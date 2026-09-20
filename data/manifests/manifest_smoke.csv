@@ -1,0 +1,8 @@
+sample,experiment,target_gene,condition,biorep,read_count,fastq_url_1,fastq_url_2
+non_targeting_rep1,ENCSR095PIC,non-targeting,control,1,27445662,https://www.encodeproject.org/files/ENCFF112FMQ/@@download/ENCFF112FMQ.fastq.gz,https://www.encodeproject.org/files/ENCFF436EDN/@@download/ENCFF436EDN.fastq.gz
+non_targeting_rep2,ENCSR095PIC,non-targeting,control,2,38768468,https://www.encodeproject.org/files/ENCFF615EBT/@@download/ENCFF615EBT.fastq.gz,https://www.encodeproject.org/files/ENCFF692YJK/@@download/ENCFF692YJK.fastq.gz
+TRIM28_rep1,ENCSR591QYK,TRIM28,kd,1,35449217,https://www.encodeproject.org/files/ENCFF217AVB/@@download/ENCFF217AVB.fastq.gz,https://www.encodeproject.org/files/ENCFF521QXQ/@@download/ENCFF521QXQ.fastq.gz
+TRIM28_rep2,ENCSR591QYK,TRIM28,kd,2,37370060,https://www.encodeproject.org/files/ENCFF334RTV/@@download/ENCFF334RTV.fastq.gz,https://www.encodeproject.org/files/ENCFF369HYZ/@@download/ENCFF369HYZ.fastq.gz
+SETDB1_rep1,ENCSR819PCU,SETDB1,kd,1,42614151,https://www.encodeproject.org/files/ENCFF416OKR/@@download/ENCFF416OKR.fastq.gz,https://www.encodeproject.org/files/ENCFF994PPJ/@@download/ENCFF994PPJ.fastq.gz
+SETDB1_rep2,ENCSR819PCU,SETDB1,kd,2,26129146,https://www.encodeproject.org/files/ENCFF390PLA/@@download/ENCFF390PLA.fastq.gz,https://www.encodeproject.org/files/ENCFF132WED/@@download/ENCFF132WED.fastq.gz
+SETDB1_rep3,ENCSR819PCU,SETDB1,kd,3,29698915,https://www.encodeproject.org/files/ENCFF789MIJ/@@download/ENCFF789MIJ.fastq.gz,https://www.encodeproject.org/files/ENCFF041OZG/@@download/ENCFF041OZG.fastq.gz

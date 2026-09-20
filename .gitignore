@@ -1,0 +1,26 @@
+# reference genomes and annotations — regenerate with `make refs` (~290 MB, too big for git)
+refs/
+paper_repo/
+
+# pipeline intermediates
+results/fastq/
+results/align/
+results/counts/
+results/*.bam
+results/*.sam
+*.fastq
+*.fastq.gz
+*.Log.out
+*.Log.final.out
+*.Log.progress.out
+_STARtmp/
+*_STARtmp/
+
+# scratch
+handoff/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+env/

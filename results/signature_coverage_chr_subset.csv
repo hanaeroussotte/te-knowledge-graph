@@ -1,0 +1,7 @@
+signature,genes_in_set,on_chr1_or_chr19,pct_covered,actually_quantified
+IFN_typeI,125,21,16.8,21
+IFN_typeII,107,24,22.4,24
+defense_virus,264,46,17.4,46
+inflammatory,725,130,17.9,130
+senescence,83,8,9.6,8
+NFkB,121,15,12.4,15

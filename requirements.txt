@@ -1,0 +1,11 @@
+# Analysis layer. The pipeline tools (STAR/HISAT2/samtools/TEcount) come from
+# environment.yml — this file covers only the Python analysis and graph code.
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+requests>=2.31
+matplotlib>=3.7
+networkx>=3.1
+pydeseq2>=0.4
+gseapy>=1.1
+pyarrow>=14.0

@@ -1,0 +1,23 @@
+name: te-pipeline
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - star            # cloud path. NOTE: the osx-arm64 build silently reads zero reads —
+                    # on macOS use hisat2 locally and STAR on Linux. See docs/MANUAL.md §6.
+  - hisat2          # local path
+  - samtools
+  - seqtk
+  - sra-tools
+  - pysam
+  - pandas
+  - numpy
+  - scipy
+  - requests
+  - pip
+  - pip:
+      # tetranscripts is NOT installable from bioconda: the recipe requires
+      # bioconductor-deseq, which no longer exists. Install from PyPI. Only TEcount is
+      # used here; its R-based DE step is replaced by PyDESeq2.
+      - TEtranscripts

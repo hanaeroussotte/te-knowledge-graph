@@ -1,0 +1,122 @@
+<!doctype html><meta charset="utf-8"><title>TE reasoning engine</title>
+<style>
+ body{font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+   max-width:960px;margin:2.5rem auto;padding:0 1.2rem;color:#1a1a1a}
+ h1{font-size:1.5rem;margin-bottom:.2rem} h2{font-size:1.1rem;margin:0 0 .2rem}
+ h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:#666;margin:1rem 0 .3rem}
+ .sub{color:#666;margin-top:0} nav{margin:1rem 0 2rem} nav a{margin-right:.7rem;font-size:.85rem}
+ .card{border:1px solid #e3e3e3;border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.1rem}
+ .best{font-size:.8rem;font-weight:600;margin-left:.5rem}
+ .counts{color:#777;font-size:.8rem;margin:.1rem 0 .7rem}
+ ul{list-style:none;padding:0;margin:0} .claim{margin-bottom:.6rem}
+ .claim.empty{color:#777;font-style:italic}
+ .tier{display:inline-block;color:#fff;font-size:.65rem;text-transform:uppercase;
+   letter-spacing:.05em;padding:.1rem .4rem;border-radius:3px;margin-right:.45rem;vertical-align:1px}
+ .ids{font:11px ui-monospace,Menlo,monospace;color:#999;margin:.15rem 0 0 3.2rem}
+ .proof{font:11px ui-monospace,Menlo,monospace;background:#fafafa;border-left:3px solid #7A3E9D;
+   padding:.5rem .7rem;margin:.35rem 0 0 3.2rem;overflow-x:auto;white-space:pre}
+ .paths li{font:11.5px ui-monospace,Menlo,monospace;margin-bottom:.25rem}
+ .gate{font-size:.8rem;color:#555;border-top:1px solid #eee;padding-top:.5rem;margin-top:.9rem}
+</style>
+<h1>What does this gene do to transposable-element activation?</h1>
+<p class="sub">Every claim carries an evidence tier and the edge IDs it rests on. Inferred
+claims carry the proof tree that derives them. Sentences that cite nothing are rejected by the
+citation gate rather than shown.</p>
+<nav><a href="#SETDB1">SETDB1</a> <a href="#TRIM28">TRIM28</a> <a href="#SUV39H1">SUV39H1</a> <a href="#KDM4A">KDM4A</a> <a href="#DNMT3A">DNMT3A</a> <a href="#TET2">TET2</a> <a href="#DNMT1">DNMT1</a> <a href="#MPHOSPH8">MPHOSPH8</a></nav>
+
+<section class="card" id="SETDB1">
+  <h2>SETDB1 <span class="best" style="color:#B0343C">best tier: measured</span></h2>
+  <p class="counts">measured 3 &middot; curated 1 &middot;
+     literature 0 &middot; inferred 0</p>
+  <ul class="claims"><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down SETDB1 raises HERV9NC-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run).<div class="ids">e934902523d7fc8</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down SETDB1 raises LTR/ERV1 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run).<div class="ids">ed27b5c5db38dba</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down SETDB1 raises HERVE-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run).<div class="ids">e614f7ec146ac38</div></li><li class="claim"><span class="tier" style="background:#2E6FA7">curated</span> SETDB1 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation).<div class="ids">ee50c7640182e74</div></li></ul>
+  <h3>Admissible paths</h3><ul class="paths"><li><span class="tier" style="background:#7A3E9D">inferred</span> SETDB1 -DEPOSITS_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; HERV9NC-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SETDB1 -DEPOSITS_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; LTR/ERV1</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SETDB1 -DEPOSITS_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; HERVE-int</li><li><span class="tier" style="background:#2E6FA7">curated</span> SETDB1 -SILENCES-&gt; TE:UNSPECIFIED</li><li><span class="tier" style="background:#B0343C">measured</span> SETDB1 -SILENCES-&gt; HERV9NC-int</li><li><span class="tier" style="background:#B0343C">measured</span> SETDB1 -SILENCES-&gt; LTR/ERV1</li></ul>
+  <p class="gate">Citation gate: <b>4</b> sentences kept,
+     <b>0</b> rejected</p>
+</section>
+<section class="card" id="TRIM28">
+  <h2>TRIM28 <span class="best" style="color:#B0343C">best tier: measured</span></h2>
+  <p class="counts">measured 7 &middot; curated 0 &middot;
+     literature 0 &middot; inferred 0</p>
+  <ul class="claims"><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 raises AluY (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">ed043b0715cda44</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 raises SINE/Alu (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">ee95db93de0154e</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 raises AluYa5 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">e95e75956fc9ed4</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 raises MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">e51d17e4d51e3ea</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 raises SINE/MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">ececc34abb51d82</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 lowers SVA_D (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">e584e332299dd85</div></li><li class="claim"><span class="tier" style="background:#B0343C">measured</span> Knocking down TRIM28 lowers Retroposon/SVA (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).<div class="ids">e11d871ef37ae61</div></li></ul>
+  <h3>Admissible paths</h3><ul class="paths"><li><span class="tier" style="background:#B0343C">measured</span> TRIM28 -SILENCES-&gt; AluY</li><li><span class="tier" style="background:#B0343C">measured</span> TRIM28 -SILENCES-&gt; SINE/Alu</li><li><span class="tier" style="background:#B0343C">measured</span> TRIM28 -SILENCES-&gt; AluYa5</li><li><span class="tier" style="background:#B0343C">measured</span> TRIM28 -SILENCES-&gt; MIR</li><li><span class="tier" style="background:#B0343C">measured</span> TRIM28 -SILENCES-&gt; SINE/MIR</li><li><span class="tier" style="background:#B0343C">measured</span> TRIM28 -DEREPRESSES-&gt; SVA_D</li></ul>
+  <p class="gate">Citation gate: <b>7</b> sentences kept,
+     <b>0</b> rejected</p>
+</section>
+<section class="card" id="SUV39H1">
+  <h2>SUV39H1 <span class="best" style="color:#7A3E9D">best tier: inferred</span></h2>
+  <p class="counts">measured 0 &middot; curated 0 &middot;
+     literature 0 &middot; inferred 3</p>
+  <ul class="claims"><li class="claim"><span class="tier" style="background:#7A3E9D">inferred</span> Losing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT-&gt;HERV9NC-int, SUV39H1-DEPOSITS_MARK-&gt;H3K9me3.<div class="ids">e9e4541b0cb4dd8 ee4330f0f78fb63 e2db0226dc39982</div><pre class="proof">SUV39H1 -SILENCES-&gt; HERV9NC-int   [inferred via R2_WRITER_TRANSFER]
+  H3K9me3 -MARK_AT-&gt; HERV9NC-int   [inferred via R1_MARK_GROUNDING]
+    SETDB1 -SILENCES-&gt; HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]
+    SETDB1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]
+  SUV39H1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]</pre></li><li class="claim"><span class="tier" style="background:#7A3E9D">inferred</span> Losing SUV39H1 is predicted to raise LTR/ERV1, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT-&gt;LTR/ERV1, SUV39H1-DEPOSITS_MARK-&gt;H3K9me3.<div class="ids">e7901d18a1aace4 e1f8221285953c3 e2db0226dc39982</div><pre class="proof">SUV39H1 -SILENCES-&gt; LTR/ERV1   [inferred via R2_WRITER_TRANSFER]
+  H3K9me3 -MARK_AT-&gt; LTR/ERV1   [inferred via R1_MARK_GROUNDING]
+    SETDB1 -SILENCES-&gt; LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]
+    SETDB1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]
+  SUV39H1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]</pre></li><li class="claim"><span class="tier" style="background:#7A3E9D">inferred</span> Losing SUV39H1 is predicted to raise HERVE-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT-&gt;HERVE-int, SUV39H1-DEPOSITS_MARK-&gt;H3K9me3.<div class="ids">e5d646406d83290 e90c821dd72cc86 e2db0226dc39982</div><pre class="proof">SUV39H1 -SILENCES-&gt; HERVE-int   [inferred via R2_WRITER_TRANSFER]
+  H3K9me3 -MARK_AT-&gt; HERVE-int   [inferred via R1_MARK_GROUNDING]
+    SETDB1 -SILENCES-&gt; HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]
+    SETDB1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]
+  SUV39H1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]</pre></li></ul>
+  <h3>Admissible paths</h3><ul class="paths"><li><span class="tier" style="background:#7A3E9D">inferred</span> SUV39H1 -DEPOSITS_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; HERV9NC-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SUV39H1 -DEPOSITS_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; LTR/ERV1</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SUV39H1 -DEPOSITS_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; HERVE-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SUV39H1 -SILENCES-&gt; HERV9NC-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SUV39H1 -SILENCES-&gt; LTR/ERV1</li><li><span class="tier" style="background:#7A3E9D">inferred</span> SUV39H1 -SILENCES-&gt; HERVE-int</li></ul>
+  <p class="gate">Citation gate: <b>3</b> sentences kept,
+     <b>0</b> rejected</p>
+</section>
+<section class="card" id="KDM4A">
+  <h2>KDM4A <span class="best" style="color:#7A3E9D">best tier: inferred</span></h2>
+  <p class="counts">measured 0 &middot; curated 0 &middot;
+     literature 0 &middot; inferred 3</p>
+  <ul class="claims"><li class="claim"><span class="tier" style="background:#7A3E9D">inferred</span> Losing KDM4A is predicted to lower HERV9NC-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT-&gt;HERV9NC-int, KDM4A-ERASES_MARK-&gt;H3K9me3.<div class="ids">eac4e24e7933e93 ee4330f0f78fb63 e93194d65a0dfa1</div><pre class="proof">KDM4A -DEREPRESSES-&gt; HERV9NC-int   [inferred via R3_ERASER_INVERSION]
+  H3K9me3 -MARK_AT-&gt; HERV9NC-int   [inferred via R1_MARK_GROUNDING]
+    SETDB1 -SILENCES-&gt; HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]
+    SETDB1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]
+  KDM4A -ERASES_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140684 histone H3K9me2/H3K9me3 demethylase activity]</pre></li><li class="claim"><span class="tier" style="background:#7A3E9D">inferred</span> Losing KDM4A is predicted to lower LTR/ERV1, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT-&gt;LTR/ERV1, KDM4A-ERASES_MARK-&gt;H3K9me3.<div class="ids">e3cb7053e6cf807 e1f8221285953c3 e93194d65a0dfa1</div><pre class="proof">KDM4A -DEREPRESSES-&gt; LTR/ERV1   [inferred via R3_ERASER_INVERSION]
+  H3K9me3 -MARK_AT-&gt; LTR/ERV1   [inferred via R1_MARK_GROUNDING]
+    SETDB1 -SILENCES-&gt; LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]
+    SETDB1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]
+  KDM4A -ERASES_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140684 histone H3K9me2/H3K9me3 demethylase activity]</pre></li><li class="claim"><span class="tier" style="background:#7A3E9D">inferred</span> Losing KDM4A is predicted to lower HERVE-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT-&gt;HERVE-int, KDM4A-ERASES_MARK-&gt;H3K9me3.<div class="ids">e5c979ce119a13c e90c821dd72cc86 e93194d65a0dfa1</div><pre class="proof">KDM4A -DEREPRESSES-&gt; HERVE-int   [inferred via R3_ERASER_INVERSION]
+  H3K9me3 -MARK_AT-&gt; HERVE-int   [inferred via R1_MARK_GROUNDING]
+    SETDB1 -SILENCES-&gt; HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]
+    SETDB1 -DEPOSITS_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]
+  KDM4A -ERASES_MARK-&gt; H3K9me3   [curated: GO molecular function GO:0140684 histone H3K9me2/H3K9me3 demethylase activity]</pre></li></ul>
+  <h3>Admissible paths</h3><ul class="paths"><li><span class="tier" style="background:#7A3E9D">inferred</span> KDM4A -ERASES_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; HERV9NC-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> KDM4A -ERASES_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; LTR/ERV1</li><li><span class="tier" style="background:#7A3E9D">inferred</span> KDM4A -ERASES_MARK-&gt; H3K9me3 → H3K9me3 -MARK_AT-&gt; HERVE-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> KDM4A -DEREPRESSES-&gt; HERV9NC-int</li><li><span class="tier" style="background:#7A3E9D">inferred</span> KDM4A -DEREPRESSES-&gt; LTR/ERV1</li><li><span class="tier" style="background:#7A3E9D">inferred</span> KDM4A -DEREPRESSES-&gt; HERVE-int</li></ul>
+  <p class="gate">Citation gate: <b>3</b> sentences kept,
+     <b>0</b> rejected</p>
+</section>
+<section class="card" id="DNMT3A">
+  <h2>DNMT3A <span class="best" style="color:#2E6FA7">best tier: curated</span></h2>
+  <p class="counts">measured 0 &middot; curated 1 &middot;
+     literature 0 &middot; inferred 0</p>
+  <ul class="claims"><li class="claim"><span class="tier" style="background:#2E6FA7">curated</span> DNMT3A is curated as silencing transposable elements (GO:0141196 transposable element silencing by piRNA-mediated DNA methylation).<div class="ids">ebf1e0d96df4f96</div></li></ul>
+  <h3>Admissible paths</h3><ul class="paths"><li><span class="tier" style="background:#7A3E9D">inferred</span> DNMT3A -MEMBER_OF-&gt; CPX-944 → CPX-944 -SILENCES-&gt; TE:UNSPECIFIED</li><li><span class="tier" style="background:#2E6FA7">curated</span> DNMT3A -SILENCES-&gt; TE:UNSPECIFIED</li></ul>
+  <p class="gate">Citation gate: <b>1</b> sentences kept,
+     <b>0</b> rejected</p>
+</section>
+<section class="card" id="TET2">
+  <h2>TET2 <span class="best" style="color:#999">best tier: none</span></h2>
+  <p class="counts">measured 0 &middot; curated 0 &middot;
+     literature 0 &middot; inferred 0</p>
+  <ul class="claims"><li class="claim empty">No evidence in the graph connects this gene to TE activation.</li></ul>
+  
+  <p class="gate">Citation gate: <b>0</b> sentences kept,
+     <b>1</b> rejected &mdash; no edge cited</p>
+</section>
+<section class="card" id="DNMT1">
+  <h2>DNMT1 <span class="best" style="color:#999">best tier: none</span></h2>
+  <p class="counts">measured 0 &middot; curated 0 &middot;
+     literature 0 &middot; inferred 0</p>
+  <ul class="claims"><li class="claim empty">No evidence in the graph connects this gene to TE activation.</li></ul>
+  
+  <p class="gate">Citation gate: <b>0</b> sentences kept,
+     <b>1</b> rejected &mdash; no edge cited</p>
+</section>
+<section class="card" id="MPHOSPH8">
+  <h2>MPHOSPH8 <span class="best" style="color:#2E6FA7">best tier: curated</span></h2>
+  <p class="counts">measured 0 &middot; curated 1 &middot;
+     literature 0 &middot; inferred 0</p>
+  <ul class="claims"><li class="claim"><span class="tier" style="background:#2E6FA7">curated</span> MPHOSPH8 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation).<div class="ids">e9d246972e968f1</div></li></ul>
+  <h3>Admissible paths</h3><ul class="paths"><li><span class="tier" style="background:#7A3E9D">inferred</span> MPHOSPH8 -MEMBER_OF-&gt; CPX-2348 → CPX-2348 -SILENCES-&gt; TE:UNSPECIFIED</li><li><span class="tier" style="background:#2E6FA7">curated</span> MPHOSPH8 -SILENCES-&gt; TE:UNSPECIFIED</li></ul>
+  <p class="gate">Citation gate: <b>1</b> sentences kept,
+     <b>0</b> rejected</p>
+</section>

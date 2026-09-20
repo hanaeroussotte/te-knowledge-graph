@@ -1,0 +1,14 @@
+metric,value
+ENCODE knockdown experiments inventoried,1114
+distinct genes with knockdown RNA-seq,570
+GO-curated TE regulators,112
+TE loci in annotation (RepeatMasker hg38),3761678
+TE subfamilies (graph TE vocabulary),1057
+graph nodes,1350
+graph edges (all layers),2874
+  curated,2792
+  mechanism (GO MF),40
+  literature,32
+  measured (this run),10
+rule-derived edges,71
+samples quantified end-to-end,11

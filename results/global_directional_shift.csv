@@ -1,0 +1,7 @@
+knockdown,feature_set,n,up,down,frac_up,median_log2FC,binom_p
+SETDB1,TE subfamilies,353,188,165,0.533,0.0596,0.242
+SETDB1,protein-coding genes,3048,1571,1477,0.515,0.0178,0.0921
+TRIM28,TE subfamilies,322,231,91,0.717,0.4103,3.46e-15
+TRIM28,protein-coding genes,2890,1408,1482,0.487,-0.0162,0.174
+DNMT1,TE subfamilies,503,315,188,0.626,0.1167,1.63e-08
+DNMT1,protein-coding genes,3120,1509,1611,0.484,-0.0136,0.0706

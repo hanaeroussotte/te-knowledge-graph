@@ -1,0 +1,6 @@
+filter,n_predicted,true_positives,precision,recall,f1,direction_agreements,direction_comparable
+all rule hits,193,21,0.109,0.175,0.134,10,21
+direction resolved,52,8,0.154,0.067,0.093,6,8
+perturbation language,25,5,0.2,0.042,0.069,0,5
+human only,141,14,0.099,0.117,0.107,7,14
+perturbation + direction,8,0,0.0,0.0,0.0,0,0

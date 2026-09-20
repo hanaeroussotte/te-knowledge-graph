@@ -1,0 +1,756 @@
+{
+ "SETDB1": {
+  "gene": "SETDB1",
+  "has_measured_data": true,
+  "n_measured": 3,
+  "n_curated": 1,
+  "n_literature": 0,
+  "n_inferred": 0,
+  "best_tier": "measured",
+  "claims": [
+   {
+    "text": "Knocking down SETDB1 raises HERV9NC-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "e934902523d7fc8"
+    ]
+   },
+   {
+    "text": "Knocking down SETDB1 raises LTR/ERV1 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "ed27b5c5db38dba"
+    ]
+   },
+   {
+    "text": "Knocking down SETDB1 raises HERVE-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "e614f7ec146ac38"
+    ]
+   },
+   {
+    "text": "SETDB1 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation).",
+    "tier": "curated",
+    "edge_ids": [
+     "ee50c7640182e74"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "SETDB1 -DEPOSITS_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> HERV9NC-int"
+    ],
+    "edge_ids": [
+     "e6a8b25195408e1",
+     "ee4330f0f78fb63"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SETDB1 -DEPOSITS_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> LTR/ERV1"
+    ],
+    "edge_ids": [
+     "e6a8b25195408e1",
+     "e1f8221285953c3"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SETDB1 -DEPOSITS_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> HERVE-int"
+    ],
+    "edge_ids": [
+     "e6a8b25195408e1",
+     "e90c821dd72cc86"
+    ]
+   },
+   {
+    "tier": "curated",
+    "hops": [
+     "SETDB1 -SILENCES-> TE:UNSPECIFIED"
+    ],
+    "edge_ids": [
+     "ee50c7640182e74"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "SETDB1 -SILENCES-> HERV9NC-int"
+    ],
+    "edge_ids": [
+     "e934902523d7fc8"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "SETDB1 -SILENCES-> LTR/ERV1"
+    ],
+    "edge_ids": [
+     "ed27b5c5db38dba"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "SETDB1 -SILENCES-> HERVE-int"
+    ],
+    "edge_ids": [
+     "e614f7ec146ac38"
+    ]
+   }
+  ],
+  "narrative": "Knocking down SETDB1 raises HERV9NC-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [e934902523d7fc8]. Knocking down SETDB1 raises LTR/ERV1 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [ed27b5c5db38dba]. Knocking down SETDB1 raises HERVE-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [e614f7ec146ac38]. SETDB1 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation) [ee50c7640182e74].",
+  "citation_check": {
+   "sentences_kept": 4,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "TRIM28": {
+  "gene": "TRIM28",
+  "has_measured_data": true,
+  "n_measured": 8,
+  "n_curated": 0,
+  "n_literature": 0,
+  "n_inferred": 0,
+  "best_tier": "measured",
+  "claims": [
+   {
+    "text": "Knocking down TRIM28 raises AluY (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "ed043b0715cda44"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 raises SINE/Alu (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "ee95db93de0154e"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 raises AluYa5 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "e95e75956fc9ed4"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 raises MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "e51d17e4d51e3ea"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 raises SINE/MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "ececc34abb51d82"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 lowers SVA_D (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "e584e332299dd85"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 lowers Retroposon/SVA (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run).",
+    "tier": "measured",
+    "edge_ids": [
+     "e11d871ef37ae61"
+    ]
+   },
+   {
+    "text": "Knocking down TRIM28 raises TE:global (median log2FC of 322 TE subfamilies minus 2890 protein-coding genes, same contrast vs non_targeting; normalisation-invar), measured in ENCODE ENCSR591QYK (this run, set-level).",
+    "tier": "measured",
+    "edge_ids": [
+     "e0522b3d4156e69"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -SILENCES-> AluY"
+    ],
+    "edge_ids": [
+     "ed043b0715cda44"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -SILENCES-> SINE/Alu"
+    ],
+    "edge_ids": [
+     "ee95db93de0154e"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -SILENCES-> AluYa5"
+    ],
+    "edge_ids": [
+     "e95e75956fc9ed4"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -SILENCES-> MIR"
+    ],
+    "edge_ids": [
+     "e51d17e4d51e3ea"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -SILENCES-> SINE/MIR"
+    ],
+    "edge_ids": [
+     "ececc34abb51d82"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -DEREPRESSES-> SVA_D"
+    ],
+    "edge_ids": [
+     "e584e332299dd85"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -DEREPRESSES-> Retroposon/SVA"
+    ],
+    "edge_ids": [
+     "e11d871ef37ae61"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "TRIM28 -SILENCES-> TE:global"
+    ],
+    "edge_ids": [
+     "e0522b3d4156e69"
+    ]
+   }
+  ],
+  "narrative": "Knocking down TRIM28 raises AluY (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ed043b0715cda44]. Knocking down TRIM28 raises SINE/Alu (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ee95db93de0154e]. Knocking down TRIM28 raises AluYa5 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e95e75956fc9ed4]. Knocking down TRIM28 raises MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e51d17e4d51e3ea]. Knocking down TRIM28 raises SINE/MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ececc34abb51d82]. Knocking down TRIM28 lowers SVA_D (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e584e332299dd85]. Knocking down TRIM28 lowers Retroposon/SVA (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e11d871ef37ae61]. Knocking down TRIM28 raises TE:global (median log2FC of 322 TE subfamilies minus 2890 protein-coding genes, same contrast vs non_targeting; normalisation-invar), measured in ENCODE ENCSR591QYK (this run, set-level) [e0522b3d4156e69].",
+  "citation_check": {
+   "sentences_kept": 8,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "DNMT1": {
+  "gene": "DNMT1",
+  "has_measured_data": true,
+  "n_measured": 1,
+  "n_curated": 0,
+  "n_literature": 0,
+  "n_inferred": 0,
+  "best_tier": "measured",
+  "claims": [
+   {
+    "text": "Knocking down DNMT1 raises TE:global (median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva), measured in ENCODE ENCSR600OWF (this run, set-level).",
+    "tier": "measured",
+    "edge_ids": [
+     "e9459439074323c"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "DNMT1 -DEPOSITS_MARK-> 5mC",
+     "5mC -MARK_AT-> TE:global"
+    ],
+    "edge_ids": [
+     "e3fd8ea98cca562",
+     "e62dbe0821f074b"
+    ]
+   },
+   {
+    "tier": "measured",
+    "hops": [
+     "DNMT1 -SILENCES-> TE:global"
+    ],
+    "edge_ids": [
+     "e9459439074323c"
+    ]
+   }
+  ],
+  "narrative": "Knocking down DNMT1 raises TE:global (median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva), measured in ENCODE ENCSR600OWF (this run, set-level) [e9459439074323c].",
+  "citation_check": {
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "DNMT3A": {
+  "gene": "DNMT3A",
+  "has_measured_data": false,
+  "n_measured": 0,
+  "n_curated": 1,
+  "n_literature": 0,
+  "n_inferred": 1,
+  "best_tier": "curated",
+  "claims": [
+   {
+    "text": "DNMT3A is curated as silencing transposable elements (GO:0141196 transposable element silencing by piRNA-mediated DNA methylation).",
+    "tier": "curated",
+    "edge_ids": [
+     "ebf1e0d96df4f96"
+    ]
+   },
+   {
+    "text": "Losing DNMT3A is predicted to raise TE:global, derived by R2_WRITER_TRANSFER from: 5mC-MARK_AT->TE:global, DNMT3A-DEPOSITS_MARK->5mC.",
+    "tier": "inferred",
+    "edge_ids": [
+     "eab265c4e9b22a9",
+     "e62dbe0821f074b",
+     "e7527899973e5f8"
+    ],
+    "rule": "R2_WRITER_TRANSFER",
+    "proof": [
+     "DNMT3A -SILENCES-> TE:global   [inferred via R2_WRITER_TRANSFER]",
+     "  5mC -MARK_AT-> TE:global   [inferred via R1_MARK_GROUNDING]",
+     "    DNMT1 -SILENCES-> TE:global   [measured: ENCODE ENCSR600OWF (this run, set-level) median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva]",
+     "    DNMT1 -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886 DNA (cytosine-5-)-methyltransferase activity]",
+     "  DNMT3A -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886 DNA (cytosine-5-)-methyltransferase activity]"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "DNMT3A -MEMBER_OF-> CPX-944",
+     "CPX-944 -SILENCES-> TE:UNSPECIFIED"
+    ],
+    "edge_ids": [
+     "eff97afbda9779c",
+     "e77516b27f399d8"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "DNMT3A -DEPOSITS_MARK-> 5mC",
+     "5mC -MARK_AT-> TE:global"
+    ],
+    "edge_ids": [
+     "e7527899973e5f8",
+     "e62dbe0821f074b"
+    ]
+   },
+   {
+    "tier": "curated",
+    "hops": [
+     "DNMT3A -SILENCES-> TE:UNSPECIFIED"
+    ],
+    "edge_ids": [
+     "ebf1e0d96df4f96"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "DNMT3A -SILENCES-> TE:global"
+    ],
+    "edge_ids": [
+     "eab265c4e9b22a9"
+    ]
+   }
+  ],
+  "narrative": "DNMT3A is curated as silencing transposable elements (GO:0141196 transposable element silencing by piRNA-mediated DNA methylation) [ebf1e0d96df4f96]. Losing DNMT3A is predicted to raise TE:global, derived by R2_WRITER_TRANSFER from: 5mC-MARK_AT->TE:global, DNMT3A-DEPOSITS_MARK->5mC [eab265c4e9b22a9, e62dbe0821f074b, e7527899973e5f8].",
+  "citation_check": {
+   "sentences_kept": 2,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "TET2": {
+  "gene": "TET2",
+  "has_measured_data": false,
+  "n_measured": 0,
+  "n_curated": 0,
+  "n_literature": 0,
+  "n_inferred": 1,
+  "best_tier": "inferred",
+  "claims": [
+   {
+    "text": "Losing TET2 is predicted to lower TE:global, derived by R3_ERASER_INVERSION from: 5mC-MARK_AT->TE:global, TET2-ERASES_MARK->5mC.",
+    "tier": "inferred",
+    "edge_ids": [
+     "e0eab062a2cf49c",
+     "e62dbe0821f074b",
+     "e71f0836b5a228f"
+    ],
+    "rule": "R3_ERASER_INVERSION",
+    "proof": [
+     "TET2 -DEREPRESSES-> TE:global   [inferred via R3_ERASER_INVERSION]",
+     "  5mC -MARK_AT-> TE:global   [inferred via R1_MARK_GROUNDING]",
+     "    DNMT1 -SILENCES-> TE:global   [measured: ENCODE ENCSR600OWF (this run, set-level) median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva]",
+     "    DNMT1 -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886 DNA (cytosine-5-)-methyltransferase activity]",
+     "  TET2 -ERASES_MARK-> 5mC   [curated: GO molecular function GO:0070579 methylcytosine dioxygenase activity]"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "TET2 -ERASES_MARK-> 5mC",
+     "5mC -MARK_AT-> TE:global"
+    ],
+    "edge_ids": [
+     "e71f0836b5a228f",
+     "e62dbe0821f074b"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "TET2 -DEREPRESSES-> TE:global"
+    ],
+    "edge_ids": [
+     "e0eab062a2cf49c"
+    ]
+   }
+  ],
+  "narrative": "Losing TET2 is predicted to lower TE:global, derived by R3_ERASER_INVERSION from: 5mC-MARK_AT->TE:global, TET2-ERASES_MARK->5mC [e0eab062a2cf49c, e62dbe0821f074b, e71f0836b5a228f].",
+  "citation_check": {
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "SUV39H1": {
+  "gene": "SUV39H1",
+  "has_measured_data": false,
+  "n_measured": 0,
+  "n_curated": 0,
+  "n_literature": 0,
+  "n_inferred": 3,
+  "best_tier": "inferred",
+  "claims": [
+   {
+    "text": "Losing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERV9NC-int, SUV39H1-DEPOSITS_MARK->H3K9me3.",
+    "tier": "inferred",
+    "edge_ids": [
+     "e9e4541b0cb4dd8",
+     "ee4330f0f78fb63",
+     "e2db0226dc39982"
+    ],
+    "rule": "R2_WRITER_TRANSFER",
+    "proof": [
+     "SUV39H1 -SILENCES-> HERV9NC-int   [inferred via R2_WRITER_TRANSFER]",
+     "  H3K9me3 -MARK_AT-> HERV9NC-int   [inferred via R1_MARK_GROUNDING]",
+     "    SETDB1 -SILENCES-> HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]",
+     "    SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]",
+     "  SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]"
+    ]
+   },
+   {
+    "text": "Losing SUV39H1 is predicted to raise LTR/ERV1, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->LTR/ERV1, SUV39H1-DEPOSITS_MARK->H3K9me3.",
+    "tier": "inferred",
+    "edge_ids": [
+     "e7901d18a1aace4",
+     "e1f8221285953c3",
+     "e2db0226dc39982"
+    ],
+    "rule": "R2_WRITER_TRANSFER",
+    "proof": [
+     "SUV39H1 -SILENCES-> LTR/ERV1   [inferred via R2_WRITER_TRANSFER]",
+     "  H3K9me3 -MARK_AT-> LTR/ERV1   [inferred via R1_MARK_GROUNDING]",
+     "    SETDB1 -SILENCES-> LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]",
+     "    SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]",
+     "  SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]"
+    ]
+   },
+   {
+    "text": "Losing SUV39H1 is predicted to raise HERVE-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERVE-int, SUV39H1-DEPOSITS_MARK->H3K9me3.",
+    "tier": "inferred",
+    "edge_ids": [
+     "e5d646406d83290",
+     "e90c821dd72cc86",
+     "e2db0226dc39982"
+    ],
+    "rule": "R2_WRITER_TRANSFER",
+    "proof": [
+     "SUV39H1 -SILENCES-> HERVE-int   [inferred via R2_WRITER_TRANSFER]",
+     "  H3K9me3 -MARK_AT-> HERVE-int   [inferred via R1_MARK_GROUNDING]",
+     "    SETDB1 -SILENCES-> HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]",
+     "    SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]",
+     "  SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "SUV39H1 -DEPOSITS_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> HERV9NC-int"
+    ],
+    "edge_ids": [
+     "e2db0226dc39982",
+     "ee4330f0f78fb63"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SUV39H1 -DEPOSITS_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> LTR/ERV1"
+    ],
+    "edge_ids": [
+     "e2db0226dc39982",
+     "e1f8221285953c3"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SUV39H1 -DEPOSITS_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> HERVE-int"
+    ],
+    "edge_ids": [
+     "e2db0226dc39982",
+     "e90c821dd72cc86"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SUV39H1 -SILENCES-> HERV9NC-int"
+    ],
+    "edge_ids": [
+     "e9e4541b0cb4dd8"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SUV39H1 -SILENCES-> LTR/ERV1"
+    ],
+    "edge_ids": [
+     "e7901d18a1aace4"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "SUV39H1 -SILENCES-> HERVE-int"
+    ],
+    "edge_ids": [
+     "e5d646406d83290"
+    ]
+   }
+  ],
+  "narrative": "Losing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERV9NC-int, SUV39H1-DEPOSITS_MARK->H3K9me3 [e9e4541b0cb4dd8, ee4330f0f78fb63, e2db0226dc39982]. Losing SUV39H1 is predicted to raise LTR/ERV1, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->LTR/ERV1, SUV39H1-DEPOSITS_MARK->H3K9me3 [e7901d18a1aace4, e1f8221285953c3, e2db0226dc39982]. Losing SUV39H1 is predicted to raise HERVE-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERVE-int, SUV39H1-DEPOSITS_MARK->H3K9me3 [e5d646406d83290, e90c821dd72cc86, e2db0226dc39982].",
+  "citation_check": {
+   "sentences_kept": 3,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "KDM4A": {
+  "gene": "KDM4A",
+  "has_measured_data": false,
+  "n_measured": 0,
+  "n_curated": 0,
+  "n_literature": 0,
+  "n_inferred": 3,
+  "best_tier": "inferred",
+  "claims": [
+   {
+    "text": "Losing KDM4A is predicted to lower HERV9NC-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERV9NC-int, KDM4A-ERASES_MARK->H3K9me3.",
+    "tier": "inferred",
+    "edge_ids": [
+     "eac4e24e7933e93",
+     "ee4330f0f78fb63",
+     "e93194d65a0dfa1"
+    ],
+    "rule": "R3_ERASER_INVERSION",
+    "proof": [
+     "KDM4A -DEREPRESSES-> HERV9NC-int   [inferred via R3_ERASER_INVERSION]",
+     "  H3K9me3 -MARK_AT-> HERV9NC-int   [inferred via R1_MARK_GROUNDING]",
+     "    SETDB1 -SILENCES-> HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]",
+     "    SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]",
+     "  KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684 histone H3K9me2/H3K9me3 demethylase activity]"
+    ]
+   },
+   {
+    "text": "Losing KDM4A is predicted to lower LTR/ERV1, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->LTR/ERV1, KDM4A-ERASES_MARK->H3K9me3.",
+    "tier": "inferred",
+    "edge_ids": [
+     "e3cb7053e6cf807",
+     "e1f8221285953c3",
+     "e93194d65a0dfa1"
+    ],
+    "rule": "R3_ERASER_INVERSION",
+    "proof": [
+     "KDM4A -DEREPRESSES-> LTR/ERV1   [inferred via R3_ERASER_INVERSION]",
+     "  H3K9me3 -MARK_AT-> LTR/ERV1   [inferred via R1_MARK_GROUNDING]",
+     "    SETDB1 -SILENCES-> LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]",
+     "    SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]",
+     "  KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684 histone H3K9me2/H3K9me3 demethylase activity]"
+    ]
+   },
+   {
+    "text": "Losing KDM4A is predicted to lower HERVE-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERVE-int, KDM4A-ERASES_MARK->H3K9me3.",
+    "tier": "inferred",
+    "edge_ids": [
+     "e5c979ce119a13c",
+     "e90c821dd72cc86",
+     "e93194d65a0dfa1"
+    ],
+    "rule": "R3_ERASER_INVERSION",
+    "proof": [
+     "KDM4A -DEREPRESSES-> HERVE-int   [inferred via R3_ERASER_INVERSION]",
+     "  H3K9me3 -MARK_AT-> HERVE-int   [inferred via R1_MARK_GROUNDING]",
+     "    SETDB1 -SILENCES-> HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]",
+     "    SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0140949 histone H3K9 trimethyltransferase activity]",
+     "  KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684 histone H3K9me2/H3K9me3 demethylase activity]"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "KDM4A -ERASES_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> HERV9NC-int"
+    ],
+    "edge_ids": [
+     "e93194d65a0dfa1",
+     "ee4330f0f78fb63"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "KDM4A -ERASES_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> LTR/ERV1"
+    ],
+    "edge_ids": [
+     "e93194d65a0dfa1",
+     "e1f8221285953c3"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "KDM4A -ERASES_MARK-> H3K9me3",
+     "H3K9me3 -MARK_AT-> HERVE-int"
+    ],
+    "edge_ids": [
+     "e93194d65a0dfa1",
+     "e90c821dd72cc86"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "KDM4A -DEREPRESSES-> HERV9NC-int"
+    ],
+    "edge_ids": [
+     "eac4e24e7933e93"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "KDM4A -DEREPRESSES-> LTR/ERV1"
+    ],
+    "edge_ids": [
+     "e3cb7053e6cf807"
+    ]
+   },
+   {
+    "tier": "inferred",
+    "hops": [
+     "KDM4A -DEREPRESSES-> HERVE-int"
+    ],
+    "edge_ids": [
+     "e5c979ce119a13c"
+    ]
+   }
+  ],
+  "narrative": "Losing KDM4A is predicted to lower HERV9NC-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERV9NC-int, KDM4A-ERASES_MARK->H3K9me3 [eac4e24e7933e93, ee4330f0f78fb63, e93194d65a0dfa1]. Losing KDM4A is predicted to lower LTR/ERV1, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->LTR/ERV1, KDM4A-ERASES_MARK->H3K9me3 [e3cb7053e6cf807, e1f8221285953c3, e93194d65a0dfa1]. Losing KDM4A is predicted to lower HERVE-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERVE-int, KDM4A-ERASES_MARK->H3K9me3 [e5c979ce119a13c, e90c821dd72cc86, e93194d65a0dfa1].",
+  "citation_check": {
+   "sentences_kept": 3,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ },
+ "MPHOSPH8": {
+  "gene": "MPHOSPH8",
+  "has_measured_data": false,
+  "n_measured": 0,
+  "n_curated": 1,
+  "n_literature": 0,
+  "n_inferred": 0,
+  "best_tier": "curated",
+  "claims": [
+   {
+    "text": "MPHOSPH8 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation).",
+    "tier": "curated",
+    "edge_ids": [
+     "e9d246972e968f1"
+    ]
+   }
+  ],
+  "paths": [
+   {
+    "tier": "inferred",
+    "hops": [
+     "MPHOSPH8 -MEMBER_OF-> CPX-2348",
+     "CPX-2348 -SILENCES-> TE:UNSPECIFIED"
+    ],
+    "edge_ids": [
+     "e9f541d106575cf",
+     "e117493b6433d51"
+    ]
+   },
+   {
+    "tier": "curated",
+    "hops": [
+     "MPHOSPH8 -SILENCES-> TE:UNSPECIFIED"
+    ],
+    "edge_ids": [
+     "e9d246972e968f1"
+    ]
+   }
+  ],
+  "narrative": "MPHOSPH8 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation) [e9d246972e968f1].",
+  "citation_check": {
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "rejected": []
+  }
+ }
+}

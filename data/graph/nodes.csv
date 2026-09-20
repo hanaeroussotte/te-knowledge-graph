@@ -1,0 +1,1911 @@
+node_id,node_type,label
+TE:UNSPECIFIED,TEFamily,transposable elements (family unspecified)
+GO:0141196,GOTerm,transposable element silencing by piRNA-mediated DNA methylation
+TDRD1,Gene,TDRD1
+SPOCD1,Gene,SPOCD1
+FKBP6,Gene,FKBP6
+MAEL,Gene,MAEL
+C19orf84,Gene,C19orf84
+TDRD5,Gene,TDRD5
+DNMT3A,Gene,DNMT3A
+PIWIL2,Gene,PIWIL2
+DNMT3L,Gene,DNMT3L
+PIWIL4,Gene,PIWIL4
+TDRD12,Gene,TDRD12
+DDX4,Gene,DDX4
+MOV10L1,Gene,MOV10L1
+SPIN1,Gene,SPIN1
+TDRD9,Gene,TDRD9
+GO:0010526,GOTerm,transposable element silencing
+TEX15,Gene,TEX15
+ZNF91,Gene,ZNF91
+APOBEC3A,Gene,APOBEC3A
+APOBEC3C,Gene,APOBEC3C
+APOBEC3G,Gene,APOBEC3G
+SIRT7,Gene,SIRT7
+BTBD18,Gene,BTBD18
+APOBEC3H,Gene,APOBEC3H
+APOBEC3B,Gene,APOBEC3B
+TEX19,Gene,TEX19
+ASZ1,Gene,ASZ1
+ZFP92,Gene,ZFP92
+APOBEC3F,Gene,APOBEC3F
+SIRT6,Gene,SIRT6
+MOV10,Gene,MOV10
+UBR2,Gene,UBR2
+ZNF93,Gene,ZNF93
+GO:0141008,GOTerm,transposable element silencing by mRNA destabilization
+TUT7,Gene,TUT7
+TUT4,Gene,TUT4
+GO:0141005,GOTerm,transposable element silencing by heterochromatin formation
+MPHOSPH8,Gene,MPHOSPH8
+SMYD5,Gene,SMYD5
+RESF1,Gene,RESF1
+TNRC18,Gene,TNRC18
+SETDB1,Gene,SETDB1
+TASOR,Gene,TASOR
+PPHLN1,Gene,PPHLN1
+MORC2,Gene,MORC2
+GO:0141006,GOTerm,transposable element silencing by piRNA-mediated heterochromatin formation
+PIWIL1,Gene,PIWIL1
+GO:0032197,GOTerm,retrotransposition
+L1TD1,Gene,L1TD1
+GO:0098038,GOTerm,non-replicative DNA transposition
+PGBD5,Gene,PGBD5
+GO:0006313,GOTerm,DNA transposition
+THAP9,Gene,THAP9
+GO:0141194,GOTerm,siRNA-mediated heterochromatin formation
+TDRD3,Gene,TDRD3
+GO:0090310,GOTerm,negative regulation of DNA methylation-dependent heterochromatin formation
+KMT2A,Gene,KMT2A
+GO:0140719,GOTerm,constitutive heterochromatin formation
+ZNF512B,Gene,ZNF512B
+ZNF512,Gene,ZNF512
+L3MBTL1,Gene,L3MBTL1
+GO:0006346,GOTerm,DNA methylation-dependent constitutive heterochromatin formation
+MBD3L5,Gene,MBD3L5
+MBD3L4,Gene,MBD3L4
+MBD3L3,Gene,MBD3L3
+TRIM28,Gene,TRIM28
+SUZ12,Gene,SUZ12
+ATF7IP,Gene,ATF7IP
+BEND3,Gene,BEND3
+ZNF304,Gene,ZNF304
+DNMT1,Gene,DNMT1
+HDAC1,Gene,HDAC1
+HELLS,Gene,HELLS
+MBD3L2,Gene,MBD3L2
+MBD3L1,Gene,MBD3L1
+MBD2,Gene,MBD2
+SIRT1,Gene,SIRT1
+EHMT1,Gene,EHMT1
+PPM1D,Gene,PPM1D
+SMARCA5,Gene,SMARCA5
+MBD3L2B,Gene,MBD3L2B
+MBD3,Gene,MBD3
+MBD1,Gene,MBD1
+EHMT2,Gene,EHMT2
+GO:0140718,GOTerm,facultative heterochromatin formation
+EED,Gene,EED
+H1-2,Gene,H1-2
+KDM5A,Gene,KDM5A
+JARID2,Gene,JARID2
+EZH2,Gene,EZH2
+GO:0000183,GOTerm,rDNA heterochromatin formation
+SUV39H1,Gene,SUV39H1
+RRP8,Gene,RRP8
+SIRT2,Gene,SIRT2
+BAZ2A,Gene,BAZ2A
+GO:0060906,GOTerm,negative regulation of regulatory ncRNA-mediated heterochromatin formation
+ERI3,Gene,ERI3
+ERI2,Gene,ERI2
+ERI1,Gene,ERI1
+GO:0031453,GOTerm,positive regulation of heterochromatin formation
+CDK2,Gene,CDK2
+TPR,Gene,TPR
+GO:0033696,GOTerm,heterochromatin boundary formation
+TRIP12,Gene,TRIP12
+UBR5,Gene,UBR5
+GO:0031452,GOTerm,negative regulation of heterochromatin formation
+PADI4,Gene,PADI4
+DYRK1A,Gene,DYRK1A
+ELANE,Gene,ELANE
+GO:0061188,GOTerm,negative regulation of rDNA heterochromatin formation
+PHF8,Gene,PHF8
+PHF2,Gene,PHF2
+GO:0061187,GOTerm,regulation of rDNA heterochromatin formation
+MACROH2A1,Gene,MACROH2A1
+GO:0009048,GOTerm,dosage compensation by inactivation of X chromosome
+METTL3,Gene,METTL3
+SMCHD1,Gene,SMCHD1
+RBM15B,Gene,RBM15B
+HNRNPU,Gene,HNRNPU
+YTHDC1,Gene,YTHDC1
+RBM15,Gene,RBM15
+MACROH2A2,Gene,MACROH2A2
+LRIF1,Gene,LRIF1
+KAT8,Gene,KAT8
+GO:0031509,GOTerm,subtelomeric heterochromatin formation
+DOT1L,Gene,DOT1L
+DAXX,Gene,DAXX
+HAT1,Gene,HAT1
+ATRX,Gene,ATRX
+RIF1,Gene,RIF1
+EZH1,Gene,EZH1
+GO:0060816,GOTerm,random inactivation of X chromosome
+HNRNPK,Gene,HNRNPK
+HDAC3,Gene,HDAC3
+CDYL,Gene,CDYL
+PCGF3,Gene,PCGF3
+RLIM,Gene,RLIM
+SPEN,Gene,SPEN
+PCGF5,Gene,PCGF5
+LBR,Gene,LBR
+GO:0031507,GOTerm,heterochromatin formation
+TNP1,Gene,TNP1
+SUV39H2,Gene,SUV39H2
+BCOR,Gene,BCOR
+RB1,Gene,RB1
+RBBP7,Gene,RBBP7
+PCGF2,Gene,PCGF2
+H2AC15,Gene,H2AC15
+H2AC16,Gene,H2AC16
+H2AC4,Gene,H2AC4
+H2AC17,Gene,H2AC17
+H2AB3,Gene,H2AB3
+H2AC13,Gene,H2AC13
+YAF2,Gene,YAF2
+UHRF1,Gene,UHRF1
+H2AC8,Gene,H2AC8
+H2AC19,Gene,H2AC19
+H2AC18,Gene,H2AC18
+H2AJ,Gene,H2AJ
+MGA,Gene,MGA
+CBX6,Gene,CBX6
+RING1,Gene,RING1
+BMI1,Gene,BMI1
+CBX8,Gene,CBX8
+BCORL1,Gene,BCORL1
+SMARCA4,Gene,SMARCA4
+KDM2B,Gene,KDM2B
+PCGF1,Gene,PCGF1
+CBX4,Gene,CBX4
+H2AL3,Gene,H2AL3
+CBX7,Gene,CBX7
+H2AP,Gene,H2AP
+RYBP,Gene,RYBP
+H2AB2,Gene,H2AB2
+E2F6,Gene,E2F6
+SIN3A,Gene,SIN3A
+PHC1,Gene,PHC1
+PHC2,Gene,PHC2
+BAZ2B,Gene,BAZ2B
+H2AZ1,Gene,H2AZ1
+CDKN2B-AS1,Gene,CDKN2B-AS1
+EPOP,Gene,EPOP
+H1-0,Gene,H1-0
+H2AC7,Gene,H2AC7
+HMGB1,Gene,HMGB1
+H2AC12,Gene,H2AC12
+H2AC25,Gene,H2AC25
+H2AC11,Gene,H2AC11
+CSNK2A1,Gene,CSNK2A1
+CSNK2A2,Gene,CSNK2A2
+H2AC21,Gene,H2AC21
+KMT5A,Gene,KMT5A
+CBX5,Gene,CBX5
+PHF19,Gene,PHF19
+PHC3,Gene,PHC3
+CBX2,Gene,CBX2
+LMNB2,Gene,LMNB2
+RNF2,Gene,RNF2
+SKP1,Gene,SKP1
+SMARCA1,Gene,SMARCA1
+SMARCA2,Gene,SMARCA2
+KMT2D,Gene,KMT2D
+HMGA2,Gene,HMGA2
+BAP1,Gene,BAP1
+L3MBTL2,Gene,L3MBTL2
+G2E3,Gene,G2E3
+HDAC8,Gene,HDAC8
+SMARCAD1,Gene,SMARCAD1
+RBBP4,Gene,RBBP4
+H2AZ2,Gene,H2AZ2
+PCGF6,Gene,PCGF6
+H2AC1,Gene,H2AC1
+TFDP1,Gene,TFDP1
+SPTY2D1,Gene,SPTY2D1
+CSNK2B,Gene,CSNK2B
+H2AX,Gene,H2AX
+HDAC2,Gene,HDAC2
+PHF1,Gene,PHF1
+MAX,Gene,MAX
+H2AB1,Gene,H2AB1
+SCMH1,Gene,SCMH1
+RSF1,Gene,RSF1
+CBX1,Gene,CBX1
+CBX3,Gene,CBX3
+AEBP2,Gene,AEBP2
+MTF2,Gene,MTF2
+BAHD1,Gene,BAHD1
+AUTS2,Gene,AUTS2
+H2AC6,Gene,H2AC6
+H2AC20,Gene,H2AC20
+LCOR,Gene,LCOR
+LMNA,Gene,LMNA
+LMNB1,Gene,LMNB1
+H1-9P,Gene,H1-9P
+GO:0031508,GOTerm,pericentric heterochromatin formation
+CENPV,Gene,CENPV
+GO:0031048,GOTerm,regulatory ncRNA-mediated heterochromatin formation
+ZNFX1,Gene,ZNFX1
+PTENP1-AS,Gene,PTENP1-AS
+PARTICL,Gene,PARTICL
+NRDE2,Gene,NRDE2
+ARB2A,Gene,ARB2A
+ARB2BP,Gene,ARB2BP
+GO:0031445,GOTerm,regulation of heterochromatin formation
+BAZ1A,Gene,BAZ1A
+TNF,Gene,TNF
+IL6,Gene,IL6
+NFKB1,Gene,NFKB1
+RELA,Gene,RELA
+TP53,Gene,TP53
+ASXL1,Gene,ASXL1
+MAVS,Gene,MAVS
+IFIH1,Gene,IFIH1
+CXCL10,Gene,CXCL10
+IRF7,Gene,IRF7
+IRF3,Gene,IRF3
+DDX58,Gene,DDX58
+STAT1,Gene,STAT1
+IFNB1,Gene,IFNB1
+TBK1,Gene,TBK1
+EIF2AK2,Gene,EIF2AK2
+IRF9,Gene,IRF9
+OASL,Gene,OASL
+ADAR,Gene,ADAR
+STAT2,Gene,STAT2
+OAS1,Gene,OAS1
+IFIT3,Gene,IFIT3
+MX1,Gene,MX1
+ISG15,Gene,ISG15
+IFIT1,Gene,IFIT1
+CGAS,Gene,CGAS
+SRSF2,Gene,SRSF2
+TET2,Gene,TET2
+SAMHD1,Gene,SAMHD1
+JAK2,Gene,JAK2
+SF3B1,Gene,SF3B1
+ZBP1,Gene,ZBP1
+STING1,Gene,STING1
+TREX1,Gene,TREX1
+R-HSA-8953750,Pathway,Transcriptional Regulation by E2F6
+R-HSA-212300,Pathway,PRC2 methylates histones and DNA
+R-HSA-212165,Pathway,Epigenetic regulation of gene expression
+R-HSA-3214841,Pathway,PKMTs methylate histone lysines
+R-HSA-4839726,Pathway,Chromatin organization
+R-HSA-3247509,Pathway,Chromatin modifying enzymes
+R-HSA-2559580,Pathway,Oxidative Stress Induced Senescence
+R-HSA-9909649,Pathway,Regulation of PD-L1(CD274) transcription
+R-HSA-2559583,Pathway,Cellular Senescence
+R-HSA-74160,Pathway,Gene expression (Transcription)
+R-HSA-8943724,Pathway,Regulation of PTEN gene transcription
+R-HSA-212436,Pathway,Generic Transcription Pathway
+R-HSA-3108232,Pathway,SUMO E3 ligases SUMOylate target proteins
+R-HSA-2990846,Pathway,SUMOylation
+R-HSA-9764725,Pathway,Negative Regulation of CDH1 Gene Transcription
+R-HSA-9764560,Pathway,Regulation of CDH1 Gene Transcription
+R-HSA-418990,Pathway,Adherens junctions interactions
+R-HSA-9710421,Pathway,Defective pyroptosis
+R-HSA-6807070,Pathway,PTEN Regulation
+R-HSA-9764265,Pathway,Regulation of CDH1 Expression and Function
+R-HSA-9764274,Pathway,Regulation of Expression and Function of Type I Classical Cadherins
+R-HSA-421270,Pathway,Cell-cell junction organization
+R-HSA-73857,Pathway,RNA Polymerase II Transcription
+R-HSA-9645723,Pathway,Diseases of programmed cell death
+R-HSA-4551638,Pathway,SUMOylation of chromatin organization proteins
+R-HSA-9759476,Pathway,Regulation of Homotypic Cell-Cell Adhesion
+R-HSA-446728,Pathway,Cell junction organization
+R-HSA-9909648,Pathway,Regulation of PD-L1(CD274) expression
+R-HSA-1500931,Pathway,Cell-Cell communication
+R-HSA-389948,Pathway,Co-inhibition by PD-1
+R-HSA-2262752,Pathway,Cellular responses to stress
+R-HSA-5617472,Pathway,Activation of anterior HOX genes in hindbrain development during early embryogenesis
+R-HSA-5619507,Pathway,Activation of HOX genes during differentiation
+R-HSA-8953897,Pathway,Cellular responses to stimuli
+R-HSA-388841,Pathway,Regulation of T cell activation by CD28 family
+R-HSA-9609690,Pathway,HCMV Early Events
+R-HSA-1257604,Pathway,PIP3 activates AKT signaling
+R-HSA-9609646,Pathway,HCMV Infection
+R-HSA-9006925,Pathway,Intracellular signaling by second messengers
+R-HSA-9824446,Pathway,Viral Infection Pathways
+R-HSA-168256,Pathway,Immune System
+R-HSA-1266738,Pathway,Developmental Biology
+R-HSA-5663205,Pathway,Infectious disease
+R-HSA-1643685,Pathway,Disease
+R-HSA-597592,Pathway,Post-translational protein modification
+R-HSA-1280218,Pathway,Adaptive Immune System
+R-HSA-392499,Pathway,Metabolism of proteins
+R-HSA-4655427,Pathway,SUMOylation of DNA methylation proteins
+R-HSA-8939243,Pathway,RUNX1 interacts with co-factors whose precise effect on RUNX1 targets is not known
+R-HSA-9945266,Pathway,Differentiation of T cells
+R-HSA-8878171,Pathway,Transcriptional regulation by RUNX1
+R-HSA-9976102,Pathway,Differentiation of naive CD4+ T cells to T helper 2 cells (Th2 cells)
+R-HSA-3899300,Pathway,SUMOylation of transcription cofactors
+R-HSA-4570464,Pathway,SUMOylation of RNA binding proteins
+R-HSA-3108214,Pathway,SUMOylation of DNA damage response and repair proteins
+R-HSA-9842860,Pathway,Regulation of endogenous retroelements
+R-HSA-9843940,Pathway,Regulation of endogenous retroelements by KRAB-ZFP proteins
+R-HSA-983231,Pathway,Factors involved in megakaryocyte development and platelet production
+R-HSA-9943965,Pathway,"CHD3, CHD4, CHD5 subfamily"
+R-HSA-427389,Pathway,ERCC6 (CSB) and EHMT2 (G9a) positively regulate rRNA expression
+R-HSA-5250913,Pathway,Positive epigenetic regulation of rRNA expression
+R-HSA-73864,Pathway,RNA Polymerase I Transcription
+R-HSA-9940465,Pathway,ChAHP complex assembly
+R-HSA-9932444,Pathway,ATP-dependent chromatin remodelers
+R-HSA-9937848,Pathway,CHD chromatin remodelers
+R-HSA-73772,Pathway,RNA Polymerase I Promoter Escape
+R-HSA-9845323,Pathway,Regulation of endogenous retroelements by Piwi-interacting RNAs (piRNAs)
+R-HSA-3214858,Pathway,RMTs methylate histone arginines
+R-HSA-3214815,Pathway,HDACs deacetylate histones
+R-HSA-9937850,Pathway,NuRD complex assembly
+R-HSA-9940951,Pathway,Interaction of NuRD complexes with transcription factors
+R-HSA-774815,Pathway,Nucleosome assembly
+R-HSA-606279,Pathway,Deposition of new CENPA-containing nucleosomes at the centromere
+R-HSA-1640170,Pathway,Cell Cycle
+R-HSA-73886,Pathway,Chromosome Maintenance
+R-HSA-3214847,Pathway,HATs acetylate histones
+R-HSA-5633007,Pathway,Regulation of TP53 Activity
+R-HSA-9679506,Pathway,SARS-CoV Infections
+R-HSA-6804758,Pathway,Regulation of TP53 Activity through Acetylation
+R-HSA-9844594,Pathway,Transcriptional regulation of brown and beige adipocyte differentiation by EBF2
+R-HSA-9843743,Pathway,Transcriptional regulation of brown and beige adipocyte differentiation
+R-HSA-73762,Pathway,RNA Polymerase I Transcription Initiation
+R-HSA-9843745,Pathway,Adipogenesis
+R-HSA-9679191,Pathway,Potential therapeutics for SARS
+R-HSA-3700989,Pathway,Transcriptional Regulation by TP53
+R-HSA-69278,Pathway,"Cell Cycle, Mitotic"
+R-HSA-453279,Pathway,Mitotic G1 phase and G1/S transition
+R-HSA-69206,Pathway,G1/S Transition
+R-HSA-69205,Pathway,G1/S-Specific Transcription
+R-HSA-1912408,Pathway,Pre-NOTCH Transcription and Translation
+R-HSA-9616222,Pathway,Transcriptional regulation of granulopoiesis
+R-HSA-1912422,Pathway,Pre-NOTCH Expression and Processing
+R-HSA-157118,Pathway,Signaling by NOTCH
+R-HSA-1538133,Pathway,G0 and Early G1
+R-HSA-9675126,Pathway,Diseases of mitotic cell cycle
+R-HSA-1362277,Pathway,Transcription of E2F targets under negative control by DREAM complex
+R-HSA-69231,Pathway,Cyclin D associated events in G1
+R-HSA-69236,Pathway,G1 Phase
+R-HSA-69202,Pathway,Cyclin E associated events during G1/S transition 
+R-HSA-9659787,Pathway,Aberrant regulation of mitotic G1/S transition in cancer due to RB1 defects
+R-HSA-9661069,Pathway,"Defective binding of RB1 mutants to E2F1,(E2F2, E2F3)"
+R-HSA-69656,Pathway,Cyclin A:Cdk2-associated events at S phase entry
+R-HSA-111448,Pathway,Activation of NOXA and translocation to mitochondria
+R-HSA-1362300,Pathway,Transcription of E2F targets under negative control by p107 (RBL1) and p130 (RBL2) in complex with HDAC1
+R-HSA-2559585,Pathway,Oncogene Induced Senescence
+R-HSA-139915,Pathway,Activation of PUMA and translocation to mitochondria
+R-HSA-9687139,Pathway,Aberrant regulation of mitotic cell cycle due to RB1 defects
+R-HSA-113501,Pathway,Inhibition of replication initiation of damaged DNA by RB1/E2F1
+R-HSA-109581,Pathway,Apoptosis
+R-HSA-6804114,Pathway,TP53 Regulates Transcription of Genes Involved in G2 Cell Cycle Arrest
+R-HSA-5357801,Pathway,Programmed Cell Death
+R-HSA-113510,Pathway,E2F mediated regulation of DNA replication
+R-HSA-69242,Pathway,S Phase
+R-HSA-2173793,Pathway,Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer
+R-HSA-6791312,Pathway,TP53 Regulates Transcription of Cell Cycle Genes
+R-HSA-114452,Pathway,Activation of BH3-only proteins
+R-HSA-9843970,Pathway,Regulation of endogenous retroelements by the Human Silencing Hub (HUSH) complex
+R-HSA-2559582,Pathway,Senescence-Associated Secretory Phenotype (SASP)
+R-HSA-8853884,Pathway,Transcriptional Regulation by VENTX
+R-HSA-6804760,Pathway,Regulation of TP53 Activity through Methylation
+R-HSA-5689603,Pathway,UCH proteinases
+R-HSA-5688426,Pathway,Deubiquitination
+R-HSA-73894,Pathway,DNA Repair
+R-HSA-5693565,Pathway,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
+R-HSA-5693532,Pathway,DNA Double-Strand Break Repair
+R-HSA-5250941,Pathway,Negative epigenetic regulation of rRNA expression
+R-HSA-211000,Pathway,Gene Silencing by RNA
+R-HSA-5334118,Pathway,DNA methylation
+R-HSA-427413,Pathway,NoRC negatively regulates rRNA expression
+R-HSA-2559586,Pathway,DNA Damage/Telomere Stress Induced Senescence
+R-HSA-2299718,Pathway,Condensation of Prophase Chromosomes
+R-HSA-8936459,Pathway,RUNX1 regulates genes involved in megakaryocyte differentiation and platelet function
+R-HSA-427359,Pathway,SIRT1 negatively regulates rRNA expression
+R-HSA-68875,Pathway,Mitotic Prophase
+R-HSA-9816359,Pathway,Maternal to zygotic transition (MZT)
+R-HSA-5689901,Pathway,Metalloprotease DUBs
+R-HSA-73728,Pathway,RNA Polymerase I Promoter Opening
+R-HSA-9670095,Pathway,Inhibition of DNA recombination at telomere
+R-HSA-9821002,Pathway,Chromatin modifications during the maternal to zygotic transition (MZT)
+R-HSA-1221632,Pathway,Meiotic synapsis
+R-HSA-1500620,Pathway,Meiosis
+R-HSA-171306,Pathway,Packaging Of Telomere Ends
+R-HSA-912446,Pathway,Meiotic recombination
+R-HSA-5250924,Pathway,B-WICH complex positively regulates rRNA expression
+R-HSA-1474165,Pathway,Reproduction
+R-HSA-110330,Pathway,Recognition and association of DNA glycosylase with site containing an affected purine
+R-HSA-68616,Pathway,Assembly of the ORC complex at the origin of replication
+R-HSA-110328,Pathway,Recognition and association of DNA glycosylase with site containing an affected pyrimidine
+R-HSA-201722,Pathway,Formation of the beta-catenin:TCF transactivating complex
+R-HSA-110331,Pathway,Cleavage of the damaged purine
+R-HSA-73927,Pathway,Depurination
+R-HSA-5578749,Pathway,Transcriptional regulation by small RNAs
+R-HSA-5625886,Pathway,Activated PKN1 stimulates transcription of AR (androgen receptor) regulated genes KLK2 and KLK3
+R-HSA-110329,Pathway,Cleavage of the damaged pyrimidine 
+R-HSA-73928,Pathway,Depyrimidination
+R-HSA-9918481,Pathway,Dengue Virus-Host Interactions
+R-HSA-9970672,Pathway,FXIIa activates plasma kallikrein-kinin system
+R-HSA-157579,Pathway,Telomere Maintenance
+R-HSA-9917777,Pathway,Epigenetic regulation by WDR5-containing histone modifying complexes
+R-HSA-68886,Pathway,M Phase
+R-HSA-9943411,Pathway,CHD1 and CHD2 subfamily
+R-HSA-73929,Pathway,"Base-Excision Repair, AP Site Formation"
+R-HSA-9841922,Pathway,MLL4 and MLL3 complexes regulate expression of PPARG target genes in adipogenesis and hepatic steatosis
+R-HSA-9851695,Pathway,Epigenetic regulation of adipogenesis genes by MLL3 and MLL4 complexes
+R-HSA-9818564,Pathway,Epigenetic regulation of gene expression by MLL3 and MLL4 complexes
+R-HSA-8939236,Pathway,RUNX1 regulates transcription of genes involved in differentiation of HSCs
+R-HSA-9943962,Pathway,"CHD6, CHD7, CHD8, CHD9 subfamily"
+R-HSA-5625740,Pathway,RHO GTPases activate PKNs
+R-HSA-201681,Pathway,TCF dependent signaling in response to WNT
+R-HSA-5689880,Pathway,Ub-specific processing proteases
+R-HSA-73884,Pathway,Base Excision Repair
+R-HSA-69002,Pathway,DNA Replication Pre-Initiation
+R-HSA-68867,Pathway,Assembly of the pre-replicative complex
+R-HSA-9839923,Pathway,Dengue Virus Infection
+R-HSA-9018519,Pathway,Estrogen-dependent gene expression
+R-HSA-977225,Pathway,Amyloid fiber formation
+R-HSA-69306,Pathway,DNA Replication
+R-HSA-195721,Pathway,Signaling by WNT
+R-HSA-9610379,Pathway,HCMV Late Events
+R-HSA-8939211,Pathway,ESR-mediated signaling
+R-HSA-9006931,Pathway,Signaling by Nuclear Receptors
+R-HSA-195258,Pathway,RHO GTPase Effectors
+R-HSA-9701898,Pathway,STAT3 nuclear events downstream of ALK signaling
+R-HSA-9725370,Pathway,Signaling by ALK fusions and activated point mutants
+R-HSA-9700206,Pathway,Signaling by ALK in cancer
+R-HSA-9725371,Pathway,Nuclear events stimulated by ALK signaling in cancer
+R-HSA-201556,Pathway,Signaling by ALK
+R-HSA-5663202,Pathway,Diseases of signal transduction by growth factor receptors and second messengers
+R-HSA-1280215,Pathway,Cytokine Signaling in Immune system
+R-HSA-9856651,Pathway,MITF-M-dependent gene expression
+R-HSA-449147,Pathway,Signaling by Interleukins
+R-HSA-9730414,Pathway,MITF-M-regulated melanocyte development
+R-HSA-9933947,Pathway,Formation of the non-canonical BAF (ncBAF) complex
+R-HSA-9933937,Pathway,Formation of the canonical BAF (cBAF) complex
+R-HSA-9933939,Pathway,Formation of the polybromo-BAF (pBAF) complex
+R-HSA-9934037,Pathway,Formation of neuronal progenitor and neuronal BAF (npBAF and nBAF)
+R-HSA-9938024,Pathway,Somatic hypermutation of immunoglobulin genes
+R-HSA-9932451,Pathway,SWI/SNF chromatin remodelers
+R-HSA-9022692,Pathway,Regulation of MECP2 expression and activity
+R-HSA-193670,Pathway,p75NTR negatively regulates cell cycle via SC1
+R-HSA-350054,Pathway,Notch-HLH transcription pathway
+R-HSA-2122947,Pathway,NOTCH1 Intracellular Domain Regulates Transcription
+R-HSA-2644606,Pathway,Constitutive Signaling by NOTCH1 PEST Domain Mutants
+R-HSA-2894858,Pathway,Signaling by NOTCH1 HD+PEST Domain Mutants in Cancer
+R-HSA-2894862,Pathway,Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants
+R-HSA-2644602,Pathway,Signaling by NOTCH1 PEST Domain Mutants in Cancer
+R-HSA-2644603,Pathway,Signaling by NOTCH1 in Cancer
+R-HSA-8986944,Pathway,Transcriptional Regulation by MECP2
+R-HSA-1980143,Pathway,Signaling by NOTCH1
+R-HSA-9022699,Pathway,MECP2 regulates neuronal receptors and channels
+R-HSA-73887,Pathway,Death Receptor Signaling
+R-HSA-193704,Pathway,p75 NTR receptor-mediated signalling
+R-HSA-9615017,Pathway,"FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes"
+R-HSA-9614085,Pathway,FOXO-mediated transcription
+R-HSA-9675151,Pathway,Disorders of Developmental Biology
+R-HSA-9825892,Pathway,Regulation of MITF-M-dependent genes involved in cell cycle and proliferation
+R-HSA-9005895,Pathway,Pervasive developmental disorders
+R-HSA-9005891,Pathway,Loss of function of MECP2 in Rett syndrome
+R-HSA-9697154,Pathway,Disorders of Nervous System Development
+R-HSA-9022538,Pathway,Loss of MECP2 binding ability to 5mC-DNA
+R-HSA-9824594,Pathway,Regulation of MITF-M-dependent genes involved in apoptosis
+R-HSA-9022702,Pathway,MECP2 regulates transcription of neuronal ligands
+R-HSA-5601884,Pathway,PIWI-interacting RNA (piRNA) biogenesis
+R-HSA-909733,Pathway,Interferon alpha/beta signaling
+R-HSA-913531,Pathway,Interferon Signaling
+R-HSA-1169410,Pathway,Antimicrobial mechanism of IFN-stimulated genes
+R-HSA-1169408,Pathway,ISG15 antiviral mechanism
+R-HSA-918233,Pathway,TRAF3-dependent IRF activation pathway
+R-HSA-168928,Pathway,DDX58/IFIH1-mediated induction of interferon-alpha/beta
+R-HSA-933541,Pathway,TRAF6 mediated IRF7 activation
+R-HSA-9705671,Pathway,SARS-CoV-2 activates/modulates innate and adaptive immune responses
+R-HSA-9833109,Pathway,Evasion by RSV of host interferon responses
+R-HSA-9820952,Pathway,Respiratory Syncytial Virus Infection Pathway
+R-HSA-9705683,Pathway,SARS-CoV-2-host interactions
+R-HSA-9833110,Pathway,RSV-host interactions
+R-HSA-912694,Pathway,Regulation of IFNA/IFNB signaling
+R-HSA-9694516,Pathway,SARS-CoV-2 Infection
+R-HSA-9833482,Pathway,PKR-mediated signaling
+R-HSA-4755510,Pathway,SUMOylation of immune response proteins
+R-HSA-169131,Pathway,Inhibition of PKR
+R-HSA-168276,Pathway,NS1 Mediated Effects on Host Pathways
+R-HSA-9692916,Pathway,SARS-CoV-1 activates/modulates innate immune responses
+R-HSA-1834949,Pathway,Cytosolic sensors of pathogen-associated DNA 
+R-HSA-3134975,Pathway,Regulation of innate immune responses to cytosolic DNA
+R-HSA-936440,Pathway,Negative regulators of DDX58/IFIH1 signaling
+R-HSA-1606322,Pathway,ZBP1(DAI) mediated induction of type I IFNs
+R-HSA-1834941,Pathway,STING mediated induction of host immune responses
+R-HSA-9692914,Pathway,SARS-CoV-1-host interactions
+R-HSA-877300,Pathway,Interferon gamma signaling
+R-HSA-1606341,Pathway,IRF3 mediated activation of type 1 IFN
+R-HSA-3270619,Pathway,IRF3-mediated induction of type I IFN
+R-HSA-9678108,Pathway,SARS-CoV-1 Infection
+R-HSA-168164,Pathway,Toll Like Receptor 3 (TLR3) Cascade
+R-HSA-937061,Pathway,TRIF (TICAM1)-mediated TLR4 signaling 
+R-HSA-166166,Pathway,MyD88-independent TLR4 cascade 
+R-HSA-9013973,Pathway,TICAM1-dependent activation of IRF3/IRF7
+R-HSA-936964,Pathway,"Activation of IRF3, IRF7 mediated by TBK1, IKKε (IKBKE)"
+R-HSA-166016,Pathway,Toll Like Receptor 4 (TLR4) Cascade
+R-HSA-975155,Pathway,MyD88 dependent cascade initiated on endosome
+R-HSA-168181,Pathway,Toll Like Receptor 7/8 (TLR7/8) Cascade
+R-HSA-168138,Pathway,Toll Like Receptor 9 (TLR9) Cascade
+R-HSA-168898,Pathway,Toll-like Receptor Cascades
+R-HSA-3134973,Pathway,LRR FLII-interacting protein 1 (LRRFIP1) activates type I IFN production
+R-HSA-75072,Pathway,mRNA Editing
+R-HSA-77042,Pathway,Formation of editosomes by ADAR proteins
+R-HSA-75064,Pathway,mRNA Editing: A to I Conversion
+R-HSA-75102,Pathway,C6 deamination of adenosine
+R-HSA-9684482,Pathway,IFIT antiviral response
+R-HSA-8983711,Pathway,OAS antiviral response
+R-HSA-9909505,Pathway,Modulation of host responses by IFN-stimulated genes
+R-HSA-3134963,Pathway,DEx/H-box helicases activate type I IFN and inflammatory cytokines production 
+R-HSA-1059683,Pathway,Interleukin-6 signaling
+R-HSA-6783589,Pathway,Interleukin-6 family signaling
+R-HSA-9942503,Pathway,Differentiation of naive CD4+ T cells to T helper 1 cells (Th1 cells)
+R-HSA-9670439,Pathway,"Signaling by phosphorylated juxtamembrane, extracellular and kinase domain KIT mutants"
+R-HSA-9669938,Pathway,Signaling by KIT in disease
+R-HSA-8854691,Pathway,Interleukin-20 family signaling
+R-HSA-6785807,Pathway,Interleukin-4 and Interleukin-13 signaling
+R-HSA-9020956,Pathway,Interleukin-27 signaling
+R-HSA-877312,Pathway,Regulation of IFNG signaling
+R-HSA-8984722,Pathway,Interleukin-35 Signalling
+R-HSA-9860927,Pathway,"Turbulent (oscillatory, disturbed) flow shear stress activates signaling by PIEZO1 and integrins in endothelial cells"
+R-HSA-1433557,Pathway,Signaling by SCF-KIT
+R-HSA-9705462,Pathway,Inactivation of CSF3 (G-CSF) signaling
+R-HSA-982772,Pathway,Growth hormone receptor signaling
+R-HSA-8878166,Pathway,Transcriptional regulation by RUNX2
+R-HSA-447115,Pathway,Interleukin-12 family signaling
+R-HSA-9674555,Pathway,Signaling by CSF3 (G-CSF)
+R-HSA-9920588,Pathway,Dengue virus activates/modulates innate and adaptive immune responses
+R-HSA-9690722,Pathway,Viral strategies to evade IFIT action
+R-HSA-9827857,Pathway,Specification of primordial germ cells
+R-HSA-9909396,Pathway,Circadian clock
+R-HSA-390466,Pathway,Chaperonin-mediated protein folding
+R-HSA-391251,Pathway,Protein folding
+R-HSA-8940973,Pathway,RUNX2 regulates osteoblast differentiation
+R-HSA-9022537,Pathway,Loss of MECP2 binding ability to the NCoR/SMRT complex
+R-HSA-381340,Pathway,Transcriptional regulation of white adipocyte differentiation
+R-HSA-9772755,Pathway,Formation of WDR5-containing histone-modifying complexes
+R-HSA-2559584,Pathway,Formation of Senescence-Associated Heterochromatin Foci (SAHF)
+R-HSA-69200,Pathway,Phosphorylation of proteins involved in G1/S transition by active Cyclin E:Cdk2 complexes
+R-HSA-9661070,Pathway,Defective translocation of RB1 mutants to the nucleus
+R-HSA-9944997,Pathway,Loss of Function of KMT2D in MLL4 Complex Formation in Kabuki Syndrome
+R-HSA-9944971,Pathway,Loss of Function of KMT2D in Kabuki Syndrome
+R-HSA-9854907,Pathway,Regulation of MITF-M dependent genes involved in metabolism
+R-HSA-933542,Pathway,TRAF6 mediated NF-kB activation
+R-HSA-1810476,Pathway,RIP-mediated NFkB activation via ZBP1
+R-HSA-5603029,Pathway,IkBA variant leads to EDA-ID
+R-HSA-5660668,Pathway,CLEC7A/inflammasome pathway
+R-HSA-9818749,Pathway,Regulation of NFE2L2 gene expression
+R-HSA-445989,Pathway,TAK1-dependent IKK and NF-kappa-B activation  
+R-HSA-448706,Pathway,Interleukin-1 processing
+R-HSA-193692,Pathway,Regulated proteolysis of p75NTR
+R-HSA-9958825,Pathway,Activation of STAT3 by cadherin engagement
+R-HSA-209560,Pathway,NF-kB is activated and signals survival
+R-HSA-5684264,Pathway,MAP3K8 (TPL2)-dependent MAPK1/3 activation
+R-HSA-193639,Pathway,p75NTR signals via NF-kB
+R-HSA-975871,Pathway,MyD88 cascade initiated on plasma membrane
+R-HSA-168142,Pathway,Toll Like Receptor 10 (TLR10) Cascade
+R-HSA-168176,Pathway,Toll Like Receptor 5 (TLR5) Cascade
+R-HSA-5602358,Pathway,Diseases associated with the TLR signaling cascade
+R-HSA-9020702,Pathway,Interleukin-1 signaling
+R-HSA-844456,Pathway,The NLRP3 inflammasome
+R-HSA-975138,Pathway,TRAF6 mediated induction of NFkB and MAP kinases upon TLR7/8 or 9 activation
+R-HSA-5260271,Pathway,Diseases of Immune System
+R-HSA-9755511,Pathway,KEAP1-NFE2L2 pathway
+R-HSA-1169091,Pathway,Activation of NF-kappaB in B cells
+R-HSA-446652,Pathway,Interleukin-1 family signaling
+R-HSA-166058,Pathway,MyD88:MAL(TIRAP) cascade initiated on plasma membrane
+R-HSA-168188,Pathway,Toll Like Receptor TLR6:TLR2 Cascade
+R-HSA-5621575,Pathway,CD209 (DC-SIGN) signaling
+R-HSA-168179,Pathway,Toll Like Receptor TLR1:TLR2 Cascade
+R-HSA-181438,Pathway,Toll Like Receptor 2 (TLR2) Cascade
+R-HSA-622312,Pathway,Inflammasomes
+R-HSA-112411,Pathway,MAPK1 (ERK2) activation
+R-HSA-110056,Pathway,MAPK3 (ERK1) activation
+R-HSA-1170546,Pathway,Prolactin receptor signaling
+R-HSA-112409,Pathway,RAF-independent MAPK1/3 activation
+R-HSA-3214842,Pathway,HDMs demethylate histones
+R-HSA-9839394,Pathway,TGFBR3 expression
+R-HSA-9819196,Pathway,Zygotic genome activation (ZGA)
+R-HSA-6804754,Pathway,Regulation of TP53 Expression
+R-HSA-5689896,Pathway,Ovarian tumor domain proteases
+R-HSA-6806003,Pathway,Regulation of TP53 Expression and Degradation
+R-HSA-9723905,Pathway,Loss of function of TP53 in cancer due to loss of tetramerization ability
+R-HSA-9723907,Pathway,Loss of Function of TP53 in Cancer
+R-HSA-9734009,Pathway,Defective Intrinsic Pathway for Apoptosis
+R-HSA-5620971,Pathway,Pyroptosis
+R-HSA-6804756,Pathway,Regulation of TP53 Activity through Phosphorylation
+R-HSA-6804757,Pathway,Regulation of TP53 Degradation
+R-HSA-6804116,Pathway,TP53 Regulates Transcription of Genes Involved in G1 Cell Cycle Arrest
+R-HSA-69895,Pathway,Transcriptional  activation of  cell cycle inhibitor p21 
+R-HSA-69560,Pathway,Transcriptional activation of p53 responsive genes  
+R-HSA-9988426,Pathway,Negative transcriptional regulation of urea cycle enzymes
+R-HSA-8941855,Pathway,RUNX3 regulates CDKN1A transcription
+R-HSA-69615,Pathway,G1/S DNA Damage Checkpoints
+R-HSA-6783783,Pathway,Interleukin-10 signaling
+R-HSA-2995383,Pathway,Initiation of Nuclear Envelope (NE) Reformation
+R-HSA-352238,Pathway,Breakdown of the nuclear lamina
+R-HSA-75153,Pathway,Apoptotic execution phase
+R-HSA-4419969,Pathway,Depolymerization of the Nuclear Lamina
+R-HSA-2995410,Pathway,Nuclear Envelope (NE) Reassembly
+R-HSA-2980766,Pathway,Nuclear Envelope Breakdown
+R-HSA-8863678,Pathway,Neurodegenerative Diseases
+R-HSA-8862803,Pathway,Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models
+R-HSA-68911,Pathway,G2 Phase
+R-HSA-8849470,Pathway,PTK6 Regulates Cell Cycle
+R-HSA-140342,Pathway,Apoptosis induced DNA fragmentation
+R-HSA-201688,Pathway,WNT mediated activation of DVL
+R-HSA-8934903,Pathway,Receptor Mediated Mitophagy
+R-HSA-2514853,Pathway,Condensation of Prometaphase Chromosomes
+R-HSA-9931530,Pathway,Phosphorylation and nuclear translocation of the CRY:PER:kinase complex
+R-HSA-9768727,Pathway,Regulation of CDH1 posttranslational processing and trafficking to plasma membrane
+R-HSA-5205647,Pathway,Mitophagy
+R-HSA-9931529,Pathway,Phosphorylation and nuclear translocation of BMAL1 (ARNTL) and CLOCK
+R-HSA-445144,Pathway,Signal transduction by L1
+R-HSA-9828806,Pathway,Maturation of hRSV A proteins
+R-HSA-6814122,Pathway,Cooperation of PDCL (PhLP1) and TRiC/CCT in G-protein beta folding
+R-HSA-9820965,Pathway,"Respiratory syncytial virus (RSV) genome replication, transcription and translation"
+R-HSA-9929491,Pathway,SPOP-mediated proteasomal degradation of PD-L1(CD274)
+R-HSA-1483191,Pathway,Synthesis of PC
+R-HSA-9909615,Pathway,Regulation of PD-L1(CD274) Post-translational modification
+R-HSA-8948751,Pathway,Regulation of PTEN stability and activity
+R-HSA-9663891,Pathway,Selective autophagy
+R-HSA-5357786,Pathway,TNFR1-induced proapoptotic signaling
+R-HSA-5626978,Pathway,TNFR1-mediated ceramide production
+R-HSA-9670621,Pathway,Defective Inhibition of DNA Recombination at Telomere
+R-HSA-9673013,Pathway,Diseases of Telomere Maintenance
+R-HSA-9006821,Pathway,Alternative Lengthening of Telomeres (ALT)
+R-HSA-9670615,Pathway,Defective Inhibition of DNA Recombination at Telomere Due to ATRX Mutations
+R-HSA-9670613,Pathway,Defective Inhibition of DNA Recombination at Telomere Due to DAXX Mutations
+R-HSA-2644607,Pathway,Loss of Function of FBXW7 in Cancer and NOTCH1 Signaling
+R-HSA-2644605,Pathway,FBXW7 Mutants and NOTCH1 in Cancer
+R-HSA-933543,Pathway,NF-kB activation through FADD/RIP-1 pathway mediated by caspase-8 and -10
+R-HSA-9820865,Pathway,Z-decay: degradation of maternal mRNAs by zygotically expressed factors
+R-HSA-429947,Pathway,Deadenylation of mRNA
+R-HSA-3249367,Pathway,STAT6-mediated induction of chemokines
+R-HSA-180689,Pathway,APOBEC3G mediated resistance to HIV-1 infection
+R-HSA-3248023,Pathway,Regulation by TREX1
+R-HSA-75094,Pathway,Formation of the Editosome
+R-HSA-72200,Pathway,mRNA Editing: C to U Conversion
+CPX-15209,Complex,RBM47:APOBEC3DE:HNRNPDL:HNRNPR:SYNCRIP:HNRNPCL1:DUSP11:KHDRBS3:PTBP3:HNRNPC:HNRNPA1:PABPC4L:HNRNPL:HNRNPA2B1:RBMS1:HNRNPH3:RBMX:MATR3:HNRNPA3:ADAR:HNRNPK:ADARB1:KHDRBS1:ILF2:ILF3:ELAVL2:MKRN3:HNRNPA0:PABPC4:HNRNPD:ELAVL3:PUM1:RBMS2:ELAVL1:HNRNPUL2:PABPC1L:
+CPX-11736,Complex,DDX3Y:ADAR
+CPX-15656,Complex,ADAR:ADARB1:ZNF354B
+CPX-13202,Complex,DDX3Y:ADAR:ADARB1
+CPX-19812,Complex,GTPBP6:PTTG1:SRPRA:RPS27:ADAR:EEFSEC:RPL23:RPL38:RPP30:NSUN2:SKIC2:PTPN14:DECR1:UTP14C:MRM1:SKIC3:RPS27L:TRMT10C:CLASP1:REXO5:TRNT1:HSD17B10:WDR6:PNO1:MTPAP:ABCF2
+CPX-23518,Complex,CCL4:ADAR:USP38:DMAC2L
+CPX-2330,Complex,"Polycomb repressive complex 2.2, EZH1-RBBP4 variant"
+CPX-2209,Complex,"Polycomb repressive complex 2.2, EZH2-RBBP4 variant"
+CPX-2212,Complex,"Polycomb repressive complex 2.2, EZH1-RBBP7 variant"
+CPX-2213,Complex,"Polycomb repressive complex 2.2, EZH2-RBBP7 variant"
+CPX-12294,Complex,EPOP:CDK2AP1:HAT1:TNRC18:PHF1:KDM1A:SIN3B:ZNF217:SAP30:EED:MTA2:MBD3:SMARCA1:ARID4A:KDM5A:TCF7:CTBP2:FOXK1:FOXK2:MXD1:RBBP4:BPTF:CHD3:MTA1:HDAC1:NPAT:GSE1:CHD4:SHPRH:SUZ12:EZH2:RBBP7:SKIDA1:ZNF423:ARID4B:BRMS1L:PHF19:PWWP2B:AEBP2:ZNF704:EMSY:GATAD2A:TGIF2L
+CPX-12069,Complex,EPOP:PHF1:EED:SUZ12:EZH2:SKIDA1:PHF19:MAMDC4:AEBP2:EZH1:JARID2:LCOR:MTF2
+CPX-13465,Complex,EPOP:PHF1:EED:IL1A:SMARCA1:BPTF:SUZ12:EZH2:SKIDA1:PHF19:MAMDC4:AEBP2:EZH1:JARID2:LCOR:BAZ2A:MTF2
+CPX-12473,Complex,EPOP:EED:SUZ12:EZH2:SKIDA1:PHF19:AEBP2:EZH1:JARID2:MTF2
+CPX-21474,Complex,EPOP:TERT:HAT1:TNRC18:PHF1:SIN3B:SAP30:EED:IL1A:SMARCA1:ARID4A:KDM5A:FOXK1:FOXK2:MXD1:RBBP4:BPTF:SHPRH:SUZ12:EZH2:RBBP7:SKIDA1:ARID4B:BRMS1L:PHF19:PWWP2B:AEBP2:ZNF704:EMSY:TGIF2LX:CCDC71:CHD5:GATAD1:EZH1:JARID2:LCOR:PHF12:SIN3A:TGIF2:SAP130:ING2:SUDS3:SAP3
+CPX-16442,Complex,ZNF275:H2AB1:H2AB2:APOBEC3A:ZNF335
+CPX-20069,Complex,H2AB1:APOBEC3A
+CPX-16678,Complex,H2AB1:APOBEC3A:NAP1L1:TOP2B:NOL9:WDR18:SENP3:LAS1L
+CPX-22276,Complex,H2AB1:APOBEC3A:NOL9
+CPX-19433,Complex,NUDT3:SERPINB2:APOBEC3A:SIK1:KLF16:SIK2
+CPX-25343,Complex,F12:AMBP:CFI:C8A:C8G:SERPINF2:C6:APOBEC3A:CFHR2:GSTM5:CFHR1:KYNU:PFKFB3:STEAP4:ABCA12:PDLIM2:FERMT1:PRSS27
+CPX-21554,Complex,MX1:APOBEC3A:SIK1:SIK2
+CPX-21846,Complex,F12:AMBP:CFI:C8A:C8G:SERPINF2:C6:APOBEC3A:CFHR2:MMP12:GSTM5:CFHR1:KYNU:PFKFB3:STEAP4:CYB5R2:ABCA12:STING1:PDLIM2:FERMT1:PRSS27
+CPX-15658,Complex,CASC3:PABPC4L:ELAVL2:ELAVL3:RBM45:PUM2:PAIP2:APOBEC3B:PAIP2B
+CPX-19697,Complex,SYNCRIP:DUSP11:HNRNPL:MATR3:SUGP2:APOBEC3B
+CPX-16594,Complex,HNRNPR:HNRNPL:HNRNPH3:RBMX:HNRNPA3:HNRNPA0:TNK1:HNRNPD:ZNF326:HNRNPAB:FAM120A:APOBEC3B:RALY
+CPX-19505,Complex,PABPN1:APOBEC3B
+CPX-20369,Complex,CD19:IREB2:FASTK:PABPC5:APOBEC3B
+CPX-25395,Complex,RBM47:APOBEC3DE:CASC3:RBFOX2:HNRNPC:HELZ:MATR3:CLK2:TRA2B:NCBP1:ELAVL2:PABPC4:PUM1:RBMS2:PABPN1:RBM45:APOBEC3F:SUGP2:GSPT2:PUM2:LARP4B:UPF1:YTHDC1:ATXN2:PAIP2:PAIP1:MOV10:ZCCHC3:APOBEC3B:MKRN1:PAIP2B
+CPX-21686,Complex,HNRNPDL:HNRNPA1:HNRNPA2B1:HNRNPH3:HNRNPH1:FUS:YLPM1:HNRNPA3:HNRNPF:HNRNPH2:HNRNPK:RBM6:RBM3:KHDRBS1:HNRNPA0:HNRNPD:SAFB2:FASTK:SAFB:HNRNPA1L2:CCDC70:RBM12B:PPHLN1:TAF15:RBMXL1:RBM14:HNRNPAB:PRMT1:HNRNPUL1:NCOA5:PRMT8:SLTM:APOBEC3B
+CPX-21171,Complex,HNRNPDL:HNRNPR:SYNCRIP:KHDRBS3:HNRNPA1:HNRNPL:HNRNPA2B1:HNRNPH3:RBMX:HNRNPA3:HNRNPK:KHDRBS1:ILF3:HNRNPA0:TNK1:HNRNPD:SAFB2:SAFB:ELAVL1:HNRNPA1L2:ZNF326:RBMXL1:RBM14:HNRNPAB:HNRNPUL1:FAM120A:APOBEC3B:RALY
+CPX-22923,Complex,HNRNPDL:HNRNPA0:HNRNPAB:FAM120A:APOBEC3B
+CPX-10821,Complex,ZNF44:TRIB3:APOBEC3C:ZNF490
+CPX-25641,Complex,TRIB3:APOBEC3C
+CPX-23521,Complex,ZNF16:RPL3:RPL15:RPL10A:URB2:TARBP2:ZBTB41:ZNF770:NOL8:XRN1:WDR36:WDR89:GRWD1:C8orf33:APOBEC3C:DDX52:RRP15
+CPX-24347,Complex,WDR89:TRIB3:APOBEC3C
+CPX-26069,Complex,KIF3C:UNC13B:PJA2:SPINT2:RGS14:DNAJA2:PSMD10:BAG2:VIM:PTPRE:NES:CLK3:RCAN1:TRIM32:PLEC:PKN2:HSDL1:RWDD4:THADA:TOM1L2:PHLDB2:RBM23:RB1CC1:PGM2:USP47:ALS2:CARD10:ZYG11B:TANC2:DISC1:APOBEC3C:EXD2:SCN3B:C19orf25:WDR37:DTNA
+CPX-12350,Complex,CASC3:CSDE1:CHRM4:PABPC4L:GSPT1:RBMS1:IREB2:ETF1:NCBP1:MKRN3:PABPC1L:APOBEC3F:GSPT2:PUM2:LARP4B:PABPC5:PAIP2:MKRN2:PAIP1:ZCCHC3:MKRN1:PAIP2B
+CPX-11787,Complex,MRPL45:RBM47:PTCD1:MRPL33:TRUB2:MRPL3:MRPL19:MRPL12:MRPL28:MRPL49:MRPL58:RBMS2:MRPL23:MRPL51:MRPL2:RPUSD3:MRPL54:MRPL14:RBMS3:MRPL21:MRPL55:MRPL10:MRPL52:RBM45:APOBEC3F:MCAT:MRPL41:MRPL50:MRPL43:GADD45GIP1:PUM2:MRPL30:MRPL24:RPUSD4:MSI2:MTERF3:MALSU1:MRPL5
+CPX-14316,Complex,NCBP1:PABPC1L:APOBEC3F:MKRN2:PAIP1:MKRN1
+CPX-19504,Complex,CLK3:RNPS1:APOBEC3F:YTHDC1
+CPX-22025,Complex,MRPL45:RBM47:PTCD1:MRPL33:TRUB2:MRPL3:MRPL19:MRPL12:MKRN3:MRPL28:MRPL49:MRPL58:RBMS2:MRPL23:MRPL51:MRPL2:RPUSD3:MRPL54:MRPL14:RBMS3:MRPL21:MRPL55:MRPL10:MRPL52:RBM45:APOBEC3F:MCAT:MRPL41:SUPV3L1:MRPL50:MRPL43:GADD45GIP1:PUM2:MRPL30:MRPL24:RPUSD4:MSI2:PABPC
+CPX-22542,Complex,MKRN3:PABPC1L:APOBEC3F:GSPT2:PUM2:LARP4B:PAIP2:MKRN2:PAIP1:MKRN1
+CPX-22564,Complex,MKRN3:PABPC1L:APOBEC3F:PUM2:LARP4B:PAIP2:MKRN2:PAIP1:MKRN1
+CPX-25404,Complex,SRSF10:CLK1:CLK2:CLK3:TRA2B:NCBP1:SRSF9:PPIG:TRA2A:SRSF7:FIP1L1:RBBP6:APOBEC3F:SNIP1:SRSF12:YTHDC1:SPEN:SRSF8:SRRT:MKRN1:LUC7L2
+CPX-25313,Complex,SRSF10:CLK1:CLK3:SRSF7:FIP1L1:APOBEC3F:SNIP1:YTHDC1:SPEN:SRSF8:MKRN1
+CPX-12551,Complex,YPEL1:DEDD:FBXO21:EEF2:TYRP1:CCNF:SKP1:ZXDB:FBXO31:FBXW9:FBXO42:FBXO38:PTAR1:FBXO33:FBXL16:TTC9C:FBXO36:FBXO22:FBH1:KDM2B:FBXO30:ARB2A:GJA10:FBXL8:FBXL20:FBXL18:FBXL15:FBXO44:ENPP5:FBXO9:FBXL4:FBXL2:FBXO4:FBXW2:KDM2A
+CPX-16291,Complex,DEDD:FBXO21:EEF2:CCNF:SKP1:ZXDB:CUL1:FBXO31:FBXW9:FBXO38:FBXL16:TTC9C:FBXO36:FBXO22:FBH1:KDM2B:ARB2A:FBXL8:FBXL18:FBXL15:FBXO44:FBXO9:FBXL4:FBXO4:KDM2A
+CPX-13677,Complex,ZXDB:FBXO38:ARB2A
+CPX-17132,Complex,ZXDB:FBXO38:TTC9C:FBH1:ARB2A
+CPX-20348,Complex,ZXDB:FBXO38:FBXL14:TTC9C:FBH1:ARB2A:SUGT1
+CPX-23597,Complex,ZXDB:FBXO38:FBXO30:ARB2A
+CPX-414,Complex,PR-DUB complex
+CPX-12806,Complex,ASXL2:ASXL1:KDM1B:BAP1
+CPX-17709,Complex,ASXL2:ASXL1:KDM1B:BAP1:NSD3:MBD5
+CPX-21552,Complex,ASXL2:ASXL1:KDM1B:BAP1:NSD3:ASXL3:MBD5
+CPX-15249,Complex,SETDB1:ATF7IP2:ATF7IP
+CPX-15640,Complex,SETDB1:ATF7IP
+CPX-15534,Complex,SETDB1:ATF7IP:ARL14EP
+CPX-20509,Complex,PRC1:HSF2BP:SETDB1:ATF7IP2:ATF7IP:ARL14EP:STRA6:CDY2A
+CPX-24419,Complex,SETDB1:ATF7IP:ARL14EP:CDY2A
+CPX-26388,Complex,DAXX-ATRX histone H3-specific chaperone complex
+CPX-12279,Complex,HAT1:ATRX:NASP:MCM2:HIRA:H4C16:H3C1:H3-3A:CACNA1D:CHAF1A:CHAF1B:NPAT:H3-7:MMS22L:UBN2:CDAN1:UBR7:IPO4:TONSL:UBN1:ASF1B:TLK1:ASF1A:CDIN1:CABIN1
+CPX-11929,Complex,ATRX:CACNA1D:CHAF1A:CHAF1B
+CPX-14140,Complex,HAT1:ATRX:NASP:H4C16:H3-3A:CHAF1A:NPAT:H3-7
+CPX-10935,Complex,TCAP:CBX5:ATRX:CACNA1D:CHAF1A:CHAF1B:SUV39H2
+CPX-16991,Complex,HAT1:ATRX:NASP:HIRA:H4C16:H3-3A:NPAT:PAN2:PAN3:H3-7:MMS22L:UBN2:CDAN1:IPO4:TONSL:UBN1:ASF1B:TLK1:ASF1A:CDIN1:CABIN1
+CPX-20220,Complex,ATRX:NASP:H4C16:H3C1:H3-3A:CHAF1A:H3-7
+CPX-18903,Complex,TCAP:CBX5:ATRX:CHAF1A:SUV39H2
+CPX-25359,Complex,WIZ:CBX5:ATRX:CBX1:CACNA1D:CHAF1A:CHAF1B:RLF:CBX3:ZMYM3:FAM78B:ZMYM4:POGZ:CPLX4:ZBTB46:SHLD2:MIER2:CDYL2:CCDC71L:ZNF280C:ZNF428:ZNF462:CHAMP1:EHMT2:RSF1:ADNP:ZNF644:SUV39H2:EHMT1:ZNF581:GAGE8:MAD2L2
+CPX-21706,Complex,HAT1:ATRX:NASP:HIRA:H4C16:H3C1:H3-3A:CHAF1A:NPAT:PAN2:PAN3:H3-7:MMS22L:UBN2:CDAN1:UBR7:IPO4:TONSL:UBN1:ASF1B:TLK1:ASF1A:CDIN1:CABIN1
+CPX-7581,Complex,"Non-canonical polycomb repressive complex 1.5, RING1-RYBP-CKIIA2 variant"
+CPX-7582,Complex,"Non-canonical polycomb repressive complex 1.5, RING1-RYBP-CKIIA1-A2 variant"
+CPX-7583,Complex,"Non-canonical polycomb repressive complex 1.5, RING1-RYBP-CKIIA1 variant"
+CPX-7584,Complex,"Non-canonical polycomb repressive complex 1.5, RING1-YAF2-CKIIA2 variant"
+CPX-7585,Complex,"Non-canonical polycomb repressive complex 1.5, RING1-YAF2-CKIIA1-A2 variant"
+CPX-7586,Complex,"Non-canonical polycomb repressive complex 1.5, RING1-YAF2-CKIIA1 variant"
+CPX-7587,Complex,"Non-canonical polycomb repressive complex 1.5, RING2-RYBP-CKIIA2 variant"
+CPX-7588,Complex,"Non-canonical polycomb repressive complex 1.5, RING2-RYBP-CKIIA1-A2 variant"
+CPX-7589,Complex,"Non-canonical polycomb repressive complex 1.5, RING2-RYBP-CKIIA1 variant"
+CPX-7590,Complex,"Non-canonical polycomb repressive complex 1.5, RING2-YAF2-CKIIA2 variant"
+CPX-7591,Complex,"Non-canonical polycomb repressive complex 1.5, RING2-YAF2-CKIIA1-A2 variant"
+CPX-7592,Complex,"Non-canonical polycomb repressive complex 1.5, RING2-YAF2-CKIIA1 variant"
+CPX-2283,Complex,"Non-canonical polycomb repressive complex 1.3, RING1-RYBP-CKIIA2 variant"
+CPX-2285,Complex,"Non-canonical polycomb repressive complex 1.3, RING1-RYBP-CKIIA1-A2 variant"
+CPX-2286,Complex,"Non-canonical polycomb repressive complex 1.3, RING1-RYBP-CKIIA1 variant"
+CPX-2288,Complex,"Non-canonical polycomb repressive complex 1.3, RING1-YAF2-CKIIA2 variant"
+CPX-2289,Complex,"Non-canonical polycomb repressive complex 1.3, RING1-YAF2-CKIIA1-A2 variant"
+CPX-2290,Complex,"Non-canonical polycomb repressive complex 1.3, RING1-YAF2-CKIIA1 variant"
+CPX-2291,Complex,"Non-canonical polycomb repressive complex 1.3, RING2-RYBP-CKIIA2 variant"
+CPX-2292,Complex,"Non-canonical polycomb repressive complex 1.3, RING2-RYBP-CKIIA1-A2 variant"
+CPX-2295,Complex,"Non-canonical polycomb repressive complex 1.3, RING2-RYBP-CKIIA1 variant"
+CPX-2296,Complex,"Non-canonical polycomb repressive complex 1.3, RING2-YAF2-CKIIA2 variant"
+CPX-2297,Complex,"Non-canonical polycomb repressive complex 1.3, RING2-YAF2-CKIIA1-A2 variant"
+CPX-2298,Complex,"Non-canonical polycomb repressive complex 1.3, RING2-YAF2-CKIIA1 variant"
+CPX-12792,Complex,SOWAHB:DDTL:LZTS3:DIAPH1:DCAF7:DYRK1A:LPIN1:SOWAHA:PCGF3:SOWAHC:CEFIP:PCGF5:RNF169:AUTS2:LPIN2:ZNF503:FANCD2OS:LPIN3:HIPK2:C16orf95:ZNF703:FBRS:FBRSL1:FAM53C:DYRK1B:RAD54L2
+CPX-13832,Complex,RING1:PCGF3:KDM2B:AUTS2:FBRS:FBRSL1
+CPX-16563,Complex,SOWAHB:DDTL:LZTS3:DIAPH1:DCAF7:TROAP:DYRK1A:LPIN1:SOWAHA:PCGF3:SOWAHC:CEFIP:PCGF5:RNF169:AUTS2:LPIN2:ZNF503:FANCD2OS:LPIN3:HIPK2:C16orf95:ZNF703:FBRS:FBRSL1:FAM53C:DYRK1B:RAD54L2
+CPX-22473,Complex,CSNK2A2:CSNK2B:CSNK2A1:RNF111:PCGF5:BHLHE23:AUTS2:HIRIP3:FBRSL1:PHRF1
+CPX-20917,Complex,CBX4:CBX7:CSNK2A2:BMI1:PCGF2:CSNK2B:CSNK2A1:PHC1:RING1:CBX2:PCGF3:BCORL1:SFMBT2:BCOR:RNF111:PCGF5:PHC2:YAF2:RYBP:PHC3:BHLHE23:KDM2B:MORC4:AUTS2:USP7:SCMH1:RNF2:PCGF1:HIRIP3:PCGF6:ACTL8:FBRS:CBX8:FBRSL1:PHRF1:SCML1:SCML2
+CPX-19444,Complex,CBX4:FCHO1:E2F6:CBX7:CSNK2A2:BMI1:PCGF2:BCL6:MAX:CSNK2B:CSNK2A1:PHC1:E2F1:RING1:TFDP1:TFDP2:CBX2:PCGF3:BCORL1:NKAPL:SFMBT2:WBP2NL:BCOR:RNF111:PCGF5:MGA:PHC2:YAF2:RYBP:PHC3:KDM2B:MORC4:AUTS2:ZNF592:USP7:L3MBTL2:SCMH1:RNF2:HSD17B14:PCGF1:HIRIP3:PCGF6:ACTL8:F
+CPX-25583,Complex,LRCH4:LRCH2:ISM2:DOCK8:AUTS2:DOCK6:LRCH3:DOCK7:LRCH1
+CPX-26041,Complex,RING1:PCGF3:BCOR:PCGF5:YAF2:RYBP:BHLHE22:RP9:AUTS2:L3MBTL2:ACBD6:PCGF1:FBRS:FBRSL1:GPATCH2:GPATCH2L:RPS6KA6
+CPX-26078,Complex,C1orf226:AP3B1:CDC7:SAP18:ELL2:FCHO1:CHD1:ARHGEF10:SYNJ1:PIP5K1C:GPC4:ZRANB2:FGF1:FGF2:IL7R:ERCC3:ACP1:GTF2H1:CBX5:MNAT1:ELL:MAX:CSNK2A1:GTF2I:MLLT1:KMT2A:TGFBR3:RING1:TMEM94:DHRS2:GTF2H3:PCGF3:CHD9:RNF187:PPRC1:RAB12:JMJD6:SHQ1:ANKRD11:BCOR:RNF111:KANSL1:
+CPX-26249,Complex,PCGF5:RP9:AUTS2:ACBD6:FBRSL1:GPATCH2:GPATCH2L:RPS6KA6
+CPX-11954,Complex,PPM1G:MACROH2A1:H2AC4:RBP1:H2AZ1:H2BC17:MCM4:MCM2:H4C16:H2BC10:H3C1:SSRP1:MCM6:ARID5B:H2AC20:GON4L:H3-7:C16orf87:MMS22L:MIER3:MIER1:H2BC26:BAHD1:H2BC1:TONSL:CRAMP1:H2BC13:H2AJ:ANP32E:MACROH2A2:CFDP1:CDYL:SUPT16H
+CPX-15465,Complex,RBP1:ARID5B:GON4L:MIER3:H2BC26:BAHD1
+CPX-15087,Complex,H2AZ1:BAHD1
+CPX-14077,Complex,RBP1:ARID5B:MIER3:MIER1:H2BC26:BAHD1:H2BC1:H2BC13:CDYL
+CPX-12936,Complex,ZNHIT1:H2AZ1:SRCAP:BAHD1:H2BC1
+CPX-16855,Complex,ZNHIT1:RBP1:H2AZ1:SRCAP:H2BC26:BAHD1:H2BC1:ANP32E:CFDP1
+CPX-18052,Complex,PPM1G:MCM4:MCM6:ARID5B:GON4L:C16orf87:MIER3:MIER1:BAHD1:H2BC1:CRAMP1:H2AJ:ANP32E:MACROH2A2:CDYL
+CPX-19424,Complex,ZNHIT1:TNFSF13:YEATS4:ACTL6A:MYC:RBP1:H2AZ1:MYCL:NR2C1:MBTD1:MORF4L2:VPS72:EPC2:FOXR1:FOXR2:SRCAP:JAZF1:PALB2:H2BC26:NOPCHAP1:BAHD1:KAT5:H2BC1:MRFAP1L1:EP400:ANP32E:DPCD:ACTR6:BRD8:EPC1:MEAF6:DMAP1:MRGBP:ING3:MORF4L1:CFDP1:RUVBL2:RUVBL1:TRRAP:MRFAP1
+CPX-21157,Complex,RBP1:H2BC26:BAHD1:H2BC1:ANP32E:CFDP1
+CPX-21422,Complex,RBP1:ARID5B:GON4L:C16orf87:MIER3:MIER1:H2BC26:BAHD1:CDYL
+CPX-23586,Complex,PPM1G:ZNHIT1:ACTL6B:YEATS4:ACTL6A:MYC:H2AZ1:MYCL:MCM4:KRT2:MCM2:MBTD1:MCM6:ARID5B:MORF4L2:VPS72:GON4L:EPC2:C16orf87:FOXR1:FOXR2:MMS22L:SRCAP:MIER3:JAZF1:PALB2:MIER1:H2BC26:NOPCHAP1:BAHD1:KAT6B:ING5:KAT5:H2BC1:TONSL:EHMT2:EP400:CRAMP1:ANP32E:DPCD:ACTR6:BRD8
+CPX-22322,Complex,C16orf87:MIER1:BAHD1:CDYL
+CPX-24489,Complex,PPM1G:RBP1:H2AZ1:MCM4:MCM2:H2BC10:SSRP1:MCM6:ARID5B:GON4L:C16orf87:MIER3:MIER1:H2BC26:BAHD1:H2BC1:TONSL:CRAMP1:H2BC13:H2AJ:ANP32E:MACROH2A2:CDYL
+CPX-785,Complex,CHRAC chromatin remodeling complex
+CPX-434,Complex,ACF chromatin remodeling complex
+CPX-15229,Complex,SUN1:SYNE2:BAZ1A:CAPN6
+CPX-15940,Complex,FGD6:CHRAC1:BAZ1A:CAPN6
+CPX-16874,Complex,BAZ1A:CAPN6
+CPX-22771,Complex,MECP2:NMNAT1:BAZ1A:NLE1
+CPX-20178,Complex,SUN1:BAZ1A:CAPN6
+CPX-25195,Complex,NRM:SYNE2:BAZ1A:CAPN6
+CPX-23294,Complex,MECP2:RABL6:BAZ1A:CAPN6
+CPX-432,Complex,NoRC chromatin remodelling complex
+CPX-22192,Complex,AFP:HIBADH:KBTBD8:DCUN1D4:ADCY10:ZNF692:BAZ2A
+CPX-24958,Complex,AFP:HIBADH:ASTE1:DCUN1D4:ADCY10:ZNF692:BAZ2A
+CPX-23762,Complex,KBTBD8:ADCY10:ZNF692:BAZ2A
+CPX-24162,Complex,AFP:HIBADH:ASTE1:KBTBD8:DCUN1D4:ADCY10:ZNF692:BAZ2A
+CPX-13765,Complex,GRAP2:BCR:USP8:GAB1:PTPN23:BAZ2B:GAB2:ZSCAN21
+CPX-21196,Complex,VPS37C:UMAD1:CHMP2A:PSPN:PDCD6:IST1:CHMP1B:VPS37A:PDCD6IP:MITD1:MVB12A:TSG101:CHMP4A:GLIS2:PTPN23:CHMP4B:MVB12B:VPS37B:CHMP1A:TAS2R7:UBAP1:CHMP5:SPAST:BAZ2B:VPS28:CHMP2B:VPS9D1:CHMP3:CD2AP:CAPN7
+CPX-7561,Complex,"Non-canonical polycomb repressive complex 1.1, RING1-PCGF1-YAF2 variant"
+CPX-2272,Complex,"Non-canonical polycomb repressive complex 1.1, RING2-PCGF1-YAF2 variant"
+CPX-2354,Complex,"Non-canonical polycomb repressive complex 1.1, RING1-PCGF1-RYBP variant"
+CPX-11547,Complex,CBX4:CBX7:BCOR:PHC2:PHC3:RNF2:CBX8
+CPX-19210,Complex,RING1:PCGF3:BCORL1:BCOR:YAF2:RYBP:KDM2B:RNF2:PCGF6:FBRS:CBX8
+CPX-22722,Complex,RING1:PCGF3:BCORL1:BCOR:YAF2:RYBP:KDM2B:MORC4:RNF2:PCGF1:PCGF6:ACTL8:FBRS
+CPX-19398,Complex,CBX4:RING1:PCGF3:BCORL1:BCOR:YAF2:KDM2B:RNF2:FBRS:CBX8
+CPX-2627,Complex,"Non-canonical polycomb repressive complex 1.1, RING2-PCGF1-RYBP variant"
+CPX-20884,Complex,SMNDC1:BCORL1
+CPX-21208,Complex,BCORL1:YAF2:RYBP:MORC4
+CPX-26297,Complex,Negative regulation of RNA biosynthetic process
+CPX-26325,Complex,Nuclear transcriptional speckle
+CPX-15461,Complex,BEND3:RBPJL
+CPX-13862,Complex,ZNF785:ZNF688:KDM5C:CYP24A1:GTF3C1:BEND3:GTF3C2:ZNF764:SMARCAD1:GTF3C4:PNMA2:PDZRN3:GTF3C5:GTF3C3
+CPX-10860,Complex,ZNF785:BEND3:GTF3C6:PDZRN3
+CPX-19316,Complex,ZNF785:KIF7:BEND3:GTF3C6:DOCK6:PDZRN3
+CPX-16964,Complex,ZNF785:KIF7:BEND3:GTF3C6:DOCK6:CHRNA9:PDZRN3
+CPX-20379,Complex,ZNF785:BEND3:PDZRN3
+CPX-24773,Complex,ZNF785:CYP24A1:KIF7:BEND3:GTF3C6:SMARCAD1:PDZRN3
+CPX-7501,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX2-PHC1 variant"
+CPX-7502,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX2-PHC2 variant"
+CPX-7504,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX2-PHC3 variant"
+CPX-7505,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX4-PHC1 variant"
+CPX-7506,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX4-PHC2 variant"
+CPX-7508,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX4-PHC3 variant"
+CPX-7509,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX6-PHC1 variant"
+CPX-7510,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX6-PHC2 variant"
+CPX-7511,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX6-PHC3 variant"
+CPX-7513,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX7-PHC1 variant"
+CPX-7514,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX7-PHC2 variant"
+CPX-7515,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX7-PHC3 variant"
+CPX-7516,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX8-PHC1 variant"
+CPX-7517,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX8-PHC2 variant"
+CPX-7518,Complex,"Polycomb repressive complex 1, RING1-PCGF4-CBX8-PHC3 variant"
+CPX-7541,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX2-PHC1 variant"
+CPX-7542,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX2-PHC2 variant"
+CPX-7544,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX2-PHC3 variant"
+CPX-7545,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX4-PHC1 variant"
+CPX-7546,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX4-PHC2 variant"
+CPX-7547,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX4-PHC3 variant"
+CPX-7548,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX6-PHC1 variant"
+CPX-7549,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX6-PHC2 variant"
+CPX-7550,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX6-PHC3 variant"
+CPX-7551,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX7-PHC1 variant"
+CPX-7552,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX7-PHC2 variant"
+CPX-7553,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX7-PHC3 variant"
+CPX-7554,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX8-PHC1 variant"
+CPX-7555,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX8-PHC2 variant"
+CPX-7556,Complex,"Polycomb repressive complex 1, RING2-PCGF4-CBX8-PHC3 variant"
+CPX-2273,Complex,"Non-canonical polycomb repressive complex 1.4, RING1-RYBP variant"
+CPX-2274,Complex,"Non-canonical polycomb repressive complex 1.4, RING1-YAF2 variant"
+CPX-2282,Complex,"Non-canonical polycomb repressive complex 1.4, RNF2-YAF2 variant"
+CPX-2300,Complex,"CRL3 E3 ubiquitin ligase complex, SPOP variant"
+CPX-2571,Complex,"Non-canonical polycomb repressive complex 1.4, RNF2-RYBP variant"
+CPX-8916,Complex,"CRL3 E3 ubiquitin ligase complex, SPOP-SPOPL variant"
+CPX-19265,Complex,CBX4:CBX7:BMI1:PCGF2:PHC1:CBX2:SFMBT2:PHC2:PHC3:SCMH1:SCML1
+CPX-17005,Complex,CBX7:BMI1:PCGF2:PHC1:CBX2:SFMBT2:PHC2:PHC3:SCMH1:SCML1
+CPX-22738,Complex,CBX4:CBX7:BMI1:PCGF2:PHC1:CBX2:SFMBT2:PHC2:PHC3:SCMH1:CBX8:SCML1
+CPX-7786,Complex,"SCF E3 ubiquitin ligase complex, FBXW10 variant"
+CPX-16329,Complex,CBX5:CBX1:CBX3:ADNP2:ZNF280C:SUV39H2
+CPX-20007,Complex,CBX1:CPLX4:ZNF581
+CPX-18598,Complex,CBX5:CBX1:CBX3:ZNF776:ADNP2:ZNF280C:SUV39H2
+CPX-22134,Complex,CBX5:CBX1:CBX3:ZNF776:ADNP2:ZNF280C:DSN1:SUV39H2:ZNF581
+CPX-23331,Complex,CBX5:CBX1:CBX3:ZNF776:ADNP2:ZNF280C:ADNP:SUV39H2:ZNF581
+CPX-24495,Complex,SUV39H1:MAGEC1:CBX5:CBX1:CBX3:ZMYM4:ZNF776:ADNP2:POGZ:ZNF280C:ZNF428:CHAMP1:ADNP:SUV39H2:ZNF581:MAD2L2
+CPX-7519,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX2-PHC1 variant"
+CPX-7522,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX2-PHC2 variant"
+CPX-7523,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX2-PHC3 variant"
+CPX-2480,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX2-PHC3 variant"
+CPX-2605,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX2-PHC1 variant"
+CPX-2609,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX2-PHC2 variant"
+CPX-24480,Complex,PHC1:CBX2:SFMBT2:SCMH1:SCML1
+CPX-469,Complex,L3MBTL1 complex
+CPX-22984,Complex,CBX3:ZNF776:ADNP2:ZNF280C:SUV39H2
+CPX-7524,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX4-PHC1 variant"
+CPX-7525,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX4-PHC3 variant"
+CPX-7526,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX4-PHC2 variant"
+CPX-2594,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX4-PHC1 variant"
+CPX-2613,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX4-PHC2 variant"
+CPX-2615,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX4-PHC3 variant"
+CPX-15480,Complex,CBX4:KCTD2:ZNF672:CDC42BPA:TTLL7:KCTD17:FAM89A:NLRP1:THAP9:ZNF358:KCTD5:KCND2:POLK:ZMYND8
+CPX-21315,Complex,CBX4:KCTD2:ZNF672:CDC42BPA:TTLL7:KCTD17:FAM89A:NLRP1:THAP9:ZNF358:KCTD5:KCND2:POLK:NARF:ZMYND8
+CPX-21761,Complex,TCAP:CBX5:SUV39H2
+CPX-7527,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX6-PHC1 variant"
+CPX-7528,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX6-PHC2 variant"
+CPX-7529,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX6-PHC3 variant"
+CPX-2598,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX6-PHC3 variant"
+CPX-2616,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX6-PHC1 variant"
+CPX-2617,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX6-PHC2 variant"
+CPX-14821,Complex,APOBEC3DE:WDR46:MRPS12:ZNF354A:MRPS14:ERAL1:LUC7L3:CBX6:RPLP0:H2AC11:ZBTB48:H1-4:RPL13:SRP14:RPS19:RPS9:RPL34:RPL14:FXR2:DAP3:RPL27:CNBP:RPL30:YBX1:SRPK2:MRPS25:MRPS10:MRPS35:MRPS5:MRPS11:MRPS15:MRPS21:MRPS34:MRPS9:SRSF3:RPL18:SRSF4:SRSF6:PRP4K:TRA2A:HNRNP
+CPX-11179,Complex,CBX6:TRHR:PCGF2:SCMH1
+CPX-20435,Complex,CBX6:TRHR:SCMH1
+CPX-26338,Complex,Cytoplasmic organelles
+CPX-7530,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX7-PHC1 variant"
+CPX-7531,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX7-PHC2 variant"
+CPX-7532,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX7-PHC3 variant"
+CPX-2600,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX7-PHC1 variant"
+CPX-2601,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX7-PHC2 variant"
+CPX-2619,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX7-PHC3 variant"
+CPX-7533,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX8-PHC1 variant"
+CPX-7534,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX8-PHC2 variant"
+CPX-7535,Complex,"Polycomb repressive complex 1, RING2-PCGF2-CBX8-PHC3 variant"
+CPX-2621,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX8-PHC1 variant"
+CPX-2622,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX8-PHC2 variant"
+CPX-2623,Complex,"Polycomb repressive complex 1, RING1-PCGF2-CBX8-PHC3 variant"
+CPX-2005,Complex,Cyclin A1-CDK2 complex
+CPX-2006,Complex,Cyclin A2-CDK2 complex
+CPX-2009,Complex,Cyclin B3-CDK2 complex
+CPX-2015,Complex,Cyclin E1-CDK2 complex
+CPX-2016,Complex,Cyclin E2-CDK2 complex
+CPX-578,Complex,Cyclin-dependent protein kinase-activating kinase complex
+CPX-11851,Complex,GMNN:CCNE2:CDK1:CCNB1:CCNO:CCNE1:CDK2:CKS2:CDKN1B:CDKN1C:CDK3:SKP2:CDK5R1:E2F5:E2F4:MIDEAS
+CPX-15343,Complex,GMNN:CDK2:RBL1:CDK3:RBL2:E2F5:E2F4
+CPX-13027,Complex,GMNN:CCNE2:CDK1:CCNB1:CCNE1:CDK2:CDKN1B:CDKN1C:CDK3:CDK5R1:E2F5:E2F4:MIDEAS
+CPX-10673,Complex,SIVA1:GMNN:CDK14:CCNB2:CCNE2:CDK1:FGR:TRIM49:CDK4:PCNA:CCNB1:CCNA2:CCNO:CCND1:CCNE1:CDK2:RBL1:CCND2:CCND3:CKS2:CDKN1A:CDKN2B:CDKN2C:CDKN1B:CDKN1C:CCNH:CDKN2D:CKS1B:CCNA1:CDK3:CDK6:CDK5:RBL2:EP300:SKP2:CCNI:E2F5:SPDYC:OGFRL1:MIDEAS:CDKN2A:CCNB3:CREBBP:SCAPE
+CPX-19796,Complex,GMNN:CCNB2:CCNE2:CDK1:PCNA:CCNB1:CCNA2:CCNE1:CDK2:RBL1:CKS2:CDKN1B:CDKN1C:CKS1B:CDK3:CDK5:RBL2:EP300:SKP2:CDK5R1:E2F5:E2F4:MIDEAS:CREBBP:PKMYT1:CDT1
+CPX-21602,Complex,SIVA1:GMNN:CCNB2:CCNE2:CDK1:FGR:TRIM49:CDK4:PCNA:CCNB1:CCNA2:CCNO:CCND1:CCNE1:CDK2:RBL1:CCND2:CCND3:CKS2:CDKN1A:CDKN2B:CDKN2C:CDKN1B:CDKN1C:CDKN2D:CKS1B:CCNA1:CDK3:CDK6:CDK5:RBL2:EP300:SKP2:CCNI:CDK5R1:E2F5:E2F4:MIDEAS:CDKN2A:CCNB3:CREBBP:PKMYT1:SCAPER:CDT
+CPX-26221,Complex,BUB1:CDK1:CTSA:CCNA2:CCND1:CCNE1:CDK2:RBL1:CDC27:CDKN1A:CDKN1C:NEK2:CKS1B:CCNA1:CDC20:E2F4:CDKN3:BORA:RTKN2:C1orf52:CDC26:LIN37:ANAPC1:CUEDC2:ANAPC7:ANAPC5:FBXO5:FZR1:ANAPC10:L3MBTL1
+CPX-26273,Complex,BUB1:BUB1B:KIF20A:CDK1:POLA1:CTSA:RNH1:ERCC2:CCNA2:MCC:CCND1:CCNE1:CDK2:RBL1:CDC27:SHMT1:CDKN1A:CDC34:CDKN1C:NEK2:CKS1B:SKP1:CCNA1:CDC20:E2F4:CDKN3:BORA:RRM2B:RTKN2:C1orf52:CDC26:CKAP2:LIN37:ANAPC1:CUEDC2:ANAPC7:ANAPC5:ANAPC2:FBXO5:FBXO4:FZR1:ANAPC10:BTRC:
+CPX-16130,Complex,C16orf87:MIER1:CDYL
+CPX-18127,Complex,MIER3:CDYL
+CPX-26127,Complex,DDX39A:RFXAP:TOR1B:GNB5:NDC80:MAST3:ZNF217:TAF5L:ANXA9:PARN:TBC1D8:NEFL:FLT4:RAD52:MAGEA4:STK19:GNAQ:LIMK1:HDAC4:SCAND1:RBM6:PRKAA1:UBE4A:WRN:NFATC4:ATXN7L3:EXOSC7:TNIP1:DAZAP2:TAB1:VPS72:MAPK14:SMTNL2:PLEKHN1:CRY2:TMEM259:HIKESHI:SOHLH1:FHIP2A:PHLDB3:ARMC
+CPX-26188,Complex,ZNF217:SCAND1:CHD5:TGIF2:ZNF446:CDYL
+CPX-19938,Complex,PLEKHO1:CENPV:LGALS13:LENEP
+CPX-12742,Complex,H2BC21:CGAS:RNF138:PHF8
+CPX-26038,Complex,ZBTB7B:PPM1D:B4GALT2:MCM3:MPG:MCM5:PRIM2:DENND2B:LSM11:POLA2:CTC1:INAVA:ZRANB3:ALKBH2:KLHDC10:RBM43:AKNA:FBXO33:IQCA1:KMT5C:MGA:ZC3H3:CCAR2:FBXL6:CGAS:SMCR8:PHIP:NEIL2:TEP1:SLF1:TSEN34:ST6GALNAC5:DPH1:WDR13:PIF1:STN1:PLEKHG2:TOPORS:SPATA6:SMARCAL1:ARHGAP23
+CPX-2437,Complex,"Casein kinase II complex, CSNK2A1-CNSK2A2 variant"
+CPX-914,Complex,"Casein kinase II complex, CSNK2A1 variant"
+CPX-12009,Complex,PRPF40A:RBM25:CSNK2A1:SRSF11:NKAPL:ARL6IP4:JMJD6:NKAP:RSRC1:USP42:ZCCHC17:ARGLU1:CWC25:PHRF1:PUF60:DDX41:SRRM2
+CPX-11941,Complex,PRPF40A:RBM25:CSNK2A1:SRSF11:JMJD6:NKAP:ZCCHC17:ARGLU1:PHRF1:NFKBIL1:PUF60:SRRM2
+CPX-14817,Complex,C1orf226:NOS1AP:PRPF40A:CSNK2A1:AKAP17A:NKAP:ZCCHC10:ZCCHC17:PHRF1
+CPX-14603,Complex,CSNK2A1:NKAPL:NKAP:RSRC1:ZCCHC17
+CPX-12888,Complex,CSNK2A2:CDK11B:CSNK2B:CSNK2A1:NKAPL:HIRIP3:GPATCH2:CCNL1
+CPX-18225,Complex,C1orf226:EPB41L2:NOS1AP:PRPF40A:ZRANB2:RBM25:CSNK2A1:AKAP17A:SRSF11:NOLC1:RNPS1:DDX60L:NKAPL:ARL6IP4:JMJD6:RSBN1L:NKAP:VANGL1:ZCCHC10:NAF1:RSRC1:PNN:EPB41L1:USP42:CWC22:ZCCHC17:ARGLU1:CWC25:PHRF1:NFKBIL1:PUF60:DDX41:ACIN1:SRRM2:LUC7L2
+CPX-25082,Complex,CSNK2A2:CSNK2B:CSNK2A1:RNF111:PCGF5:BHLHE23:HIRIP3:PHRF1
+CPX-21603,Complex,CSNK2A1:NKAPL:NKAP:ZCCHC17
+CPX-24616,Complex,DDX39A:SAP18:CASC3:EPB41L2:KIF1C:ZC3H11A:PRPF40A:SRSF10:ZRANB2:U2AF2:NKTR:EIF4A3:RBM25:CLK1:CLK2:CLK3:MAGOH:TRA2B:CSNK2A1:SARNP:AKAP17A:SRSF11:SRSF9:PPIG:PRP4K:THOC5:DDX39B:NOLC1:RNPS1:SRSF7:NCBP3:ARL6IP4:VIRMA:THOC7:JMJD6:RSBN1L:ZC3H14:NKAPD1:RBBP6:PABPN1
+CPX-26259,Complex,CDC7:ELL2:ERCC3:GTF2H1:MNAT1:CSNK2A1:GTF2H3:ANKRD11:HDGFL2:CDCA7L:EAF1:IWS1:HIRIP3:DBF4:SUPT16H
+CPX-2428,Complex,"Casein kinase II complex, CSNK2A2 variant"
+CPX-14982,Complex,CSNK2A2:NKAPL:HAGHL:TTLL7:VSX1
+CPX-11289,Complex,SETDB2:SENP7:DAXX
+CPX-26288,Complex,Nucleoplasm 2
+CPX-26298,Complex,DNA metabolic assembly
+CPX-26337,Complex,Nuclear lumen
+CPX-26340,Complex,Nuclear body
+CPX-13184,Complex,HYKK:SMS:LAGE3:NUP43:TP53RK:GON7:OSGEP:DDX4:TPRKB:AMMECR1
+CPX-22081,Complex,DDX4:VPS45
+CPX-21342,Complex,DDX4:DDX28
+CPX-21527,Complex,RBSN:DDX4:GRHPR
+CPX-12855,Complex,HMGB3:EDF1:KDM4B:DNMT1:FAM50A:ZBTB6:LRRC47:TACO1:RTF2:API5:FAM50B
+CPX-11263,Complex,DNMT1:RTF2
+CPX-11328,Complex,DNMT1:FEN1
+CPX-16401,Complex,HMGB3:EDF1:PLEK:HMGB1:EIF4B:DNMT1:HMGB2:MAP4:CALD1:FAM50A:CNN3:ZBTB6:LRRC47:TACO1:RTF2:API5:FAM50B
+CPX-19744,Complex,NARS1:SNX3:EIF1B:EIF3J:LETM1:CYP1A1:HMGN1:TCEA1:ACP1:DNMT1:GTF2E2:FEN1:TSFM:RECQL:HDGF:EIF5:HDLBP:FKBP3:MESD:LRRC47:CTNNBL1:VRK1:API5:FARSB:RBM12:TMA7:SBDS:TLN1
+CPX-17862,Complex,MAP3K13:DNMT1:KLHL20
+CPX-22740,Complex,DNMT1:FEN1:RTF2
+CPX-20765,Complex,TCERG1:EIF1B:TCEA3:EIF3J:TCEA1:DNMT1:APEX1:FEN1:YARS1:EIF5:EIF5A:FKBP3:PLCB3:MESD:LASP1:TCEA2:PTCRA:DUSP19:PUS7:VRK1:CDV3:TMA7:SBDS
+CPX-2816,Complex,"CRL4-DCAF8 E3 ubiquitin ligase complex, CUL4B variant"
+CPX-2818,Complex,"CRL4-DCAF8 E3 ubiquitin ligase complex, CUL4A variant"
+CPX-944,Complex,DNA (cytosine-5)-methyltransferase 3A complex
+CPX-13228,Complex,TCL1A:DNMT3B:PCDHA4:PCDHA1:DNMT3A
+CPX-19824,Complex,TCL1A:ODR4:DNMT3B:PCDHA4:PCDHA1:DNMT3A
+CPX-21488,Complex,TCL1A:DNMT3B:PCDHA7:PCDHA6:PCDHA4:PCDHA12:PCDHGA10:PCDHA8:PCDHA3:PCDHA2:PCDHA13:PCDHA11:PCDHA10:PCDHA1:DNMT3A
+CPX-23364,Complex,TCL1A:ODR4:UFSP2:DNMT3B:PCDHA4:PCDHA1:DNMT3A
+CPX-23675,Complex,TCL1A:UFSP2:DNMT3B:PCDHA4:PCDHA1:DNMT3A
+CPX-22312,Complex,TCL1A:ODR4:DNMT3B:PCDHA4:DNMT3A
+CPX-6276,Complex,DNA (cytosine-5)-methyltransferase 3B complex
+CPX-14399,Complex,MLLT3:MLLT10:MLLT6:DOT1L
+CPX-16101,Complex,FOXD2:MLLT3:MAGEA8:MLLT10:MLLT6:METTL16:DOT1L:C1orf159
+CPX-13503,Complex,DOT1L:SETDB2:SENP7
+CPX-13247,Complex,MLLT3:MAGEA8:MLLT10:MLLT6:DOT1L
+CPX-20040,Complex,MLLT3:MAGEA8:MLLT10:MLLT6:DOT1L:UQCC5:C1orf159
+CPX-19387,Complex,MAGEA8:MLLT10:MLLT6:DOT1L
+CPX-23683,Complex,CIBAR1:CCN1:PTPN13:DZIP1:ZCCHC10:DOT1L:SETDB2:SENP7
+CPX-24126,Complex,MAGEA8:MLLT10:DOT1L:UQCC5:C1orf159:SETDB2:SENP7
+CPX-24817,Complex,MLLT3:MAGEA8:MLLT10:MLLT6:METTL16:DOT1L:UQCC5:C1orf159
+CPX-12028,Complex,DYRK1A:CEFIP:FAM53C:DYRK1B
+CPX-10696,Complex,SOWAHB:DIAPH1:DCAF7:DYRK1A:SOWAHA:SOWAHC:CEFIP:LPIN2:HIPK2:C16orf95:FAM53C:DYRK1B
+CPX-13191,Complex,DYRK1A:CEFIP:FAM53C
+CPX-10582,Complex,DYRK1A:CEFIP:DYRK1B
+CPX-19980,Complex,LZTS3:DYRK1A:CEFIP:KNDC1:LPIN2:DYRK1B:RAD54L2
+CPX-18437,Complex,DYRK1A:CEFIP
+CPX-18991,Complex,DCAF7:TROAP:DYRK1A:SOWAHA:CEFIP:FANCD2OS:C16orf95:FBRSL1:FAM53C:DYRK1B
+CPX-21343,Complex,DIAPH1:DCAF7:DYRK1A:SOWAHA:SOWAHC:CEFIP:KIF21A:ZNF503:HIPK2:C16orf95:ZNF703:FAM53C:DYRK1B
+CPX-24108,Complex,LZTS3:DYRK1A:CEFIP:DYRK1B
+CPX-2550,Complex,"Non-canonical polycomb repressive complex 1.6, RING1-YAF2 variant"
+CPX-2552,Complex,E2F6-DP1 transcriptional repressor complex
+CPX-2555,Complex,"Non-canonical polycomb repressive complex 1.6, RING2-RYBP variant"
+CPX-2557,Complex,"Non-canonical polycomb repressive complex 1.6, RING2-YAF2 variant"
+CPX-2305,Complex,"Non-canonical polycomb repressive complex 1.6, RING1-RYBP variant"
+CPX-16741,Complex,E2F6:TCF19
+CPX-20908,Complex,KDM1A:ZNF217:E2F6:EEF1AKMT4-ECE2:HDAC1:ZMYM3:GSE1:ZMYM4:MIDEAS:CCDC71:RCOR2:MIER2:RREB1:HDAC2:PHF21A:PHF21B:PWWP2A:TRERF1:PHF12:ZSCAN5A:DNTTIP1:ADNP:EHMT1:HMG20B:BAHCC1:RCOR3:RERE:ZMYM2:SFMBT1:RCOR1:CASP8AP2:TCF19
+CPX-26114,Complex,E2F6:NUP188:COMMD1:PHF21A:NRBF2:NUP88:DUSP22:COMMD9
+CPX-2569,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP4-PCL1-PALI1 variant"
+CPX-2570,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP7-PCL3-PALI1 variant"
+CPX-2307,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP7-PCL1-PALI1 variant"
+CPX-2309,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP7-PCL2-PALI1 variant"
+CPX-2310,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP4-PCL2-PALI1 variant"
+CPX-2311,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP7-PCL1-PALI1 variant"
+CPX-2312,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP4-PCL2-PALI1 variant"
+CPX-2314,Complex,"Polycomb repressive complex 2.1,EZH2-RBBP7-PCL2-PALI1 variant"
+CPX-2316,Complex,"Polycomb repressive complex 2.1,EZH2-RBBP7-PCL3-PALI1 variant"
+CPX-2317,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP4-PCL1-EPOP variant"
+CPX-2318,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP4-PCL2-EPOP variant"
+CPX-2320,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP7-PCL2-EPOP variant"
+CPX-2322,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP4-PCL3-EPOP variant"
+CPX-2323,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP7-PCL3-EPOP variant"
+CPX-2324,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP4-PCL1-EPOP variant"
+CPX-2325,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP7-PCL1-EPOP variant"
+CPX-2326,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP4-PCL2-EPOP variant"
+CPX-2327,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP7-PCL2-EPOP variant"
+CPX-2328,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP4-PCL3-EPOP variant"
+CPX-2329,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP7-PCL3-EPOP variant"
+CPX-2196,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP4-PCL3-PALI1 variant"
+CPX-2198,Complex,"Polycomb repressive complex 2.1,EZH2-RBBP4-PCL3-PALI1 variant"
+CPX-2204,Complex,"Polycomb repressive complex 2.1, EZH2-RBBP4-PCL1-PALI1 variant"
+CPX-2205,Complex,"Polycomb repressive complex 2.1, EZH1-RBBP7-PCL1-EPOP variant"
+CPX-26262,Complex,PHF20L1:CDK2AP1:HAT1:TNRC18:PHF1:SIN3B:SAP30:EED:MTA2:MBD3:RFX1:ARID4A:KDM5A:RFX3:NASP:HIRA:ERCC6:RBBP4:BPTF:CHD3:CHAF1A:CHAF1B:MTA1:CTBP1:HDAC1:NPAT:CHD4:ARID5B:SHPRH:SUZ12:EZH2:E2F4:RBBP7:ZNF827:ZNF423:ARID4B:LIN52:BRMS1L:LIN9:TSHZ3:MMS22L:MIER3:EMSY:GAT
+CPX-11976,Complex,WIZ:CDYL2:XAGE3:ZNF462:EHMT2:ADNP:ZNF644:EHMT1:GAGE8
+CPX-12710,Complex,XAGE3:ZNF462:EHMT2:ADNP:ZNF644:EHMT1:GAGE8
+CPX-10994,Complex,WIZ:THOP1:MIER2:CDYL2:XAGE3:XAGE2:ZNF462:EHMT2:ADNP:ZNF644:EHMT1:GAGE8
+CPX-14890,Complex,KDM5A:HDAC1:ZMYM3:GSE1:ZMYM4:MIDEAS:EMSY:CCDC71:RCOR2:GATAD1:RREB1:PHF21A:PHF21B:PWWP2A:TRERF1:PHF12:ZSCAN5A:DNTTIP1:ADNP:EHMT1:HMG20B:RCOR3:RERE:ZMYM2:SFMBT1:RCOR1:CASP8AP2
+CPX-13898,Complex,WIZ:MIER2:CDYL2:XAGE3:ZNF462:EHMT2:ADNP:ZNF644:EHMT1:GAGE8
+CPX-16426,Complex,XAGE3:ZNF462:EHMT2:ADNP:ZNF644:EHMT1
+CPX-16416,Complex,WIZ:XAGE3:XAGE2:ZNF462:EHMT2:ZNF644:EHMT1:GAGE8
+CPX-13199,Complex,WIZ:MIER2:CDYL2:XAGE3:ZNF462:EHMT2:ZNF644:EHMT1:GAGE8
+CPX-12950,Complex,WIZ:THOP1:MIER2:CDYL2:XAGE3:XAGE2:ZNF462:EHMT2:ZNF644:EHMT1:GAGE8
+CPX-11151,Complex,XAGE3:ZNF462:EHMT2:ZNF644:EHMT1:GAGE8
+CPX-20564,Complex,ZMYM3:ZMYM4:ZSCAN5A:ADNP:EHMT1:ZMYM2
+CPX-18909,Complex,WIZ:APOC2:THOP1:ZBTB46:MIER2:CDYL2:XAGE3:XAGE2:GMCL1:ZNF462:EHMT2:ZNF644:EHMT1:GAGE8
+CPX-24883,Complex,WIZ:XAGE3:ZNF462:EHMT2:ADNP:ZNF644:EHMT1:GAGE8
+CPX-26303,Complex,Nucleoplasm 1
+CPX-26308,Complex,Chromosome organization complex family
+CPX-15357,Complex,EIF2AK2:HDDC3
+CPX-10868,Complex,MPO:ELANE:CTSG:ITGAM:ANXA3:BPI:MMP8:PRTN3:MNDA:ARHGDIB:SMIM8:EGFL8:CYP3A43:GNG8
+CPX-16275,Complex,ELANE:PRTN3:CEACAM6:CFAP58:ELOA2:LRRC17
+CPX-22120,Complex,GOLGA8A:IGLL5:JAK2:SCGB2A1:GJB5:SCGB1D1:SCGB1D2:JCHAIN:PIGR:KRT6A:LTF:MPO:ELANE:CTSG:EPX:IGLL1:TCN1:LCN1:MNDA:CLCN2:PRKX:LYZ:MUC5AC:PRR4:TMEM176B:HBM:PABIR3:LEG1:SPNS3:APCDD1:RIBC1:BPIFB2:FRMD1:CCDC148:NPB:OR13C3:BPIFB1:CAPSL:ITLN2:PMEPA1:ZG16B:TIMD4:SMIM8
+CPX-24734,Complex,MPO:ELANE:CTSG:MNDA:APCDD1:LRRC17:SMIM8:SPATA17
+CPX-12363,Complex,RPS20:ERI1:RAPGEF4
+CPX-19861,Complex,WRN:DUSP6:VASH2:ERI1:NEIL1
+CPX-19099,Complex,ERI1:RAMAC:CILK1
+CPX-21616,Complex,DUSP6:ERI1:NEIL1
+CPX-22373,Complex,ERI1:RAMAC
+CPX-21283,Complex,ERI2:TPH1:TPH2:DNAJC12
+CPX-12204,Complex,VWC2L:ERI3:ATF1:ARHGAP22:SPX
+CPX-12035,Complex,ERI3:CREB1:ATF1:NFIL3:ARHGAP22
+CPX-12549,Complex,ERI3:MT2A:MT1A:MT1E:MT1F:MT1M
+CPX-14738,Complex,VWC2L:ERI3:SPX
+CPX-11324,Complex,VWC2L:ERI3
+CPX-16382,Complex,ERI3:ARHGAP22:AGAP3
+CPX-13598,Complex,ERI3:ARHGAP22
+CPX-11245,Complex,ERI3:DEFB110:CAMKMT:SPX
+CPX-22693,Complex,ERI3:MT1F:SPX
+CPX-23010,Complex,VWC2L:ERI3:STAT6:NCOA1:SPX
+CPX-23004,Complex,VWC2L:ERI3:STAT6:NR1I3:NCOA1:FAM131B:SPX
+CPX-24536,Complex,VWC2L:ERI3:NCOA1:SPX
+CPX-23279,Complex,VWC2L:ERI3:STAT6:NR1I3:NCOA1:SPX
+CPX-23295,Complex,VWC2L:ERI3:ARHGAP22:SPX
+CPX-26099,Complex,ERI3:PRKAB2:PHKA2:PRKAA2
+CPX-13316,Complex,EEF2K:FKBP6:USP19:OSBP:PDE4A:NXNL2:CDC37L1:OSBP2:FERD3L
+CPX-13955,Complex,EEF2K:FKBP6:USP19:OSBP:PDE4A:NXNL2:CDC37L1:OSBP2:OSBPL9
+CPX-14011,Complex,EEF2K:FKBP6:OSBP:CDC37L1
+CPX-15771,Complex,EEF2K:FKBP6:OSBP:PDE4A:CDC37L1:OSBP2:OSBPL9
+CPX-13157,Complex,EEF2K:FKBP6:OSBP:CDC37L1:OSBP2
+CPX-22555,Complex,EEF2K:FKBP6:USP19:OSBP:CDC37L1:OSBP2
+CPX-19448,Complex,EEF2K:FKBP6:USP19:OSBP:PDE4A:NXNL2:CDC37L1:OSBP2
+CPX-21530,Complex,EEF2K:FKBP6:OSBP:PDE4A:CDC37L1:USP33:OSBP2
+CPX-21938,Complex,EEF2K:FKBP6:OSBP:PDE4A:CDC37L1:OSBP2
+CPX-24388,Complex,EEF2K:FKBP6:OSBP:PDE4A:CDC37L1
+CPX-14157,Complex,G2E3:EFHD1:PLAGL2
+CPX-15428,Complex,BRD1:H2BC11:H1-0:ZNF22:RPL23A:RPS26:RPL24:GRSF1:DNAJC9:RSL24D1
+CPX-15508,Complex,H1-2:H1-8:LENEP
+CPX-16739,Complex,H2BC12:FARS2:H1-2:RPS10:RPS20:BMS1:PURB
+CPX-14449,Complex,SUV39H1:H2AB1:NAP1L1:TOP2B:NOL9:PELP1:WDR18:SENP3:LAS1L
+CPX-11595,Complex,H2AB1:H2AB2:ZNF335
+CPX-23807,Complex,IPO5:H2AB1:NOL9:WDR18:SENP3:LAS1L
+CPX-23321,Complex,ZNF275:H2AB1:H2AB2:ZNF335
+CPX-16701,Complex,H2AB2:CCDC71L:ZNF335
+CPX-17726,Complex,ZNF275:H2AB2:CCDC71L
+CPX-22212,Complex,ZNF275:H2AB2:ZNF335
+CPX-25319,Complex,ZNF275:H2AB2:CCDC71L:ZNF335
+CPX-25754,Complex,"Nucleosome complex, H2A type 1 variant"
+CPX-12143,Complex,RPS19:RPS29:RPS28:H2AC20
+CPX-11122,Complex,RGR:H2AC20:RAB37
+CPX-25284,Complex,H2AC20:CFDP1
+CPX-12263,Complex,ZNF354A:RPLP2:RPL35A:NCL:RPL13:RPL27A:RPL21:RPL34:CNBP:RSBN1:H2AC21:ZFP62:MMTAG2
+CPX-2556,Complex,"Nucleosome, variant H3.1-H2A.2-H2B.1"
+CPX-2558,Complex,"Nucleosome complex, H2BC12 variant"
+CPX-2564,Complex,"Nucleosome, variant H3.1t-H2A.2-H2B.1"
+CPX-5647,Complex,CENP-A nucleosome complex
+CPX-5668,Complex,"Nucleosome, variant H3.2-H2A.2-H2B.1"
+CPX-14770,Complex,HMGN4:H2AC4:POLB:PARP1:XRCC6:XRCC5:RPA2:XRCC1:XPA:RPA1:RPA3:LIG3:XPC:SSBP1:SSRP1:RPA4:HLTF:RPAIN:CHD1L:APLF:HMCES:PRIMPOL:RSF1:PNKP:MACROD1:RNF146:TDP1:CLEC1B:PARP2
+CPX-11659,Complex,HAT1:H2AC4:KRT18:NASP:HIRA:H4C16:H3C1:H3-3A:CACNA1D:SSRP1:RBBP4:CHAF1A:CHAF1B:NPAT:SHPRH:PAN2:PAN3:SPATA1:MMS22L:UBN2:TLK2:CDAN1:PPTC7:IPO4:TONSL:RSF1:CLXN:ETNK1:UBN1:ASF1B:TLK1:CADPS:ASF1A:CDIN1:CABIN1
+CPX-16690,Complex,H2AC4:H4C16:H3C1:H3-7:MMS22L:UBR7
+CPX-25755,Complex,Hexasome complex
+CPX-11145,Complex,TDRD7:PIMREG:H2AJ
+CPX-16016,Complex,DDX42:H2AJ:ORC6
+CPX-24972,Complex,IFI27L1:PIMREG:H2AJ:C9orf78:ORC6
+CPX-25618,Complex,ORC2:H2AJ:ORC6
+CPX-23213,Complex,GON4L:CRAMP1:H2AJ:YY1AP1:SS18L2
+CPX-19673,Complex,H2AP:METTL16
+CPX-19028,Complex,H2AP:TRADD:PGS1:METTL16
+CPX-24818,Complex,H2AP:PGS1:METTL16
+CPX-4425,Complex,BRCA1-A complex
+CPX-5670,Complex,"Nucleosome, variant H3.1-H2A.Z-H2B.1"
+CPX-13990,Complex,ZNHIT1:TNFSF13:YEATS4:ACTL6A:H2AZ1:MYCL:NR2C1:MBTD1:VPS72:EPC2:FOXR2:SRCAP:JAZF1:NOPCHAP1:KAT5:EP400:DPCD:ACTR6:BRD8:EPC1:MEAF6:DMAP1:MRGBP:ING3:RUVBL2:RUVBL1:TRRAP
+CPX-10936,Complex,H2AZ1:C16orf87:PARP2
+CPX-5671,Complex,"Nucleosome, variant H3.1-H2A.V-H2B.1"
+CPX-26584,Complex,"Cytoplasmic histone acetyltransferase type B, HAT1 complex"
+CPX-26599,Complex,"Nuclear histone-HAT1-associated multichaperone complex, ASF1B variant"
+CPX-26601,Complex,"Nuclear histone-HAT1-associated multichaperone complex, ASF1A variant"
+CPX-12845,Complex,HAT1:SMARCA1:RBBP4:BPTF:NPAT:SHPRH:RBBP7:PWWP2B:CCDC71:ZNF521:ZNF512B:SALL1
+CPX-15297,Complex,HAT1:NPAT:MMS22L:CDAN1:IPO4:TONSL:ASF1B:ASF1A:CDIN1
+CPX-15859,Complex,HAT1:NASP:H4C16:NPAT:MMS22L:UBN2:CDAN1:IPO4:TONSL:UBN1:ASF1B:ASF1A:CDIN1
+CPX-3321,Complex,SIN3A histone deacetylase complex
+CPX-3323,Complex,"SIN3A histone deacetylase complex, ES cell-specific variant"
+CPX-3322,Complex,SIN3B histone deacetylase complex
+CPX-2184,Complex,"MIER1 histone deacetylase complex, HDAC1 variant"
+CPX-2874,Complex,"MiDAC histone deacetylase complex, HDAC1 variant"
+CPX-880,Complex,MBD2/NuRD nucleosome remodeling and deacetylase complex
+CPX-922,Complex,MBD3/NuRD nucleosome remodeling and deacetylase complex
+CPX-9066,Complex,"CoREST transcriptional corepressor complex, RCOR2-HDAC1 variant"
+CPX-9068,Complex,"CoREST transcriptional corepressor complex, RCOR3-HDAC1 variant"
+CPX-9163,Complex,"MIER2 histone deacetylase complex, HDAC1 variant"
+CPX-8943,Complex,"CoREST transcriptional corepressor complex, RCOR1-HDAC1 variant"
+CPX-15325,Complex,KDM5A:HDAC1:GSE1:MIDEAS:EMSY:CCDC71:GATAD1:RREB1:PHF21A:PHF21B:PWWP2A:TRERF1:PHF12:DNTTIP1:RERE:SFMBT1:RCOR1:CASP8AP2
+CPX-13515,Complex,HDAC1:GSE1:MIDEAS:CCDC71:MIER2:HDAC2:PHF21A:PHF21B:PWWP2A:TRERF1:PHF12:DNTTIP1:HMG20B:BAHCC1:RERE:SFMBT1:CASP8AP2
+CPX-18342,Complex,TERT:TNRC18:KDM1A:SIN3B:ZNF217:SAP30:PDGFRB:ARID4A:KDM5A:FOXK1:FOXK2:HDAC1:ZMYM3:GSE1:RBBP7:ARID4B:BRMS1L:PWWP2B:MIDEAS:EMSY:TGIF2LX:CCDC71:RCOR2:GATAD1:ZNF516:RREB1:HDAC2:PHF21A:PWWP2A:TRERF1:PHF12:SIN3A:ZSCAN5A:TGIF2:SAP130:DNTTIP1:ING2:SUDS3:SAP30L:BRMS
+CPX-22080,Complex,HDAC1:PWWP2B:CCDC71:PHF21B:SFMBT1:CASP8AP2
+CPX-25686,Complex,TERT:TNRC18:KDM1A:SIN3B:ZNF217:SAP30:PDGFRB:ARID4A:KDM5A:FOXK1:FOXK2:HDAC1:ZMYM3:GSE1:RBBP7:ARID4B:BRMS1L:PWWP2B:MIDEAS:EMSY:TGIF2LX:CCDC71:RCOR2:GATAD1:RREB1:HDAC2:PHF21A:PWWP2A:TRERF1:PHF12:SIN3A:ZSCAN5A:TGIF2:SAP130:DNTTIP1:ING2:SUDS3:SAP30L:BRMS1:SINHC
+CPX-2867,Complex,"MiDAC histone deacetylase complex, HDAC2 variant"
+CPX-9065,Complex,"CoREST transcriptional corepressor complex, RCOR1-HDAC2 variant"
+CPX-9067,Complex,"CoREST transcriptional corepressor complex, RCOR2-HDAC2 variant"
+CPX-9069,Complex,"CoREST transcriptional corepressor complex, RCOR3-HDAC2 variant"
+CPX-9162,Complex,"MIER1 histone deacetylase complex, HDAC2 variant"
+CPX-9167,Complex,"MIER2 histone deacetylase complex, HDAC2 variant"
+CPX-13934,Complex,MTA2:MBD3:CHD3:CHD4:GATAD2A:CHD5:HDAC2:MTA3:SALL4:ZMYND8
+CPX-16875,Complex,CDK2AP1:MTA2:MBD3:SMARCA1:TCF7:ERCC6:RBBP4:BPTF:CHD3:MTA1:CHD4:SHPRH:RBBP7:ZNF423:PWWP2B:GATAD2A:ZNF687:ZBTB2:BEND7:CHD5:ZNF296:MBD3L1:GATAD2B:ZNF592:HDAC2:ZNF521:ZNF512B:PWWP2A:MTA3:BCL11B:ZNF219:MBD2:TRPS1:ZNF639:SALL4:ZMYND8
+CPX-16916,Complex,MTA2:ERCC6:CHD3:MTA1:CHD4:HDAC2:ZNF521:MTA3:ZNF219:TRPS1:SALL4
+CPX-22996,Complex,CDK2AP1:MTA2:MBD3:SMARCA1:TCF7:ERCC6:RBBP4:BPTF:CHD3:MTA1:CHD4:SHPRH:RBBP7:ZNF423:PWWP2B:GATAD2A:ZNF687:ZBTB2:CHD5:GATAD2B:ZNF592:HDAC2:ZNF521:ZNF512B:PWWP2A:MTA3:BCL11B:ZNF219:MBD2:TRPS1:ZNF639:SALL4:ZMYND8
+CPX-24687,Complex,CDK2AP1:MTA2:MBD3:ERCC6:CHD3:MTA1:CHD4:ZNF423:GATAD2A:ZNF687:ZNF592:HDAC2:ZNF521:MTA3:ZNF219:TRPS1:ZMYND8
+CPX-15289,Complex,HDAC3:TBL1X:NCOR1:GPS2:ANKRD11:WDR87:TBL1Y:TBL1XR1:SETD5
+CPX-11143,Complex,HDAC3:TBL1X:NCOR1:GPS2:ANKRD11:WDR87:TBL1Y:TBL1XR1:SETD5:NCOR2
+CPX-16349,Complex,HDAC3:TBL1X:NCOR1:GPS2:ANKRD11:WDR87:TBL1Y:TBL1XR1:NCOR2
+CPX-11157,Complex,HDAC3:TBL1X:NCOR1:GPS2:ANKRD11:TBL1Y:TBL1XR1
+CPX-18525,Complex,HDAC3:ETV3:HELZ:ERF:ANKRD11
+CPX-22988,Complex,HDAC3:TBL1X:NCOR1:GPS2:ANKRD11:TBL1Y:NCOR2
+CPX-26158,Complex,KANSL1L:HDAC3:NCOR1:STK38:QSER1:JADE1:SLF2:CCDC106:PCIF1:FOXJ2:GTF2IRD1
+CPX-26255,Complex,KANSL1L:TRIM24:HDAC3:DAPK3:TBL1X:NCOR1:GLI2:NRIP1:ANK3:GPS2:STK38:PKN1:QSER1:JADE1:SLF2:DTX3L:ARHGEF40:KAT2B:MRTFA:CCDC106:TBL1XR1:PCIF1:FOXJ2:MLH3:GTF2IRD1:PRR12:NCOR2:USP3
+CPX-4141,Complex,NLRP3 inflammasome
+CPX-13352,Complex,HMGB1:SP100
+CPX-10688,Complex,HMGB3:EDF1:HMGB1:EIF4B:HMGB2:MAP4:GTF2B:CALD1:FAM50A:LRRC47:CHMP6:SNF8:RTF2:API5:CHMP2B:FAM50B
+CPX-15995,Complex,HMGB1:SP100:ZNF706
+CPX-16444,Complex,HMGB3:HMGB1:HMGB2:LRRC47:API5
+CPX-17278,Complex,HMGB1:SP100:RILPL1:CMIP:GPR119
+CPX-17093,Complex,HMGB1:HMGB2
+CPX-18706,Complex,HMGB1:SP100:HMGB2
+CPX-22856,Complex,DDX3Y:HNRNPH3:HNRNPK:RBM6:RBM3:KHDRBS1:SAFB2:SAFB:TASOR2:CCDC70:RBM12B:TAF15:HNRNPUL1:NSRP1:NCOA5:SLTM
+CPX-20628,Complex,YLPM1:HNRNPK:RBM6:RBM3:ZNF638:RBM12B:PPHLN1:DDX17:NCOA5:KLF13
+CPX-18943,Complex,YLPM1:HNRNPK:RBM6:RBM3:KHDRBS1:ZNF638:RBM12B:PPHLN1:NCOA5:KLF13
+CPX-20897,Complex,RBMX:HNRNPK:ZNF326:RBMXL1
+CPX-21053,Complex,HNRNPK:SAFB2:CAPN13
+CPX-25107,Complex,RBMX:HNRNPK:ZNF326
+CPX-21652,Complex,HNRNPK:ILF3:ELAVL1:HNRNPUL1
+CPX-23389,Complex,YLPM1:HNRNPK:RBM6:RBM3:KHDRBS1:SAFB2:ZNF638:SAFB:CAPN13:CCDC70:RBM12B:PPHLN1:RBMXL1:NCOA5:SLTM:KLF13
+CPX-23689,Complex,YLPM1:HNRNPK:RBM6:RBM3:KHDRBS1:SAFB2:ZNF638:SAFB:CAPN13:CCDC70:RBM12B:PPHLN1:DDX17:RBMXL1:NCOA5:SLTM:KLF13
+CPX-1080,Complex,CRD-mediated mRNA stability complex
+CPX-13824,Complex,RFC1:HNRNPU:USP10:FOCAD:SERBP1:DDX55:DDX1:RIOK2:LSG1:AVEN:RTRAF
+CPX-26131,Complex,C1orf226:HNRNPDL:HNRNPR:SYNCRIP:KHDRBS3:HNRNPL:HNRNPA2B1:MRE11:HNRNPA3:PSME3:SRSF3:HNRNPU:EWSR1:SAFB2:SAFB:HNRNPUL2:FIP1L1:NUP54:RBMXL1:ZFR:QKI:PRMT1:ARIH1
+CPX-26317,Complex,Nuclear splicing speckle
+CPX-26321,Complex,Spliceosomal complex family
+CPX-26327,Complex,U2-type spliceosomal complex family
+CPX-26328,Complex,Chromatin regulation assembly
+CPX-26332,Complex,Nucleolus
+CPX-26333,Complex,RNA processing complex family
+CPX-26348,Complex,RNA splicing complex family
+CPX-26350,Complex,Subgroup of spliceosomal complex family
+CPX-12685,Complex,AK1:ACAT1:SERPINB6:TALDO1:COL10A1:IFIH1
+CPX-19880,Complex,TALDO1:IFIH1
+CPX-11813,Complex,IFIT3:IFNA14:IFIT2:IFIT1:PHACTR4
+CPX-13726,Complex,IFIT3:IFIT2:IFIT1:PHACTR4
+CPX-17185,Complex,IFIT3:IFNA13:IFNA2:IFNA7:IFNA21:IFNA5:IFNA14:IFNA17:IFNA6:IFNA4:IFNA16:ISG15:IFIT1:TRIM21:IFNA8:UBA7:IFI44L:UBR3:IFI44
+CPX-23471,Complex,IFIT1:PHACTR4
+CPX-6007,Complex,Interferon beta receptor-ligand complex
+CPX-13322,Complex,UBL3:IFNB1:KIT:IFNAR1:EPHA3:RGS9BP:MARCHF1:CD320:MOSPD1:EDAR:TMEM98
+CPX-10569,Complex,IFNB1:KIT:IFNAR1:MOSPD1:EDAR
+CPX-6041,Complex,STAT1/STAT3 complex
+CPX-9204,Complex,Interleukin-25 receptor-ligand complex
+CPX-8936,Complex,Interleukin-6 antagonist complex
+CPX-623,Complex,Interleukin-6-mIL6R-mIL6ST receptor-ligand classical signalling complex
+CPX-8969,Complex,Interleukin-6 sIL6R-sIL6ST buffering receptor-ligand complex
+CPX-8967,Complex,Interleukin-6 sIL6R-mIL6ST receptor-ligand trans-signalling complex
+CPX-6018,Complex,STING-TRAF3-TBK1 complex
+CPX-6037,Complex,MAVS-TRAF3 E3 ubiquitin ligase complex
+CPX-6038,Complex,TBK1-IKKepsilon-NAP1 complex
+CPX-15493,Complex,AHSA1:IRF3
+CPX-14290,Complex,USP19:IRF3:NXNL2:AURKC
+CPX-13971,Complex,USP19:PSEN2:IRF3
+CPX-11529,Complex,IRF3:GLMN:FEM1C:ZSWIM6:ZSWIM5
+CPX-11064,Complex,AHSA1:IRF3:MAP6
+CPX-16077,Complex,PSEN2:IRF3
+CPX-13263,Complex,USP19:AHSA1:IRF3
+CPX-12930,Complex,USP19:AHSA1:PSEN2:IRF3
+CPX-17446,Complex,USP19:IRF3:NXNL2
+CPX-22960,Complex,AHSA1:PSEN2:IRF3
+CPX-24362,Complex,MOCS3:AHSA1:IRF3:MAP6
+CPX-8122,Complex,"CRL3 E3 ubiquitin ligase complex, KLHL22 variant"
+CPX-6008,Complex,Interferon epsilon receptor-ligand complex
+CPX-14451,Complex,MYO1F:STYK1:IRF7:IL1RL2
+CPX-13230,Complex,MYO1F:STYK1:IRF7
+CPX-12913,Complex,STYK1:IRF7:SENP1
+CPX-19990,Complex,STYK1:IRF7
+CPX-6016,Complex,ISGF3 complex
+CPX-12450,Complex,STAT2:IRF9:GLIPR2:WARS2
+CPX-22816,Complex,IRF9:GLIPR2:WARS2
+CPX-26122,Complex,STAT1:STAT2:IRF9:DPP9
+CPX-26179,Complex,HIDE1:IKBKB:ZW10:HIP1R:SCGN:LTN1:CCNB2:CDS2:RIGI:UMPS:NF1:COMT:SSTR2:CD68:PEX19:MTOR:PHKA1:KNTC1:GEMIN4:TMEM258:EFNB1:IRF9:FHIP1A:VAC14:EIF2B5:GPR17:EIF2B1:KPNB1:KIF14:PPP2R5E:ADCK5:TTI2:TBC1D9:UNC13D:HOOK3:COMTD1:EXOC8:MOSPD2:CIP2A:RGP1:GCN1:IGSF8:SNF8:CD
+CPX-11287,Complex,IFNA13:IFNA2:IFNA7:IFNA5:IFNA14:IFNA17:IFNA6:IFNA4:IFNA16:ISG15:TRIM21:IFNA8:UBA7:UBR3:KDF1
+CPX-19291,Complex,IFNA7:IFNA6:ISG15:UBA7
+CPX-18182,Complex,IFNA2:IFNA7:IFNA6:IFNA4:ISG15:UBA7
+CPX-17731,Complex,IFNA2:IFNA7:ISG15:UBA7
+CPX-24984,Complex,IFNA13:IFNA2:IFNA7:IFNA21:IFNA5:IFNA14:IFNA17:IFNA6:IFNA4:IFNA16:ISG15:TRIM21:UBA7:IFI44L:UBR3:IFI44
+CPX-21667,Complex,IFNA2:IFNA7:IFNA6:IFNA4:IFNA16:ISG15:UBA7:UBR3
+CPX-506,Complex,Interleukin-5 receptor-ligand complex
+CPX-512,Complex,Granulocyte-macrophage colony-stimulating factor-receptor complex
+CPX-6015,Complex,Interferon gamma receptor-ligand complex
+CPX-12741,Complex,JAK2:ARHGAP18
+CPX-15359,Complex,JAK2:NRAS:ANXA11:ADIRF:ARHGAP18:SERINC2
+CPX-11709,Complex,JAK2:ABCA8:CST4:CST1:JCHAIN:PIGR:CRH:HBQ1:CST2:AMY1A:CA6:CST5:LYZ:RCAN2:PLEKHG6:AKNAD1:HBM:LEG1:HID1:FNBP4:FAM89B:C10orf53:FRMD1:ZNF491:NPB:MUC7:RNF141:CRYGN:ZG16B:BPIFA2:TIMD4:B3GNT5:MUC5B:SPRR3:CRNN
+CPX-19351,Complex,OPLAH:JAK2:ARHGAP18:PTGES2
+CPX-809,Complex,NSL histone acetyltransferase complex
+CPX-815,Complex,MSL histone acetyltransferase complex
+CPX-13306,Complex,KANSL1:MCRS1:PHF20:KAT8:DUS2
+CPX-19804,Complex,KANSL1:PHF20:KAT8:DUS2
+CPX-26186,Complex,ATN1:KMT2A:NCOA6:MSL1:KANSL1:MSL3:KMT2C:MCRS1:PHF20:KAT8:KANSL3:ASH2L:KMT2B:HCFC2
+CPX-2832,Complex,"SCF E3 ubiquitin ligase complex, KDM2B variant"
+CPX-18214,Complex,DEDD:FBXO21:CCNF:SKP1:CUL1:FBXO31:FBXW9:FBXL16:FBXO36:FBH1:KDM2B:FBXL8:FBXL18:FBXL15:FBXO44:FBXO4:KDM2A
+CPX-18251,Complex,EEF2:FBXO31:FBXW9:FBXL16:KDM2B:FBXL8:FBXL18:FBXL15:FBXO9:KDM2A
+CPX-19094,Complex,FBXO31:FBXW9:FBXL16:KDM2B:FBXL8:FBXL18:FBXL15:KDM2A
+CPX-25579,Complex,DEDD:FBXO21:CCNF:SKP1:CUL1:FBXO31:FBXW9:FBXL16:TTC9C:FBXO36:FBXO22:FBH1:KDM2B:FBXL8:FBXL18:FBXL15:FBXO44:FBXL4:FBXO4:KDM2A
+CPX-15756,Complex,SIN3B:KDM5A:MORF4L2:EMSY:GATAD1:PHF12:MORF4L1
+CPX-19024,Complex,SIN3B:KDM5A:BRCA2:MORF4L2:EMSY:GATAD1:PHF12:MORF4L1
+CPX-24157,Complex,SIN3B:KDM5A:BRCA2:MORF4L2:EMSY:PALB2:GATAD1:MRFAP1L1:PHF12:MORF4L1:MRFAP1
+CPX-5850,Complex,"Histone-lysine N-methyltransferase complex, KMT2A variant"
+CPX-12679,Complex,KMT2D:SETD1A:KDM6A:TADA2A:TADA3:ATN1:WDR5:DR1:KMT2A:NCOA6:RBBP5:ZNF318:KANSL1:ZZZ3:KMT2C:BOD1L1:KAT2A:KAT2B:BOD1:DPY30:ZNF518B:IKZF5:KAT14:CHD8:MBIP:DUS2:CXXC1:RERE:ASH2L:YEATS2:KMT2B:SETD1B:HCFC2
+CPX-15504,Complex,SETD1A:KDM6A:KMT2A:RBBP5:KMT2C:BOD1L1:BOD1:DPY30:ASH2L:SETD1B:HCFC2
+CPX-13006,Complex,KMT2D:SETD1A:KDM6A:HCFC1:KMT2A:RBBP5:KMT2C:BOD1L1:BOD1:DPY30:CXXC1:ASH2L:SETD1B:HCFC2
+CPX-11408,Complex,SETD1A:KDM6A:HCFC1:KMT2A:RBBP5:KMT2C:BOD1L1:BOD1:DPY30:CXXC1:ASH2L:SETD1B:HCFC2
+CPX-15921,Complex,SETD1A:KDM6A:TADA2A:TADA3:MDK:ATN1:WDR5:DR1:KMT2A:NCOA6:RBBP5:ZZZ3:KMT2C:BOD1L1:KAT2A:KAT2B:BOD1:DPY30:KAT14:MBIP:CXXC1:RERE:ASH2L:YEATS2:SETD1B:HCFC2
+CPX-13517,Complex,KDM6A:HCFC1:KMT2A:RBBP5:KMT2C:BOD1L1:BOD1:DPY30:SETD1B:HCFC2
+CPX-19677,Complex,KMT2D:SETD1A:KDM6A:HCFC1:ATN1:WDR5:KMT2A:NCOA6:RBBP5:KMT2C:BOD1L1:BOD1:DPY30:CXXC1:ASH2L:SETD1B:HCFC2
+CPX-18950,Complex,MEN1:UTY:KMT2D:SETD1A:KDM6A:HCFC1:ATN1:C21orf58:WDR5:KMT2A:NCOA6:RBBP5:ZXDC:PAXIP1:KMT2C:BOD1L1:BOD1:AK7:PAGR1:DPY30:CXXC1:ASH2L:KMT2B:SETD1B:HCFC2
+CPX-19425,Complex,KMT2D:SETD1A:KDM6A:HCFC1:ATN1:WDR5:KMT2A:NCOA6:RBBP5:ZNF318:KMT2C:BOD1L1:BOD1:DPY30:CXXC1:ASH2L:KMT2B:SETD1B:HCFC2
+CPX-21562,Complex,KMT2D:SETD1A:KDM6A:TADA2A:TADA3:MDK:ATN1:WDR5:DR1:KMT2A:NCOA6:RBBP5:ZZZ3:KMT2C:BOD1L1:KAT2A:KAT2B:BOD1:DPY30:KAT14:CHD8:MBIP:CXXC1:RERE:ASH2L:YEATS2:SETD1B:HCFC2
+CPX-7104,Complex,"Histone-lysine N-methyltransferase complex, KMT2D variant"
+CPX-14871,Complex,UTY:KMT2D:RARRES1:RPL38:PAXIP1:PAGR1:TPX2
+CPX-14586,Complex,UTY:KMT2D:RARRES1:RPL38:PAXIP1:PAGR1:MTIF3:TPX2
+CPX-12468,Complex,KMT2D:TADA3:ATN1:WDR5:NCOA6:KAT2A:KAT2B:SGF29:RERE
+CPX-16822,Complex,UTY:KMT2D:PAXIP1:PAGR1:MTIF3
+CPX-21523,Complex,UTY:KMT2D:PAXIP1:PAGR1
+CPX-13009,Complex,L1TD1:CHAC1
+CPX-10907,Complex,SCG5:FABP4:L1TD1:CHAC1:RNF6
+CPX-10712,Complex,SCG5:L1TD1:CHAC1
+CPX-16207,Complex,MAN1A1:GOLGA7B:L1TD1:GOLGA7:TMEFF1:PI4K2A:CHAC1:ZDHHC5:CLDND1:ZDHHC8
+CPX-13194,Complex,L1TD1:ELMOD1:CHAC1
+CPX-16624,Complex,GOLGA7B:L1TD1:PI4K2A:CHAC1:CLDND1:ZDHHC8
+CPX-18811,Complex,GOLGA7B:L1TD1:CHAC1:ZDHHC8
+CPX-22803,Complex,GOLGA7B:L1TD1:GOLGA7:ZDHHC5:CLDND1:ZDHHC8
+CPX-12023,Complex,CFAP337:L3MBTL1
+CPX-18595,Complex,CFAP337:SAMD11:L3MBTL1
+CPX-24529,Complex,HOXD13:SAMD11:L3MBTL1
+CPX-11957,Complex,SERPINF1:L3MBTL2:CIZ1
+CPX-16289,Complex,SERPINF1:ZNF296:L3MBTL2
+CPX-23738,Complex,SERPINF1:ZNF296:L3MBTL2:CIZ1
+CPX-20048,Complex,ZNF593:MAGEB4:RNASEH1:CLPX:SCAF4:HOXA9:C1QBP:LBR:ZNF638:RBM26:RNF220:BNC2:BHLHA15:RBM23:ZNF579:CMAS:CACTIN:DHX38:MBD6:ZFP91:BAG1:LSM14B:YY1AP1:SP140L:RBM27:SS18L2:POLDIP2:CHCHD2
+CPX-17304,Complex,ZNF593:RNASEH1:SCAF4:HOXA9:C1QBP:LBR:RBM26:RNF220:BNC2:BHLHA15:RBM23:ZNF579:CACTIN:MBD6:ZFP91:LSM14B:YY1AP1:SP140L:GPATCH2L:RBM27:SS18L2:POLDIP2:CHCHD2
+CPX-18996,Complex,ZNF593:MAGEB4:RNASEH1:CLPX:HOXA9:C1QBP:LBR:ZNF638:RBM26:RNF220:BNC2:RBM23:CMAS:CACTIN:MBD6:ZFP91:BAG1:LSM14B:YY1AP1:SP140L:RBM27:SS18L2:POLDIP2:CHCHD2
+CPX-22442,Complex,RNASEH1:C1QBP:LBR:ZNF638
+CPX-25237,Complex,RNASEH1:C1QBP:LBR
+CPX-26140,Complex,ARHGAP10:TOR1A:RAB29:CASC3:MCM3AP:ANKRD17:ZNF324:NUP155:SUN1:DIRAS3:ZBED1:TPR:ATP6V1B1:DNAJB2:NUP62:RANGAP1:NUP153:SUMO1:LBR:TOR1AIP1:TMEM201:NHSL1:C6orf141:RAP1GAP2:BLTP3A:DTX2:ZC3HC1:NRM:DHX37:NOPCHAP1:TBC1D19:ARL6IP6:LEMD2:SYNE2:POM121:RGPD5:CCDC77:BRIP
+CPX-11960,Complex,PHF1:MAMDC4:LCOR
+CPX-14775,Complex,LMNA:MTHFD2:LMNB1:LMNB2
+CPX-16631,Complex,PDE6D:LMNA:LMNB1:LMNB2:INPP5E
+CPX-17440,Complex,LMNA:LMNB1:LMNB2
+CPX-19366,Complex,PDE6D:UBL3:LMNA:LMNB1:ARL3:LMNB2:TBC1D10A:INPP5E:FBXO10
+CPX-21981,Complex,PDE6D:UBL3:LMNA:LMNB1:RAB28:LMNB2:TBC1D10A:INPP5E:FBXO10
+CPX-11998,Complex,SCAMP3:TIMM17B:LTN1:RPN1:ATP1A1:SLC25A5:ATP2A2:ATP2B1:LMNB1:ATP5F1A:SSR4:SEC61B:SLC25A3:SLC7A5:SLC1A5:SLC35F6:SLC38A5:SLC39A7:YIPF5:ATP5MK:SFXN1:ATAD3A:TECR:SLC25A13
+CPX-15431,Complex,LMNB1:LMNB2
+CPX-20061,Complex,SCAMP3:LTN1:LMNB1:SLC7A5:SLC35F6:SLC39A7:YIPF5:TECR
+CPX-16540,Complex,SCAMP3:LTN1:LMNB1:SLC7A5:SLC35F6:SLC39A7:YIPF5:SFXN1:TECR
+CPX-16798,Complex,LMNB1:ATP2A3:TMCO1
+CPX-19055,Complex,SCAMP3:LMNB1
+CPX-22505,Complex,LMNB1:EMD:SLC35F6:YIPF4
+CPX-21070,Complex,SCAMP3:LMNB1:TMPO
+CPX-25342,Complex,LMNB1:TMCO1
+CPX-25340,Complex,PDE6D:UBL3:LMNB1:RAB28:LMNB2:TBC1D10A:INPP5E:FBXO10
+CPX-21509,Complex,SCAMP3:LTN1:LMNB1
+CPX-11227,Complex,SMCHD1:TSHB:CBLIF:LRIF1
+CPX-20490,Complex,LRIF1:DQX1:REXO5
+CPX-14562,Complex,MACROH2A1:H3-7:H2BW1
+CPX-11557,Complex,MACROH2A1:H3-7
+CPX-19042,Complex,MACROH2A1:XPC:HLTF:RNF146:PARP2
+CPX-24894,Complex,PPM1G:MACROH2A1:H3-7:H2BW1:MACROH2A2
+CPX-23193,Complex,MACROH2A1:H2BW1
+CPX-20902,Complex,PPM1G:H3-7:MACROH2A2
+CPX-21899,Complex,PPM1G:MACROH2A2
+CPX-11002,Complex,GPAT2:AKAP1:MAEL
+CPX-17863,Complex,FIBCD1:MAEL
+CPX-18662,Complex,GPAT2:MAEL
+CPX-19582,Complex,MEI1:GPAT2:MAEL:GAD1:TRPV5
+CPX-20204,Complex,MAEL:SF3B5
+CPX-356,Complex,ATG5-ATG12 complex
+CPX-10768,Complex,POU2F1:ARFIP1:HSPA2:CFAP298:HSF1:HSF2:PTK2:ENDOG:QRICH1:EDRF1:C3orf38:UBAP2:SCYL2:MAVS:FAM114A1:STAM:HMCES:TGM7:OR7D2:DPH2:ILRUN:ARMC1:HSPBP1:HSF4
+CPX-13105,Complex,TCAP:DNAJC13:TUSC2:TOMM70:BAG4:HSPA4L:BAG2:BAG3:HSPA1B:HSPA8:POU2F1:HSPA6:DNAJB1:STIP1:HSPA1L:HSPA4:ARFIP1:HSPA2:CFAP298:HSF1:HSF2:PTK2:ENDOG:MLF2:QRICH1:EDRF1:HERC4:C3orf38:ZNF385C:SCYL2:ABHD15:MAVS:PNPLA5:CCDC117:LRRC56:NOXO1:CYP2W1:METTL21A:HSPH1:HMCES:
+CPX-18212,Complex,NT5C2:SF1:MAVS:HSPBP1
+CPX-17942,Complex,MAVS:BZW2
+CPX-20673,Complex,VAC14:MAVS:FIG4:OSBPL1A:PIKFYVE
+CPX-25460,Complex,GYPB:SPN:PTAFR:EIF2B2:EIF2B5:EIF2B1:ASIC2:BZW1:MAVS:CIP2A:IPO9:SEC62:EIF2B3:EIF2B4:EXOG:BZW2
+CPX-24659,Complex,VAC14:MAVS:FIG4:OSBPL1A
+CPX-7601,Complex,MXD4-MAX transcriptional repressor complex
+CPX-2515,Complex,MXI1-MAX transcriptional repressor complex
+CPX-2517,Complex,MXD3-MAX transcriptional repressor complex
+CPX-2548,Complex,MYCL-MAX transcriptional activator complex
+CPX-2551,Complex,MGA-MAX transcriptional repressor complex
+CPX-91,Complex,MYC-MAX transcriptional activator complex
+CPX-104,Complex,MAD-MAX transcriptional repressor complex
+CPX-2231,Complex,MYCN-MAX transcriptional activator complex
+CPX-12594,Complex,MYC:MXI1:MAX:MXD1:MXD4:MNT:MXD3:DNAH6
+CPX-13073,Complex,MYC:MXI1:MAX:MXD1:MXD4:WBP2NL:MNT:MXD3:DNAH6
+CPX-16281,Complex,MYC:MXI1:MAX:MXD4:MXD3:DNAH6
+CPX-26244,Complex,GPC4:FGF1:MAX:GTF2I:TMEM94:TRERF1:GMEB2:GTF3C5:GMEB1
+CPX-22069,Complex,SMARCA1:RBBP4:BPTF:SHPRH:RBBP7:PWWP2B:ZBTB2:CHD5:GATAD2B:ZNF512B:MBD2:SALL4
+CPX-24694,Complex,CDK2AP1:MBD3:GATAD2A:ZNF687:ZNF592:MBD2:ZMYND8
+CPX-15091,Complex,BEND7:ZNF296:MBD3L1:BCL11A
+CPX-15889,Complex,BEND7:MBD3L1:ZNF639
+CPX-21887,Complex,BEND7:ZNF296:MBD3L1:ZNF521:BCL11A
+CPX-23170,Complex,BEND7:MBD3L1
+CPX-15937,Complex,ZNF821:MBD3L2:BCL11A
+CPX-15992,Complex,ZNF821:ZNF423:MBD3L2
+CPX-16319,Complex,MBD3L2:ZNF296
+CPX-15740,Complex,ZNF821:MBD3L2:ZNF296:BCL11A
+CPX-12908,Complex,ZNF821:MBD3L2:ZNF296:PROX1
+CPX-11239,Complex,ZNF821:MBD3L2:PROX1
+CPX-19166,Complex,ZNF821:MBD3L2
+CPX-24931,Complex,ZNF821:ZNF423:MBD3L2:PROX1:ZNF521:BCL11A
+CPX-1605,Complex,WMM N6-adenosine-methyltransferase complex
+CPX-21210,Complex,"Methyltransferase complex, METTL3-METTL14"
+CPX-12537,Complex,WTAP:ZC3H13:VIRMA:CBLL1:METTL3:NME8:CBLL2:RBM15B:WAC:METTL14
+CPX-14139,Complex,WTAP:VIRMA:CBLL1:METTL3:RBM15B:METTL14
+CPX-10889,Complex,METTL3:RBM15B
+CPX-19874,Complex,WTAP:ZC3H13:VIRMA:CBLL1:METTL3:CBLL2:METTL14
+CPX-22942,Complex,METTL3:RBM15B:METTL14
+CPX-23185,Complex,WTAP:ZC3H13:METTL3:CBLL2:METTL14
+CPX-2348,Complex,HUSH epigenetic repressor complex
+CPX-14209,Complex,ABHD2:MORC1:LAMP5:MORC2
+CPX-12403,Complex,ABHD2:MBOAT2:MORC1:LAMP5:MORC2
+CPX-19563,Complex,MORC1:MORC2
+CPX-26253,Complex,KIF2A:PSMD12:PSMD14:PSMD3:TXNL1:NME1:PSMC3:YY1:PSMA1:PSMA4:PSMB8:PSMB9:PSMA5:PSMB5:PSMC2:PSMB10:PSMC4:PSMD8:PSMD4:PSMA6:PSMC1:PSMC5:RPS11:PSMC6:ARHGEF5:BLMH:PSME4:ADRM1:PSMD5:MIDN:NPLOC4:ZFAND2B:PSMG2:PSMB7:PSMD1:ELAC2:PAAF1:PAXX:INO80B:PSME3IP1:ACTR8:INO8
+CPX-2405,Complex,"CRL4-DCAF12 E3 ubiquitin ligase complex, CUL4A variant"
+CPX-2406,Complex,"CRL4-DCAF12 E3 ubiquitin ligase complex, CUL4B variant"
+CPX-26064,Complex,MTHFD2:SRP14:SRP54:MAPK11:MOV10:CPNE5:SRP68
+CPX-26242,Complex,TXNDC9:PDCD5:DIAPH1:PFDN1:COL8A1:CCT3:CCT8:CCT4:MFAP4:MLLT10:VBP1:CCT2:GNA12:PDCL:NAA30:SHB:SOWAHC:CFAP141:FBXW9:UNC45B:KLHDC8B:WDTC1:AFG2A:TRPC4AP:PPP1R13L:CCT6B:PFDN5:CHP1:CCT7:WDR83:PDCL3:QTRT2:RC3H2:MOV10:ARHGEF10L:TUBG2:NLRP2:MIOS:NUDC
+CPX-11291,Complex,CAPN15:NBEAL1:PRICKLE1:MOV10L1:ANKIB1:KCNE3
+CPX-16217,Complex,CAPN15:STAM2:TJP3:ARHGAP29:NBEAL1:GPBP1:SLC22A15:TC2N:EHBP1:GRAMD2B:PRICKLE1:SLC30A3:MOV10L1:AGXT2:SPRY4:CSNK1G1:ANKIB1:ZNRF3:RNF6:DIP2C:MYRF:PTCH2
+CPX-16241,Complex,CAPN15:RND2:MERTK:NBEAL1:PRICKLE2:NKD1:RNF125:PRICKLE1:CDCA7:MOV10L1:NRSN2:DACT1:ANKIB1:KCNE3:ROBO1
+CPX-20044,Complex,ATP9B:MAPKBP1:CAPN15:STAM2:SLITRK3:TJP3:MERTK:ARHGAP29:MEAK7:NBEAL1:PRICKLE2:GPBP1:GRAMD2A:ANKRD18A:SLC22A15:TC2N:RIN3:NKD1:RUNDC1:RNF125:GRAMD2B:MARK4:PRICKLE1:SLC30A3:MAPKAP1:MOV10L1:AGXT2:SPRY4:RIMS4:CSNK1G1:PLCB1:DACT1:ANKIB1:ZNRF3:RNF6:DIP2C:MYRF:PTCH
+CPX-17114,Complex,CAPN15:RND2:MERTK:NBEAL1:PRICKLE2:ANKRD18A:TC2N:MATCAP2:NKD1:RNF125:PRICKLE1:SECISBP2:CDCA7:MOV10L1:NRSN2:RIMS4:DACT1:ANKIB1:DIP2C:KCNE3:ROBO1
+CPX-12839,Complex,BCLAF3:ERH:ZNF200:ANKDD1A:TASOR2:ZNF597:MPHOSPH8:TASOR
+CPX-15333,Complex,CD8A:UBE2A:UBE2B:ANKDD1A:TASOR2:SLF2:SMC5:EID3:SIMC1:NSMCE1:ESAM:ZNF597:NSMCE2:NSMCE3:SMC6:MPHOSPH8:SLF1:RAD18:NSMCE4A
+CPX-13044,Complex,BCLAF3:CD8A:ANKDD1A:TASOR2:SLF2:SMC5:EID3:SIMC1:NSMCE1:ESAM:ZNF597:NSMCE2:NSMCE3:SMC6:MPHOSPH8:SLF1:RAD18:NSMCE4A
+CPX-13093,Complex,BCLAF3:CD8A:UBE2A:UBE2B:ANKDD1A:TASOR2:SLF2:SMC5:EID3:SIMC1:NSMCE1:ESAM:ZNF597:NSMCE2:NSMCE3:SMC6:MPHOSPH8:SLF1:RAD18:NSMCE4A
+CPX-16562,Complex,BCLAF3:CD8A:ANKDD1A:TASOR2:SLF2:SMC5:EID3:SIMC1:NSMCE1:ESAM:ZNF597:NSMCE2:NSMCE3:SMC6:MPHOSPH8:SLF1:NSMCE4A
+CPX-18581,Complex,SAFB2:MPHOSPH8
+CPX-19944,Complex,ZNF200:TASOR2:MPHOSPH8
+CPX-20964,Complex,ZNF200:TASOR2:MPHOSPH8:TASOR
+CPX-21082,Complex,BCLAF3:CD8A:UBE2A:UBE2B:ERH:ANKDD1A:TASOR2:SLF2:SMC5:EID3:SIMC1:NSMCE1:ESAM:ZNF597:NSMCE2:NSMCE3:SMC6:MPHOSPH8:SLF1:RAD18:NSMCE4A
+CPX-23845,Complex,CD8A:UBE2A:UBE2B:ZNF200:ANKDD1A:TASOR2:SLF2:SMC5:EID3:SIMC1:NSMCE1:ESAM:ZNF597:NSMCE2:NSMCE3:SMC6:MPHOSPH8:SLF1:RAD18:NSMCE4A
+CPX-14329,Complex,HPGD:MX1:CHI3L2:C18orf21:TPRG1
+CPX-14541,Complex,MAP1LC3B2:MX1:CHI3L2:C18orf21:SAMD9:STEAP4:ITPKC:GSDMC:SSUH2
+CPX-18632,Complex,MX1:C18orf21:TPRG1
+CPX-19939,Complex,MX1:CHI3L2:C18orf21
+CPX-7801,Complex,KPC E3 ubiquitin ligase complex
+CPX-7821,Complex,"SCF E3 ubiquitin ligase complex, FBXW11 variant"
+CPX-2365,Complex,"SCF E3 ubiquitin ligase complex, BTRC variant"
+CPX-9621,Complex,TRAF6-TIFA E3 ubiquitin ligase complex
+CPX-9661,Complex,TIFA-TIFAB signalling regulator complex
+CPX-9741,Complex,TRAF2-TIFA E3 ubiquitin ligase complex
+CPX-10041,Complex,Interleukin-18 receptor-ligand complex
+CPX-22522,Complex,NFKBIE:NFKB1:NFKBIA:NFKB2:RELB:RELA:REL:NFKBIB:NFKBID:ANKRD27
+CPX-23510,Complex,NFKBIE:NFKB1:NFKBIA:NFKB2:RELB:RELA:REL:NFKBIB
+CPX-26046,Complex,PER2:NFKB1:ANKRD49:NDN:HIF1AN
+CPX-26222,Complex,NRP1:GLCE:HADHA:LRPPRC:GRK6:HADHB:DHRS2:RAB12:MTERF4:MITD1:GLG1:DHRS4:SLIRP:NRDE2
+CPX-16362,Complex,OASL:PATZ1
+CPX-18316,Complex,RPL19:OASL
+CPX-16385,Complex,MORC4:PCGF1:ACTL8
+CPX-2260,Complex,"Non-canonical polycomb repressive complex 1.2, RING1-YAF2 variant"
+CPX-2276,Complex,"Non-canonical polycomb repressive complex 1.2, RNF2-RYBP variant"
+CPX-2280,Complex,"Non-canonical polycomb repressive complex 1.2, RNF2-YAF2 variant"
+CPX-2630,Complex,"Non-canonical polycomb repressive complex 1.2, RING1-RYBP variant"
+CPX-11924,Complex,RABGGTB:INPP5A:PGBD5:RABGGTA:RAB7B:PPP1R16A
+CPX-17398,Complex,RABGGTB:INPP5A:PGBD5:RAB7B:PPP1R16A
+CPX-22851,Complex,RABGGTB:INPP5A:PGBD5:PPP1R16A
+CPX-18208,Complex,PHC1:SFMBT2
+CPX-25658,Complex,IFI35:PHF19
+CPX-7861,Complex,PHF2-ARID5B histone lysine demethylase complex
+CPX-16824,Complex,PHF2:VPS37A
+CPX-20991,Complex,VPS37C:UMAD1:PHF2:VPS37A:PDCD6IP:MVB12A:TSG101:MVB12B:VPS37B:UBAP1:VPS28
+CPX-23608,Complex,PHF2:HMGA1
+CPX-16673,Complex,CDKN2AIPNL:XRN2:PHF8
+CPX-24158,Complex,DNTTIP2:PHF8
+CPX-21699,Complex,ARHGAP19:PIWIL4:PIWIL1:TDRKH
+CPX-22369,Complex,PIWIL4:PIWIL1:TDRKH
+CPX-23830,Complex,FHIT:ARHGAP19:PIWIL4:PIWIL1:TDRKH
+CPX-12169,Complex,YLPM1:RBM6:RBM3:SAFB2:ZNF638:SAFB:CCDC70:RBM12B:PPHLN1:RBMXL1:NCOA5:SLTM:KLF13
+CPX-10976,Complex,YLPM1:ZNF638:CCDC70:PPHLN1:NCOA5:SLTM
+CPX-15013,Complex,YLPM1:RBM6:RBM3:ZNF638:CCDC70:RBM12B:PPHLN1:NCOA5:SLTM:KLF13
+CPX-10758,Complex,SAFB2:PPHLN1:RBMXL1
+CPX-13114,Complex,SAFB2:SAFB:PPHLN1
+CPX-10566,Complex,YLPM1:ZNF638:RBM12B:PPHLN1:NCOA5
+CPX-17691,Complex,YLPM1:RBM6:ZNF638:RBM12B:PPHLN1:KLF13
+CPX-20826,Complex,HNRNPDL:HNRNPR:HNRNPA1:HNRNPL:RBMX:MATR3:HNRNPA3:ILF2:HNRNPA0:HNRNPD:SAFB2:SAFB:ELAVL1:HNRNPUL2:ZNF326:SUGP2:PPHLN1:RBMXL1:ZFR:HNRNPAB:RALY
+CPX-20488,Complex,YLPM1:RBM6:RBM3:KHDRBS1:ZNF638:SAFB:CCDC70:RBM12B:PPHLN1:DDX17:RBMXL1:NCOA5:SLTM:KLF13
+CPX-20533,Complex,YLPM1:RBM6:RBM3:ZNF638:RBM12B:PPHLN1:KLF13
+CPX-21687,Complex,YLPM1:RBM6:ZNF638:RBM12B:PPHLN1:NCOA5:SLTM:SCAF8:KLF13
+CPX-21794,Complex,RBM6:ZNF638:CCDC70:RBM12B:PPHLN1:NCOA5:SLTM
+CPX-23153,Complex,YLPM1:ZNF638:RBM12B:PPHLN1:NCOA5:SLTM
+CPX-24306,Complex,RBMX:HNRNPA3:SAFB2:SAFB:ZNF326:PPHLN1:RBMXL1
+CPX-26149,Complex,GEMIN2:PRPF3:HTATSF1:DHX16:AQR:CDC40:WBP4:SNRNP200:SNRPC:C1S:YJU2B:COIL:RBM5:TXNL4A:SNW1:DHX8:EFTUD2:PPP4R3B:ICE2:CWF19L1:PPP4R3A:PRPF8:TTC33:MEPCE:DDX42:DZIP1:CCAR1:FAM9B:PPHLN1:PPIL4:CTNNBL1:DHX38:ESS2:CCDC97:TOE1:RNPC3:WDFY2:TGS1:CDC5L:PPIL3:TUT1:GEMIN7
+CPX-7728,Complex,RB1-E2F3-DP1 transcriptional repressor complex
+CPX-155,Complex,RB1-E2F1-DP1 transcriptional repressor complex
+CPX-175,Complex,RB1-E2F2-DP1 transcriptional repressor complex
+CPX-14708,Complex,MCIDAS:E2F3:RB1:MYBL1:MYBL2:RBL1:E2F1:RBL2:TFDP2:E2F2:E2F5:E2F4:LIN52:LIN9:LIN54:LIN37
+CPX-14271,Complex,RAD17:RB1:CHTF8:RFC4:RFC2:RFC5:RFC3:CHTF18:ATAD5:CDC6:DSCC1
+CPX-11703,Complex,RAD17:RB1:CHTF8:RFC4:RFC2:RFC5:ATAD5:CDC6:DSCC1
+CPX-19245,Complex,RB1:TFDP3
+CPX-19666,Complex,RAD17:RB1:CHTF8:RFC4:RFC2:RFC5:RFC3:ATAD5:CDC6:DSCC1
+CPX-7461,Complex,"DREAM transcriptional repressor complex, RBL2 variant"
+CPX-7462,Complex,Myb-MuvB-FOXM1 transcriptional activation complex
+CPX-688,Complex,NuRF chromatin remodeling complex
+CPX-2366,Complex,Myb-MuvB transcriptional activation complex
+CPX-2368,Complex,"DREAM transcriptional repressor complex, RBL1 variant"
+CPX-569,Complex,Chromatin assembly factor 1 complex
+CPX-16009,Complex,SMARCA1:RBBP4:BPTF:PWWP2B:ZNF512B
+CPX-19326,Complex,SMARCA1:RBBP4:BPTF:SHPRH:RBBP7:PWWP2B:ZBTB2:CHD5:GATAD2B:ZNF512B
+CPX-17618,Complex,SHPRH:RBBP7:PWWP2B:CCDC71
+CPX-23208,Complex,SMARCA1:SHPRH:RBBP7:PWWP2B:CCDC71
+CPX-24595,Complex,SHPRH:RBBP7
+CPX-10945,Complex,MUC20:RBM15
+CPX-24467,Complex,KHDRBS3:RBM15
+CPX-12108,Complex,SH2B2:IRF6:INSC:KCTD1:SRGAP1:GPSM1:MTURN:RBM15B:SHKBP1:ASPSCR1:ACSS2:GMIP:ZHX1:KCTD3:ZHX2
+CPX-11380,Complex,TBC1D3F:SH2B2:ZBTB49:RBM15B:WDR83:RIMS4:ZHX1
+CPX-12427,Complex,POTEB:POTEB3:POTEC:POTED:NME8:RBM15B:CEP83
+CPX-20575,Complex,TBC1D3F:SH2B2:ZBTB49:GPSM1:RBM15B:WDR83:RIMS4:ZHX1
+CPX-21868,Complex,SH2B2:RBM15B:ZHX1
+CPX-5828,Complex,"NF-kappaB DNA-binding transcription factor complex, p50/p65"
+CPX-5829,Complex,"NF-kappaB DNA-binding transcription factor complex, p52/p65"
+CPX-5834,Complex,"NF-kappaB DNA-binding transcription factor complex, p65/c-Rel"
+CPX-5835,Complex,"NF-kappaB DNA-binding transcription factor complex, p65/p65"
+CPX-9223,Complex,TNFSF14-TNFRSF14 receptor complex
+CPX-19241,Complex,PAX6:CALML3:OPN5:SYNPO:KLF6:RESF1:CCNB1IP1
+CPX-21475,Complex,ZNF536:ADGRB2:NKX2-2:S100B:POU3F2:TIGD4:CNTROB:LCORL:FNBP1:MTMR12:CPLANE1:RESF1:ZBTB4
+CPX-14712,Complex,GFPT1:ZMYM1:SALL3:SALL1:RLIM:SALL2
+CPX-15355,Complex,MATCAP1:EPM2AIP1:CITED1:BDH2:RLIM
+CPX-15520,Complex,PJA2:UBB:DNAJB2:DYNLT1:EPN3:RLIM
+CPX-20669,Complex,UBB:DNAJB2:DYNLT1:EPN3:RLIM
+CPX-23104,Complex,DNAJB2:DYNLT1:RLIM
+CPX-25696,Complex,GFPT1:ZMYM1:RLIM:SALL2
+CPX-26095,Complex,RAD51B:SH3BP5:SBF1:NFATC1:PML:GTF2B:NHLH2:LRRC41:TERF2:NCOA2:TSC22D1:NUFIP2:RAD50:NEUROG1:ERCC4:ACD:PPWD1:HES6:RNF2:DPYSL5:TINF2:SH3BGRL3:DHX35:DCLRE1B:TERF2IP:CNOT7
+CPX-26111,Complex,PGP:RAD51B:MED7:SH3BP5:CLUH:RP2:ZWINT:SBF1:NFATC1:CENPB:ERCC1:PML:BRCA1:YLPM1:GTF2B:NHLH2:CENPC:TP53BP1:NBR1:RALBP1:LRRC41:TERF2:NCOA2:TSC22D1:GON4L:HMBOX1:TAPT1:C16orf87:PLXDC2:NUFIP2:DTWD2:GEMIN5:CENPI:RAD50:NEUROG1:ERCC4:ACD:PPWD1:CENPT:HES6:RNF2:DPYSL5
+CPX-467,Complex,eNoSc complex
+CPX-455,Complex,RSF complex
+CPX-15616,Complex,CACNA1D:CHAF1A:CHAF1B:RSF1
+CPX-15661,Complex,HMGN4:BANF1:RSF1
+CPX-15387,Complex,GALK1:PELO:SAMHD1
+CPX-11563,Complex,DNAJA2:EML2:TUBB4A:TUBB:FAS:CAD:DNAJA1:ARL2:RPS27:GALK1:IRAK1:MSH6:HK2:TUBA1B:TUBA4A:TUBB4B:CDC42EP1:NME3:TUBB3:IQGAP2:TUBB2A:CAPS:TUBB8:EML6:NFXL1:TUBA1A:TTC5:TCP11L2:NUBPL:TUBA1C:SDF4:ZNG1A:PELO:TBCD:TUBB6:TUBB2B:TUBA4B:TCP11L1:SUCLA2:GGT7:SAMHD1:NUBP2
+CPX-16239,Complex,CCDC47:PELO:SUCLA2:SAMHD1
+CPX-13617,Complex,GALK1:MSH6:PELO:FBXL12:SAMHD1
+CPX-22391,Complex,PELO:SAMHD1
+CPX-2539,Complex,U2 small nuclear ribonucleoprotein complex
+CPX-1099,Complex,B-WICH chromatin remodelling complex
+CPX-2227,Complex,SF3B complex
+CPX-26506,Complex,Minor Spliceosomal Pre-B complex
+CPX-26509,Complex,Minor Spliceosomal B-act complex
+CPX-26429,Complex,Major Spliceosomal Pre-B complex
+CPX-26435,Complex,Major Spliceosomal B complex
+CPX-26441,Complex,Major Spliceosomal Pre-B-act complex
+CPX-26448,Complex,Major Spliceosomal B-act-I complex
+CPX-26450,Complex,Major Spliceosomal B-act-II complex
+CPX-26451,Complex,Major Spliceosomal B-act-III complex
+CPX-26454,Complex,Major Spliceosomal B-act-IV complex
+CPX-26458,Complex,Major Spliceosomal Post-B-act complex
+CPX-26487,Complex,U12 small nuclear ribonucleoprotein complex
+CPX-26489,Complex,U11/U12 di-small nuclear ribonucleoprotein complex
+CPX-18512,Complex,TERT:TNRC18:SIN3B:SAP30:PDGFRB:ARID4A:FOXK1:FOXK2:ARID4B:BRMS1L:TGIF2LX:SIN3A:TGIF2:SAP130:ING2:SUDS3:SAP30L:BRMS1:SINHCAF:BAHCC1:ING1
+CPX-18798,Complex,TNRC18:SIN3B:SAP30:ARID4A:FOXK2:ARID4B:BRMS1L:TGIF2LX:SIN3A:TGIF2:SAP130:ING2:SAP30L:BRMS1:SINHCAF:BAHCC1:ING1
+CPX-16176,Complex,ZBTB38:SIRT1
+CPX-19358,Complex,HOXA5:PITX1:ZBTB38:SIRT1
+CPX-1004,Complex,PCAF-containing ATAC complex
+CPX-997,Complex,GCN5-containing ATAC complex
+CPX-11744,Complex,RAB3GAP1:SIRT2:RAB3GAP2:GPAM
+CPX-16140,Complex,SARS1:RAB3GAP1:SIRT2:RAB3GAP2:GPAM
+CPX-17287,Complex,CST5:RAB3GAP1:SIRT2:RAB3GAP2:GPAM
+CPX-17629,Complex,SARS1:SIRT2:GPAM
+CPX-20862,Complex,CST5:RAB3GAP1:SIRT2:GPAM
+CPX-23726,Complex,SIRT2:DUS3L:GPAM
+CPX-16612,Complex,GFPT2:GFPT1:SIRT6
+CPX-21679,Complex,GFPT2:H2BC17:GFPT1:SIRT6
+CPX-12565,Complex,MROH6:SFI1:RGS9:FTL:PSKH1:DNAH14:ARHGEF5:TTLL4:DUSP5:FAM161A:ERCC6L2:WDR25:ADNP2:ALKBH2:TRNP1:NEK5:PGBD2:GDPGP1:RBM43:KMT5C:FAM43A:ARRDC2:SH3RF2:SMCR8:COQ10A:NEK1:RBBP8:TEP1:CABLES2:COQ10B:MAGEF1:SIRT7:CFAP97:AGTPBP1:MOK:MYH15
+CPX-7747,Complex,"SCF E3 ubiquitin ligase complex, FBXW2 variant"
+CPX-7761,Complex,"SCF E3 ubiquitin ligase complex, FBXW4 variant"
+CPX-7762,Complex,"SCF E3 ubiquitin ligase complex, FBXW5 variant"
+CPX-7763,Complex,"SCF E3 ubiquitin ligase complex, FBXW7 variant"
+CPX-7784,Complex,"SCF E3 ubiquitin ligase complex, FBXW8-CUL7 variant"
+CPX-7785,Complex,"SCF E3 ubiquitin ligase complex, FBXW9 variant"
+CPX-7822,Complex,"SCF E3 ubiquitin ligase complex, FBXW12 variant"
+CPX-7846,Complex,"SCF E3 ubiquitin ligase complex, CCNF variant"
+CPX-7847,Complex,"SCF E3 ubiquitin ligase complex, FBXO2 variant"
+CPX-7881,Complex,"SCF E3 ubiquitin ligase complex, FBXO3 variant"
+CPX-7882,Complex,"SCF E3 ubiquitin ligase complex, FBXO4 variant"
+CPX-7904,Complex,"SCF E3 ubiquitin ligase complex, FBXO5 variant"
+CPX-7905,Complex,"SCF E3 ubiquitin ligase complex, FBXO6 variant"
+CPX-7906,Complex,"SCF E3 ubiquitin ligase complex, FBXO7 variant"
+CPX-7921,Complex,"SCF E3 ubiquitin ligase complex, FBXO8 variant"
+CPX-7922,Complex,"SCF E3 ubiquitin ligase complex, FBXO9 variant"
+CPX-7923,Complex,"SCF E3 ubiquitin ligase complex, FBXO10 variant"
+CPX-7924,Complex,"SCF E3 ubiquitin ligase complex, FBXO11 variant"
+CPX-7925,Complex,"SCF E3 ubiquitin ligase complex, FBXO15 variant"
+CPX-7926,Complex,"SCF E3 ubiquitin ligase complex, FBXO16 variant"
+CPX-7927,Complex,"SCF E3 ubiquitin ligase complex, FBXO17 variant"
+CPX-7928,Complex,"SCF E3 ubiquitin ligase complex, FBH1 variant"
+CPX-7929,Complex,"SCF E3 ubiquitin ligase complex, LMO7 variant"
+CPX-7930,Complex,"SCF E3 ubiquitin ligase complex, FBXO21 variant"
+CPX-7962,Complex,"SCF E3 ubiquitin ligase complex, FBXO22 variant"
+CPX-7963,Complex,"SCF E3 ubiquitin ligase complex, FBXO24 variant"
+CPX-7965,Complex,"SCF E3 ubiquitin ligase complex, FBXO25 variant"
+CPX-7966,Complex,"SCF E3 ubiquitin ligase complex, FBXO27 variant"
+CPX-7967,Complex,"SCF E3 ubiquitin ligase complex, FBXO28 variant"
+CPX-7968,Complex,"SCF E3 ubiquitin ligase complex, FBXO30 variant"
+CPX-7971,Complex,"SCF E3 ubiquitin ligase complex, FBXO31 variant"
+CPX-7972,Complex,"SCF E3 ubiquitin ligase complex, FBXO32 variant"
+CPX-7973,Complex,"SCF E3 ubiquitin ligase complex, FBXO33 variant"
+CPX-7975,Complex,"SCF E3 ubiquitin ligase complex, FBXO34 variant"
+CPX-7976,Complex,"SCF E3 ubiquitin ligase complex, FBXO36 variant"
+CPX-7977,Complex,"SCF E3 ubiquitin ligase complex, FBXO38 variant"
+CPX-7979,Complex,"SCF E3 ubiquitin ligase complex, FBXO39 variant"
+CPX-7981,Complex,"SCF E3 ubiquitin ligase complex, FBXO40 variant"
+CPX-3291,Complex,"SCF E3 ubiquitin ligase complex, FBXL3 variant"
+CPX-3292,Complex,"SCF E3 ubiquitin ligase complex, FBXL2 variant"
+CPX-3295,Complex,"SCF E3 ubiquitin ligase complex, SKP2 variant"
+CPX-2489,Complex,"SCF E3 ubiquitin ligase complex, FBXL22 variant"
+CPX-2492,Complex,"SCF E3 ubiquitin ligase complex, FBXL15 variant"
+CPX-2512,Complex,"SCF E3 ubiquitin ligase complex, FBXL4 variant"
+CPX-2516,Complex,"SCF E3 ubiquitin ligase complex, FBXL6 variant"
+CPX-2538,Complex,"SCF E3 ubiquitin ligase complex, KDM2A variant"
+CPX-2553,Complex,"SCF E3 ubiquitin ligase complex, FBXL18 variant"
+CPX-2554,Complex,"SCF E3 ubiquitin ligase complex, FBXL19 variant"
+CPX-2319,Complex,"SCF E3 ubiquitin ligase complex, FBXL14 variant"
+CPX-2343,Complex,"SCF E3 ubiquitin ligase complex, FBXL16 variant"
+CPX-2438,Complex,"SCF E3 ubiquitin ligase complex, FBXL8 variant"
+CPX-2748,Complex,"SCF E3 ubiquitin ligase complex, FBXL21 variant"
+CPX-2773,Complex,"SCF E3 ubiquitin ligase complex, FBXL17 variant"
+CPX-2239,Complex,"SCF E3 ubiquitin ligase complex, FBXL5 variant"
+CPX-2241,Complex,"SCF E3 ubiquitin ligase complex, FBXL13 variant"
+CPX-2658,Complex,"SCF E3 ubiquitin ligase complex, FBXL12 variant"
+CPX-2683,Complex,"SCF E3 ubiquitin ligase complex, FBXL7 variant"
+CPX-2873,Complex,"SCF E3 ubiquitin ligase complex, FBXL20 variant"
+CPX-7982,Complex,"SCF E3 ubiquitin ligase complex, FBXO41 variant"
+CPX-7983,Complex,"SCF E3 ubiquitin ligase complex, FBXO42 variant"
+CPX-8002,Complex,"SCF E3 ubiquitin ligase complex, FBXO43 variant"
+CPX-8003,Complex,"SCF E3 ubiquitin ligase complex, FBXO44 variant"
+CPX-8004,Complex,Non-canonical FBXO45-MYCBP2-SKP1 E3 ubiquitin ligase complex
+CPX-8005,Complex,"SCF E3 ubiquitin ligase complex, FBXO46 variant"
+CPX-8006,Complex,"SCF E3 ubiquitin ligase complex, FBXO47 variant"
+CPX-8108,Complex,"SCF E3 ubiquitin ligase complex, TSPAN17 variant"
+CPX-26036,Complex,SKP1:CUL1:FBXL19:FBXO46:FBXO11:LZTR1:FBXL17:FBXW2:KDM2A
+CPX-13357,Complex,SMARCA1:MAGEA3:MAGEA6:OMP:BAP18:HMGXB4
+CPX-11392,Complex,SMARCA1:MAGEA3:MAGEA6:BPTF:BAP18:HMGXB4
+CPX-20660,Complex,IL1A:SMARCA1:MAGEA3:MAGEA6:OMP:BPTF:BAP18:HMGXB4
+CPX-25119,Complex,SMARCA1:BPTF:BAP18:HMGXB4
+CPX-21330,Complex,SMARCA1:BAP18
+CPX-4084,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6A-BICRA-SMARCA2 variant"
+CPX-4203,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6A-BICRAL-SMARCA2 variant"
+CPX-4223,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6B-BICRA-SMARCA2 variant"
+CPX-4224,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6B-BICRAL-SMARCA2 variant"
+CPX-1164,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1A-SMARCA2 variant"
+CPX-1194,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1A-SMARCA2 variant"
+CPX-1195,Complex,Embryonic stem cell-specific SWI/SNF ATP-dependent chromatin remodeling complex
+CPX-1196,Complex,"Polybromo-associated SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B variant"
+CPX-1199,Complex,"Polybromo-associated SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A variant"
+CPX-1201,Complex,"Neural progenitor-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1A-SMARCA2 variant"
+CPX-1202,Complex,"Neuron-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1A-SMARCA2 variant"
+CPX-1203,Complex,"Brain-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1A-SMARCA2 variant"
+CPX-1205,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1B-SMARCA2 variant"
+CPX-1207,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1A-SMARCA2 variant"
+CPX-1210,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1B-SMARCA2 variant"
+CPX-1213,Complex,"Neural progenitor-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1B-SMARCA2 variant"
+CPX-1217,Complex,"Neuron-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1B-SMARCA2 variant"
+CPX-1220,Complex,"Brain-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1B-SMARCA2 variant"
+CPX-1223,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1B-SMARCA2 variant"
+CPX-1225,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1A-SMARCA2 variant"
+CPX-1227,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1B-SMARCA2 variant"
+CPX-23550,Complex,ARID1A:SS18L1:ACTL6B:SMARCA2:SMARCA4:SMARCB1:SS18:BCL7A:ARID2:BICRAL:SMARCD3:ARID1B:SMARCC2:PHF10:BCL7C:DPF1:DPF3:DPF2:SMARCC1:SMARCD2:SMARCE1:SMARCD1:BCL7B:TEX13B:BRD9:BRD7:BICRA
+CPX-23556,Complex,ARID1A:SS18L1:ACTL6B:SMARCA2:SMARCA4:SMARCB1:SS18:BCL7A:ARID2:BICRAL:SMARCD3:PBRM1:ARID1B:SMARCC2:PHF10:BCL7C:DPF1:DPF3:DPF2:SMARCC1:SMARCD2:SMARCE1:SMARCD1:BCL7B:TEX13B:BRD9:BRD7:BICRA
+CPX-26094,Complex,TAF4:ARID1A:KPNA5:ATXN7:RNMT:CCNT1:KPNA6:NOS1AP:SS18L1:USP1:ACTL6A:TAF1:TAF6:SMARCA2:SMARCA4:KPNA2:KPNA1:CTDSPL2:SMARCB1:TAF5:TAF7:TAF9:BCL7A:TAF7L:TAF3:ARID2:CDCA2:BICRAL:SMARCD3:SRCAP:TAF8:PBRM1:CARM1:PDIK1L:BOD1L1:ARID1B:SMARCC2:UBA3:PHF10:BCL7C:TAF4B:D
+CPX-26117,Complex,ARID1A:SS18L1:ACTL6A:SMARCA2:SMARCA4:SMARCB1:BCL7A:ARID2:BICRAL:SMARCD3:PBRM1:ARID1B:SMARCC2:BCL7C:DPF1:DPF2:SMARCC1:SMARCD2:SMARCE1:SMARCD1:BCL7B:CDCA7:BRD9:BRD7:BICRA:NUP50
+CPX-26163,Complex,TAF4:ARID1A:KPNA5:RNMT:KPNA6:SS18L1:ACTL6A:TAF1:SMARCA2:SMARCA4:KPNA2:KPNA1:CTDSPL2:SMARCB1:TAF5:BCL7A:TAF7L:TAF3:ARID2:BICRAL:SMARCD3:SRCAP:PBRM1:PDIK1L:ARID1B:SMARCC2:UBA3:BCL7C:DPF1:DPF2:SMARCC1:SMARCD2:SMARCE1:SMARCD1:BCL7B:CDCA7:BRD9:BRD7:BICRA:NUP50
+CPX-4206,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6A-BICRA-SMARCA4 variant"
+CPX-4207,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6A-BICRAL-SMARCA4 variant"
+CPX-4225,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6B-BICRA-SMARCA4 variant"
+CPX-4226,Complex,"GBAF (SWI/SNF) ATP-dependent chromatin remodeling complex, ACTL6B-BICRAL-SMARCA4 variant"
+CPX-1204,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1A-SMARCA4 variant"
+CPX-1206,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1B-SMARCA4 variant"
+CPX-1209,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1A-SMARCA4 variant"
+CPX-1211,Complex,"SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1B-SMARCA4 variant"
+CPX-1212,Complex,"Neural progenitor-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1A-SMARCA4 variant"
+CPX-1215,Complex,"Neural progenitor-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1B-SMARCA4 variant"
+CPX-1216,Complex,"Neuron-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1A-SMARCA4 variant"
+CPX-1218,Complex,"Neuron-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1B-SMARCA4 variant"
+CPX-1219,Complex,"Brain-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1A-SMARCA4 variant"
+CPX-1221,Complex,"Brain-specific SWI/SNF ATP-dependent chromatin remodeling complex, ARID1B-SMARCA4 variant"
+CPX-1222,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1A-SMARCA4 variant"
+CPX-1224,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6A-ARID1B-SMARCA4 variant"
+CPX-1226,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1A-SMARCA4 variant"
+CPX-1228,Complex,"Muscle cell-specific SWI/SNF ATP-dependent chromatin remodeling complex, ACTL6B-ARID1B-SMARCA4 variant"
+CPX-757,Complex,WICH chromatin remodelling complex
+CPX-25738,Complex,"CERF chromatin remodelling complex, SMARCA5 variant"
+CPX-26251,Complex,POLR1G:SMARCA5:KIF1B:DKC1:PAGE1:POLR1A:ESRRA:UBTF:EEF1B2:CRAT:CSNK1D:BCAM:POLR2F:RPL23A:AKR1C1:GFPT1:TNFRSF9:TCOF1:GAB1:BIRC2:VGLL4:RBMS2:ZNF174:CAMK4:SYTL3:TMEM177:HERC4:INO80C:HECW1:ATOSB:JAZF1:TIAM2:LRRC47:BEND7:PDZD8:NEDD1:TSEN15:PSPC1:NECTIN2:CCDC127:
+CPX-14309,Complex,ZNF785:ZNF688:KDM5C:GTF3C1:SCML4:GTF3C6:ZNF764:SMARCAD1:GTF3C4:PDZRN3:ATG4B:GTF3C5:GTF3C3
+CPX-11298,Complex,MEIOC:ZNF316:TRIM24:ZNF324:ZNF92:OVGP1:ZNF460:ZNF528:SPIN3:ZNF324B:ZNF550:ZNF764:ZNF714:ZNF251:SMARCAD1:RBAK:ZNF223:TRIM33
+CPX-10713,Complex,ZNF785:NEBL:KDM5C:CYP24A1:ZNF764:SMARCAD1:SUFU
+CPX-17121,Complex,ZNF816:SMARCAD1
+CPX-22904,Complex,ZNF44:TRIB3:SMARCAD1
+CPX-20819,Complex,ZNF320:ZNF316:ZNF724:ZNF324:ZNF708:ZNF136:ZNF92:OVGP1:ZNF460:ZNF273:ZNF765:ZNF100:UBALD2:ZNF480:ZNF669:GJD4:ZNF714:SMARCAD1:ZNF430:TRIM39:SLC2A9:RBAK:ZNF223:TRIM33
+CPX-20968,Complex,ZNF44:TRIB3:SMARCAD1:ZNF490
+CPX-24852,Complex,ZNF320:ZNF316:ZNF724:ZNF195:TRIM24:ZNF253:ZNF324:ZNF44:ZNF708:ZNF8:ZNF136:ZNF445:ZNF92:TRIM28:ZNF211:ZNF460:ZNF273:ZNF77:ZNF284:ZNF791:ZNF528:ZNF718:ZNF311:ZNF324B:ZNF813:ZNF620:ZNF621:ZNF765:ZNF627:ZNF595:ZNF100:ZNF480:ZNF669:VWCE:ZNF764:ZNF333:GJD4:ZNF71
+CPX-21118,Complex,ZNF44:HROB:TRIB3:SMARCAD1:TRIM33
+CPX-11398,Complex,LAMTOR5:LAMTOR4:RRAGB:SMYD5:LAMTOR1:RRAGA:RPTOR:SLC38A9:RRAGC:RRAGD:LAMTOR3:LAMTOR2
+CPX-16183,Complex,TULP1:TULP3:TUB:HSPG2:SMYD5:ANKRD54:RNF138:AKT1S1:LYSMD1
+CPX-20031,Complex,TULP1:TULP3:TUB:SMYD5:ANKRD54:RNF138:AKT1S1:LYSMD1
+CPX-18325,Complex,TUB:SMYD5:ANKRD54
+CPX-22507,Complex,LAMTOR5:LAMTOR4:SMYD5:LAMTOR1:RRAGA:RPTOR:SLC38A9:RRAGC:RRAGD:LAMTOR3:LAMTOR2
+CPX-22888,Complex,SMYD5:LAMTOR1
+CPX-18942,Complex,TULP1:TULP3:SCO1:UBA1:TUB:SMYD5:ANKRD54:TTC21B:IFTAP:WDR19:IFT43:IFT140:LYSMD1:IFT122:WDR35:ZKSCAN5
+CPX-24935,Complex,BMPR1B:SMYD5:LAMTOR1:TPRA1
+CPX-23418,Complex,TUB:SMYD5
+CPX-24682,Complex,SMYD5:LAMTOR1:SLC38A9:RRAGC:RRAGD:LAMTOR2
+CPX-14442,Complex,SRSF9:SPEN
+CPX-16160,Complex,DDX39A:ZC3H11A:DDX39B:THOC2:SPEN
+CPX-16229,Complex,ZC3H11A:THOC2:SPEN
+CPX-16233,Complex,VIRMA:CBLL1:SPEN
+CPX-17928,Complex,HNRNPCL1:SRSF10:SRSF9:SPEN:PRMT1:CAAP1:BCLAF1:THRAP3
+CPX-22695,Complex,DDX39A:ZC3H11A:DDX39B:THOC7:THOC2:THOC3:SPEN
+CPX-22821,Complex,ZC3H11A:VIRMA:SPEN
+CPX-19895,Complex,ZC3H11A:VIRMA:ALYREF:SPEN
+CPX-23750,Complex,ZBTB33:TRIML2:SPEN
+CPX-24292,Complex,HNRNPCL1:SRSF10:SRSF9:SPEN:PRMT1:CAAP1:BCLAF1:MKRN1:THRAP3
+CPX-23979,Complex,WTAP:ZC3H13:VIRMA:CBLL1:CBLL2:SPEN
+CPX-24782,Complex,SAP18:ZC3H11A:NKTR:EIF4A3:SARNP:ZC3H14:PABPN1:GPALPP1:SPEN:PNN:GPATCH8:CCDC9
+CPX-12605,Complex,SPIN4:SPIN3:YRDC:SPINDOC:SPIN1
+CPX-11809,Complex,SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:CGGBP1:SPIN1
+CPX-14492,Complex,PAX3:SPIN4:SPIN3:YRDC:UBR7:SPIN2B:SPINDOC:ARHGAP39:RPS6KB2:CGGBP1:SPIN1
+CPX-10940,Complex,SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:SPIN1
+CPX-11604,Complex,SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:XPNPEP1:RPS6KB2:CGGBP1:SPIN1
+CPX-16388,Complex,SPIN3:YRDC:SPIN2B:SPINDOC:CGGBP1:SPIN1
+CPX-13244,Complex,SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:XPNPEP1:RPS6KB2:SPIN1
+CPX-12883,Complex,SPIN4:SPIN3:SPINDOC:SPIN1
+CPX-11246,Complex,SPIN3:SPINDOC:SPIN1
+CPX-19311,Complex,SPIN4:SPIN3:YRDC:SPINDOC:RPS6KB2:SPIN1
+CPX-20046,Complex,PAX3:ZNF528:SPIN4:SPIN3:ZNF324B:YRDC:SPIN2B:SPINDOC:CGGBP1:SPIN1
+CPX-18454,Complex,SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:XPNPEP1:SPIN1
+CPX-18177,Complex,SPIN4:YRDC:SPIN2B:SPINDOC:XPNPEP1:CGGBP1:SPIN1
+CPX-20597,Complex,PAX3:SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:CGGBP1:SPIN1
+CPX-23571,Complex,SPIN4:YRDC:SPIN2B:SPIN1
+CPX-23744,Complex,GPX1:SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:XPNPEP1:CGGBP1:SPIN1
+CPX-23383,Complex,SPIN4:SPIN3:YRDC:SPIN2B:SPINDOC:XPNPEP1:CGGBP1:SPIN1
+CPX-24636,Complex,SPIN4:YRDC:SPIN2B:SPINDOC:XPNPEP1:SPIN1
+CPX-25017,Complex,RBM34:SPTY2D1
+CPX-12352,Complex,SAP18:CASC3:HNRNPCL1:SRSF10:ZRANB2:LUC7L3:SNRNP70:SON:U2AF2:NKTR:EIF4A3:CLK1:CLK2:CLK3:NCBP2:MAGOH:TRA2B:SRPK2:SRSF3:SRSF2:SRSF11:SRSF1:SRSF4:NCBP1:SRSF9:SRSF6:PPIG:PRP4K:TRA2A:RNPS1:SRSF7:NKAPD1:RBBP6:ZC3H18:SRRM1:NKAP:SNIP1:SREK1:SRSF12:MAGOHB:YTHDC1:SRS
+CPX-17466,Complex,SRSF2:PRPF38B
+CPX-22628,Complex,SAP18:SRSF10:SON:CLK1:TRA2B:SRPK2:SRSF3:SRSF2:SRSF6:PPIG:PRP4K:RBM39:SRSF7:NKAPD1:RBBP6:SRRM1:SNIP1:SCAF11:CLK4:ARGLU1:MKRN1:GPATCH8
+CPX-23790,Complex,SAP18:CASC3:PRPF40A:SRSF10:ZRANB2:LUC7L3:SNRNP70:U2AF2:NKTR:RBM25:CLK1:CLK2:CLK3:NCBP2:MAGOH:TRA2B:SRSF2:AKAP17A:SRSF11:NCBP1:SRSF9:PPIG:PRP4K:TRA2A:RNPS1:SRSF7:PABPC1L:PRPF38B:JMJD6:RSBN1L:ZC3H14:FIP1L1:NKAPD1:RBBP6:PABPN1:ZC3H18:GPALPP1:SRRM1:GSPT2:NKAP:
+CPX-6042,Complex,STAT1/STAT4 complex
+CPX-6048,Complex,STAT1 homodimer
+CPX-10310,Complex,"Interleukin-24 receptor-ligand complex, type 1"
+CPX-10311,Complex,"Interleukin-24 receptor-ligand complex, type 2"
+CPX-10335,Complex,Interleukin-35 receptor ligand type 2 complex
+CPX-10337,Complex,Interleukin-35 receptor ligand type 4 complex
+CPX-14551,Complex,STAT1:STAT2
+CPX-6047,Complex,STAT2/STAT6 complex
+CPX-2127,Complex,STING complex
+CPX-11775,Complex,FAM25A:RAB27B:ALOX15B:UBL3:LYPD3:TRIM16:RAB3D:LRG1:C8A:SERPINF2:C1S:HPGD:PI3:SPRR2E:SPRR2A:CHI3L1:CSK:MATK:INPP1:GPLD1:AMPD3:PTK6:TTC39B:CYB5R2:TPRG1:H3C13:NLRP10:STING1:PPFIBP2:ABHD5:KCTD4:SARG:NMES1:KIF13A:EPHX3:CWH43:TUFT1:PLCXD1:SMPD3:IL36RN:KLK11:IL36
+CPX-14857,Complex,STIM1:PLS1:STING1:METTL6
+CPX-10699,Complex,PLS1:PTGR1:STING1
+CPX-15777,Complex,DDAH1:PLS1:PTGR1:STING1
+CPX-12381,Complex,DDAH1:STING1
+CPX-18623,Complex,DDAH1:PTGR1:STING1
+CPX-18314,Complex,PLS1:STING1
+CPX-25075,Complex,DDAH1:STING1:NDFIP2
+CPX-23919,Complex,PTGR1:STING1:ARMT1
+CPX-24211,Complex,DDAH1:PLS1:PTGR1:STING1:METTL6
+CPX-24002,Complex,PLS1:PTGR1:STING1:METTL6
+CPX-25656,Complex,PTGR1:STING1
+CPX-2399,Complex,"CRL4-DCAF13 E3 ubiquitin ligase complex, CUL4A variant"
+CPX-2407,Complex,"CRL4-DCAF13 E3 ubiquitin ligase complex, CUL4B variant"
+CPX-14671,Complex,SUV39H1:MAGEC1
+CPX-25014,Complex,SUV39H1:MAGEC1:ENKD1
+CPX-15471,Complex,AP4M1:PDE4B:CLEC4G:KNDC1:TEPSIN:SUV39H2:DISC1:AP4E1:AP4S1:AP4B1
+CPX-14141,Complex,AP4M1:CLEC4G:TEPSIN:SUV39H2:DISC1:AP4E1:AP4S1:AP4B1
+CPX-18927,Complex,AP4M1:CLEC4G:KNDC1:TEPSIN:SUV39H2:AP4E1:AP4S1:AP4B1
+CPX-6089,Complex,TBK1-IKKepsilon-TANK complex
+CPX-6090,Complex,TBK1-IKKepsilon-SINTBAD complex
+CPX-9461,Complex,USP7-TRIM27 ubiquitinase/deubiquitinase complex
+CPX-11950,Complex,HTRA2:CXCL1:TRAF2:TRAF1:BIRC3:BIRC2:IKBKE:TANK:DIABLO:TBK1
+CPX-13954,Complex,TBKBP1:TRAF5:HTRA2:BBOX1:CXCL1:CXCL2:CXCL3:SYCN:TRAF2:TRAF1:BIRC3:BIRC2:IKBKE:TANK:AZI2:DIABLO:TBK1:IRAK3
+CPX-14636,Complex,CALCOCO2:CHRDL1:AZI2:TBK1
+CPX-13536,Complex,TBKBP1:TRAF5:HTRA2:BBOX1:CXCL1:SYCN:TRAF2:TRAF1:BIRC3:BIRC2:IKBKE:TANK:AZI2:DIABLO:TBK1:IRAK3
+CPX-18656,Complex,TBKBP1:CXCL1:CXCL2:CXCL3:TRAF2:TRAF1:BIRC3:BIRC2:IKBKE:TANK:AZI2:DIABLO:TBK1
+CPX-18349,Complex,HTRA2:CXCL1:TRAF2:TRAF1:BIRC3:IKBKE:TANK:DIABLO:TBK1
+CPX-22476,Complex,TBKBP1:BCL10:CXCL1:CXCL2:CXCL3:TRAF2:BIRC3:BIRC2:IKBKE:TANK:AZI2:DIABLO:TBK1
+CPX-25362,Complex,HTRA2:CXCL1:TRAF2:TRAF1:BIRC3:IKBKE:TANK:TBK1
+CPX-24878,Complex,TBKBP1:TRAF5:HTRA2:BBOX1:BCL10:CXCL1:CXCL2:CXCL3:SYCN:TRAF2:TRAF1:BIRC3:BIRC2:IKBKE:TANK:AZI2:DIABLO:TBK1:IRAK3
+CPX-14839,Complex,TOP3B:MITD1:TDRD3
+CPX-13019,Complex,SYNGR4:TOP3B:FXR1:FMR1:KBTBD2:MITD1:TDRD3
+CPX-14005,Complex,KIF1C:TOP3B:KIF1A:TDRD3
+CPX-13190,Complex,DDX17:KHSRP:FUBP1:TDRD3
+CPX-22423,Complex,DDX17:TDRD3
+CPX-19917,Complex,TOP3B:FXR1:FMR1:TDRD3
+CPX-23386,Complex,TOP3B:FXR1:FMR1:MITD1:TDRD3
+CPX-26162,Complex,PLXDC2:DTWD2:TDRD3:INTS7
+CPX-12327,Complex,BMAL1:CLOCK:PDE6A:PDE6B:KHDC4:TDRD9:BMAL2:NPAS2:CIPC
+CPX-19255,Complex,BMAL1:CLOCK:PDE6A:PDE6B:KHDC4:TDRD9:BMAL2:DHTKD1:NPAS2:CIPC:MSRA
+CPX-15945,Complex,OGT:TET2:THAP6:THAP11:HCFC1R1:NFE2L3
+CPX-15626,Complex,OGT:HCFC1:TET2:THAP6:HCFC1R1
+CPX-15527,Complex,OGT:TET2:THAP6:THAP11:HCFC1R1
+CPX-19309,Complex,OGT:HCFC1:TET2:THAP6:THAP2:HCFC1R1
+CPX-25707,Complex,OGT:TET2:THAP6:HCFC1R1
+CPX-26044,Complex,TNKS:XRCC6:XRCC5:RPA2:XRCC1:RPA1:LIG3:LIG4:TERF1:XRCC4:TET2:RFWD3:APTX:TSEN54:CHD1L:APLF:TSEN2:ZNF398:CLP1:HMCES:PNKP:PAXX:RANGRF:FARSB:RNF146:POT1:TIMELESS
+CPX-12572,Complex,SERPINC1:TEX15
+CPX-15389,Complex,UGP2:LY6G5C:LY6G5B:SPOCK2:CALR3:TEX15
+CPX-13023,Complex,CALR3:TEX15
+CPX-18175,Complex,PRG2:PTGS1:PKD1:FOXF1:LRP8:B4GALNT3:ADAMTS14:TEX15:MINPP1
+CPX-17066,Complex,LY6G5C:LY6G5B:SPOCK2:TEX15
+CPX-20297,Complex,SERPINC1:CALR3:TEX15
+CPX-21108,Complex,UGP2:CALR3:TEX15
+CPX-7641,Complex,E2F4-DP1 transcriptional regulator complex
+CPX-1971,Complex,E2F1-DP1 transcription factor complex
+CPX-1972,Complex,E2F2-DP1 transcription factor complex
+CPX-1973,Complex,E2F3-DP1 transcription factor complex
+CPX-8261,Complex,"CRL3 E3 ubiquitin ligase complex, KLHL40 variant"
+CPX-12506,Complex,RANBP1:TFDP1:ATAD3C:VPS35L:COMMD6:COMMD1:COMMD5
+CPX-11054,Complex,VPS26C:CCDC22:RANBP1:TFDP1:TGIF1:CCDC93:ATAD3C:VPS35L:COMMD6:COMMD7:COMMD2:COMMD1:DENND10:COMMD5:COMMD4:COMMD8:COMMD9:COMMD3:VPS29:COMMD10
+CPX-20688,Complex,VPS26C:CCDC22:TFDP1:TGIF1:CCDC93:ATAD3C:VPS35L:COMMD6:COMMD7:COMMD2:FBXO39:COMMD1:DENND10:ODAD1:COMMD5:COMMD4:COMMD8:COMMD9:COMMD3:VPS29:COMMD10
+CPX-12015,Complex,TFAM:ZNF672:CDC42BPA:ZNF57:KCTD17:FAM89A:REPIN1:NLRP1:THAP9:ZNF358:KCTD5:POLK
+CPX-11347,Complex,TFAM:KCTD2:ZNF672:CDC42BPA:ZNF57:KCTD17:FAM89A:REPIN1:NLRP1:THAP9:ZNF358:TMEM45A:KCTD5:KCND2:POLK
+CPX-16318,Complex,TFAM:KCTD2:ZNF672:PDZK1:CDC42BPA:ZNF57:SH2D5:KCTD17:FAM89A:REPIN1:NLRP1:THAP9:TMEM45A:KCTD5:POLK:ZMYND8
+CPX-20005,Complex,TFAM:ZNF672:CDC42BPA:ZNF57:KCTD17:FAM89A:REPIN1:NLRP1:THAP9:ZNF358:POLK
+CPX-17695,Complex,TFAM:ZNF672:ZNF57:KCTD17:REPIN1:NLRP1:THAP9:ZNF358
+CPX-22735,Complex,TFAM:CDC42BPA:ZNF57:KCTD17:FAM89A:NLRP1:THAP9:POLK:ZMYND8
+CPX-22251,Complex,TFAM:CDC42BPA:ZNF57:KCTD17:FAM89A:NLRP1:THAP9:POLK
+CPX-18874,Complex,CDC42BPA:KCTD17:FAM89A:NLRP1:THAP9
+CPX-20375,Complex,TFAM:ZNF672:CDC42BPA:ZNF57:KCTD17:DTD1:FAM89A:NLRP1:THAP9:ZNF358:POLK:NARF:ZMYND8
+CPX-25586,Complex,TFAM:ZNF672:CDC42BPA:ZNF57:KCTD17:FAM89A:NLRP1:THAP9:ZNF358:NARF:ZMYND8
+CPX-21301,Complex,ZNF672:PDZK1:CDC42BPA:KCTD17:FAM89A:THAP9:POLK:ZMYND8
+CPX-8822,Complex,Interleukin-27 complex
+CPX-12249,Complex,CAPN8:TNF:CAPNS1:CAPN2
+CPX-12056,Complex,CAPN8:TNF:CAPNS1:CAPN1:CAPN2:FNTB
+CPX-15654,Complex,TNF:TNFRSF1A:TRADD:SLC39A1:DOLK
+CPX-13154,Complex,TNF:XKRX:FAM234A:TAS2R8:ICOS
+CPX-12973,Complex,TNF:MFAP5:NEO1
+CPX-18240,Complex,TNF:TNFRSF1A:TRADD:DOLK
+CPX-25701,Complex,TNF:TNFRSF1A:TRADD:SLC39A1
+CPX-26033,Complex,TNF:TNFRSF1A
+CPX-6093,Complex,TP53-MDM2-MDM4 transcription regulation complex
+CPX-900,Complex,"SAGA complex, KAT2A variant"
+CPX-6802,Complex,"SAGA complex, KAT2B variant"
+CPX-663,Complex,TP53-MDM4 transcription regulation complex
+CPX-759,Complex,TP53-MDM2 transcription regulation complex
+CPX-26723,Complex,"G3BP2-USP10, deubiquitinase complex"
+CPX-915,Complex,General transcription factor complex TFIID
+CPX-978,Complex,NuA4 histone acetyltransferase complex
+CPX-8344,Complex,BRE1 E3 ubiquitin ligase complex
+CPX-12293,Complex,TP53:CUL7:CCDC183:ZNF841:CUL9:UBE2F
+CPX-12528,Complex,TP53:ZNF616:CUL7:ZNF841:ZNF761:CUL9:UBE2F:MRI1
+CPX-13029,Complex,TP53:CUL7:CCDC183:CUL9
+CPX-14009,Complex,TP53:CUL7:ZNF841:ZNF761:CUL9:UBE2F:MRI1
+CPX-16240,Complex,TP53:ZNF616:CUL7:ZNF841:ZNF761:CUL9:GLMN:UBE2F:MRI1:ZSWIM6
+CPX-21406,Complex,TP53:CUL7:CCDC183:ZNF841:CUL9:UBE2F:MRI1
+CPX-24058,Complex,CUBN:TP53:HNF4A:CUL7:ZNF841:CUL9:UBE2F:MRI1
+CPX-26092,Complex,MDM4:TP53:MDM2:DCAF1
+CPX-873,Complex,Nuclear pore complex
+CPX-12664,Complex,TPR:CTC1:TEN1
+CPX-16692,Complex,KIF20A:TPR:MAD2L1BP:EPM2AIP1:PYROXD1:MAD1L1
+CPX-19575,Complex,NEMP2:CASTOR2:KPNA3:KPNA4:NEMP1:RGPD8:NUP155:RGPD1:RGPD2:TPR:RCC1:NUP214:NUP62:RANBP1:RANGAP1:NUP153:RANBP2:KPNA2:NUP98:SEC13:NUP107:SESN2:B2M:SUMO2:NUTF2:RAN:SUMO1:UBE2I:RAE1:NUP160:KPNB1:DLGAP5:GLE1:CDCA2:NUP54:RGPD4:NUP43:NUP37:NUP35:NUP133:SEH1L:POM121
+CPX-22879,Complex,TPR:MAD2L1BP:EPM2AIP1:PYROXD1:PYM1:MAD1L1
+CPX-24966,Complex,TPR:TEN1:CPEB1:CCDC88C
+CPX-21673,Complex,KIF20A:TPR:MAD2L1:MAD2L1BP:C15orf39:EPM2AIP1:PYROXD1:PYM1:MAD1L1
+CPX-21402,Complex,SLC26A4:KIF20A:POLA1:TPR:MAD2L1BP:C15orf39:EPM2AIP1:PYROXD1:CDCA7L:PRR12:MAD1L1
+CPX-21942,Complex,TPR:TEN1:STN1
+CPX-23097,Complex,TPR:TEN1
+CPX-22930,Complex,TPR:CTC1:TEN1:STN1
+CPX-24270,Complex,TPR:MAD2L1BP:ZSCAN29:PYROXD1:MAD1L1
+CPX-26715,Complex,SET complex
+CPX-13011,Complex,MUC15:FCRL4:FCRL5:TREX1
+CPX-14021,Complex,FCRL4:TREX1:RAB23
+CPX-12962,Complex,FCRL4:TREX1
+CPX-23439,Complex,MUC15:FCRL4:FCRL5:TREX1:RAB23
+CPX-12053,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:ZNF600:KRBOX5
+CPX-12609,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF417
+CPX-15439,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF595
+CPX-11574,Complex,ZNF250:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-13658,Complex,ZNF726:ZNF716:TRIM24:TRIM28:ZNF718:ZNF311:ZNF678:ZNF621:ZNF354C:ZNF595:ZNF333:TRIM39
+CPX-17142,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF34
+CPX-16584,Complex,ZNF33A:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-19548,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF573
+CPX-18517,Complex,ZNF37A:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-19217,Complex,ZNF99:ZNF250:ZNF37A:ZNF84:ZNF85:ZNF33A:ZNF33B:TRIM28:ZNF124:ZNF674:ZNF585B:ZNF766:KRBOX4:ZNF343:ZNF600:KRBOX5:ZNF573:ZNF595:ZNF34:ZNF713:ZNF615:ZNF527:ZNF417:ZNF799:ZNF649:ZNF670:ZNF226:ZNF624
+CPX-19242,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF226
+CPX-19250,Complex,TRIM28:ZNF124:ZNF674:ZNF585B:KRBOX4:KRBOX5
+CPX-18808,Complex,TRIM28:ZNF124:ZNF674:ZNF766:KRBOX4:KRBOX5
+CPX-18347,Complex,ZNF84:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-22853,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF799
+CPX-21036,Complex,ZNF85:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-21048,Complex,ZNF33B:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-21271,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF527
+CPX-25524,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF615
+CPX-23670,Complex,ZNF99:TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5
+CPX-22370,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF624
+CPX-23908,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF713
+CPX-24219,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:ZNF343:KRBOX5
+CPX-24780,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF670
+CPX-24781,Complex,TRIM28:ZNF124:ZNF674:KRBOX4:KRBOX5:ZNF649
+CPX-26073,Complex,ZNF8:NELFE:TRIM28:NELFCD:NELFB:ZNF689:NELFA
+CPX-24609,Complex,GARRE1:TUT4:DUSP16:PLEKHG1:SMG5
+CPX-15837,Complex,STAU1:RPLP1:ZNF16:RPS12:RPL3:TUT7:WDR36:C7orf50:C8orf33:SDAD1
+CPX-15518,Complex,TUT7:ZNF384:LIN28A
+CPX-18475,Complex,TUT7:HELZ2:FAM120C:PURG
+CPX-14778,Complex,PLA2G1B:NUDT6:UBR2
+CPX-19221,Complex,PLXDC2:UBR2:SMOC1
+CPX-17175,Complex,UBR5:HUWE1:TANGO6
+CPX-20323,Complex,UBR5:HUWE1
+CPX-21185,Complex,DFFA:DFFB:UBR5:HUWE1
+CPX-26115,Complex,TOM1:UBR5:WIZ:CLTA:TBP:MAPK3:MPG:NEDD4:CLTCL1:RAD23A:RAD23B:VCP:ENTREP3:CLTC:CSTF1:UBE3A:TRAF2:LAPTM4A:RABEP1:DDI2:ANKRD13D:STXBP4:TAX1BP1:MB21D2:ZNF114:RCBTB1:MPLKIP:URGCP:DDX1:SYN2:WBP2:CCDC102A:LDAF1:DAZAP1:TRIM11:ITCH:BTBD9:WRNIP1:PLIN2:TOLLIP:WWP1:RAB
+CPX-26125,Complex,UBR5:MPG:RAD23A:RAD23B:UBE3A:DDI2:DAZAP1:RTCB
+CPX-26189,Complex,UBR5:WIZ:TBP:MAPK3:MPG:RAD23A:RAD23B:ENTREP3:CSTF1:UBE3A:DDI2:ANKRD13D:RCBTB1:MPLKIP:DDX1:SYN2:DAZAP1:ITCH:BTBD9:WRNIP1:SMURF1:TRIM35:RTCB
+CPX-13141,Complex,ZNF622:UHRF1
+CPX-18448,Complex,EIF1AY:EIF1AX:ZNF622:UHRF1
+CPX-22889,Complex,EIF1AY:EIF1AX:UHRF1
+CPX-11908,Complex,SRSF10:HNRNPC:CLK1:NCBP1:TRA2A:SRSF7:RBBP6:YTHDC1:SRSF8:SRRT:MKRN1:RALY:PAIP2B
+CPX-15887,Complex,CLK2:SRSF12:YTHDC1:SRRT
+CPX-19038,Complex,CLK1:CLK2:NCBP1:FIP1L1:RBBP6:SRSF12:YTHDC1:SRRT:LUC7L2
+CPX-18764,Complex,SAP18:CASC3:ZC3H11A:SRSF10:SNRNP70:NKTR:EIF4A3:CLK2:CLK3:MAGOH:TRA2B:NCBP1:SRSF9:PPIG:TRA2A:RNPS1:SRSF7:VIRMA:ZC3H14:NKAPD1:RBBP6:PABPN1:ZC3H18:SNIP1:SRSF12:YTHDC1:SRSF8:SRRT:PNN:BCLAF1:MKRN1:ACIN1:SRRM2:THRAP3:LUC7L2:CCDC9:RBM8A
+CPX-18111,Complex,CLK1:CLK2:NCBP1:SRSF12:YTHDC1:LUC7L2
+CPX-21773,Complex,CLK3:ZC3H14:YTHDC1
+CPX-23652,Complex,CLK3:YTHDC1
+CPX-21165,Complex,ZNF724:RPS19BP1:ZNF512
+CPX-24376,Complex,AMH:FHL3:FAM98C:TJAP1:KCTD1:ZSWIM9:HIPK1:MTURN:SHKBP1:RHBDF1:ZNF512B:KCTD15:HIPK2:MRTFB:THSD7A:KCTD3
+CPX-25202,Complex,ZKSCAN1:ZNF91
+CPX-23806,Complex,ZKSCAN1:ZNF91:PRKG1
+CPX-23855,Complex,ZNF91:CCDC15:TRIM44:DACH2:DACH1:TRIM17
+CPX-12787,Complex,FBL:ZNF93
+CPX-15075,Complex,CSDE1:EIF4H:SZRD1:LARP6:C11orf68:GEMIN7:ZNFX1:STRAP
+CPX-16491,Complex,CSDE1:EIF4H:ZNFX1
+CPX-16647,Complex,CSDE1:EIF4H:SZRD1:LARP6:C11orf68:ZNFX1:STRAP
+CPX-19878,Complex,SZRD1:LARP6:C11orf68:ZNFX1:STRAP
+CPX-20932,Complex,CSDE1:EIF4H:LARP6:ZNFX1
+H3K9me3,ChromatinMark,H3K9me3
+PRDM2,Gene,PRDM2
+PRDM16,Gene,PRDM16
+SETD5,Gene,SETD5
+SETDB2,Gene,SETDB2
+ASH1L,Gene,ASH1L
+PRDM8,Gene,PRDM8
+MECOM,Gene,MECOM
+PRDM9,Gene,PRDM9
+H3K27me3,ChromatinMark,H3K27me3
+NSD3,Gene,NSD3
+5mC,ChromatinMark,5mC
+DNMT3B,Gene,DNMT3B
+KDM4A,Gene,KDM4A
+KDM4F,Gene,KDM4F
+KDM4E,Gene,KDM4E
+KDM4D,Gene,KDM4D
+KDM1A,Gene,KDM1A
+KDM4B,Gene,KDM4B
+KDM4C,Gene,KDM4C
+HR,Gene,HR
+KDM3A,Gene,KDM3A
+KDM3B,Gene,KDM3B
+KDM7A,Gene,KDM7A
+JMJD1C,Gene,JMJD1C
+KDM6A,Gene,KDM6A
+UTY,Gene,UTY
+KDM6B,Gene,KDM6B
+TET1,Gene,TET1
+TET3,Gene,TET3

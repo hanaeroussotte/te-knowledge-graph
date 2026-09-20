@@ -1,0 +1,10 @@
+knockdown,level,features_tested,n_padj_lt_0.1,best_feature,best_log2FC,best_padj
+DNMT1,subfamily,503,0,LTR12C:ERV1:LTR,0.461,0.4059
+DNMT1,family,28,0,Alu:SINE,0.081,0.9979
+DNMT1,class,5,0,DNA,0.14,0.9983
+SETDB1,subfamily,67,2,HERVE-int:ERV1:LTR,0.966,0.08321
+SETDB1,family,13,0,ERV1:LTR,0.243,0.7064
+SETDB1,class,5,0,SINE,0.22,0.75
+TRIM28,subfamily,47,4,AluY:Alu:SINE,0.79,0.0005322
+TRIM28,family,12,1,SVA:Retroposon,-0.337,0.06872
+TRIM28,class,5,1,Retroposon,-0.337,0.04945
