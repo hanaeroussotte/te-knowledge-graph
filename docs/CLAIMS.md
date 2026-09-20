@@ -1,12 +1,22 @@
 # Claim registry
 
-Every externally presentable scientific claim this project makes, with a status. Nothing
-goes on a slide, in an abstract or into a README unless it appears here.
+Every externally presentable scientific claim this project makes, with a status, the
+approved public wording, and the wording that is **not** to be used. Nothing goes on a
+slide, in an abstract, into a README or out of anyone's mouth in a demo unless it appears
+here. This is the single source of truth for what can safely be said.
 
-**Adversarial rule.** Each novelty claim was treated as false until a literature search
-failed to find a sufficiently close precedent. The objective was to kill claims, not
-defend them. Whatever survived is below. Every `NOT_FOUND_IN_PRIOR_ART_SEARCH` is scoped
-to the databases, queries and date used — see `PRIOR_ART.md` and `data/graph/prior_art.csv`.
+> **Adversarial novelty rule.** Assume every novelty claim is false until the strongest
+> available prior art has been identified and compared against it. The purpose of the
+> search is to narrow or eliminate our claims, not to defend them.
+
+> **Absence of evidence from a literature search is weak evidence of absence.** Every
+> `NOT_FOUND_IN_PRIOR_ART_SEARCH` below is scoped to the databases, queries and date used
+> — see `PRIOR_ART.md` and `data/graph/prior_art.csv`. It means *we did not locate a
+> precedent*, never *no precedent exists*.
+
+**Claim types.** `field fact` (established biology or methodology, we cite it) ·
+`project result` (measured in this build) · `inference` (derived by a rule) ·
+`novelty claim` (an assertion about what is new).
 
 **Search scope for all `NOT_FOUND` verdicts:** PubMed (connector) and Europe PMC REST
 body-text search over the open-access subset, plus one web search for a preprint tool;
@@ -24,6 +34,28 @@ sentence level. A negative here means *not located by this search*, never *does 
 | `NOT_TESTED` | Within scope but deliberately not attempted, or attempted and refused |
 | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | We looked for a precedent and did not locate one |
 | `RETRACTED_BY_US` | We previously stated this and it is wrong |
+
+---
+
+---
+
+## 0. Approved wording — the table to read before speaking
+
+For the claims that are easy to overstate. Left column is sayable; right column is not.
+
+| # | Say this | Do **not** say |
+|---|---|---|
+| W1 | "Major general-purpose biomedical knowledge graphs — PrimeKG, Hetionet, Open Targets — don't model TE families or loci as first-class entities." | "No public knowledge graph has TEs." |
+| W2 | "We re-analyse perturbation experiments for TE effects their authors didn't measure." | "Nobody has systematically perturbed genes to find TE regulators." |
+| W3 | "We use TEcount from TEtranscripts; Telescope, SQuIRE and MAJEC are alternatives we haven't benchmarked." | "We built a TE quantification method." / "our quantifier" |
+| W4 | "The set-level test is standard competitive gene-set testing; what we did not find in the literature is the normalisation-invariance argument for using it as the primary TE readout." | "We invented a normalisation-invariant statistic." |
+| W5 | "The engine **predicts** TET2 loss lowers TEs — a mechanistic hypothesis, here is the proof tree." | "The engine shows / proves / derives causally that TET2 derepresses TEs." |
+| W6 | "In K562, TE derepression is not accompanied by an interferon response, and the sensors aren't expressed — this dataset can't test viral mimicry." | "TE derepression does not cause interferon." |
+| W7 | "Predicted from a DNMT1 knockdown in K562; asserting it in another cell type is a further inference." | "DNMT3A silences transposable elements." (unqualified) |
+| W8 | "A perturbational TE atlas is the long-term object; this is an architecture with a worked example." | "This is the TE atlas." |
+| W9 | "TxPert plus a TE-aware expression matrix would be a strong competitor — a closable gap." | "Nothing else can do this." |
+| W10 | "cGAS also acts upstream in chromatin control, so this path has feedback and our drawing is a simplification." | "TE derepression → cGAS → interferon" as a settled directed pathway. |
+| W11 | "Three components were built, measured and not shipped." | Any mention of link prediction as a feature. |
 
 ---
 

@@ -58,9 +58,27 @@ signatures:  ## interferon / senescence set-level tests (with coverage guard)
 	  --de $(OUT)/deseq2_results.csv --gtf $(REFS)/gencode.v44.gtf \
 	  --outdir $(OUT) --scope-chroms chr1 chr19
 
-test:  ## regression (proof trees, rule firing, edge context) + claim audit — run before every push
+test:  ## regression (proof trees, rule firing, edge context) + claim audit
 	python tests/audit_claims.py
 	python tests/test_regression.py
+
+derived:  ## export inferred edges with their inherited context
+	python src/te_reason.py TET2 --export-derived results/derived_edges.csv
+
+gate:  ## FULL pre-push gate — nothing is committed until this passes
+	@echo "--- 1/6 regenerate derived edges from the graph"
+	@$(MAKE) --no-print-directory derived
+	@echo "--- 2/6 claim audit (retracted wording, dangling refs, blank context, DOIs)"
+	@python tests/audit_claims.py
+	@echo "--- 3/6 proof-tree + structured conclusion regression"
+	@python tests/test_regression.py
+	@echo "--- 4/6 every script parses"
+	@for f in src/*.py tests/*.py; do python -c "import ast;ast.parse(open('$$f').read())" || exit 1; done
+	@echo "--- 5/6 figures present"
+	@ls figures/*.png >/dev/null
+	@echo "--- 6/6 review the diff yourself before committing:"
+	@git status --short
+	@echo "GATE PASSED — now read the diff above, then commit."
 
 migrate-context:  ## add cell type / modality / assay / resolution columns to every edge file
 	python src/migrate_edge_context.py --apply

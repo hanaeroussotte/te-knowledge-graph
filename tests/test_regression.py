@@ -83,8 +83,60 @@ def context_complete() -> dict:
     return bad
 
 
+def worked_examples() -> dict:
+    """Structured per-gene record. A text diff of the proof output catches everything,
+    but it cannot tell you *what* changed — and the failure mode that matters is a
+    changed biological conclusion hiding inside a cosmetic reformat. So compare the
+    scientific content field by field: which edges came back, with what signs, at what
+    tiers, through which rules, resting on which premises, and with what context."""
+    sys.path.insert(0, str(ROOT / "src"))
+    import te_reason as T
+    edges, derived, index, _ = T.load_graph()
+    out = {}
+    for g in GENES:
+        r = T.explain(g, edges, derived, index)
+        prose = T.narrate(r)
+        allowed = {e.edge_id for e in edges} | {d.edge.edge_id for d in derived}
+        kept, rejected = T.verify_claims(prose, allowed)
+        rec = {"best_tier": r.get("best_tier"),
+               "counts": {k: r.get(f"n_{k}") for k in
+                          ("measured", "curated", "literature", "inferred")},
+               "sentences_kept": len(kept), "sentences_rejected": len(rejected),
+               "claims": [], "paths": []}
+        # one record per claim the engine is willing to state, with the provenance that
+        # justifies it — citations, rule, and proof-tree shape
+        for cl in r.get("claims", []):
+            rec["claims"].append({
+                "id": "|".join(sorted(cl.get("edge_ids", []))),
+                "tier": cl.get("tier"), "rule": cl.get("rule"),
+                "cites": sorted(cl.get("edge_ids", [])),
+                "proof_depth": len(cl.get("proof", []) or []),
+                # sign is the direction word, which is the biological conclusion
+                "direction": ("raise" if " raise" in cl.get("text", "")
+                              else "lower" if " lower" in cl.get("text", "")
+                              else "none")})
+        for p in r.get("paths", []):
+            rec["paths"].append({"id": "|".join(p.get("edge_ids", [])),
+                                 "tier": p.get("tier"), "hops": p.get("hops", [])})
+        # inferred-edge context, which is what may silently turn a scoped prediction
+        # into a universal claim
+        # lists, not tuples: this record round-trips through JSON, and a tuple comes back
+        # as a list, so a tuple here makes the test fail against its own fresh baseline
+        rec["inference_context"] = [list(t) for t in sorted(
+            {(d.edge.edge_id, d.rule,
+              d.edge.ctx().get("context_generalization_required"),
+              d.edge.ctx().get("context_cell_type"),
+              d.edge.ctx().get("te_resolution"))
+             for d in derived if d.edge.subject == g})]
+        rec["claims"].sort(key=lambda x: x["id"])
+        rec["paths"].sort(key=lambda x: x["id"])
+        out[g] = rec
+    return out
+
+
 def collect() -> dict:
-    return {"proofs": proof_text(), "rules": rule_counts(), "layers": layer_counts()}
+    return {"proofs": proof_text(), "rules": rule_counts(), "layers": layer_counts(),
+            "examples": worked_examples()}
 
 
 def main():
@@ -122,6 +174,34 @@ def main():
     for k in set(old["layers"]) | set(cur["layers"]):
         if old["layers"].get(k) != cur["layers"].get(k):
             fails.append(f"layer {k}: was {old['layers'].get(k)} now {cur['layers'].get(k)}")
+
+    # per-gene scientific content, field by field — this is the check that tells you WHICH
+    # conclusion moved. A changed biological conclusion is surfaced for review; it is never
+    # to be "fixed" by editing code until the old answer comes back.
+    oe, ce = old.get("examples", {}), cur.get("examples", {})
+    for g in sorted(set(oe) | set(ce)):
+        o, c = oe.get(g), ce.get(g)
+        if o is None or c is None:
+            fails.append(f"{g}: gene {'added to' if o is None else 'removed from'} the panel")
+            continue
+        for field in ("best_tier", "counts", "sentences_kept", "sentences_rejected"):
+            if o.get(field) != c.get(field):
+                fails.append(f"{g}.{field}: was {o.get(field)} now {c.get(field)}")
+        if o.get("inference_context") != c.get("inference_context"):
+            fails.append(f"{g}.inference_context changed:\n     was {o.get('inference_context')}"
+                         f"\n     now {c.get('inference_context')}")
+        for field in ("claims", "paths"):
+            ob = {x["id"]: x for x in o.get(field, [])}
+            cb = {x["id"]: x for x in c.get(field, [])}
+            for i in sorted(set(ob) - set(cb)):
+                fails.append(f"{g}: {field[:-1]} DISAPPEARED {ob[i]}")
+            for i in sorted(set(cb) - set(ob)):
+                fails.append(f"{g}: {field[:-1]} APPEARED {cb[i]}")
+            for i in sorted(set(ob) & set(cb)):
+                for k2 in sorted(set(ob[i]) | set(cb[i])):
+                    if ob[i].get(k2) != cb[i].get(k2):
+                        fails.append(f"{g}: {i}.{k2} was {ob[i].get(k2)!r} "
+                                     f"now {cb[i].get(k2)!r}")
 
     if fails:
         print("FAIL")

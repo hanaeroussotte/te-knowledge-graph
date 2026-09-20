@@ -1,6 +1,13 @@
 # TE resolution: the ontology this should grow into
 
-## 1. The target hierarchy
+## 1. Two orthogonal axes
+
+The mistake to avoid is collapsing these into one. **Resolution** is how finely a claim
+localises in the repeat hierarchy. **Context** is the experimental circumstances it was
+established in. They vary independently: a claim can be subfamily-level in K562 or
+locus-level in primary cells, and neither implies the other.
+
+### Axis 1 — evidence resolution
 
 ```
     TEClass            LINE, SINE, LTR, DNA, Retroposon, RC
@@ -13,6 +20,23 @@
        │
     TETranscript       a specific transcript from that locus
 ```
+
+**Family and subfamily are separate levels, not one hybrid level.** They are neither
+biologically nor computationally interchangeable, and this project demonstrates the
+distinction itself: `AluY` is significant at padj 0.0005 while the `Alu` family it belongs
+to is not significant at all. Writing them as "family/subfamily" would erase the finding
+that motivates the whole resolution discussion.
+
+### Axis 2 — experimental context
+
+```
+    species | cell_type | cell_state | perturbation | perturbation_modality
+            | assay | timepoint | dose | reference_genome | reference_scope | quantifier
+```
+
+Both axes are carried as columns on every edge (`migrate_edge_context.py`,
+`nesy_rules.CONTEXT_KEYS`), and inferred edges **inherit** context from their premises
+rather than silently generalising — see §7.
 
 **Evidence should attach at whichever resolution the experiment actually supports** — not
 at whichever level the pipeline happens to output. That is the design rule, and the current
@@ -78,7 +102,49 @@ locus-level edges can enter without a migration. What would be needed:
 - A rule guard: no rule may combine premises at different resolutions without an explicit
   `PART_OF` traversal, or `AluY` evidence will leak onto a specific insertion.
 
-## 6. Status
+## 6. Context inheritance on inferred edges
+
+This is implemented, and it is one of the more useful properties of the reasoning layer.
+
+The problem is easy to miss. R2 takes
+
+```
+SETDB1 loss raises HERV9NC-int     [measured: K562, CRISPRi, RNA-seq, subfamily, TEcount]
+SUV39H1 writes H3K9me3             [curated: no cell type]
+```
+
+and concludes something about `SUV39H1`. Written down bare, that conclusion reads as a
+universal claim about SUV39H1 and HERV9NC-int — when the only experiment underneath it is
+one knockdown in one leukaemia line.
+
+`nesy_rules.inherit_context()` therefore carries premise context onto every derived edge,
+centrally in `forward_chain` rather than inside each rule, so a newly added rule cannot
+forget to do it:
+
+- a key the informative premises agree on is **inherited**;
+- a key they disagree on becomes `mixed(a|b)`, with nested `mixed()` flattened so repeated
+  chaining does not compound;
+- a key no premise speaks to is `not_applicable`;
+- if any premise carried a specific experimental context, the conclusion is flagged
+  **`context_generalization_required=yes`**.
+
+87 of 89 derived edges carry that flag. The two that do not are R4 complex-consensus edges
+resting only on curated membership, which genuinely have no experimental context. Proof
+trees print the flag inline:
+
+```
+TET2 -DEREPRESSES-> TE:global   [inferred via R3_ERASER_INVERSION]
+  ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPR
+    — asserting it elsewhere is a further inference
+```
+
+Export the whole set with `python src/te_reason.py <gene> --export-derived results/derived_edges.csv`.
+
+**Why this matters beyond bookkeeping:** generalising a prediction outside the context that
+grounds it is a *second inference*, and it should have to be made explicitly rather than
+inherited by silence. The flag is what forces that.
+
+## 7. Status
 
 `NOT_TESTED`. Nothing in this document has been run. It is the design the next build should
 target, recorded so the current subfamily choice reads as a scoped decision with an expiry

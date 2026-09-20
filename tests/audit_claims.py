@@ -90,6 +90,46 @@ def main():
         if tok not in claims:
             fails.append(f"CLAIMS.md is missing status vocabulary: {tok}")
 
+    # the registry must carry approved/prohibited wording, or it is a status list rather
+    # than a source of truth for what can be said
+    for tok in ["Say this", "Do **not** say", "Adversarial novelty rule",
+                "weak evidence of absence"]:
+        if tok not in claims:
+            fails.append(f"CLAIMS.md is missing required section/rule: {tok!r}")
+
+    # no blank context fields anywhere an edge claims a context
+    ctx_cols = ["context_cell_type", "context_species", "perturbation_modality", "assay",
+                "timepoint", "te_resolution", "quantifier", "reference_scope"]
+    for f in (glob.glob(str(ROOT / "data/graph/edges_*.csv"))
+              + glob.glob(str(ROOT / "results/edges_*.csv"))):
+        d = pd.read_csv(f, keep_default_na=False)
+        for c in ctx_cols:
+            if c not in d.columns:
+                fails.append(f"{Path(f).name}: missing context column {c}")
+            elif (d[c].astype(str).str.strip() == "").any():
+                n = int((d[c].astype(str).str.strip() == "").sum())
+                fails.append(f"{Path(f).name}: {n} blank cells in {c} "
+                             f"(use 'not_applicable', never blank and never 'NA')")
+
+    # inferred edges must not be presented as universal without a flag
+    derived = ROOT / "results/derived_edges.csv"
+    if derived.exists():
+        d = pd.read_csv(derived, keep_default_na=False)
+        if "context_generalization_required" not in d.columns:
+            fails.append("derived_edges.csv has no context_generalization_required column")
+        else:
+            grounded = d[(d.context_cell_type != "not_applicable")
+                         & (d.context_generalization_required != "yes")]
+            if len(grounded):
+                fails.append(f"{len(grounded)} derived edges carry a specific cell type but "
+                             f"are not flagged for context generalisation")
+
+    # demo and deck must not assert anything absent from the registry's approved wording
+    for name in ("docs/DEMO_SCRIPT.md", "demo/presentation.html"):
+        p = ROOT / name
+        if not p.exists():
+            warns.append(f"{name} missing — cannot audit its claims")
+
     for w in warns:
         print("  ! ", w)
     if fails:

@@ -49,12 +49,16 @@ def load_graph(files=None):
     for p in files:
         if not Path(p).exists():
             missing.append(p); continue
-        df = pd.read_csv(p)
+        # keep_default_na=False so the literal token "not_applicable" survives, and so a
+        # genuinely blank cell stays distinguishable from "this does not apply"
+        df = pd.read_csv(p, keep_default_na=False)
+        have = [c for c in nr.CONTEXT_KEYS if c in df.columns]
         for r in df.itertuples():
+            ctx = tuple(sorted((c, str(getattr(r, c, ""))) for c in have))
             edges.append(nr.Edge(str(r.subject), str(r.predicate), str(r.object),
-                                 str(r.evidence_tier), str(r.source),
+                                 str(r.evidence_tier), str(getattr(r, "source", "")),
                                  str(getattr(r, "source_detail", "") or "")[:120],
-                                 getattr(r, "native_score", None), str(r.edge_id)))
+                                 getattr(r, "native_score", None), str(r.edge_id), ctx))
     derived, index = nr.forward_chain(edges)
     return edges, derived, index, missing
 
@@ -151,11 +155,29 @@ def main():
     ap.add_argument("genes", nargs="+")
     ap.add_argument("--json", default=None)
     ap.add_argument("--proofs", action="store_true", help="print proof trees")
+    ap.add_argument("--export-derived", default=None, metavar="CSV",
+                    help="write every derived edge with its inherited context. Inferred "
+                         "edges carry the scope of their narrowest premise; an edge with "
+                         "context_generalization_required=yes must not be quoted as a "
+                         "universal claim.")
     a = ap.parse_args()
 
     edges, derived, index, missing = load_graph()
     if missing:
         print(f"[note] absent edge files (layer not built): {', '.join(missing)}", file=sys.stderr)
+    if a.export_derived:
+        rows = []
+        for d in derived:
+            e = d.edge
+            rows.append({"edge_id": e.edge_id, "subject": e.subject, "predicate": e.predicate,
+                         "object": e.object, "evidence_tier": e.tier, "rule": d.rule,
+                         "premise_edge_ids": ";".join(p.edge_id for p in d.premises),
+                         "premise_tiers": ";".join(p.tier for p in d.premises),
+                         **e.ctx()})
+        pd.DataFrame(rows).to_csv(a.export_derived, index=False)
+        flagged = sum(r.get("context_generalization_required") == "yes" for r in rows)
+        print(f"{len(rows)} derived edges -> {a.export_derived} "
+              f"({flagged} require context generalisation before being stated universally)")
     # derived edges are part of the graph once inferred, so their ids are citable; the
     # gate checks existence, and the tier field is what marks them as inference
     allowed = {e.edge_id for e in edges} | {d.edge.edge_id for d in derived}

@@ -1,4 +1,6 @@
-# TE knowledge graph — what does a gene do to transposable-element activation?
+# Evidence-Traceable Perturbational Reasoning for Transposable-Element Regulation
+
+*What does this gene do to transposable-element activation — and how would you know?*
 
 A transposable-element-aware biological knowledge graph with a rule-based reasoning layer,
 where every claim carries an evidence tier and a proof back to primary sources.

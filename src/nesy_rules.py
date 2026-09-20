@@ -47,9 +47,72 @@ class Edge:
     detail: str = ""
     score: float | None = None
     edge_id: str = ""
+    # (key, value) pairs — a tuple so the dataclass stays hashable
+    context: tuple = ()
 
     def key(self):
         return (self.subject, self.predicate, self.object)
+
+    def ctx(self) -> dict:
+        return dict(self.context)
+
+
+# The experimental context an edge was established in. Orthogonal to TE resolution: a
+# claim can be subfamily-level in K562 or locus-level in primary cells, and those are
+# independent axes. See docs/TE_RESOLUTION.md.
+CONTEXT_KEYS = ["context_species", "context_cell_type", "context_cell_state",
+                "perturbation", "perturbation_modality", "assay", "timepoint", "dose",
+                "reference_genome", "reference_scope", "te_resolution", "quantifier"]
+UNINFORMATIVE = {"", "nan", "none", "not_applicable", "inherited from premises",
+                 "as reported in abstract (not parsed)"}
+
+
+def inherit_context(premises) -> dict:
+    """Carry the context of the premises onto the conclusion.
+
+    The problem this solves is a real one, and it is easy to miss. R2 takes
+
+        SETDB1 loss raises HERV9NC-int   [measured: K562, CRISPRi, RNA-seq]
+        SUV39H1 writes H3K9me3           [curated: no cell type]
+
+    and concludes something about SUV39H1. If the conclusion is written down with no
+    context it reads as a universal claim about SUV39H1 and HERV9NC-int, when the only
+    experiment underneath it was one knockdown in one leukaemia line. An inferred edge
+    inherits the scope of its narrowest evidence; asserting it outside that scope is a
+    second inference, and it should have to be made explicitly.
+
+    Rules:
+      * a key on which the informative premises agree is inherited
+      * a key on which they disagree becomes ``mixed(a|b)``
+      * a key no premise speaks to is ``not_applicable``
+      * if ANY premise carried a specific experimental context, the conclusion is flagged
+        ``context_generalization_required=yes``
+    """
+    out, specific = {}, False
+    for k in CONTEXT_KEYS:
+        vals = []
+        for p in premises:
+            v = str(p.ctx().get(k, "")).strip()
+            # a premise may itself be derived and already carry mixed(a|b); unpack it or
+            # the nesting compounds into mixed(a|mixed(a|b)) after two rounds of chaining
+            if v.startswith("mixed(") and v.endswith(")"):
+                vals += [x for x in v[6:-1].split("|") if x.lower() not in UNINFORMATIVE]
+            elif v.lower() not in UNINFORMATIVE:
+                vals.append(v)
+        uniq = sorted(set(vals))
+        if not uniq:
+            out[k] = "not_applicable"
+        elif len(uniq) == 1:
+            out[k] = uniq[0]
+        else:
+            out[k] = "mixed(" + "|".join(uniq) + ")"
+        if uniq and k in ("context_cell_type", "perturbation_modality", "context_cell_state"):
+            specific = True
+    out["context_generalization_required"] = "yes" if specific else "no"
+    out["context_grounded_in"] = "; ".join(
+        f"{k}={out[k]}" for k in ("context_cell_type", "perturbation_modality", "assay")
+        if out.get(k) not in (None, "not_applicable")) or "not_applicable"
+    return out
 
 
 @dataclass
@@ -63,6 +126,10 @@ class Derived:
         pad = "  " * depth
         e = self.edge
         out = [f"{pad}{e.subject} -{e.predicate}-> {e.object}   [{e.tier} via {self.rule}]"]
+        c = e.ctx()
+        if c.get("context_generalization_required") == "yes":
+            out.append(f"{pad}  ! prediction is grounded in {c.get('context_grounded_in')} "
+                       f"— asserting it elsewhere is a further inference")
         for p in self.premises:
             d = (index or {}).get(p.key())
             if d is not None and depth < 6:
@@ -262,7 +329,10 @@ def forward_chain(edges: list[Edge], max_rounds: int = 3):
                     eid = "e" + hashlib.sha1(
                         f"{d.edge.subject}|{d.edge.predicate}|{d.edge.object}|{name}".encode()
                     ).hexdigest()[:14]
-                    d.edge = replace(d.edge, edge_id=eid)
+                    # context is inherited centrally rather than in each rule, so a new
+                    # rule cannot forget to do it
+                    d.edge = replace(d.edge, edge_id=eid,
+                                     context=tuple(sorted(inherit_context(d.premises).items())))
                     new.append(d)
         if not new:
             break

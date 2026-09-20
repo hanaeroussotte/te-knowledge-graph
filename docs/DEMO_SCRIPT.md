@@ -113,11 +113,24 @@ And the ladder from `EPISTEMOLOGY.md`: TE RNA up does not give dsRNA up, does no
 cytoplasmic cDNA, does not give sensor activation, does not give interferon, does not give
 disease. Rungs 1, 2 and 6 are measured here. Rungs 3, 4, 5 are not.
 
-## Q7. "So what should we compute next?"
+## Q7. "Is the evidence sufficient to answer the question we started with?"
 
-The transition that matters: **knowledge → uncertainty → the next experiment.**
+**Ask this, not "what should we compute next".** The ending has to be driven by the
+scientific logic, or it becomes theatre: an agent announcing a next experiment regardless
+of whether one is needed reads as a script, and a reviewer will hear it as one.
 
-The system can name what would most reduce uncertainty, and why:
+So the system assesses sufficiency first, per claim, against the registry in `CLAIMS.md`:
+
+| Question | Sufficient? | Why |
+|---|---|---|
+| Does TRIM28 loss raise TEs in K562? | **yes** | measured, two statistics, p = 3.5 × 10⁻¹⁵ |
+| Is DNMT1 on the 5mC→TE axis? | **yes, at compartment level** | p = 1.6 × 10⁻⁸; no subfamily clears FDR |
+| Does DNMT3A silence TEs? | **no** | inferred only; no DNMT3A knockdown exists in ENCODE |
+| Does TE derepression drive interferon? | **no** | the sensing arm is not expressed in this cell line |
+| Are the TE effects quantifier-independent? | **no** | not tested; protocol written, not run |
+
+Only where the answer is *no* does it name the computation expected to reduce the most
+decision-relevant uncertainty — and the ranking is by what it would settle, not by cost:
 
 1. **Repeat in a sensing-competent cell type** — primary haematopoietic progenitors, or
    K562 reconstituted with cGAS. Converts rung 5 from impossible to testable.
@@ -129,10 +142,12 @@ The system can name what would most reduce uncertainty, and why:
 
 The closing line:
 
-> Five H3K9 methyltransferases are predicted to regulate the same TE programme. You do not
-> need to test all five — you test the one that best discriminates between the competing
-> explanations. That is what turns a knowledge graph into an experimental-design engine,
-> and it is the direction this is going.
+> Two of those five questions are answered and three are not, and the system knows which
+> is which. Five H3K9 methyltransferases are predicted to regulate the same TE programme —
+> you don't test all five, you test the one that best discriminates between the competing
+> explanations. Deciding *that* is what turns a knowledge graph into an experimental-design
+> engine, and it only works if the system can first tell you honestly which of its own
+> answers are not yet answers.
 
 ---
 

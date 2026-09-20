@@ -1,5 +1,5 @@
 {
- "proofs": "\n=== TET2  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=1\nLosing TET2 is predicted to lower TE:global, derived by R3_ERASER_INVERSION from: 5mC-MARK_AT->TE:global, TET2-ERASES_MARK->5mC [e0eab062a2cf49c, e62dbe0821f074b, ed53a3057004127].\n  citation gate: 1 sentences kept, 0 rejected\n  TET2 -DEREPRESSES-> TE:global   [inferred via R3_ERASER_INVERSION]\n    5mC -MARK_AT-> TE:global   [inferred via R1_MARK_GROUNDING]\n      DNMT1 -SILENCES-> TE:global   [measured: ENCODE ENCSR600OWF (this run, set-level) median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva]\n      DNMT1 -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886]\n    TET2 -ERASES_MARK-> 5mC   [curated: GO molecular function GO:0070579]\n\n=== DNMT3A  [best tier: curated]  measured=0 curated=1 literature=0 inferred=1\nDNMT3A is curated as silencing transposable elements (GO:0141196 transposable element silencing by piRNA-mediated DNA methylation) [e57e34d0984d26f]. Losing DNMT3A is predicted to raise TE:global, derived by R2_WRITER_TRANSFER from: 5mC-MARK_AT->TE:global, DNMT3A-DEPOSITS_MARK->5mC [eab265c4e9b22a9, e62dbe0821f074b, ec9a39c75750f2e].\n  citation gate: 2 sentences kept, 0 rejected\n  DNMT3A -SILENCES-> TE:global   [inferred via R2_WRITER_TRANSFER]\n    5mC -MARK_AT-> TE:global   [inferred via R1_MARK_GROUNDING]\n      DNMT1 -SILENCES-> TE:global   [measured: ENCODE ENCSR600OWF (this run, set-level) median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva]\n      DNMT1 -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886]\n    DNMT3A -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886]\n\n=== SETDB1  [best tier: measured]  measured=3 curated=1 literature=0 inferred=0\nKnocking down SETDB1 raises HERV9NC-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [e934902523d7fc8]. Knocking down SETDB1 raises LTR/ERV1 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [ed27b5c5db38dba]. Knocking down SETDB1 raises HERVE-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [e614f7ec146ac38]. SETDB1 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation) [ea30bfcb4f478a3].\n  citation gate: 4 sentences kept, 0 rejected\n\n=== TRIM28  [best tier: measured]  measured=8 curated=0 literature=0 inferred=0\nKnocking down TRIM28 raises AluY (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ed043b0715cda44]. Knocking down TRIM28 raises SINE/Alu (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ee95db93de0154e]. Knocking down TRIM28 raises AluYa5 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e95e75956fc9ed4]. Knocking down TRIM28 raises MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e51d17e4d51e3ea]. Knocking down TRIM28 raises SINE/MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ececc34abb51d82]. Knocking down TRIM28 lowers SVA_D (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e584e332299dd85]. Knocking down TRIM28 lowers Retroposon/SVA (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e11d871ef37ae61]. Knocking down TRIM28 raises TE:global (median log2FC of 322 TE subfamilies minus 2890 protein-coding genes, same contrast vs non_targeting; normalisation-invar), measured in ENCODE ENCSR591QYK (this run, set-level) [e0522b3d4156e69].\n  citation gate: 8 sentences kept, 0 rejected\n\n=== DNMT1  [best tier: measured]  measured=1 curated=0 literature=0 inferred=0\nKnocking down DNMT1 raises TE:global (median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva), measured in ENCODE ENCSR600OWF (this run, set-level) [e9459439074323c].\n  citation gate: 1 sentences kept, 0 rejected\n\n=== EZH2  [best tier: literature]  measured=0 curated=0 literature=1 inferred=0\nPublished work reports that EZH2 silences L1 (PMID:18637271) [e94b11e8693cdff].\n  citation gate: 1 sentences kept, 0 rejected\n\n=== KDM4A  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=3\nLosing KDM4A is predicted to lower HERV9NC-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERV9NC-int, KDM4A-ERASES_MARK->H3K9me3 [eac4e24e7933e93, ee4330f0f78fb63, e49c4daa95e18c0]. Losing KDM4A is predicted to lower LTR/ERV1, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->LTR/ERV1, KDM4A-ERASES_MARK->H3K9me3 [e3cb7053e6cf807, e1f8221285953c3, e49c4daa95e18c0]. Losing KDM4A is predicted to lower HERVE-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERVE-int, KDM4A-ERASES_MARK->H3K9me3 [e5c979ce119a13c, e90c821dd72cc86, e49c4daa95e18c0].\n  citation gate: 3 sentences kept, 0 rejected\n  KDM4A -DEREPRESSES-> HERV9NC-int   [inferred via R3_ERASER_INVERSION]\n    H3K9me3 -MARK_AT-> HERV9NC-int   [inferred via R1_MARK_GROUNDING]\n      SETDB1 -SILENCES-> HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684]\n  KDM4A -DEREPRESSES-> LTR/ERV1   [inferred via R3_ERASER_INVERSION]\n    H3K9me3 -MARK_AT-> LTR/ERV1   [inferred via R1_MARK_GROUNDING]\n      SETDB1 -SILENCES-> LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684]\n  KDM4A -DEREPRESSES-> HERVE-int   [inferred via R3_ERASER_INVERSION]\n    H3K9me3 -MARK_AT-> HERVE-int   [inferred via R1_MARK_GROUNDING]\n      SETDB1 -SILENCES-> HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684]\n\n=== MPHOSPH8  [best tier: curated]  measured=0 curated=1 literature=0 inferred=0\nMPHOSPH8 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation) [e422ae227b307f2].\n  citation gate: 1 sentences kept, 0 rejected\n\n=== SUV39H1  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=3\nLosing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERV9NC-int, SUV39H1-DEPOSITS_MARK->H3K9me3 [e9e4541b0cb4dd8, ee4330f0f78fb63, e64714c7af4c17b]. Losing SUV39H1 is predicted to raise LTR/ERV1, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->LTR/ERV1, SUV39H1-DEPOSITS_MARK->H3K9me3 [e7901d18a1aace4, e1f8221285953c3, e64714c7af4c17b]. Losing SUV39H1 is predicted to raise HERVE-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERVE-int, SUV39H1-DEPOSITS_MARK->H3K9me3 [e5d646406d83290, e90c821dd72cc86, e64714c7af4c17b].\n  citation gate: 3 sentences kept, 0 rejected\n  SUV39H1 -SILENCES-> HERV9NC-int   [inferred via R2_WRITER_TRANSFER]\n    H3K9me3 -MARK_AT-> HERV9NC-int   [inferred via R1_MARK_GROUNDING]\n      SETDB1 -SILENCES-> HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n  SUV39H1 -SILENCES-> LTR/ERV1   [inferred via R2_WRITER_TRANSFER]\n    H3K9me3 -MARK_AT-> LTR/ERV1   [inferred via R1_MARK_GROUNDING]\n      SETDB1 -SILENCES-> LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n  SUV39H1 -SILENCES-> HERVE-int   [inferred via R2_WRITER_TRANSFER]\n    H3K9me3 -MARK_AT-> HERVE-int   [inferred via R1_MARK_GROUNDING]\n      SETDB1 -SILENCES-> HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n\n=== TP53  [best tier: literature]  measured=0 curated=0 literature=1 inferred=0\nPublished work reports that TP53 is required for expression of L1 (PMID:15467158) [e2f46b9a594b5d5].\n  citation gate: 1 sentences kept, 0 rejected\n",
+ "proofs": "\n=== TET2  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=1\nLosing TET2 is predicted to lower TE:global, derived by R3_ERASER_INVERSION from: 5mC-MARK_AT->TE:global, TET2-ERASES_MARK->5mC [e0eab062a2cf49c, e62dbe0821f074b, ed53a3057004127].\n  citation gate: 1 sentences kept, 0 rejected\n  TET2 -DEREPRESSES-> TE:global   [inferred via R3_ERASER_INVERSION]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPR; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    5mC -MARK_AT-> TE:global   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPR; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      DNMT1 -SILENCES-> TE:global   [measured: ENCODE ENCSR600OWF (this run, set-level) median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva]\n      DNMT1 -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886]\n    TET2 -ERASES_MARK-> 5mC   [curated: GO molecular function GO:0070579]\n\n=== DNMT3A  [best tier: curated]  measured=0 curated=1 literature=0 inferred=1\nDNMT3A is curated as silencing transposable elements (GO:0141196 transposable element silencing by piRNA-mediated DNA methylation) [e57e34d0984d26f]. Losing DNMT3A is predicted to raise TE:global, derived by R2_WRITER_TRANSFER from: 5mC-MARK_AT->TE:global, DNMT3A-DEPOSITS_MARK->5mC [eab265c4e9b22a9, e62dbe0821f074b, ec9a39c75750f2e].\n  citation gate: 2 sentences kept, 0 rejected\n  DNMT3A -SILENCES-> TE:global   [inferred via R2_WRITER_TRANSFER]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPR; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    5mC -MARK_AT-> TE:global   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPR; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      DNMT1 -SILENCES-> TE:global   [measured: ENCODE ENCSR600OWF (this run, set-level) median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva]\n      DNMT1 -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886]\n    DNMT3A -DEPOSITS_MARK-> 5mC   [curated: GO molecular function GO:0003886]\n\n=== SETDB1  [best tier: measured]  measured=3 curated=1 literature=0 inferred=0\nKnocking down SETDB1 raises HERV9NC-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [e934902523d7fc8]. Knocking down SETDB1 raises LTR/ERV1 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [ed27b5c5db38dba]. Knocking down SETDB1 raises HERVE-int (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR819PCU (this run) [e614f7ec146ac38]. SETDB1 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation) [ea30bfcb4f478a3].\n  citation gate: 4 sentences kept, 0 rejected\n\n=== TRIM28  [best tier: measured]  measured=8 curated=0 literature=0 inferred=0\nKnocking down TRIM28 raises AluY (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ed043b0715cda44]. Knocking down TRIM28 raises SINE/Alu (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ee95db93de0154e]. Knocking down TRIM28 raises AluYa5 (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e95e75956fc9ed4]. Knocking down TRIM28 raises MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e51d17e4d51e3ea]. Knocking down TRIM28 raises SINE/MIR (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [ececc34abb51d82]. Knocking down TRIM28 lowers SVA_D (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e584e332299dd85]. Knocking down TRIM28 lowers Retroposon/SVA (HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting), measured in ENCODE ENCSR591QYK (this run) [e11d871ef37ae61]. Knocking down TRIM28 raises TE:global (median log2FC of 322 TE subfamilies minus 2890 protein-coding genes, same contrast vs non_targeting; normalisation-invar), measured in ENCODE ENCSR591QYK (this run, set-level) [e0522b3d4156e69].\n  citation gate: 8 sentences kept, 0 rejected\n\n=== DNMT1  [best tier: measured]  measured=1 curated=0 literature=0 inferred=0\nKnocking down DNMT1 raises TE:global (median log2FC of 503 TE subfamilies minus 3120 protein-coding genes, same contrast vs control_CRISPR; normalisation-inva), measured in ENCODE ENCSR600OWF (this run, set-level) [e9459439074323c].\n  citation gate: 1 sentences kept, 0 rejected\n\n=== EZH2  [best tier: literature]  measured=0 curated=0 literature=1 inferred=0\nPublished work reports that EZH2 silences L1 (PMID:18637271) [e94b11e8693cdff].\n  citation gate: 1 sentences kept, 0 rejected\n\n=== KDM4A  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=3\nLosing KDM4A is predicted to lower HERV9NC-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERV9NC-int, KDM4A-ERASES_MARK->H3K9me3 [eac4e24e7933e93, ee4330f0f78fb63, e49c4daa95e18c0]. Losing KDM4A is predicted to lower LTR/ERV1, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->LTR/ERV1, KDM4A-ERASES_MARK->H3K9me3 [e3cb7053e6cf807, e1f8221285953c3, e49c4daa95e18c0]. Losing KDM4A is predicted to lower HERVE-int, derived by R3_ERASER_INVERSION from: H3K9me3-MARK_AT->HERVE-int, KDM4A-ERASES_MARK->H3K9me3 [e5c979ce119a13c, e90c821dd72cc86, e49c4daa95e18c0].\n  citation gate: 3 sentences kept, 0 rejected\n  KDM4A -DEREPRESSES-> HERV9NC-int   [inferred via R3_ERASER_INVERSION]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    H3K9me3 -MARK_AT-> HERV9NC-int   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      SETDB1 -SILENCES-> HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684]\n  KDM4A -DEREPRESSES-> LTR/ERV1   [inferred via R3_ERASER_INVERSION]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    H3K9me3 -MARK_AT-> LTR/ERV1   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      SETDB1 -SILENCES-> LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684]\n  KDM4A -DEREPRESSES-> HERVE-int   [inferred via R3_ERASER_INVERSION]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    H3K9me3 -MARK_AT-> HERVE-int   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      SETDB1 -SILENCES-> HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    KDM4A -ERASES_MARK-> H3K9me3   [curated: GO molecular function GO:0140684]\n\n=== MPHOSPH8  [best tier: curated]  measured=0 curated=1 literature=0 inferred=0\nMPHOSPH8 is curated as silencing transposable elements (GO:0141005 transposable element silencing by heterochromatin formation) [e422ae227b307f2].\n  citation gate: 1 sentences kept, 0 rejected\n\n=== SUV39H1  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=3\nLosing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERV9NC-int, SUV39H1-DEPOSITS_MARK->H3K9me3 [e9e4541b0cb4dd8, ee4330f0f78fb63, e64714c7af4c17b]. Losing SUV39H1 is predicted to raise LTR/ERV1, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->LTR/ERV1, SUV39H1-DEPOSITS_MARK->H3K9me3 [e7901d18a1aace4, e1f8221285953c3, e64714c7af4c17b]. Losing SUV39H1 is predicted to raise HERVE-int, derived by R2_WRITER_TRANSFER from: H3K9me3-MARK_AT->HERVE-int, SUV39H1-DEPOSITS_MARK->H3K9me3 [e5d646406d83290, e90c821dd72cc86, e64714c7af4c17b].\n  citation gate: 3 sentences kept, 0 rejected\n  SUV39H1 -SILENCES-> HERV9NC-int   [inferred via R2_WRITER_TRANSFER]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    H3K9me3 -MARK_AT-> HERV9NC-int   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      SETDB1 -SILENCES-> HERV9NC-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n  SUV39H1 -SILENCES-> LTR/ERV1   [inferred via R2_WRITER_TRANSFER]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    H3K9me3 -MARK_AT-> LTR/ERV1   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      SETDB1 -SILENCES-> LTR/ERV1   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n  SUV39H1 -SILENCES-> HERVE-int   [inferred via R2_WRITER_TRANSFER]\n    ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n    H3K9me3 -MARK_AT-> HERVE-int   [inferred via R1_MARK_GROUNDING]\n      ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPRi; assay=mixed(RNA-seq (polyA, paired-end)|curation) \u2014 asserting it elsewhere is a further inference\n      SETDB1 -SILENCES-> HERVE-int   [measured: ENCODE ENCSR819PCU (this run) HISAT2 k=100 + TEcount multi, chr1+chr19, 1.5M reads/lib; vs non_targeting]\n      SETDB1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n    SUV39H1 -DEPOSITS_MARK-> H3K9me3   [curated: GO molecular function GO:0046974]\n\n=== TP53  [best tier: literature]  measured=0 curated=0 literature=1 inferred=0\nPublished work reports that TP53 is required for expression of L1 (PMID:15467158) [e2f46b9a594b5d5].\n  citation gate: 1 sentences kept, 0 rejected\n",
  "rules": {
   "n_input_edges": 9366,
   "n_derived": 89,
@@ -43,6 +43,789 @@
    "tiers": {
     "measured": 15
    }
+  }
+ },
+ "examples": {
+  "TET2": {
+   "best_tier": "inferred",
+   "counts": {
+    "measured": 0,
+    "curated": 0,
+    "literature": 0,
+    "inferred": 1
+   },
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e0eab062a2cf49c|e62dbe0821f074b|ed53a3057004127",
+     "tier": "inferred",
+     "rule": "R3_ERASER_INVERSION",
+     "cites": [
+      "e0eab062a2cf49c",
+      "e62dbe0821f074b",
+      "ed53a3057004127"
+     ],
+     "proof_depth": 7,
+     "direction": "lower"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e0eab062a2cf49c",
+     "tier": "inferred",
+     "hops": [
+      "TET2 -DEREPRESSES-> TE:global"
+     ]
+    },
+    {
+     "id": "ed53a3057004127|e62dbe0821f074b",
+     "tier": "inferred",
+     "hops": [
+      "TET2 -ERASES_MARK-> 5mC",
+      "5mC -MARK_AT-> TE:global"
+     ]
+    }
+   ],
+   "inference_context": [
+    [
+     "e0eab062a2cf49c",
+     "R3_ERASER_INVERSION",
+     "yes",
+     "K562",
+     "subfamily"
+    ]
+   ]
+  },
+  "DNMT3A": {
+   "best_tier": "curated",
+   "counts": {
+    "measured": 0,
+    "curated": 1,
+    "literature": 0,
+    "inferred": 1
+   },
+   "sentences_kept": 2,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e57e34d0984d26f",
+     "tier": "curated",
+     "rule": null,
+     "cites": [
+      "e57e34d0984d26f"
+     ],
+     "proof_depth": 0,
+     "direction": "none"
+    },
+    {
+     "id": "e62dbe0821f074b|eab265c4e9b22a9|ec9a39c75750f2e",
+     "tier": "inferred",
+     "rule": "R2_WRITER_TRANSFER",
+     "cites": [
+      "e62dbe0821f074b",
+      "eab265c4e9b22a9",
+      "ec9a39c75750f2e"
+     ],
+     "proof_depth": 7,
+     "direction": "raise"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e57e34d0984d26f",
+     "tier": "curated",
+     "hops": [
+      "DNMT3A -SILENCES-> TE:UNSPECIFIED"
+     ]
+    },
+    {
+     "id": "eab265c4e9b22a9",
+     "tier": "inferred",
+     "hops": [
+      "DNMT3A -SILENCES-> TE:global"
+     ]
+    },
+    {
+     "id": "ec9a39c75750f2e|e62dbe0821f074b",
+     "tier": "inferred",
+     "hops": [
+      "DNMT3A -DEPOSITS_MARK-> 5mC",
+      "5mC -MARK_AT-> TE:global"
+     ]
+    },
+    {
+     "id": "eff97afbda9779c|e77516b27f399d8",
+     "tier": "inferred",
+     "hops": [
+      "DNMT3A -MEMBER_OF-> CPX-944",
+      "CPX-944 -SILENCES-> TE:UNSPECIFIED"
+     ]
+    }
+   ],
+   "inference_context": [
+    [
+     "eab265c4e9b22a9",
+     "R2_WRITER_TRANSFER",
+     "yes",
+     "K562",
+     "subfamily"
+    ]
+   ]
+  },
+  "SETDB1": {
+   "best_tier": "measured",
+   "counts": {
+    "measured": 3,
+    "curated": 1,
+    "literature": 0,
+    "inferred": 0
+   },
+   "sentences_kept": 4,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e614f7ec146ac38",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e614f7ec146ac38"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "e934902523d7fc8",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e934902523d7fc8"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "ea30bfcb4f478a3",
+     "tier": "curated",
+     "rule": null,
+     "cites": [
+      "ea30bfcb4f478a3"
+     ],
+     "proof_depth": 0,
+     "direction": "none"
+    },
+    {
+     "id": "ed27b5c5db38dba",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "ed27b5c5db38dba"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e1a0e939eaa5d95|e1f8221285953c3",
+     "tier": "inferred",
+     "hops": [
+      "SETDB1 -DEPOSITS_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> LTR/ERV1"
+     ]
+    },
+    {
+     "id": "e1a0e939eaa5d95|e90c821dd72cc86",
+     "tier": "inferred",
+     "hops": [
+      "SETDB1 -DEPOSITS_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> HERVE-int"
+     ]
+    },
+    {
+     "id": "e1a0e939eaa5d95|ee4330f0f78fb63",
+     "tier": "inferred",
+     "hops": [
+      "SETDB1 -DEPOSITS_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> HERV9NC-int"
+     ]
+    },
+    {
+     "id": "e614f7ec146ac38",
+     "tier": "measured",
+     "hops": [
+      "SETDB1 -SILENCES-> HERVE-int"
+     ]
+    },
+    {
+     "id": "e8f4db3bd54df8d|e117493b6433d51",
+     "tier": "inferred",
+     "hops": [
+      "SETDB1 -MEMBER_OF-> CPX-2348",
+      "CPX-2348 -SILENCES-> TE:UNSPECIFIED"
+     ]
+    },
+    {
+     "id": "e934902523d7fc8",
+     "tier": "measured",
+     "hops": [
+      "SETDB1 -SILENCES-> HERV9NC-int"
+     ]
+    },
+    {
+     "id": "ea30bfcb4f478a3",
+     "tier": "curated",
+     "hops": [
+      "SETDB1 -SILENCES-> TE:UNSPECIFIED"
+     ]
+    },
+    {
+     "id": "ed27b5c5db38dba",
+     "tier": "measured",
+     "hops": [
+      "SETDB1 -SILENCES-> LTR/ERV1"
+     ]
+    }
+   ],
+   "inference_context": []
+  },
+  "TRIM28": {
+   "best_tier": "measured",
+   "counts": {
+    "measured": 8,
+    "curated": 0,
+    "literature": 0,
+    "inferred": 0
+   },
+   "sentences_kept": 8,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e0522b3d4156e69",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e0522b3d4156e69"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "e11d871ef37ae61",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e11d871ef37ae61"
+     ],
+     "proof_depth": 0,
+     "direction": "lower"
+    },
+    {
+     "id": "e51d17e4d51e3ea",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e51d17e4d51e3ea"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "e584e332299dd85",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e584e332299dd85"
+     ],
+     "proof_depth": 0,
+     "direction": "lower"
+    },
+    {
+     "id": "e95e75956fc9ed4",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e95e75956fc9ed4"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "ececc34abb51d82",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "ececc34abb51d82"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "ed043b0715cda44",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "ed043b0715cda44"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    },
+    {
+     "id": "ee95db93de0154e",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "ee95db93de0154e"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e0522b3d4156e69",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -SILENCES-> TE:global"
+     ]
+    },
+    {
+     "id": "e11d871ef37ae61",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -DEREPRESSES-> Retroposon/SVA"
+     ]
+    },
+    {
+     "id": "e51d17e4d51e3ea",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -SILENCES-> MIR"
+     ]
+    },
+    {
+     "id": "e584e332299dd85",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -DEREPRESSES-> SVA_D"
+     ]
+    },
+    {
+     "id": "e95e75956fc9ed4",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -SILENCES-> AluYa5"
+     ]
+    },
+    {
+     "id": "ececc34abb51d82",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -SILENCES-> SINE/MIR"
+     ]
+    },
+    {
+     "id": "ed043b0715cda44",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -SILENCES-> AluY"
+     ]
+    },
+    {
+     "id": "ee95db93de0154e",
+     "tier": "measured",
+     "hops": [
+      "TRIM28 -SILENCES-> SINE/Alu"
+     ]
+    }
+   ],
+   "inference_context": []
+  },
+  "DNMT1": {
+   "best_tier": "measured",
+   "counts": {
+    "measured": 1,
+    "curated": 0,
+    "literature": 0,
+    "inferred": 0
+   },
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e9459439074323c",
+     "tier": "measured",
+     "rule": null,
+     "cites": [
+      "e9459439074323c"
+     ],
+     "proof_depth": 0,
+     "direction": "raise"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e9459439074323c",
+     "tier": "measured",
+     "hops": [
+      "DNMT1 -SILENCES-> TE:global"
+     ]
+    },
+    {
+     "id": "ec0d99167c0e898|e62dbe0821f074b",
+     "tier": "inferred",
+     "hops": [
+      "DNMT1 -DEPOSITS_MARK-> 5mC",
+      "5mC -MARK_AT-> TE:global"
+     ]
+    }
+   ],
+   "inference_context": []
+  },
+  "EZH2": {
+   "best_tier": "literature",
+   "counts": {
+    "measured": 0,
+    "curated": 0,
+    "literature": 1,
+    "inferred": 0
+   },
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e94b11e8693cdff",
+     "tier": "literature",
+     "rule": null,
+     "cites": [
+      "e94b11e8693cdff"
+     ],
+     "proof_depth": 0,
+     "direction": "none"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e94b11e8693cdff",
+     "tier": "literature",
+     "hops": [
+      "EZH2 -SILENCES-> L1"
+     ]
+    }
+   ],
+   "inference_context": []
+  },
+  "KDM4A": {
+   "best_tier": "inferred",
+   "counts": {
+    "measured": 0,
+    "curated": 0,
+    "literature": 0,
+    "inferred": 3
+   },
+   "sentences_kept": 3,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e1f8221285953c3|e3cb7053e6cf807|e49c4daa95e18c0",
+     "tier": "inferred",
+     "rule": "R3_ERASER_INVERSION",
+     "cites": [
+      "e1f8221285953c3",
+      "e3cb7053e6cf807",
+      "e49c4daa95e18c0"
+     ],
+     "proof_depth": 7,
+     "direction": "lower"
+    },
+    {
+     "id": "e49c4daa95e18c0|e5c979ce119a13c|e90c821dd72cc86",
+     "tier": "inferred",
+     "rule": "R3_ERASER_INVERSION",
+     "cites": [
+      "e49c4daa95e18c0",
+      "e5c979ce119a13c",
+      "e90c821dd72cc86"
+     ],
+     "proof_depth": 7,
+     "direction": "lower"
+    },
+    {
+     "id": "e49c4daa95e18c0|eac4e24e7933e93|ee4330f0f78fb63",
+     "tier": "inferred",
+     "rule": "R3_ERASER_INVERSION",
+     "cites": [
+      "e49c4daa95e18c0",
+      "eac4e24e7933e93",
+      "ee4330f0f78fb63"
+     ],
+     "proof_depth": 7,
+     "direction": "lower"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e3cb7053e6cf807",
+     "tier": "inferred",
+     "hops": [
+      "KDM4A -DEREPRESSES-> LTR/ERV1"
+     ]
+    },
+    {
+     "id": "e49c4daa95e18c0|e1f8221285953c3",
+     "tier": "inferred",
+     "hops": [
+      "KDM4A -ERASES_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> LTR/ERV1"
+     ]
+    },
+    {
+     "id": "e49c4daa95e18c0|e90c821dd72cc86",
+     "tier": "inferred",
+     "hops": [
+      "KDM4A -ERASES_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> HERVE-int"
+     ]
+    },
+    {
+     "id": "e49c4daa95e18c0|ee4330f0f78fb63",
+     "tier": "inferred",
+     "hops": [
+      "KDM4A -ERASES_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> HERV9NC-int"
+     ]
+    },
+    {
+     "id": "e5c979ce119a13c",
+     "tier": "inferred",
+     "hops": [
+      "KDM4A -DEREPRESSES-> HERVE-int"
+     ]
+    },
+    {
+     "id": "eac4e24e7933e93",
+     "tier": "inferred",
+     "hops": [
+      "KDM4A -DEREPRESSES-> HERV9NC-int"
+     ]
+    }
+   ],
+   "inference_context": [
+    [
+     "e3cb7053e6cf807",
+     "R3_ERASER_INVERSION",
+     "yes",
+     "K562",
+     "subfamily"
+    ],
+    [
+     "e5c979ce119a13c",
+     "R3_ERASER_INVERSION",
+     "yes",
+     "K562",
+     "subfamily"
+    ],
+    [
+     "eac4e24e7933e93",
+     "R3_ERASER_INVERSION",
+     "yes",
+     "K562",
+     "subfamily"
+    ]
+   ]
+  },
+  "MPHOSPH8": {
+   "best_tier": "curated",
+   "counts": {
+    "measured": 0,
+    "curated": 1,
+    "literature": 0,
+    "inferred": 0
+   },
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e422ae227b307f2",
+     "tier": "curated",
+     "rule": null,
+     "cites": [
+      "e422ae227b307f2"
+     ],
+     "proof_depth": 0,
+     "direction": "none"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e422ae227b307f2",
+     "tier": "curated",
+     "hops": [
+      "MPHOSPH8 -SILENCES-> TE:UNSPECIFIED"
+     ]
+    },
+    {
+     "id": "e9f541d106575cf|e117493b6433d51",
+     "tier": "inferred",
+     "hops": [
+      "MPHOSPH8 -MEMBER_OF-> CPX-2348",
+      "CPX-2348 -SILENCES-> TE:UNSPECIFIED"
+     ]
+    }
+   ],
+   "inference_context": []
+  },
+  "SUV39H1": {
+   "best_tier": "inferred",
+   "counts": {
+    "measured": 0,
+    "curated": 0,
+    "literature": 0,
+    "inferred": 3
+   },
+   "sentences_kept": 3,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e1f8221285953c3|e64714c7af4c17b|e7901d18a1aace4",
+     "tier": "inferred",
+     "rule": "R2_WRITER_TRANSFER",
+     "cites": [
+      "e1f8221285953c3",
+      "e64714c7af4c17b",
+      "e7901d18a1aace4"
+     ],
+     "proof_depth": 7,
+     "direction": "raise"
+    },
+    {
+     "id": "e5d646406d83290|e64714c7af4c17b|e90c821dd72cc86",
+     "tier": "inferred",
+     "rule": "R2_WRITER_TRANSFER",
+     "cites": [
+      "e5d646406d83290",
+      "e64714c7af4c17b",
+      "e90c821dd72cc86"
+     ],
+     "proof_depth": 7,
+     "direction": "raise"
+    },
+    {
+     "id": "e64714c7af4c17b|e9e4541b0cb4dd8|ee4330f0f78fb63",
+     "tier": "inferred",
+     "rule": "R2_WRITER_TRANSFER",
+     "cites": [
+      "e64714c7af4c17b",
+      "e9e4541b0cb4dd8",
+      "ee4330f0f78fb63"
+     ],
+     "proof_depth": 7,
+     "direction": "raise"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e5d646406d83290",
+     "tier": "inferred",
+     "hops": [
+      "SUV39H1 -SILENCES-> HERVE-int"
+     ]
+    },
+    {
+     "id": "e64714c7af4c17b|e1f8221285953c3",
+     "tier": "inferred",
+     "hops": [
+      "SUV39H1 -DEPOSITS_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> LTR/ERV1"
+     ]
+    },
+    {
+     "id": "e64714c7af4c17b|e90c821dd72cc86",
+     "tier": "inferred",
+     "hops": [
+      "SUV39H1 -DEPOSITS_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> HERVE-int"
+     ]
+    },
+    {
+     "id": "e64714c7af4c17b|ee4330f0f78fb63",
+     "tier": "inferred",
+     "hops": [
+      "SUV39H1 -DEPOSITS_MARK-> H3K9me3",
+      "H3K9me3 -MARK_AT-> HERV9NC-int"
+     ]
+    },
+    {
+     "id": "e7901d18a1aace4",
+     "tier": "inferred",
+     "hops": [
+      "SUV39H1 -SILENCES-> LTR/ERV1"
+     ]
+    },
+    {
+     "id": "e9e4541b0cb4dd8",
+     "tier": "inferred",
+     "hops": [
+      "SUV39H1 -SILENCES-> HERV9NC-int"
+     ]
+    }
+   ],
+   "inference_context": [
+    [
+     "e5d646406d83290",
+     "R2_WRITER_TRANSFER",
+     "yes",
+     "K562",
+     "subfamily"
+    ],
+    [
+     "e7901d18a1aace4",
+     "R2_WRITER_TRANSFER",
+     "yes",
+     "K562",
+     "subfamily"
+    ],
+    [
+     "e9e4541b0cb4dd8",
+     "R2_WRITER_TRANSFER",
+     "yes",
+     "K562",
+     "subfamily"
+    ]
+   ]
+  },
+  "TP53": {
+   "best_tier": "literature",
+   "counts": {
+    "measured": 0,
+    "curated": 0,
+    "literature": 1,
+    "inferred": 0
+   },
+   "sentences_kept": 1,
+   "sentences_rejected": 0,
+   "claims": [
+    {
+     "id": "e2f46b9a594b5d5",
+     "tier": "literature",
+     "rule": null,
+     "cites": [
+      "e2f46b9a594b5d5"
+     ],
+     "proof_depth": 0,
+     "direction": "none"
+    }
+   ],
+   "paths": [
+    {
+     "id": "e2f46b9a594b5d5",
+     "tier": "literature",
+     "hops": [
+      "TP53 -DEREPRESSES-> L1"
+     ]
+    }
+   ],
+   "inference_context": []
   }
  }
 }
