@@ -56,6 +56,26 @@ def is_te(index) -> np.ndarray:
     return np.array([str(i).count(":") == 2 for i in index])
 
 
+def classify(index) -> np.ndarray:
+    """Three feature classes, and the distinction matters for two separate reasons.
+
+    TE              subfamily:family:class, from the RepeatMasker GTF.
+    gene            an ENSG id, i.e. a gene on a chromosome that is fully in the reference.
+    panel_gene      a symbol id, from a spliced-in signature contig (build_panel_reference.py).
+
+    Panel genes are an immune-biased, deliberately chosen subset. They must never enter the
+    protein-coding background of the set-level TE test — that test works because size
+    factors scale both sets together, which only means something if the background is an
+    unselected sample of the transcriptome. They are also excluded from size-factor
+    estimation, so normalisation stays identical to a run without a panel.
+    """
+    out = []
+    for i in index:
+        s = str(i)
+        out.append("TE" if s.count(":") == 2 else "gene" if s.startswith("ENSG") else "panel_gene")
+    return np.array(out)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -76,6 +96,8 @@ def main():
 
     m = pd.read_csv(a.counts, sep="\t", index_col=0)
     m.index = [str(i).strip('"') for i in m.index]
+    # `merge` writes a trailing feature_type annotation column; counts only from here on
+    m = m.drop(columns=[c for c in m.columns if m[c].dtype == object], errors="ignore")
     m = m.round().astype(int)
     man = pd.read_csv(a.manifest)
 
@@ -103,14 +125,17 @@ def main():
         sub = meta[meta.target.isin([kd, ctrl])]
         c = m.T.loc[sub.index]
         c = c.loc[:, (c.sum(0) >= a.min_count) & ((c > 0).sum(0) >= 2)]
+        cls = classify(c.columns)
+        bg = list(c.columns[cls == "gene"])
         dds = DeseqDataSet(counts=c, metadata=sub[["target"]], design="~target",
-                           inference=inf, quiet=True)
+                           control_genes=bg, inference=inf, quiet=True)
         dds.deseq2()
         st = DeseqStats(dds, contrast=["target", kd, ctrl], inference=inf, quiet=True)
         st.summary()
         r = st.results_df.copy()
         r["feature"] = r.index
         r["is_TE"] = is_te(r.index)
+        r["feature_class"] = classify(r.index)
         r["knockdown"], r["control"] = kd, ctrl
         all_res.append(r)
 
@@ -129,8 +154,8 @@ def main():
                     f"padj={row.padj:.4g}", TODAY])))
 
         # ---- set-level edge
-        t = r[r.is_TE].log2FoldChange.dropna()
-        g = r[~r.is_TE].log2FoldChange.dropna()
+        t = r[r.feature_class == "TE"].log2FoldChange.dropna()
+        g = r[r.feature_class == "gene"].log2FoldChange.dropna()
         mw = stats.mannwhitneyu(t, g, alternative="two-sided")
         delta = float(t.median() - g.median())
         setrows.append({"knockdown": kd, "control": ctrl, "n_TE": len(t), "n_gene": len(g),

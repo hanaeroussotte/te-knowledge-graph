@@ -181,8 +181,26 @@ small forward-chainer. The architecture would support more; the content is thin.
 Extrapolating to primary haematopoietic cells — which is what the clonal-haematopoiesis framing
 implies — is not supported by anything measured here.
 
-**The TE → sensor → interferon arm is drawn but not measured.** It appears in the graph figure
-as an explicitly marked "consequence arm, not measured here." No ISG induction was tested.
+**The TE → sensor → interferon arm is now measured, and it is a null — with a mechanistic
+explanation.** *(Updated; see `docs/PANEL_REFERENCE.md`.)* The arm was previously
+unmeasurable because only 16.8% of the type-I interferon gene set sits on chr1+chr19.
+Splicing 921 contigs covering 990 signature gene loci into the reference raised that to
+76.8%, at a cost of 62 Mb and a reference-perturbation control (Pearson 0.992–0.996 against
+the original log2FCs, no sign flips, set-level deltas unchanged).
+
+At real coverage, no signature moves in any of the three contrasts under Bonferroni
+correction, and the bootstrap confidence intervals on the interferon arm exclude effects of
+the magnitude seen on the TE arm — so this is a measured absence, not an underpowered one.
+The same data explains it: in K562 the transduction machinery is abundant (`TYK2` 799 CPM,
+`MAVS` 586, `IRF3` 317, `STING1` 270) while the **entry points are at the floor** — `CGAS`
+0.21 CPM, `ZBP1` 0.26, `TLR3` 0.00, `NLRP3` 0.20, `RIGI` 5.4, `IFIH1` 8.5 — and `ADAR`, the
+main brake on sensing endogenous dsRNA, is at 823 CPM. `IFNB1` and `OASL` are at zero.
+
+So: **this dataset cannot test viral mimicry**, because the cell line lacks the sensors. The
+claim "TE derepression causes interferon" remains untested here and requires a
+sensing-competent cell type. Two residual weaknesses of the fix itself: a panel measures
+only the genes you name, so it cannot surface an unanticipated pathway; and the
+inflammatory-response set (725 members) still fails the coverage guard at 0.535.
 
 **Subfamily-level, not locus-level.** Individual insertions differ enormously in whether they
 are transcribed. "AluY goes up" aggregates ~104,000 loci.

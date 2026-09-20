@@ -58,6 +58,27 @@ signatures:  ## interferon / senescence set-level tests (with coverage guard)
 	  --de $(OUT)/deseq2_results.csv --gtf $(REFS)/gencode.v44.gtf \
 	  --outdir $(OUT) --scope-chroms chr1 chr19
 
+panel:  ## splice signature gene loci into the reference so the inflammation arm is measurable
+	python src/build_panel_reference.py spec  --gtf $(REFS)/gencode.v44.gtf \
+	  --in-scope chr1,chr19 --outdir data/graph
+	python src/build_panel_reference.py build --gtf $(REFS)/gencode.v44.gtf \
+	  --spec data/graph/panel_spec.csv --outdir $(REFS)
+	cat $(REFS)/chr1.fa $(REFS)/chr19.fa $(REFS)/panel.fa > $(REFS)/chr1_chr19_panel_m.fa
+	cat $(REFS)/gencode.v44.chr1_chr19.gtf $(REFS)/panel.gtf \
+	  > $(REFS)/gencode.v44.chr1_chr19.panel.gtf
+	hisat2-build -p 8 $(REFS)/chr1_chr19_panel_m.fa $(REFS)/hisat2/chr1_chr19_panel_m
+
+de-panel:  ## re-quantify + DE + signatures on the panel-augmented reference
+	python src/te_pipeline.py run --ref-scope chr_subset_panel --aligner hisat2 \
+	  --manifest data/manifests/manifest_core.csv --outdir results_panel \
+	  --reads 1500000 --threads 8 --stranded no --mode multi
+	python src/te_pipeline.py merge --outdir results_panel
+	python src/run_de.py --counts results_panel/counts_matrix.tsv \
+	  --manifest data/manifests/manifest_core.csv --outdir results_panel
+	python src/score_signatures.py --counts results_panel/counts_matrix.tsv \
+	  --de results_panel/deseq2_results.csv --gtf $(REFS)/gencode.v44.gtf \
+	  --outdir results_panel --scope-chroms chr1 chr19
+
 query:  ## ask the engine about a gene:  make query GENE=TET2
 	python src/te_reason.py $(GENE) --proofs
 

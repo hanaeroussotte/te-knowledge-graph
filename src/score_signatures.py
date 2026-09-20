@@ -93,15 +93,20 @@ def main():
 
     sets = {k: sorted(quickgo_symbols(go) & valid) for k, go in SETS.items()}
 
+    # Coverage is measured, not assumed. The question is not "which chromosome is this gene
+    # on" but "did this run actually quantify it" — which is what a spliced-in panel contig
+    # changes (build_panel_reference.py). --scope-chroms is kept only as a fallback for
+    # reporting when no DE table is available.
+    quantified = set(de.symbol)
     cov_rows, usable = [], {}
     for k, members in sets.items():
-        if a.scope_chroms:
-            inscope = [g for g in members if chrom.get(g) in set(a.scope_chroms)]
-        else:
-            inscope = members
+        inscope = [g for g in members if g in quantified]
+        onchrom = ([g for g in members if chrom.get(g) in set(a.scope_chroms)]
+                   if a.scope_chroms else members)
         frac = len(inscope) / max(len(members), 1)
         cov_rows.append({"signature": k, "go": SETS[k], "genes_in_set": len(members),
-                         "in_reference_scope": len(inscope), "coverage": round(frac, 3),
+                         "in_reference_scope": len(onchrom),
+                         "actually_quantified": len(inscope), "coverage": round(frac, 3),
                          "interpretable": frac >= a.min_coverage})
         if frac >= a.min_coverage:
             usable[k] = members
@@ -120,24 +125,41 @@ def main():
     for kd in sorted(de.knockdown.dropna().unique()):
         d = de[de.knockdown == kd].dropna(subset=["log2FoldChange"])
         genes = d[~d.is_TE]
+        is_panel = (genes.get("feature_class", pd.Series("gene", index=genes.index))
+                    == "panel_gene")
         for name, members in usable.items():
-            inset = genes[genes.symbol.isin(members)].log2FoldChange
-            rest = genes[~genes.symbol.isin(members)].log2FoldChange
+            sel = genes.symbol.isin(members)
+            inset = genes[sel].log2FoldChange
             if len(inset) < 10:
                 continue
-            mw = stats.mannwhitneyu(inset, rest, alternative="two-sided")
-            rows.append({"knockdown": kd, "signature": name, "n_in_set": len(inset),
-                         "median_set": round(float(inset.median()), 4),
-                         "median_rest": round(float(rest.median()), 4),
-                         "delta": round(float(inset.median() - rest.median()), 4),
-                         "mannwhitney_p": float(f"{mw.pvalue:.4g}")})
+            # Two backgrounds, because a panel introduces one specific confound. Signature
+            # genes mostly sit on spliced-in contigs; ordinary genes mostly do not. If the
+            # two groups differ technically — mappability, GC, contig edges — that alone
+            # would look like a signature shift. The panel-only background removes it:
+            # every gene on both sides is then on a panel contig.
+            for bg_name, bgsel in [("all_other_genes", ~sel),
+                                   ("other_panel_genes", (~sel) & is_panel)]:
+                rest = genes[bgsel].log2FoldChange
+                if len(rest) < 10:
+                    continue
+                mw = stats.mannwhitneyu(inset, rest, alternative="two-sided")
+                rows.append({"knockdown": kd, "signature": name, "background": bg_name,
+                             "n_in_set": len(inset), "n_background": len(rest),
+                             "median_set": round(float(inset.median()), 4),
+                             "median_rest": round(float(rest.median()), 4),
+                             "delta": round(float(inset.median() - rest.median()), 4),
+                             "mannwhitney_p": float(f"{mw.pvalue:.4g}")})
         te = d[d.is_TE].log2FoldChange
+        # background for the TE test is the unselected chr1/chr19 gene set only — see the
+        # feature_class docstring in run_de.py
+        bg_genes = genes[~is_panel].log2FoldChange if is_panel.any() else genes.log2FoldChange
         if len(te) >= 10:
-            mw = stats.mannwhitneyu(te, genes.log2FoldChange, alternative="two-sided")
-            rows.append({"knockdown": kd, "signature": "TE_compartment", "n_in_set": len(te),
+            mw = stats.mannwhitneyu(te, bg_genes, alternative="two-sided")
+            rows.append({"knockdown": kd, "signature": "TE_compartment",
+                         "background": "all_other_genes", "n_background": len(bg_genes), "n_in_set": len(te),
                          "median_set": round(float(te.median()), 4),
-                         "median_rest": round(float(genes.log2FoldChange.median()), 4),
-                         "delta": round(float(te.median() - genes.log2FoldChange.median()), 4),
+                         "median_rest": round(float(bg_genes.median()), 4),
+                         "delta": round(float(te.median() - bg_genes.median()), 4),
                          "mannwhitney_p": float(f"{mw.pvalue:.4g}")})
     res = pd.DataFrame(rows)
     res.to_csv(out / "signature_setlevel_tests.csv", index=False)

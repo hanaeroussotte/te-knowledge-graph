@@ -136,6 +136,57 @@ This adds a second concrete thing the genome-wide run buys, alongside grounding 
 measure the TE arm and cannot measure the inflammation arm, which is precisely the junction
 the hypothesis turns on.
 
+### 5c. RESOLVED — the arm was made measurable, and the answer is a null with a reason
+
+*(Added after §5b; full write-up in `docs/PANEL_REFERENCE.md`.)*
+
+Rather than wait for a genome-wide run, the missing loci were spliced into the existing
+reference as 921 extra contigs covering 990 signature genes (`src/build_panel_reference.py`).
+Coverage of the type-I interferon set went **0.168 → 0.768**; defense-response-to-virus
+0.174 → 0.708; senescence 0.096 → 0.783. The inflammatory-response set reached only 0.535
+and is **still refused** by the coverage guard.
+
+A reference-perturbation control on the identical FASTQs confirms nothing already measured
+moved: Pearson 0.992–0.996 against the original log₂FCs, median |Δ| ≤ 0.027, no sign flips,
+and the set-level TE deltas unchanged (TRIM28 +0.408, DNMT1 +0.136, SETDB1 +0.024).
+
+**The measured answer, at real coverage:**
+
+| Knockdown | TE arm Δ | 95% CI | Interferon arm Δ | 95% CI |
+|---|---|---|---|---|
+| SETDB1 | +0.024 | −0.062 … +0.115 | +0.023 | −0.056 … +0.060 |
+| TRIM28 | **+0.408** | +0.311 … +0.467 | −0.023 | −0.126 … +0.061 |
+| DNMT1 | **+0.136** | +0.095 … +0.178 | −0.011 | −0.059 … +0.042 |
+
+No signature moves under Bonferroni across the 15 tests, under either background
+(`all_other_genes` and the panel-only control background agree). The interferon intervals
+exclude effects of TE-arm magnitude, so this is a measured absence.
+
+**Why, from the same data.** In K562 the transducers are abundant — `TYK2` 799 CPM, `MAVS`
+586, `IRF3` 317, `JAK1` 317, `STAT2` 286, `STING1` 270 — and the **pathway's entry points
+are at the floor**: `CGAS` 0.21 CPM (non-zero in 1 of 11 samples), `ZBP1` 0.26, `NLRP3`
+0.20, `TLR3` 0.00, `RIGI` 5.4, `IFIH1` 8.5. `ADAR`, the principal brake on MDA5 sensing of
+endogenous double-stranded RNA, is at 823 CPM, and there is no tonic interferon tone to
+raise (`IFNB1` 0.00, `OASL` 0.00).
+
+**What this means for the hypothesis.** It does not test it. K562 cannot mount the response
+the hypothesis requires, so the DNMT3A-arm prediction — TE reactivation → viral mimicry →
+inflammation — is neither supported nor refuted here. What the project now has is a
+*validated instrument* for the junction: the TE arm and the inflammation arm are measured
+in the same libraries, on the same reference, with a control showing the reference change is
+inert, and a rule (`R6_TE_MEDIATED_INFLAMMATION`) that fires only when both move in the same
+contrast. It currently fires zero times, correctly.
+
+**The experiment this specifies.** Repeat in a sensing-competent cell type — one expressing
+cGAS/STING and MDA5, e.g. primary or immortalised haematopoietic progenitors, or K562
+reconstituted with cGAS — and ideally with a DNMT3A or TET2 perturbation rather than DNMT1.
+That is now a concrete protocol rather than an aspiration, and it is the single most
+informative next experiment for the hypothesis.
+
+Tables: `signature_coverage_panel.csv`, `signature_setlevel_tests_panel.csv`,
+`two_arm_effects.csv`, `sensor_expression_k562.csv`, `reference_perturbation.csv`.
+Figure: `fig_two_arm.png`.
+
 Tables: `signature_coverage_chr_subset.csv`, `signature_setlevel_tests.csv`,
 `signature_scores.csv` — all retained so the attempt and its failure mode are reproducible.
 

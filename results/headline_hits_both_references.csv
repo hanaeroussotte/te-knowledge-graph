@@ -1,0 +1,7 @@
+knockdown,feature,log2FC_old,log2FC_new,padj_old,padj_new,same_sign,still_sig
+TRIM28,AluY,0.79,0.845,0.000532,0.0435,True,True
+TRIM28,AluYa5,0.99,0.904,0.0679,,True,False
+TRIM28,SVA_D,-0.408,-0.362,0.0801,0.109,True,False
+SETDB1,HERVE-int,0.966,0.971,0.0832,0.0604,True,True
+TRIM28,MIR,0.559,0.586,0.0895,0.0595,True,True
+SETDB1,HERV9NC-int,1.198,1.169,0.0898,,True,False

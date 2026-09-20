@@ -47,10 +47,13 @@ by EM, and a graph with `TEFamily` / `TELocus` / `TEClass` as first-class node t
 | `src/te_reason.py` | `explain(gene)` + the citation gate |
 | `src/annotate_tractability.py` | Open Targets + ChEMBL → five druggability classes |
 | `src/score_signatures.py` | interferon / senescence set-level tests, with a coverage guard |
+| `src/build_panel_reference.py` | splices signature gene loci into the reference as extra contigs so a gene set becomes measurable without a genome-wide index |
 | `src/extract_lit.py` | rule-based literature extractor — **kept but not used**, see below |
 
-Documentation in `docs/` — start with `PRIMER.md` if the biology is new to you, `MANUAL.md` if
-you want to run it, `CRITIQUE.md` before you believe any of it.
+Documentation in `docs/` — **`COMPLETE_WALKTHROUGH.md` explains the whole project from zero**
+(biology, architecture, every script, the mathematics, how to read every output);
+`PRIMER.md` is the shorter version, `MANUAL.md` if you want to run it, `CRITIQUE.md` before
+you believe any of it, `PANEL_REFERENCE.md` for how the interferon coverage gap was closed.
 
 ## Quickstart
 

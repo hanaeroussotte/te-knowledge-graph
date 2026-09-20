@@ -1,0 +1,7 @@
+signature,go,genes_in_set,in_reference_scope,actually_quantified,coverage,interpretable
+IFN_typeI,GO:0034340,125,21,96,0.768,True
+IFN_typeII,GO:0034341,107,24,70,0.654,True
+defense_virus,GO:0051607,264,46,187,0.708,True
+inflammatory,GO:0006954,725,130,388,0.535,False
+senescence,GO:0090398,83,8,65,0.783,True
+NFkB,GO:0038061,121,15,83,0.686,True

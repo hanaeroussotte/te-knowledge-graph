@@ -190,6 +190,34 @@ def r5(edges, by_pred, derived_complex=()):
     return out
 
 
+@rule("R6_TE_MEDIATED_INFLAMMATION",
+      "If, in the SAME contrast, losing gene g raised the TE compartment (measured) AND "
+      "raised an inflammation signature (measured), conclude that g drives that signature "
+      "through TE derepression. Both premises must be measured and must come from the same "
+      "knockdown — a TE effect in one experiment and an interferon effect in another is a "
+      "coincidence, not a pathway. The rule cannot fire on a signature whose reference "
+      "coverage was too low to score, which is why the panel-augmented reference exists.")
+def r6(edges, by_pred):
+    # gene -> the contrast in which its TE effect was measured
+    te_up = {}
+    for e in by_pred["SILENCES"]:
+        if e.tier == "measured" and e.object.startswith("TE:"):
+            te_up[e.subject] = e
+    out = []
+    for e in by_pred["INDUCES"]:
+        if e.tier != "measured" or not e.object.startswith("Signature:"):
+            continue
+        base = te_up.get(e.subject)
+        if base is None:
+            continue
+        # same knockdown, and the source string records the contrast for both
+        out.append(Derived(Edge(e.subject, "DRIVES_VIA_TE", e.object, "inferred",
+                                "rule:R6_TE_MEDIATED_INFLAMMATION",
+                                detail=f"TE {base.detail}; signature {e.detail}"),
+                           "R6_TE_MEDIATED_INFLAMMATION", (base, e)))
+    return out
+
+
 # ------------------------------------------------------------------------ forward chain
 def forward_chain(edges: list[Edge], max_rounds: int = 3):
     """Apply the rules to fixpoint (or max_rounds). Returns (derived, index)."""

@@ -37,6 +37,14 @@ SCOPES = {
                    REFS / "hg38_rmsk_TE.chr1_chr19.gtf",
                    REFS / "gencode.v44.chr1_chr19.gtf",
                    REFS / "star_chr1_chr19", 13),
+    # chr1+chr19 plus spliced-in gene-body contigs for every signature gene that lives
+    # elsewhere (see build_panel_reference.py). The TE GTF is deliberately unchanged, so
+    # the TE feature set is identical to chr_subset and the two runs can be compared
+    # feature-by-feature as a reference-perturbation control.
+    "chr_subset_panel": ([REFS / "chr1.fa", REFS / "chr19.fa", REFS / "panel.fa"],
+                         REFS / "hg38_rmsk_TE.chr1_chr19.gtf",
+                         REFS / "gencode.v44.chr1_chr19.panel.gtf",
+                         REFS / "star_chr1_chr19_panel_m", 13),
     "genome":     ([REFS / "GRCh38.primary_assembly.genome.fa"],
                    REFS / "hg38_rmsk_TE.gtf",
                    REFS / "gencode.v44.gtf",
@@ -201,8 +209,12 @@ def cmd_run(a):
     import csv
     fastas, te_gtf, gencode, idx, _ = SCOPES[a.ref_scope]
     gencode = gunzip_if_needed(gencode)
-    if not (idx / "SA").exists():
+    ht2_prefix = REFS / "hisat2" / idx.name.replace("star_", "")
+    if a.aligner == "star" and not (idx / "SA").exists():
         sys.exit(f"no STAR index at {idx} — run `te_pipeline.py index --ref-scope {a.ref_scope}` first")
+    if a.aligner == "hisat2" and not Path(str(ht2_prefix) + ".1.ht2").exists():
+        sys.exit(f"no HISAT2 index at {ht2_prefix}.*.ht2 — "
+                 f"build it with `hisat2-build -p 8 <fasta> {ht2_prefix}`")
     out = Path(a.outdir); (out / "fastq").mkdir(parents=True, exist_ok=True)
     (out / "align").mkdir(exist_ok=True); (out / "counts").mkdir(exist_ok=True)
 
