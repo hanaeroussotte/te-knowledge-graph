@@ -50,10 +50,37 @@ by EM, and a graph with `TEFamily` / `TELocus` / `TEClass` as first-class node t
 | `src/build_panel_reference.py` | splices signature gene loci into the reference as extra contigs so a gene set becomes measurable without a genome-wide index |
 | `src/extract_lit.py` | rule-based literature extractor — **kept but not used**, see below |
 
-Documentation in `docs/` — **`COMPLETE_WALKTHROUGH.md` explains the whole project from zero**
-(biology, architecture, every script, the mathematics, how to read every output);
-`PRIMER.md` is the shorter version, `MANUAL.md` if you want to run it, `CRITIQUE.md` before
-you believe any of it, `PANEL_REFERENCE.md` for how the interferon coverage gap was closed.
+### What this is, stated precisely
+
+> **An evidence-traceable perturbational reasoning system for transposable-element
+> regulation.** It re-analyses perturbation experiments for effects on the repetitive
+> genome, converts those measurements into signed and provenance-tracked biological
+> relationships, connects them to known mechanisms, and generates testable hypotheses whose
+> evidence paths can be inspected and falsified.
+
+It is **not** a new TE quantification method (that is
+[TEtranscripts](https://doi.org/10.1093/bioinformatics/btv422), which we run), not the first
+systematic search for TE regulators (genome-wide screens date to 2003), and not a new
+statistical test (competitive gene-set testing). Every novelty claim was put through a
+deliberate attempt to kill it — see `PRIOR_ART.md` and the claim registry `CLAIMS.md`.
+
+### Documentation
+
+| Read this | For |
+|---|---|
+| `COMPLETE_WALKTHROUGH.md` | the whole project from zero — biology, architecture, every script, the mathematics, how to read every output |
+| `WHY_THIS_IS_DIFFERENT.md` | what already existed and which part is actually new |
+| `PRIOR_ART.md` / `CLAIMS.md` | the evidence behind every claim, and its status |
+| `EPISTEMOLOGY.md` | what the system is entitled to conclude, and the inference ladder |
+| `DEMO_SCRIPT.md` | the seven-question demo |
+| `PRIMER.md` / `MANUAL.md` | shorter explainer / operator's guide |
+| `CRITIQUE.md` | read before believing any of it |
+| `PANEL_REFERENCE.md` | how the interferon coverage gap was closed |
+| `TE_RESOLUTION.md` / `QUANTIFIER_ROBUSTNESS.md` | where the resolution should go; the robustness test, specified and **not run** |
+| `COMPUTE.md` / `modal_setup.md` | what belongs in the cloud and what does not |
+
+Run `make test` before any push: it audits for retracted claims and regression-tests the
+proof trees.
 
 ## Quickstart
 

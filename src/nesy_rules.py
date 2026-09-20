@@ -2,10 +2,23 @@
 """
 nesy_rules.py — the symbolic half of the engine.
 
+These are MECHANISM-GUIDED CANDIDATE-GENERATION RULES. They produce mechanistic
+hypotheses, not causal deductions, and the vocabulary matters: R1-R6 say what is worth
+testing next, not what is true. See docs/EPISTEMOLOGY.md, which also carries the
+TE RNA -> dsRNA -> cytoplasmic cDNA -> sensing -> interferon -> phenotype ladder. Every
+rung of that ladder is a separate empirical claim and no rule here may skip one.
+
 A small forward-chaining rule set over the TE-aware graph. Every derived edge carries a
 proof tree naming the ground edges it rests on, so an inferred claim can always be walked
 back to curated or measured evidence. Nothing here is learned; it is deliberately all
-stated logic that a reviewer can read and disagree with.
+stated logic that a reviewer can read and disagree with. Printing the proof tree is what
+makes "predicted" an honest word rather than a hedge: every premise is attackable.
+
+This rule engine is a BOOTSTRAP. It exists to generate testable hypotheses while the
+measured matrix is too small to train on. Once the perturbational TE atlas is large enough
+to hold out a validation set, a learned perturbation model (TxPert/GEARS-style) becomes
+feasible and the two should coexist — rules for the auditable mechanistic path, learning
+for coverage.
 
 Sign convention (matches schema.md): predicates are stated as the effect of LOSING the
 subject. SILENCES(G, T) means "losing G raises T". DEREPRESSES(G, T) means "losing G

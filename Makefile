@@ -58,6 +58,18 @@ signatures:  ## interferon / senescence set-level tests (with coverage guard)
 	  --de $(OUT)/deseq2_results.csv --gtf $(REFS)/gencode.v44.gtf \
 	  --outdir $(OUT) --scope-chroms chr1 chr19
 
+test:  ## regression (proof trees, rule firing, edge context) + claim audit — run before every push
+	python tests/audit_claims.py
+	python tests/test_regression.py
+
+migrate-context:  ## add cell type / modality / assay / resolution columns to every edge file
+	python src/migrate_edge_context.py --apply
+
+prior-art:  ## show the prior-art record behind every novelty claim
+	@python -c "import pandas as pd; d=pd.read_csv('data/graph/prior_art.csv',keep_default_na=False); \
+	print(d.groupby('verdict').size().to_string()); print(); \
+	print(d[['claim_id','verdict','precedent','doi']].to_string(index=False))"
+
 panel:  ## splice signature gene loci into the reference so the inflammation arm is measurable
 	python src/build_panel_reference.py spec  --gtf $(REFS)/gencode.v44.gtf \
 	  --in-scope chr1,chr19 --outdir data/graph

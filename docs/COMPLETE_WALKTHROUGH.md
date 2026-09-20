@@ -153,7 +153,7 @@ it. That is the gap this project fills.
 
 ---
 
-## 3. Why existing knowledge graphs cannot do this
+## 3. What existing knowledge graphs do not model
 
 A **knowledge graph** is a database shaped like a network: *nodes* are things (a gene, a
 disease, a drug), *edges* are statements relating them (`DNMT3A —MUTATED_IN→ CH`). It is
@@ -163,9 +163,16 @@ this gene to that disease?" — which a table cannot answer.
 The main public biomedical graphs are Hetionet, PrimeKG and Open Targets. Between them they
 cover genes, proteins, diseases, drugs, pathways, phenotypes, anatomy and side effects.
 
-**None of them has a node type for a transposable element.** There is nowhere to put
-`AluY`. So the statement "SETDB1 silences HERVK" is not a fact that can be false in those
-graphs — it is a sentence they cannot write down.
+**None of them models a transposable element as a first-class entity.** There is nowhere
+to put `AluY`. So the statement "SETDB1 silences HERVK" is not a fact that can be false in
+those graphs — it is a sentence they cannot write down directly.
+
+Say it that way, not as "no public knowledge graph has TEs". The stronger version is
+attackable: an ontology for *bacterial* integrative and conjugative elements exists
+([ICEO](https://doi.org/10.1038/s41597-021-01112-5)), which is the same idea in a different
+domain, and nothing stops someone building a TE-aware graph tomorrow. The claim is scoped
+to the major general-purpose human biomedical graphs, and to a literature search on a
+stated date — see `PRIOR_ART.md` and `CLAIMS.md` entry D2.
 
 Two further gaps follow from that one:
 
@@ -546,6 +553,25 @@ The user's own published pipeline (`TE_CHIP`) takes the second route. The two ar
 interchangeable** and have never been benchmarked against each other on the same data;
 `CRITIQUE.md` lists that benchmark as the clearest next test.
 
+**Credit where it is due, because this is the part most likely to be mistaken for our
+contribution.** The third route is `TEcount`, from **TEtranscripts** (Jin et al.,
+*Bioinformatics* 2015, [10.1093/bioinformatics/btv422](https://doi.org/10.1093/bioinformatics/btv422)).
+Every TE number in this project comes out of that tool. We did not invent it and must never
+imply otherwise. Nor is it the only option — **Telescope**
+([10.1371/journal.pcbi.1006453](https://doi.org/10.1371/journal.pcbi.1006453)) and **SQuIRE**
+([10.1093/nar/gky1301](https://doi.org/10.1093/nar/gky1301)) resolve to individual loci
+rather than subfamilies, SalmonTE is faster, TEspeX handles exonised fragments, MATES and
+IRescue work at single-cell resolution, and **MAJEC** (bioRxiv 2026,
+[10.64898/2026.04.10.717472](https://doi.org/10.64898/2026.04.10.717472)) targets a failure
+mode we do not address at all: TE reads that overlap gene exons, which it reports cutting
+from ~43% to ~5% of locus-level signal.
+
+The reason our subfamily-level results are not simply obsolete is that MAJEC's own
+benchmark reports **r = 0.987 concordance with TEtranscripts for subfamily-level
+differential expression**. MAJEC's advantage is at locus level. That is a defence, not a
+dismissal, and the experiment that would settle it for our data is written up — and
+explicitly not run — in `QUANTIFIER_ROBUSTNESS.md`.
+
 ### 8.2 TEcount's expectation-maximisation
 
 The idea: if you knew how strongly each subfamily was expressed, you could split an
@@ -728,6 +754,20 @@ protein-coding genes in the same contrast?*
 ```
 
 tested with a Mann–Whitney U test (a rank test, so it needs no distributional assumption).
+
+**This statistic is not new, and claiming it is would be a mistake.** Comparing one feature
+set's fold-change distribution against all other features is **competitive gene-set
+testing** — CAMERA ([10.1093/nar/gks461](https://doi.org/10.1093/nar/gks461)) and GSEA
+([10.1073/pnas.0506580102](https://doi.org/10.1073/pnas.0506580102)). Aggregate TE readouts
+also already exist, including in neurodegeneration, where ALS cortex stratifies into
+subtypes one of which is defined by retrotransposon activation
+([10.1016/j.celrep.2019.09.066](https://doi.org/10.1016/j.celrep.2019.09.066)).
+
+What a literature search did **not** find (198 open-access full texts, sentence level,
+2026-09-20 — see `PRIOR_ART.md`) is the argument below: that using protein-coding genes
+from the *same contrast* as the reference makes the readout immune to the normalisation
+error which is the field's central objection to TE quantification. The test is borrowed;
+the reason for making it the primary TE readout is the contribution.
 
 **Why this is normalisation-invariant, which is the point.** Suppose the size factors are
 wrong — say every knockdown-group size factor is off by a common multiplicative factor *c*.
@@ -1252,17 +1292,22 @@ A 301 bp window on chr1 was fetched from both and compared byte for byte: identi
 > Half your genome is domesticated viruses. Cells keep them switched off with chemical
 > marks; when the machinery that writes those marks breaks, the elements wake up and the
 > cell's antiviral alarm fires — inflammation with no infection. That's implicated in
-> ageing and in blood cancer. No public knowledge graph can even represent it, because none
-> of them has a node type for a transposable element. We built one that does, filled it
-> from public curation, our own analysis of raw sequencing data, and the literature, and
-> added a reasoner that derives new links and prints its proof. Ask it about a gene nobody
-> has ever tested and it gives you an answer you can check line by line — and tells you
-> whether the gene is druggable.
+> ageing and in blood cancer. The major general-purpose biomedical knowledge graphs —
+> PrimeKG, Hetionet, Open Targets — don't model transposable elements as first-class
+> entities, so that chain is hard to express in them directly. Meanwhile there are over a
+> thousand public perturbation experiments whose authors never counted the repetitive
+> genome. We re-analyse them for TE effects, turn the measurements into signed,
+> provenance-tracked relationships, and run mechanism rules that generate testable
+> hypotheses about genes nobody has assayed — each one printed as a proof tree you can
+> attack line by line. And when the evidence won't support an answer, it refuses and names
+> the experiment that would.
 
 ### The three slides that matter
 
-1. **The gap.** Hetionet, PrimeKG, Open Targets — no TE node. 3.76 million elements, 1,057
-   subfamilies, unrepresentable.
+1. **The gap.** Hetionet, PrimeKG and Open Targets don't model TEs as first-class
+   entities — 3.76 million elements across 1,057 subfamilies with nowhere to sit. The
+   measurement tools (TEtranscripts and successors) and the reasoning tools have never
+   been connected.
 2. **The measurement.** DNMT1: nothing at FDR < 0.1, and a real effect at p = 1.6 × 10⁻⁸ on
    the set-level test. Explain why that test cannot be faked by normalisation (8.7). This
    is the slide that shows you know what you are doing.
