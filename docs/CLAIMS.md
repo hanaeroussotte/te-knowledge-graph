@@ -5,9 +5,12 @@ approved public wording, and the wording that is **not** to be used. Nothing goe
 slide, in an abstract, into a README or out of anyone's mouth in a demo unless it appears
 here. This is the single source of truth for what can safely be said.
 
-> **Adversarial novelty rule.** Assume every novelty claim is false until the strongest
-> available prior art has been identified and compared against it. The purpose of the
-> search is to narrow or eliminate our claims, not to defend them.
+> **Adversarial novelty rule.** Treat every novelty claim as unproven until the strongest
+> available prior art has been identified and compared against it. The objective is not to
+> preserve the project's existing positioning. Narrow, qualify or remove claims whenever
+> the literature requires it. "Not found" claims must always state the databases searched,
+> the search strategy and the search date; absence from a literature search must never be
+> converted into "nobody has done this."
 
 > **Absence of evidence from a literature search is weak evidence of absence.** Every
 > `NOT_FOUND_IN_PRIOR_ART_SEARCH` below is scoped to the databases, queries and date used

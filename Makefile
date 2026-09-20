@@ -66,19 +66,24 @@ derived:  ## export inferred edges with their inherited context
 	python src/te_reason.py TET2 --export-derived results/derived_edges.csv
 
 gate:  ## FULL pre-push gate — nothing is committed until this passes
-	@echo "--- 1/6 regenerate derived edges from the graph"
+	@echo "--- 1/7 regenerate derived edges from the graph"
 	@$(MAKE) --no-print-directory derived
-	@echo "--- 2/6 claim audit (retracted wording, dangling refs, blank context, DOIs)"
+	@echo "--- 2/7 claim audit (retracted wording, dangling refs, blank context, registry)"
 	@python tests/audit_claims.py
-	@echo "--- 3/6 proof-tree + structured conclusion regression"
+	@echo "--- 3/7 every cited DOI and PMID resolves"
+	@python tests/check_citations.py | tail -3
+	@echo "--- 4/7 proof-tree + structured conclusion regression"
 	@python tests/test_regression.py
-	@echo "--- 4/6 every script parses"
+	@echo "--- 5/7 figures regenerate from saved tables"
+	@python src/make_figures.py --outdir figures
+	@echo "--- 6/7 every script parses"
 	@for f in src/*.py tests/*.py; do python -c "import ast;ast.parse(open('$$f').read())" || exit 1; done
-	@echo "--- 5/6 figures present"
-	@ls figures/*.png >/dev/null
-	@echo "--- 6/6 review the diff yourself before committing:"
+	@echo "--- 7/7 review the diff yourself before committing:"
 	@git status --short
 	@echo "GATE PASSED — now read the diff above, then commit."
+
+figures:  ## regenerate both panel figures from results/*.csv
+	python src/make_figures.py --outdir figures
 
 migrate-context:  ## add cell type / modality / assay / resolution columns to every edge file
 	python src/migrate_edge_context.py --apply

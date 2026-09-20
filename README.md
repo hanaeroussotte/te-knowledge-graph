@@ -1,4 +1,4 @@
-# Evidence-Traceable Perturbational Reasoning for Transposable-Element Regulation
+# Evidence-Traceable Neurosymbolic Reasoning for Transposable-Element Regulation
 
 *What does this gene do to transposable-element activation — and how would you know?*
 
