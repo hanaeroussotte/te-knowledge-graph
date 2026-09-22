@@ -24,33 +24,78 @@ def slide(kicker, title, body, notes):
     S.append((kicker, title, body, notes))
 
 slide("", "What does this gene do to the repetitive genome?",
-"""<p class="lede">Half the human genome is repeated, mobile DNA. Cells spend real energy
-keeping it switched off; when that machinery fails it switches back on, and that is tied to
-inflammation and ageing.</p>
-<p class="lede"><b>Ask that question of any gene and there is nothing to ask it against.</b>
-Transposable elements are missing from the knowledge graphs, and missing from the experiments
-that could have answered it.</p>
-<div class="two">
-<div class="card"><h3>Absent from the graphs</h3>
-<p class="small">The major biomedical knowledge graphs do not model transposable elements as
-first-class entities. PrimeKG has 10 principal node types, Hetionet 11. None is a
-transposable element.</p></div>
-<div class="card"><h3>Absent from the experiments</h3>
-<p class="small">ENCODE holds <b>1,114 knockdowns across 570 genes</b>, reads public. Standard
-pipelines discard multi-mapping reads — which is most of the repetitive genome. The
-measurement was paid for and never made.</p></div>
-</div>
+"""<p class="lede">Roughly half the human genome is repeated, mobile DNA. Cells spend real
+energy keeping it switched off; when that machinery fails it switches back on, and that is
+tied to inflammation and ageing.</p>
+<p class="lede"><b>Ask that question of any gene today and five separate things are in your
+way.</b> This is which of them already have answers, which do not, and what we built for the
+ones that do not.</p>
 <p class="meta">Hanae Roussotte &middot; biology knowledge-graph track</p>""",
-"""Two sentences of biology, then the gap, then move. Both gap claims are narrowed on purpose
-— 'not as first-class entities', not 'no graph has TEs'. The positioning survived two
-adversarial prior-art passes; if pushed, concede and cite TEKRABber immediately.""")
+"""Two sentences of biology, then promise the structure: problems, what exists, what is left.
+Saying 'five things are in your way' sets up the next slide and stops you sounding like you
+are claiming the whole field is empty.""")
 
-slide("The tool", "Ask it about TET2 — a gene with no annotation and no experiment",
+slide("The problems", "Five obstacles, and they are not the same kind of problem",
+"""<table class="t">
+<tr><th>#</th><th>Problem</th><th>Why it blocks the question</th></tr>
+<tr><td><b>1</b></td><td>Repeats are thrown away by default</td><td>Standard RNA-seq pipelines discard multi-mapping reads. Most of the repetitive genome <i>is</i> multi-mapping, so it is invisible unless you deliberately handle it</td></tr>
+<tr><td><b>2</b></td><td>Transposable elements are not entities in biomedical knowledge graphs</td><td>You cannot query a relationship whose object does not exist in the schema</td></tr>
+<tr><td><b>3</b></td><td>Perturbation data was never read out on repeats</td><td>ENCODE holds <b>1,114 knockdowns across 570 genes</b>, reads public. The measurement was paid for and never made</td></tr>
+<tr><td><b>4</b></td><td>Predictions rarely say where they came from</td><td>If a tool tells you gene X silences element Y, you usually cannot tell whether that is a measurement, a curation, a sentence in an abstract, or a model's guess</td></tr>
+<tr><td><b>5</b></td><td>Nothing says &ldquo;not enough evidence&rdquo;</td><td>Systems that always answer cannot tell you which answers to distrust</td></tr>
+</table>
+<p class="punch">1 and 3 are <b>engineering</b>. 2 is a <b>schema</b> problem. 4 and 5 are
+<b>epistemic</b> — and they are the ones that do not go away with more data.</p>""",
+"""Say the last line deliberately. It is the slide's whole purpose: separating the problems
+that compute solves from the problems that design solves. Judges who build tools will
+recognise 4 and 5 as the hard ones.""")
+
+slide("What already exists", "Most of this is solved, and by people who are not us",
+"""<table class="t">
+<tr><th>Problem</th><th>Already solved by</th><th>Status</th></tr>
+<tr><td><b>1</b> handling repeats</td><td><b>TEtranscripts / TEcount</b> (Jin 2015, 10.1093/bioinformatics/btv422) — <i>we use it</i>. Alternatives at locus level: Telescope (10.1371/journal.pcbi.1006453), SQuIRE (10.1093/nar/gky1301), MAJEC (2026). <b>16 tools have been benchmarked</b> (10.1093/gpbjnl/qzag044)</td><td class="ok">solved</td></tr>
+<tr><td><b>1&prime;</b> where repeats are active</td><td><b>Atlases exist and dwarf us</b> — TE-SCALE, 1.3 M cells / 20 cancer types (10.1093/nar/gkaf1235) · TEITbase, 33 cancer types (10.1093/database/baag025) · REdiscoverTE across TCGA (10.1038/s41467-019-13035-2)</td><td class="ok">solved</td></tr>
+<tr><td><b>3</b> screening for regulators</td><td><b>Done repeatedly</b> — <i>C. elegans</i> RNAi 2003, <i>Drosophila</i> 2013, human L1 screens (<i>Nature</i> 2018, 10.1038/nature25179), CRISPR L1 regulators 2025</td><td class="ok">solved</td></tr>
+<tr><td><b>2</b> graphs and TE networks</td><td>PrimeKG (10.1038/s41597-023-01960-3), Hetionet (10.7554/elife.26726) — 10 and 11 node types, none a TE. TE-specific networks do exist: TEKRABber (10.7554/elife.103608), PlaNC-TE in plants (10.1093/database/bay078)</td><td class="bad">partial</td></tr>
+<tr><td>predicting perturbation response</td><td><b>GEARS</b> (10.1038/s41587-023-01905-6), <b>TxPert</b> (10.1038/s41587-026-03113-4), scPerturb (10.1038/s41592-023-02144-y)</td><td class="bad">not for TEs</td></tr>
+<tr><td>set-level statistics</td><td><b>GSEA</b> (10.1073/pnas.0506580102), <b>CAMERA</b> (10.1093/nar/gks461) — our compartment test is a variant of an established idea, not a new one</td><td class="ok">solved</td></tr>
+</table>
+<p class="punch">Industry too: <b>ROME Therapeutics</b> built a company on the repeat genome and
+solved the LINE-1 ORF2p structure. Ahead of us on biology. <span class="small">(Their published
+science is verified; their platform description I could not check from this environment, and
+I say so rather than guess.)</span></p>""",
+"""This is the slide that wins trust, and the instinct to skip it is exactly wrong. Say
+'solved' out loud six times. Five of our own novelty claims were retracted after two
+adversarial prior-art passes — 279 abstracts, 198 full texts — and naming that before anyone
+asks removes the entire attack surface.""")
+
+slide("The gap", "What is left once you credit all of that",
+"""<p class="punch bad-b">Every atlas above answers <b>where</b> transposable elements are
+active — which tissue, which tumour, which cell. None of them answers <b>what perturbation
+changed them, through what mechanism, and what to test next.</b> Observational versus
+interventional. That axis is comparatively empty.</p>
+<p>And the two epistemic problems, 4 and 5, are untouched by any of it. So the residual gap is
+narrow and specific:</p>
+<table class="t">
+<tr><th>Gap</th><th>What we built for it</th></tr>
+<tr><td>a perturbation read out on the repeat genome becomes a <b>signed, sourced relationship</b></td><td>27 measured edges from re-analysed ENCODE knockdowns, each carrying accession, statistic, date and a stable id</td></tr>
+<tr><td>those relationships sit in <b>one schema</b> with curated mechanism, so they can be reasoned over</td><td>9,366 typed edges across four evidence layers; transposable elements are first-class nodes</td></tr>
+<tr><td>a conclusion's <b>trust level is computed, not asserted</b></td><td>tier = the weakest link on the derivation path, and the path is printed</td></tr>
+<tr><td>the system can <b>decline</b></td><td><span class="mono">best_tier: none</span> is a supported output, not an error</td></tr>
+</table>
+<p class="punch ok-b">Stated honestly: <b>every component here has precedent. The assembly did
+not surface in two independent searches</b> — which is a `NOT_FOUND`, and still not proof of
+absence.</p>""",
+"""The axis sentence — observational versus interventional — is the one to memorise. And end
+on the NOT_FOUND caveat yourself; a claim of novelty that names its own limit is much harder
+to attack than one that does not.""")
+
+slide("Result 1 — the tool", "Ask it about TET2: no annotation, no experiment, still an answer",
 """<pre class="term">$ python src/te_reason.py TET2 --proofs
 
 === TET2  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=1
 Losing TET2 is predicted to <b>lower</b> TE:global, derived by R3_ERASER_INVERSION from:
-5mC-MARK_AT-&gt;TE:global, TET2-ERASES_MARK-&gt;5mC  [e0eab062a2cf49c, e62dbe0821f074b]
+5mC-MARK_AT-&gt;TE:global, TET2-ERASES_MARK-&gt;5mC   [e0eab062a2cf49c, e62dbe0821f074b]
   citation gate: 1 sentences kept, 0 rejected
 
   TET2 -DEREPRESSES-&gt; TE:global            [inferred via R3_ERASER_INVERSION]
@@ -62,39 +107,17 @@ Losing TET2 is predicted to <b>lower</b> TE:global, derived by R3_ERASER_INVERSI
       DNMT1 -DEPOSITS_MARK-&gt; 5mC            [curated: GO:0003886]
     TET2 -ERASES_MARK-&gt; 5mC                 [curated: GO:0070579]</pre>
 <p class="punch">TET2 has <b>no</b> transposon annotation in the Gene Ontology and <b>no</b>
-knockdown in ENCODE. The answer is nevertheless specific, signed, and <b>traceable to one
-real measurement</b> — and it is labelled <span class="mono">inferred</span>, not measured.</p>""",
-"""Run this live if you can; it takes under a second. Trace the tree bottom-up with a finger:
-one measurement, two ontology records, a directional prediction. Then point at the warning
-line — the system flags that its own conclusion is bound to K562.""")
+knockdown in ENCODE. The answer is specific, signed, traceable to one real measurement — and
+labelled <span class="mono">inferred</span>, not measured. That is problems 4 and 5, answered
+in one screen.</p>""",
+"""Run it live if you can — under a second. Trace the tree bottom-up with a finger, then
+point at the warning line: the system flags that its own conclusion is bound to one cell
+type.""")
 
-slide("Under it", "Four evidence layers, and a tier that is the weakest link",
-"""<div class="layers">
-<div class="L c"><b>curated</b><span>9,263 edges</span><em>Gene Ontology &middot; STRING v12 &middot; Reactome &middot; Complex Portal</em></div>
-<div class="L m"><b>mechanism</b><span>44 edges</span><em>which enzyme writes or erases which chromatin mark</em></div>
-<div class="L e"><b>measured</b><span>27 edges</span><em>our own re-analysis &mdash; signed, dated, reproducible</em></div>
-<div class="L l"><b>literature</b><span>tiered lowest</span><em>extracted, unvalidated, never permitted to ground a rule</em></div>
-</div>
-<p class="punch">Every edge carries a source, a retrieval date, a stable id and a tier. Six
-rules chain forward to a fixpoint; a conclusion's tier is the <b>weakest link on its path</b>,
-and every answer prints the derivation — which is what you just saw.</p>
-<div class="two">
-<div class="card"><h3>Structural audit — <span class="mono">make validate</span></h3>
-<p class="small">42 metrics. <b>0</b> schema violations over 9,366 typed edges &middot;
-<b>0</b> duplicate triples &middot; <b>100%</b> provenance &middot; 97.6% one component.</p></div>
-<div class="card"><h3>It found its own defect</h3>
-<p class="small">One gene&ndash;TE pair asserted in <i>both</i> directions — both edges from the
-<i>same abstract</i>. Kept, not deleted: it is the literature layer's unmeasured error rate
-made visible, and the reason that layer can never ground a rule.</p></div>
-</div>""",
-"""Lead the audit with the defect, not the passes — volunteering a real flaw buys more than
-five clean metrics. If asked whether clean structure means the edges are true: no, flatly.""")
-
-slide("The measurement", "Three knockdowns, re-counted against the repeat annotation",
+slide("Result 2 — the measurement", "Three knockdowns, re-counted against the repeat annotation",
 """<p>ENCODE RNA-seq in K562, 11 libraries. HISAT2 reporting up to 100 alignments per read,
-then TEcount's expectation-maximisation to apportion multi-mapping reads
-(<b>TEtranscripts, Jin et al. 2015 &mdash; not ours</b>), then DESeq2 with size factors
-estimated on protein-coding genes only.</p>
+TEcount's expectation-maximisation for multi-mapping reads (<b>TEtranscripts — not ours</b>),
+DESeq2 with size factors estimated on protein-coding genes only.</p>
 <table class="t">
 <tr><th>Knockdown</th><th>target's own mRNA</th><th>remaining</th><th>did it work?</th><th>effect on TEs</th></tr>
 <tr><td>DNMT1</td><td>&minus;1.87</td><td>27%</td><td class="ok">confirmed</td><td>whole-compartment shift</td></tr>
@@ -103,24 +126,24 @@ estimated on protein-coding genes only.</p>
 </table>
 <p class="punch bad-b">We pointed that check at our own data and it cost us: SETDB1 — the sole
 anchor for one of our two chromatin marks — cannot be confirmed to have worked. <i>Not
-confirmed</i>, not <i>failed</i>: it is CRISPRi read as a shallow snapshot, and it did produce
-the ERV results. It is now in the limitations.</p>""",
-"""Credit TEtranscripts out loud and early — the single thing most likely to be mistaken for
-our contribution. Then give the SETDB1 row without flinching. Nobody else will show you a
-failed control on their own data.""")
+confirmed</i>, not <i>failed</i>: CRISPRi read as a shallow snapshot, and it did produce the
+ERV results. It is in the limitations.</p>""",
+"""Credit TEtranscripts out loud — the single thing most likely to be mistaken for our
+contribution. Then give the SETDB1 row without flinching. Nobody else will show you a failed
+control on their own data.""")
 
-slide("Attacked", "The one result that had to survive, and what it cost",
-"""<p>The primary readout is normalisation-invariant by construction:
+slide("Result 3 — attacked", "The one result that had to survive, and what it cost",
+"""<p>The readout is normalisation-invariant by construction:
 <span class="mono">&Delta; = median log&#8322;FC over TE subfamilies &minus; median over
-protein-coding genes</span>, within one contrast. Size factors are per-sample and
-multiplicative, so they shift both sets equally on the log scale and cancel in the difference.</p>
-<p class="punch bad-b">An external reviewer found the real flaw: our p-value treated ~350
-correlated TE families as independent evidence. We measured the inflation instead of arguing.
-<b>Mean pairwise correlation 0.006 to 0.48 &rarr; variance inflation 4&times; to 155&times;</b>
-— in two of three contrasts, 322 families carry about <b>two families' worth</b> of
-independent information. Those p-values are <b>retracted</b>.</p>
+protein-coding genes</span>, within one contrast — size factors are per-sample and
+multiplicative, so they cancel in the difference.</p>
+<p class="punch bad-b">A reviewer found the real flaw: our p-value treated ~350 correlated TE
+families as independent evidence. We measured the inflation instead of arguing. <b>Mean
+pairwise correlation 0.006 to 0.48 &rarr; variance inflation 4&times; to 155&times;</b> — in two
+of three contrasts, 322 families carry about <b>two families' worth</b> of independent
+information. Those p-values are <b>retracted</b>. This is exactly why CAMERA exists.</p>
 <table class="t">
-<tr><th>Challenge</th><th>DNMT1 — the anchor that had to hold</th></tr>
+<tr><th>Challenge</th><th>DNMT1 — the anchor slide 5's answer rests on</th></tr>
 <tr><td>effect size</td><td><b>&Delta; = +0.13</b>, 63% of 503 families up</td></tr>
 <tr><td>six ways of defining the TE set</td><td class="ok">same sign <b>6 of 6</b> — LINE +0.19, SINE +0.10, LTR +0.11, DNA +0.10</td></tr>
 <tr><td>drop any single library</td><td class="ok">+0.10 … +0.19, <b>sign never flips</b></td></tr>
@@ -129,67 +152,60 @@ independent information. Those p-values are <b>retracted</b>.</p>
 </table>
 <p class="small">TRIM28's <i>whole-compartment</i> claim did not survive — a permuted labelling
 beat the real one — and is now an effect size only. Its per-feature AluY result is a different
-statistic and stands. DNMT1 is the anchor the TET2 answer on slide 2 rests on, which is why
-this is the slide that mattered.</p>""",
-"""Have this ready: with two replicates per arm there are three possible label shufflings, so
-no p below 0.333 is reachable — a limit of the experiment, not the analysis. Anyone quoting a
-tiny p from a two-replicate design is quoting an artefact.""")
+statistic and stands.</p>""",
+"""Have this ready: with two replicates per arm there are three label shufflings, so no p
+below 0.333 is reachable — a limit of the experiment, not the analysis. Anyone quoting a tiny
+p from a two-replicate design is quoting an artefact.""")
 
-slide("Robustness", "How much of the reasoning rests on how little",
+slide("Result 4 — what it is for", "The graph tells you which experiment to run next",
 f"""<img class="fig" src="{img('fig_holdout_robustness.png')}" alt="anchor-dependence analysis">
 <p class="punch">Remove <b>SETDB1</b> and the derived layer collapses from <b>89 edges to
 8</b>. Remove <b>TRIM28</b> — the largest measured effect in the dataset — and <b>nothing
-changes</b>, because a scaffold has no writer annotation and cannot satisfy R1. Only
-<b>four</b> edges ground the entire inference layer.</p>
-<p class="punch ok-b">This is where the graph stops being a database and becomes an
-experimental-design tool: it turns &ldquo;we need more data&rdquo; into <b>more writers and
-erasers of these two marks</b>. We checked — of 40 such enzymes in the graph, ENCODE has
-knockdowns for <b>three</b>, and we have used two. The public well is nearly dry, which is
-itself the result.</p>""",
+changes</b>, because a scaffold has no writer annotation and cannot ground a mark. Only
+<b>four</b> edges support the entire inference layer.</p>
+<p class="punch ok-b">That turns &ldquo;we need more data&rdquo; into a named experiment:
+<b>more writers and erasers of these two marks</b>. We then checked — of 40 such enzymes in
+the graph, ENCODE has knockdowns for <b>three</b>, and we have used two. <b>The public well is
+nearly dry, and that is the result.</b></p>
+<p>Four things were also built, measured, and not shipped: a literature extractor at
+precision <b>0.109</b>, link prediction with no constructible held-out set, an interferon
+conclusion drawn from a reference holding 17% of the signature, and the p-values retracted on
+the previous slide.</p>""",
 """The TRIM28-contributes-nothing result is counter-intuitive and worth a pause. It is also
-the honest answer to 'what would you do with more compute': a named experiment, not a wish.""")
+the honest answer to 'what would you do with more compute' — a named experiment, not a wish.""")
 
-slide("Refusal", "Four things we built, measured, and did not ship",
-"""<table class="t">
-<tr><th>Built</th><th>Measured</th><th>Decision</th></tr>
-<tr><td>rule-based literature extractor</td><td>precision <b>0.109</b></td><td class="bad">rejected</td></tr>
-<tr><td>link prediction on the graph</td><td>no held-out set constructible from 3 knockdowns</td><td class="bad">not built</td></tr>
-<tr><td>an interferon conclusion</td><td>reference contained 17% of the signature</td><td class="bad">refused, then fixed</td></tr>
-<tr><td>compartment Mann&ndash;Whitney p-values</td><td>variance inflation to 155&times;</td><td class="bad">retracted</td></tr>
-</table>
-<p class="punch">The interferon arm is the instructive one. We built a panel reference and took
-type-I interferon coverage from <b>0.17 to 0.77</b> — and the answer was <i>still</i> a null,
-now with a mechanism: in K562 the cytosolic sensors are barely expressed. CGAS 0.21, ZBP1 0.26,
-TLR3 0.00 CPM, while the transducers run at 270&ndash;800.</p>
-<p><b>The wiring and the sprinklers are installed; the smoke detectors are not.</b> So the
-claim is not &ldquo;TE derepression does not cause interferon&rdquo; — it is <i>this dataset
-cannot decisively test it, and here is the cell type that could</i>.</p>
-<p class="punch ok-b"><span class="mono">best_tier: none</span> is a supported output, not an
-error path. That is the whole design.</p>""",
-"""If you get one slide past the title, make it this one. Then stop talking and let them
-ask.""")
-
-slide("Honestly", "What is weak, what fixes it, and what is next",
-"""<table class="t">
-<tr><th>Limitation</th><th>What settles it</th></tr>
-<tr><td>the whole 5mC arm rests on <b>one</b> contrast, 1.5 M reads across chr1+chr19 — and chr19 is the most gene-dense, Alu-rich chromosome and carries the KRAB-ZFP clusters</td><td>genome-wide, full depth</td></tr>
-<tr><td>SETDB1's knockdown efficiency <b>not confirmed</b>, and it anchors 3 of the 4 grounding edges</td><td>the same run</td></tr>
-<tr><td>only <b>9 of 55</b> silencing-machinery genes are measurable at current reference scope</td><td>the same run</td></tr>
-<tr><td>subfamily resolution, not individual loci — and the field is moving to loci</td><td>Telescope / SQuIRE</td></tr>
-<tr><td>two replicates per arm caps any sample-level p at 0.333</td><td>more replicates, not a better test</td></tr>
-<tr><td>no <b>time</b>, no position along the chromosome, no dose, and no feedback — every context column for those reads <span class="mono">not_applicable</span></td><td>a dynamical model; scoped, <b>not implemented</b></td></tr>
-</table>
+slide("Honestly", "What is weak, what compute would buy, and the ask",
+"""<div class="two">
+<div class="card"><h3>The binding limitations</h3>
+<p class="small">&bull; the whole 5mC arm rests on <b>one</b> contrast, 1.5 M reads across
+chr1+chr19 — and chr19 is the most gene-dense, Alu-rich chromosome<br>
+&bull; SETDB1's efficiency <b>not confirmed</b>, and it anchors 3 of 4 grounding edges<br>
+&bull; only <b>9 of 55</b> silencing-machinery genes measurable at this reference scope<br>
+&bull; subfamily resolution, not loci — the field is moving to loci<br>
+&bull; two replicates per arm caps any sample-level p at <b>0.333</b><br>
+&bull; no time, position, dose or feedback — those context columns read
+<span class="mono">not_applicable</span> throughout</p></div>
+<div class="card"><h3>What compute buys, costed</h3>
+<p class="small">A genome-wide re-run at 30 M reads fixes the <b>first four at once</b>:
+retires the two-chromosome bias, lifts machinery coverage, settles the SETDB1 question, and
+retires the interferon coverage guard because its 725 genes become present by construction.</p>
+<p class="small ok-b">The pipeline is written, containerised and <b>dry-run validated</b>
+(<span class="mono">src/modal_app.py</span>). Pre-flight found three defects that would each
+have wasted the run — including a setup step that reported success while never building the
+annotation the counter needs.</p>
+<p class="small bad-b"><b>Not launched today, deliberately.</b> The shared reference build is
+a 1&ndash;2.5 h critical path and there are 90 minutes. Spending credits on a run that cannot
+finish would be theatre.</p></div>
+</div>
 <p class="punch">Two adversarial prior-art passes, 279 abstracts, 198 full texts, five novelty
-claims retracted — including one we liked. <b>And one search returned a clean zero that we
-believed: the paper existed, and its fourth author was in the room.</b> Logged as the fifth
-time a check here was caught lying.</p>
+claims retracted — including one we liked. <b>And one search returned a clean zero we believed:
+the paper existed, and its fourth author was in the room.</b></p>
 <p class="punch ok-b">The ask is specific: <b>writers and erasers of H3K9me3 and 5mC from
 outside ENCODE</b>. Everything else is computed, in the repository, and reproducible from one
 command.</p>""",
-"""The last limitation row is the only place the cellular-automata collaboration appears, and
-it is framed as a known representational gap with a scoped answer — say 'designed, not built'
-and move on unless asked. If cut to three minutes: slides 1, 2, 5, 7 — the gap, the tool
-answering a gene, the surviving result, the refusals.""")
+"""If asked why you did not run it: because the critical path is longer than the time, and
+naming that is better than a half-finished job. The pre-registration is the artefact proving
+the interpretation was fixed before the data was opened. Three-minute cut: slides 2, 3, 4, 5.""")
 
 CSS = """
 *{box-sizing:border-box}
