@@ -2,8 +2,19 @@
 """
 modal_app.py — fan out TE quantification across perturbation experiments on Modal.
 
-    modal run src/modal_app.py --manifest data/manifests/manifest_prospective.csv
-    modal run src/modal_app.py --manifest data/manifests/manifest_core.csv --reads 0
+    # 1. build the shared reference ONCE (genome FASTA + GENCODE + TE GTF + HISAT2 index)
+    python src/modal_app.py --build-reference-only --ref-scope genome
+
+    # 2. fan out over libraries
+    python src/modal_app.py --manifest data/manifests/manifest_prospective.csv --reads 30000000
+    python src/modal_app.py --manifest data/manifests/manifest_core.csv --reads 0
+
+    # 3. bring the count tables home (they live on a Modal Volume until you do)
+    python src/modal_app.py --collect
+
+NOTE: it is `python src/modal_app.py`, NOT `modal run`. The App is constructed inside
+make_app() at call time rather than at module scope, so `modal run` has no App to
+discover. The driver opens it itself with `with app.run():`.
 
     # no Modal account needed — validates the plan and the manifest locally:
     python src/modal_app.py --dry-run --manifest data/manifests/manifest_prospective.csv
@@ -61,7 +72,9 @@ def build_image(modal):
         .micromamba_install(*CONDA, channels=["bioconda", "conda-forge"])
         .pip_install(*PIP)
         # the pipeline module itself, so workers run the same code as local runs
-        .add_local_python_source("te_pipeline")
+        # te_pipeline for parity with local runs; build_te_annotation because
+        # build_reference now constructs the TE vocabulary in the Volume.
+        .add_local_python_source("te_pipeline", "build_te_annotation")
     )
 
 
@@ -92,13 +105,40 @@ def make_app(modal):
                 if not os.path.exists(p.replace(".gz", "")):
                     subprocess.run(["curl", "-sSL", "--retry", "3", "-o", p, url], check=True)
                     subprocess.run(["bash", "-c", f"pigz -d -f {p}"], check=True)
+        # The TE GTF. This was missing in the first version of this file, and it is the
+        # kind of omission that only shows up after the expensive step: build_reference
+        # built the index, every quantify container then died inside TEcount because
+        # --TE pointed at a path nothing had created. Build it here, in the same shared
+        # Volume, so one download serves every worker.
+        te_gtf = "/refs/hg38_rmsk_TE.gtf"
+        if not os.path.exists(te_gtf):
+            rmsk = "/refs/rmsk.hg38.txt.gz"
+            if not os.path.exists(rmsk):
+                subprocess.run(["curl", "-sSL", "--retry", "3", "-o", rmsk,
+                                "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/"
+                                "database/rmsk.txt.gz"], check=True)
+            # same filters as a local `make annotation`, via the same module, so the
+            # vocabulary on Modal is identical to the one the graph was built from
+            subprocess.run(["python", "-m", "build_te_annotation",
+                            "--rmsk", rmsk, "--outdir", "/refs",
+                            "--prefix", "hg38_rmsk_TE"], check=True)
+
         idx = "/refs/hisat2/GRCh38"
         if not os.path.exists(idx + ".1.ht2"):
             os.makedirs("/refs/hisat2", exist_ok=True)
             subprocess.run(["hisat2-build", "-p", "8",
                             "/refs/GRCh38.primary_assembly.genome.fa", idx], check=True)
         refs.commit()
-        return sorted(os.listdir("/refs"))
+
+        # Fail here, loudly, rather than in N quantify containers. Everything below is
+        # what `quantify` will look for; if any of it is absent the fan-out is pointless.
+        required = [idx + ".1.ht2", te_gtf, "/refs/gencode.v44.gtf"]
+        missing = [p for p in required if not os.path.exists(p)]
+        if missing:
+            raise RuntimeError(f"reference incomplete, refusing to report success: {missing}")
+        return {"files": sorted(os.listdir("/refs")),
+                "te_gtf_lines": sum(1 for _ in open(te_gtf)),
+                "index": idx}
 
     @app.function(image=image, volumes={"/refs": refs, "/out": out},
                   cpu=4.0, memory=16384, timeout=60 * 60 * 4, retries=2)
@@ -110,6 +150,11 @@ def make_app(modal):
         will fail all three times and show up in the returned dict rather than silently
         producing an empty count table."""
         import subprocess, tempfile
+        for ref in (te_gtf, gene_gtf, "/refs/hisat2/GRCh38.1.ht2"):
+            if not os.path.exists(ref):
+                return {"sample": row["sample"],
+                        "status": f"failed: reference missing {ref} — run "
+                                  f"--build-reference-only first"}
         sample = row["sample"]
         wd = tempfile.mkdtemp(prefix=f"{sample}_")
         try:
@@ -170,6 +215,32 @@ def read_manifest(path: str) -> list[dict]:
     return rows
 
 
+def collect(dest: str) -> int:
+    """Pull the count tables off the results Volume into the local workspace.
+
+    Without this the fan-out succeeds and leaves you with nothing to analyse: TEcount
+    writes into the `te-results` Volume, and `te_pipeline.py merge` reads local files.
+    This is the step that closes that gap. Small files (one count table per library), so
+    a plain read is fine.
+    """
+    import modal
+    vol = modal.Volume.from_name(RESULTS_VOLUME)
+    os.makedirs(dest, exist_ok=True)
+    n = 0
+    for entry in vol.listdir("/", recursive=True):
+        if not entry.path.endswith(".cntTable"):
+            continue
+        out_path = os.path.join(dest, os.path.basename(entry.path))
+        with open(out_path, "wb") as fh:
+            for chunk in vol.read_file(entry.path):
+                fh.write(chunk)
+        n += 1
+        print(f"  {out_path}  ({os.path.getsize(out_path):,} bytes)")
+    if not n:
+        print(f"  nothing found on Volume {RESULTS_VOLUME!r} — has quantify run?")
+    return n
+
+
 def dry_run(rows: list[dict], reads: int, cap: int):
     """Validate the plan without Modal. Prints what would be dispatched, so a manifest
     error is caught before anyone spends credits on it."""
@@ -185,7 +256,7 @@ def dry_run(rows: list[dict], reads: int, cap: int):
         print(f"  {r['sample']:<26} {r.get('target_gene',''):<10} "
               f"{r.get('condition',''):<8} {pe}  {r.get('experiment','')}")
     print(f"\nDRY RUN — nothing dispatched. Remove --dry-run and use "
-          f"`modal run src/modal_app.py` to execute.")
+          f"`python src/modal_app.py` to execute.")
 
 
 def main():
@@ -200,7 +271,15 @@ def main():
     ap.add_argument("--gene-gtf", default="/refs/gencode.v44.gtf")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--build-reference-only", action="store_true")
+    ap.add_argument("--collect", metavar="DEST", nargs="?", const="results/modal_counts",
+                    help="download count tables from the results Volume and exit")
     a = ap.parse_args()
+
+    if a.collect:
+        print(f"collecting count tables -> {a.collect}")
+        n = collect(a.collect)
+        print(f"{n} count tables retrieved")
+        return
 
     rows = read_manifest(a.manifest)
     if a.dry_run:
