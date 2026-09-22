@@ -12,6 +12,14 @@ equations and you should be able to defend each of them.
 | Document | Answers |
 |---|---|
 | `COMPLETE_WALKTHROUGH.md` (this one) | What is all of this, and why is each piece here? |
+| **`KNOWLEDGE_GRAPHS_101.md`** | **What is a knowledge graph, technically? Start here if that phrase is new** |
+| **`TOMORROW.md`** | **What do I actually do on the day, hour by hour** |
+| **`PRESENTATION_GUIDE.md`** | **Every slide explained: what to say, and what each number means** |
+| `WHY_THIS_IS_DIFFERENT.md` | What already existed, and which part is genuinely new |
+| `PRIOR_ART.md` / `CLAIMS.md` | The evidence behind every claim; approved vs prohibited wording |
+| `EPISTEMOLOGY.md` | What the system is entitled to conclude, and the inference ladder |
+| `ROBUSTNESS.md` | How much does the reasoning layer actually rest on? |
+| `PREREGISTRATION.md` | The one prospective prediction, committed before the data was opened |
 | `PRIMER.md` | A shorter from-zero explainer plus the 20-step procedure |
 | `MANUAL.md` | I want to run it — which command, which flag? |
 | `INTERPRETING_RESULTS.md` | What does this number in the output mean? |
@@ -19,7 +27,16 @@ equations and you should be able to defend each of them.
 | `HYPOTHESIS_DNMT3A_TET2.md` | How does it connect to the DNMT3A/TET2 work? |
 | `ADAPTING_TO_NEW_DATA.md` | Someone handed me a dataset — now what? |
 | `PANEL_REFERENCE.md` | How the interferon coverage gap was closed |
-| `RUNBOOK.md`, `modal_setup.md` | Operational: reruns, cloud |
+| `TE_RESOLUTION.md` / `QUANTIFIER_ROBUSTNESS.md` | Where the resolution should go; the robustness test, not yet run |
+| `COMPUTE.md` / `modal_setup.md` | What belongs in the cloud and what does not |
+| `RUNBOOK.md` | Operational: reruns |
+
+**Sections 17–21 are newer than 1–16.** They cover the prior-art work, context
+inheritance, the robustness result, the prospective test and the pre-push gate. Sections
+1–16 keep their original numbering because the text cross-references them (`§8.7` and so
+on), so the new material is appended rather than interleaved. If you are reading straight
+through, read 1–16 then 17–21; nothing in 17–21 contradicts what comes before, but §17
+does narrow one claim made in §3.
 
 ---
 
@@ -1284,6 +1301,18 @@ A 301 bp window on chr1 was fetched from both and compared byte for byte: identi
    applied identically across samples; not what you would report as a final number.
 9. **A panel measures what you name.** Section 10's fix cannot discover an unanticipated
    pathway the way a genome-wide run can.
+10. **The reasoning layer rests on two experiments, and we measured that** (§19). Removing
+    SETDB1 collapses the derived layer from 89 edges to 8; each chromatin mark is grounded
+    by exactly one knockdown. Nothing in the inference layer is independently corroborated.
+11. **Measured evidence only propagates through enzymes** (§19.2). TRIM28 — the largest
+    measured effect in the project — contributes zero inferential value because a scaffold
+    cannot ground a chromatin mark.
+12. **The cGAS path may not be acyclic** (§17.6). cGAS appears to act upstream in chromatin
+    control as well as downstream as a sensor, so any cGAS-containing path should be read as
+    one direction of a loop.
+13. **Two novelty claims rest on a scoped negative** (§17.4). "Not found in 198 open-access
+    full texts on one date" is not "does not exist", and the search itself nearly produced
+    five false negatives from a single mistyped field name.
 
 ---
 
@@ -1339,7 +1368,354 @@ look at the TE compartment. It predicts a *decrease*, which is falsifiable.
 
 ---
 
-## 16. Glossary
+---
+
+## 17. The prior-art attack, and what survived it
+
+Everything up to §16 describes what the system does. This section describes what happened
+when we tried to prove that none of it was new — because a novelty claim you have not
+attacked is a claim someone else will attack for you, in public, at a worse moment.
+
+### 17.1 The rule we worked under
+
+> **Adversarial novelty rule.** Treat every novelty claim as unproven until the strongest
+> available prior art has been identified and compared against it. The objective is not to
+> preserve the project's existing positioning. Narrow, qualify or remove claims whenever
+> the literature requires it.
+
+And the corollary, which matters just as much:
+
+> **Absence of evidence from a literature search is weak evidence of absence.** "Not found"
+> must always state the databases, the queries and the date. It never becomes "nobody has
+> done this."
+
+### 17.2 How the search was done
+
+23 queries; 279 abstracts screened; **198 open-access full texts read at sentence level**;
+PubMed plus Europe PMC; 2026-09-20. The record is `data/graph/prior_art.csv` (21 rows) and
+`docs/PRIOR_ART.md`.
+
+**One episode from that search is worth more than the result.** The first full-text pass
+used Europe PMC's `FULL_TEXT:` field and returned **zero hits on all five queries** — which
+would have been superb news for our novelty claims. `FULL_TEXT:` is not a valid field name
+and fails silently. The correct field is `BODY:`; the same first query then returned 593
+hits.
+
+Five "no precedent found" results were a typo, and every one of them pointed the way we
+wanted. **A novelty claim is cheapest to "prove" with a broken search.** That is the entire
+reason the adversarial rule exists, and it is why the search method is written down.
+
+### 17.3 Four claims died
+
+| We used to say | Reality |
+|---|---|
+| "No public knowledge graph has TEs" | Narrowed: *major general-purpose* biomedical KGs (PrimeKG, Hetionet, Open Targets) do not model TEs as first-class entities. **ICEO** does exactly this for *bacterial* mobile elements |
+| "Nobody has systematically perturbed genes to find TE regulators" | Flatly false. Genome-wide RNAi screens: *C. elegans* 2003, *Drosophila* 2013. Human L1 CRISPR screens: *Nature* 2018. Still active in 2025 |
+| TE multi-mapping quantification is ours | It is **TEtranscripts** (Jin *et al.* 2015). We run its `TEcount`. Alternatives: Telescope, SQuIRE, SalmonTE, TEspeX, MATES, IRescue, MAJEC |
+| The set-level statistic is new | It is **competitive gene-set testing** — CAMERA, GSEA. Aggregate TE readouts also exist, including in ALS cortex |
+
+Note the shape of the correction to the third row. We are not merely crediting a tool; the
+tool *is* the measurement. Every TE number in this project comes out of TEcount. Anyone in
+the field will know it, and claiming it would end the conversation.
+
+### 17.4 Two survived, narrowed
+
+**The normalisation-invariance framing.** Not the test — the *argument for making it the
+primary readout*. Across 198 open-access full texts we did not locate a paper that uses the
+protein-coding fold-change distribution *from the same contrast* as the reference against
+which TE fold changes are tested, on the explicit grounds that per-sample size factors
+cancel in the difference of the two medians (§8.7). The two nearest sentence-level hits use
+protein-coding genes only to *define* intergenic TEs.
+
+**The assembly:**
+
+> An evidence-traceable perturbational reasoning system for transposable-element
+> regulation. It re-analyses perturbation experiments for effects on the repetitive genome,
+> converts those measurements into signed and provenance-tracked relationships, connects
+> them to known mechanisms, and generates testable hypotheses whose evidence paths can be
+> inspected and falsified.
+
+Each component has precedent. The combination did not surface.
+
+### 17.5 The nearest competitor, stated fairly
+
+**TxPert** (*Nat Biotechnol* 2026) uses multiple gene-product knowledge graphs and deep
+learning to predict transcriptomic responses to perturbation, approaching split-half
+experimental reproducibility on unseen single perturbations. Its published output space is
+conventional transcriptomic response; it does not model TEs.
+
+**TxPert plus a TE-aware expression matrix would be a strong competitor, and that gap is
+closable rather than closed.** Say this before someone says it to you. It is also the right
+long-term direction rather than a threat: once the measured matrix is big enough to hold
+out a validation set, a TE-specific learned model becomes feasible, and the rule engine is
+best understood as a **bootstrap** — what generates testable hypotheses *before* the atlas
+is large enough for machine learning. Rules and learning coexisting is a stronger position
+than arguing symbolic reasoning permanently wins.
+
+### 17.6 A result that complicates our own diagram
+
+cGAS-deficient mice show premature ageing with LINE-1 derepression and inflammation
+(*Nat Aging* 2026), implicating cGAS in **maintaining H3K9me3** rather than only sensing
+cytoplasmic DNA.
+
+Our figures draw cGAS *downstream* of TE derepression. If it also acts upstream, the path
+contains **feedback** and a one-way reading of it is wrong. This is logged as an open
+structural issue, not patched away: the path grammar walks directed paths and would happily
+tell a one-way story.
+
+### 17.7 The claim registry
+
+`docs/CLAIMS.md` is the single source of truth for what can be said. Every presentable
+claim has a status — `ESTABLISHED`, `SUPPORTED_BY_THIS_BUILD`, `INFERRED`, `HYPOTHESIS`,
+`NOT_TESTED`, `NOT_FOUND_IN_PRIOR_ART_SEARCH`, `RETRACTED_BY_US` — plus **approved wording
+and prohibited wording**. Read §0 of it before speaking publicly.
+
+---
+
+## 18. Context inheritance: why a prediction is not universal
+
+This is a small piece of machinery with a large effect on what the system is allowed to
+claim, and it is one of the more defensible things in the project.
+
+### 18.1 The problem
+
+R2 takes these two facts:
+
+```
+SETDB1 loss raises HERV9NC-int   [measured: K562, CRISPRi, RNA-seq, subfamily, TEcount]
+SUV39H1 writes H3K9me3           [curated: no cell type at all]
+```
+
+and concludes something about `SUV39H1`. Write that conclusion down bare and it reads as a
+universal claim about SUV39H1 and HERV9NC-int — when the only experiment underneath it is
+**one knockdown in one leukaemia cell line**.
+
+The analogy: a colleague tells you a particular drug lowered blood pressure in a trial of
+40 men in Helsinki. You then infer something about a chemically similar drug. If you write
+that inference in your notes as "drug B lowers blood pressure", you have quietly deleted
+"40 men, Helsinki" — and the next person to read your note has no way to recover it.
+
+### 18.2 The mechanism
+
+`nesy_rules.inherit_context()` carries premise context onto every derived edge. It is
+applied **centrally in `forward_chain`**, not inside each rule, so a rule added next year
+cannot forget to do it:
+
+- a key the informative premises **agree** on is inherited;
+- a key they **disagree** on becomes `mixed(a|b)`, with nested `mixed()` flattened so it
+  does not compound into `mixed(a|mixed(a|b))` after two rounds of chaining;
+- a key **no premise speaks to** is `not_applicable`;
+- if **any** premise carried specific experimental context, the conclusion is flagged
+  `context_generalization_required = yes`.
+
+**87 of 89 derived edges carry that flag.** The two that do not are R4 complex-consensus
+edges resting only on curated membership, which genuinely have no experimental context.
+
+Proof trees print it inline:
+
+```
+TET2 -DEREPRESSES-> TE:global   [inferred via R3_ERASER_INVERSION]
+  ! prediction is grounded in context_cell_type=K562; perturbation_modality=CRISPR
+    — asserting it elsewhere is a further inference
+```
+
+### 18.3 Why it matters beyond bookkeeping
+
+Generalising a prediction outside the context that grounds it is a **second inference**. It
+should have to be made explicitly, not inherited by silence. The flag is what forces that.
+
+There is also a small implementation detail with a large failure mode: the token is
+`not_applicable`, never `NA`. Pandas reads `NA` back as `NaN`, which silently converts *"we
+know this does not apply"* into *"we did not record this"* — two very different statements.
+
+### 18.4 Every edge's context columns
+
+```
+evidence resolution   class | family | subfamily | locus | transcript
+experimental context  species | cell_type | cell_state | perturbation
+                      | perturbation_modality | assay | timepoint | dose
+                      | reference_genome | reference_scope | quantifier
+```
+
+These are **orthogonal axes**: a claim can be subfamily-level in K562 or locus-level in
+primary cells, and neither implies the other. All 9,366 edges carry both.
+
+---
+
+## 19. How much does the reasoning actually rest on?
+
+The system turns 3 measured knockdowns into 89 derived predictions. That ratio invites an
+obvious attack: *is this a reasoning system, or one experiment restated 89 times?*
+
+So we measured it. **Leave-one-anchor-out**: drop every *measured* edge belonging to one
+gene, re-run forward chaining to fixpoint, see what survives. Nothing else changes.
+
+| Anchor removed | measured edges dropped | derived edges | genes answered |
+|---|---|---|---|
+| — (full graph) | 0 | **89** | 10/10 |
+| TRIM28 | 13 | **89** | 9/10 |
+| DNMT1 | 6 | **83** | 7/10 |
+| SETDB1 | 8 | **8** | 8/10 |
+
+### 19.1 The fragility
+
+Removing SETDB1 collapses the derived layer **89 → 8**. The reason is visible in R1: only
+**four** mark-grounding edges exist in the entire graph, and each mark is grounded by
+exactly one gene.
+
+```
+H3K9me3 MARK_AT HERV9NC-int   <- SETDB1   (measured)
+H3K9me3 MARK_AT LTR/ERV1      <- SETDB1   (measured)
+H3K9me3 MARK_AT HERVE-int     <- SETDB1   (measured)
+5mC     MARK_AT TE:global     <- DNMT1    (measured)
+```
+
+R1 is the only rule that creates `MARK_AT` edges, and R2/R3 consume them. So the whole
+H3K9me3 arm — every SUV39H1, SETDB2, EHMT1, KDM4A–E prediction — traces to **one CRISPRi
+experiment**, and the whole 5mC arm — DNMT3A, DNMT3B, TET1/2/3 — to **one CRISPR
+experiment**. Say this before you are asked.
+
+### 19.2 The surprise
+
+Removing **TRIM28** drops 13 measured edges — more than either other anchor — and changes
+the derived layer **not at all**. TRIM28 has the largest measured effect in the project
+(+0.41, p = 3.5 × 10⁻¹⁵) and the reasoning layer does not use it.
+
+Why: TRIM28 is a **scaffold**, not a mark writer. No `DEPOSITS_MARK` edge, so it can never
+satisfy R1, so it can never ground a mark. Its measured edges are terminal.
+
+The general lesson: **measured evidence only enters the reasoning layer through genes with
+a curated enzymatic role.** A scaffold, an RNA-binding protein or an uncharacterised screen
+hit contributes zero inferential value however large its effect.
+
+### 19.3 Where it holds up
+
+In no hold-out did a surviving claim change **direction**. Genes either kept their
+prediction or lost it entirely and returned `best_tier: none`. When the evidence goes away
+the system **refuses** rather than falling back on a weaker source and presenting it at the
+same confidence. The 5mC arm is also independent of the H3K9me3 arm, exactly as the mark
+structure implies — a small piece of evidence that the rules are doing what they claim
+rather than laundering one number.
+
+### 19.4 What it changes about "what next"
+
+This converts a vague ask into a specific one. The useful next experiments are **additional
+writers and erasers of the same two marks**, because those add independent R1 groundings. A
+second H3K9me3 writer measured directly would make that arm survive losing SETDB1. **A
+fourth TRIM28-like scaffold would add nothing.**
+
+---
+
+## 20. The prospective test
+
+Everything above is retrospective: we re-analysed data and derived predictions from it. The
+honest next step is to state a prediction *before* looking at data that could refute it.
+
+**`docs/PREREGISTRATION.md` is committed to the repository. Read it before running
+anything.**
+
+### 20.1 The prediction
+
+```
+DNMT3B -SILENCES-> TE:global          [inferred, R2_WRITER_TRANSFER]
+meaning:   losing DNMT3B RAISES the TE compartment
+grounded:  K562, CRISPR   →   flag: context_generalization_required = yes
+```
+
+**Why DNMT3B is the right target.** R2_WRITER_TRANSFER is the rule most likely to be wrong
+in the whole engine: it transfers a measured effect from one writer of a mark to another on
+the strength of the shared mark alone. And `DNMT1` is the **maintenance**
+methyltransferase, while `DNMT3B` is a ***de novo*** one. If writer-transfer is unsound,
+this is where it breaks.
+
+### 20.2 The data, which we have never opened
+
+| | |
+|---|---|
+| Knockdown | ENCODE **ENCSR290GUQ** — DNMT3B, CRISPR, HepG2, paired-end, **258.5 M reads** |
+| Control | ENCODE **ENCSR306EWE** — CRISPR control, HepG2 |
+| Manifest | `data/manifests/manifest_prospective.csv` |
+| Endpoint | the **sign** of the set-level statistic (§8.7) |
+
+### 20.3 The confound, stated before the result
+
+**The prediction is grounded in K562. The only available test data is HepG2.** So this
+tests two things at once and cannot separate them:
+
+1. does a measured effect transfer between two writers of the same mark? (R2)
+2. does the 5mC→TE relationship hold outside K562? (cell-type generalisation)
+
+A failure will not tell you which one broke. A clean test of R2 alone needs a DNMT3B
+knockdown in K562, and **ENCODE does not contain one.** This is exactly the situation the
+`context_generalization_required` flag exists to announce — and it is announced.
+
+### 20.4 The gate before the endpoint
+
+**Check DNMT3B's own counts first.** A CRISPR knockdown that did not work produces a
+perfect null, which looks identical to a refutation. If DNMT3B is not reduced in the
+knockdown arm, the test is **void**, not negative.
+
+### 20.5 The interpretations, fixed in advance
+
+| Outcome | Interpretation |
+|---|---|
+| TE compartment up, p < 0.01 | R2 survives a *cross-cell-type* test — stronger than a within-K562 confirmation. Convert the edge to `measured` |
+| up, 0.01 ≤ p < 0.1 | Direction consistent, underpowered. Weak support; re-test at full depth |
+| no shift | R2 or cell-type transfer fails here. Record as `REFUTED_IN_THIS_CONTEXT` — **do not quietly drop it** |
+| TE compartment **down** | Most informative outcome: writer-transfer *inverts* across DNMT family members, and R2 should be restricted or removed |
+
+---
+
+## 21. The gate: how the repository defends itself
+
+Prose rules get forgotten. These are enforced by code, and `make gate` runs all seven.
+
+| # | Step | What it catches |
+|---|---|---|
+| 1 | regenerate derived edges | the graph still re-derives from source |
+| 2 | `tests/audit_claims.py` | a **retracted claim** asserted anywhere in any `.md`, `.html` or `src/*.py`; dangling document references; blank context cells; grounded-but-unflagged inferences |
+| 3 | `tests/check_citations.py` | **every DOI resolves against Crossref, every PMID against NCBI**, printing the title each resolves to — 17 and 17 |
+| 4 | `tests/test_regression.py` | proof-tree text, rule firing counts, layer counts, and per-gene structured conclusions (direction, tier, rule, citations, proof depth, context) |
+| 5 | `src/make_figures.py` | both panel figures **rebuild from `results/*.csv`** with no kernel state |
+| 6 | syntax | every file in `src/` and `tests/` parses |
+| 7 | `git status` | prints the diff; **the gate does not commit for you** |
+
+### 21.1 Three times a check was found to be lying
+
+Worth reading, because the pattern repeats and it is the most transferable lesson here.
+
+**(a) The gate passed over a failing step.** Step 3 printed `AUDIT FAIL` and the gate still
+printed `GATE PASSED`. The recipe was `python tests/check_citations.py | tail -3`, and a
+shell pipeline reports the exit status of the **last** command — `tail` — not of python. The
+pipe existed purely to keep the output tidy. *A check whose failure cannot fail the gate is
+worse than no check.*
+
+**(b) The citation checker failed on a good citation.** NCBI intermittently returns HTTP 200
+with an empty record under load; one PMID failed once and resolved on retry. Treating that
+as definitive is dangerous in both directions — it blocks a push on a network hiccup, and it
+invites someone to "fix" the gate by deleting a citation that was real. It now retries with
+backoff.
+
+**(c) The claim audit matched a phrasing, not a claim.** The banned pattern required the
+literal words "public knowledge graph". The slide deck said *"No major biology knowledge
+graph has a TE node type"* — the same retracted claim — and walked straight through.
+Widening the pattern to match the claim immediately exposed **five live instances** in
+files we believed were clean.
+
+All three were found by **attacking the check**, not by reading it. The habit: verify a gate
+by deliberately injecting a violation and confirming it fails, then removing it and
+confirming it passes. Never trust a gate that has only ever run on a clean tree.
+
+### 21.2 One box deliberately unticked
+
+*Graph regeneration from source* is **not** automated. `build_graph.py` needs ~10 minutes of
+live calls to GO, STRING, Reactome and Complex Portal, so gating on it would fail on a
+network blip rather than on a defect. Run `make graph` manually before a release. Flagged
+rather than quietly passed.
+
+---
+
+## 22. Glossary
 
 | Term | Meaning |
 |---|---|

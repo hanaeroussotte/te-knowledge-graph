@@ -76,6 +76,9 @@ deliberate attempt to kill it — see `PRIOR_ART.md` and the claim registry `CLA
 | `PRIOR_ART.md` / `CLAIMS.md` | the evidence behind every claim, and its status |
 | `EPISTEMOLOGY.md` | what the system is entitled to conclude, and the inference ladder |
 | `DEMO_SCRIPT.md` | the seven-question demo |
+| **`TOMORROW.md`** | **start here on the day — hour by hour, for a first-timer** |
+| `KNOWLEDGE_GRAPHS_101.md` | what a knowledge graph is, technically, from zero |
+| `PRESENTATION_GUIDE.md` | every slide explained, with the number to defend |
 | `DEMO_5MIN.md` | **the timed 5-minute pitch** |
 | `PREREGISTRATION.md` | the one prospective prediction, committed before the data was opened |
 | `ROBUSTNESS.md` | leave-one-anchor-out: what the reasoning layer actually rests on |
