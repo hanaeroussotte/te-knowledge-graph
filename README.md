@@ -75,6 +75,7 @@ deliberate attempt to kill it — see `PRIOR_ART.md` and the claim registry `CLA
 | `PRIOR_ART.md` / `CLAIMS.md` | the evidence behind every claim, and its status |
 | `EPISTEMOLOGY.md` | what the system is entitled to conclude, and the inference ladder |
 | `DEMO_SCRIPT.md` | the seven-question demo |
+| `EXECUTION_BRIEF.md` | plan, status and verification commands |
 | `PRIMER.md` / `MANUAL.md` | shorter explainer / operator's guide |
 | `CRITIQUE.md` | read before believing any of it |
 | `PANEL_REFERENCE.md` | how the interferon coverage gap was closed |

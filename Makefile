@@ -71,7 +71,10 @@ gate:  ## FULL pre-push gate — nothing is committed until this passes
 	@echo "--- 2/7 claim audit (retracted wording, dangling refs, blank context, registry)"
 	@python tests/audit_claims.py
 	@echo "--- 3/7 every cited DOI and PMID resolves"
-	@python tests/check_citations.py | tail -3
+# NO PIPE HERE. `python ... | tail -3` reports tail's exit status, not python's, so a
+# failing citation check printed AUDIT FAIL and the gate still said GATE PASSED. A check
+# whose failure cannot fail the gate is worse than no check at all.
+	@python tests/check_citations.py
 	@echo "--- 4/7 proof-tree + structured conclusion regression"
 	@python tests/test_regression.py
 	@echo "--- 5/7 figures regenerate from saved tables"

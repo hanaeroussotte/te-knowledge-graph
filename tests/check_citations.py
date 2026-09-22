@@ -56,19 +56,33 @@ def resolve_doi(doi: str, email: str | None) -> tuple[bool | None, str]:
     return True, (r.json()["message"].get("title") or [""])[0]
 
 
-def resolve_pmid(pmid: str, email: str | None) -> tuple[bool | None, str]:
-    try:
-        r = requests.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi",
-                         params={"db": "pubmed", "id": pmid, "retmode": "json",
-                                 **({"email": email} if email else {})}, timeout=45)
-    except Exception as e:
-        return None, f"network error: {type(e).__name__}"
-    if not r.ok:
-        return None, f"NCBI HTTP {r.status_code}"
-    rec = (r.json().get("result") or {}).get(pmid)
-    if not rec or rec.get("error"):
-        return False, "not found in PubMed"
-    return True, rec.get("title", "")
+def resolve_pmid(pmid: str, email: str | None, tries: int = 3) -> tuple[bool | None, str]:
+    """NCBI intermittently returns 200 with an empty or errored record under load. Treating
+    that as a definitive 'does not exist' is dangerous in both directions: it blocks a push
+    on a network hiccup, and it invites someone to 'fix' the gate by deleting a citation
+    that was real all along. So only declare failure after the record is absent on every
+    retry."""
+    last = ""
+    for i in range(tries):
+        try:
+            r = requests.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi",
+                             params={"db": "pubmed", "id": pmid, "retmode": "json",
+                                     **({"email": email} if email else {})}, timeout=45)
+        except Exception as e:
+            last = f"network error: {type(e).__name__}"
+            time.sleep(1.5 * (i + 1)); continue
+        if r.status_code in (429, 500, 502, 503):
+            last = f"NCBI HTTP {r.status_code}"
+            time.sleep(1.5 * (i + 1)); continue
+        if not r.ok:
+            return None, f"NCBI HTTP {r.status_code}"
+        rec = (r.json().get("result") or {}).get(pmid)
+        if rec and not rec.get("error") and rec.get("title"):
+            return True, rec["title"]
+        last = "no record returned"
+        time.sleep(1.5 * (i + 1))
+    return (False, f"not found in PubMed after {tries} attempts") if last == "no record returned" \
+        else (None, last)
 
 
 def main():
