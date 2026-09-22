@@ -61,19 +61,42 @@ partly normalise itself away.
 
 ### 2.2 Set-level results
 
-| Knockdown | median log₂FC, TEs | median log₂FC, genes | p |
-|---|---|---|---|
-| SETDB1 | +0.060 | +0.018 | 0.24 |
-| TRIM28 | +0.410 | −0.016 | 3.5 × 10⁻¹⁵ |
-| DNMT1 | **+0.117** | −0.014 | **1.6 × 10⁻⁸** |
+| Knockdown | Δ (TE − gene median log₂FC) | frac TE up | Mann–Whitney p | **correlation-aware p** | leave-one-library-out | permutation |
+|---|---|---|---|---|---|---|
+| SETDB1 | +0.023 | 0.53 | 0.41 | 0.89 | −0.40..+0.70, sign flips | p = 1.00 (floor 0.10) |
+| TRIM28 | +0.421 | 0.73 | ~~2.3 × 10⁻²¹~~ | **0.44** | −0.02..+1.12, **sign flips** | p = 0.67, null beat observed |
+| **DNMT1** | **+0.130** | **0.63** | ~~1.4 × 10⁻⁷~~ | **0.045** | **+0.10..+0.19, sign held 4/4** | most extreme of 3, 3.7× null |
 
-**The DNMT1 result is the one that matters:** no individual subfamily clears FDR 0.1, yet the
-TE compartment is coherently shifted. A per-feature-only analysis reports "no effect". This
-grounds 5-methylcytosine as a silencing mark, which is the only route by which the reasoning
-layer can reach DNMT3A and TET2.
+**The Mann–Whitney values are struck through because they are retracted as evidence.** They
+treat 322–503 TE features as independent observations; measured mean pairwise correlation ρ̄
+is 0.006 (DNMT1) to 0.48 (TRIM28), giving variance-inflation factors of 4.1 to 155 — i.e. the
+two CRISPRi contrasts carry roughly **two** features' worth of independent information, not
+300. Full analysis and method in `COMPARTMENT_STATISTICS.md`.
 
-SETDB1's pattern (strong individual HERV hits, no compartment shift) is consistent with a
-targeted ERV silencer; TRIM28 and DNMT1 move the whole compartment.
+**The DNMT1 result is the one that matters, and it is the one that survived being attacked.**
+No individual subfamily clears FDR 0.1, yet Δ = +0.13 with 63% of 503 features up, the same
+sign in **all six** alternative feature-set definitions (LINE +0.19, SINE +0.10, LTR +0.11,
+DNA +0.10, expression-filtered +0.13, trimmed +0.13), stable under leave-one-library-out
+(+0.10 to +0.19, sign preserved in all four drops), the most extreme of the three admissible
+sample labellings by a factor of 3.7, and a correlation-aware p of 0.045. A per-feature-only
+analysis would report "no effect". **This grounds 5mC, which is the only route by which the
+reasoning layer reaches DNMT3A and TET2 — so it matters that it is the arm that held.**
+
+**TRIM28's compartment claim is downgraded to an effect size.** Large (+0.42) and
+directionally very consistent (73% up, same sign in 6/6 variants), but a permuted labelling
+produced a *larger* Δ than the real one, the sign does not survive leave-one-library-out, and
+the correlation-aware p is 0.44. Its **per-feature** results are unaffected — AluY at
+padj 0.0005 is a DESeq2 Wald test with BH correction, a different statistic that does not
+depend on the compartment comparison.
+
+At this depth and reference scope, SETDB1 shows several stronger individual HERV effects
+without evidence of a global compartment shift, whereas TRIM28 and DNMT1 show broader
+positive shifts in the TE distribution. That is what was observed; it is consistent with
+SETDB1 acting as a targeted ERV silencer and does not establish specificity.
+
+**The binding constraint is the design.** With two replicates per arm there are three
+admissible label permutations, so **no sample-level p below 0.333 is attainable regardless of
+effect size.** More replicates, not a better test, is what would settle these.
 
 ### 2.3 The normalisation-invariance argument
 
@@ -124,7 +147,7 @@ No sign flips among the six headline hits; set-level deltas unchanged. Cost: ~1,
 features enlarge the multiple-testing set, losing 1–2 per-feature hits per contrast — so the
 TE arm is quoted from the original reference and the inflammation arm from the panel run.
 
-**Result: no interferon signature moves in any contrast**, under Bonferroni across 15 tests,
+**Result: no detectable type-I interferon transcriptional signature moves in any contrast**, under Bonferroni across 15 tests,
 under either background (all-other-genes and panel-only). Bootstrap 95% CIs:
 
 | Knockdown | TE arm | interferon arm |
@@ -140,9 +163,16 @@ CGAS 0.21 (non-zero in 1 of 11 samples), ZBP1 0.26, RIGI 5.4, IFIH1 8.5 — vers
 **transducers** STING1 270, IRF3 317, JAK1 317, STAT2 286, MAVS 586, TYK2 799. ADAR 823;
 IFNB1 and OASL 0.00.
 
-**Conclusion as stated:** *TE derepression occurred; no interferon response accompanied it;
-the cytosolic sensing entry points are not expressed. This dataset cannot test viral
-mimicry.* Not "TE derepression does not cause interferon."
+**Conclusion as stated:** *TE derepression occurred without a detectable type-I interferon
+transcriptional signature under these conditions. Several candidate upstream sensing
+components are absent or expressed at very low levels, making K562 a weak context in which
+to test viral mimicry. Without a positive stimulation control, functional competence of the
+sensing pathway cannot be established, so this dataset cannot provide a decisive test.*
+
+Note the deliberate narrowing: **not** "the sensing entry points are not expressed" (RIGI at
+5.4 and IFIH1 at 8.5 CPM are expressed), **not** "no interferon response" (only a
+transcriptional signature was measured — no secreted protein, phosphorylation or functional
+signalling), and **not** "TE derepression does not cause interferon".
 
 **Weakness (acknowledged):** no stimulation control (poly(I:C) or cGAMP) was run, so sensor
 non-responsiveness is **inferred from mRNA abundance rather than demonstrated**.
@@ -215,7 +245,7 @@ Output is a proof tree whose leaves are real edge ids. A separate **citation gat
 generated prose into sentences and drops any sentence citing an edge id that does not exist
 — including sentences citing nothing.
 
-### 5.1 Leave-one-anchor-out robustness (the key result)
+### 5.1 Anchor-dependence analysis
 
 | Anchor removed | measured edges dropped | derived edges | genes answered |
 |---|---|---|---|

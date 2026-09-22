@@ -70,6 +70,8 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | W12 | "TE atlases exist and are large — TE-SCALE, TEITbase, REdiscoverTE. They answer *where* TEs are active; we ask *what perturbation changed them*." | "There's no TE atlas." / "the first TE atlas" |
 | W13 | "ROME Therapeutics is the closest industrial precedent and was ahead of us on biology — they solved the ORF2p structure. What I haven't found in their public work is this architecture." | Any comparison implying we have more depth than ROME, or that its closure means the science failed. |
 | W14 | "We work at subfamily level because aggregating upward measurably loses signal; the field is moving to loci and the ontology is split to permit it." | "Subfamily is the right level." / any implication `TELocus` exists as a node type. |
+| W16 | "The compartment effect size is Δ = +0.13 for DNMT1, consistent across every feature class and stable to dropping any library. The correlation-aware p is 0.045 — our original Mann–Whitney p was anti-conservative because TE features aren't independent, and we measured the inflation at 4×." | Any Mann–Whitney p-value for a compartment effect: 1.6 × 10⁻⁸, 3.5 × 10⁻¹⁵, 2.3 × 10⁻²¹. All retracted as evidence. |
+| W17 | "With two replicates per arm the permutation floor is p = 0.333, so no sample-level test can reach significance in this design. That's a limitation of the experiment, not of the analysis." | Any small sample-level p-value from an n = 2 design. |
 | W15 | "The hypothesis is published — Hasan et al., *GeroScience* 2026, 10.1007/s11357-026-02510-6, and I'm a co-author, so this project instruments my own prior finding rather than confirming it." | "An independent paper confirms our prediction." (You are the 4th of 30 authors. It is the source, not confirmation.) |
 
 ---
@@ -92,8 +94,8 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 
 | # | Claim | Status | Evidence |
 |---|---|---|---|
-| B1 | TRIM28 knockdown shifts the whole TE compartment (median log₂FC +0.41 vs −0.02 for genes) | `SUPPORTED_BY_THIS_BUILD` | `global_directional_shift.csv`, p = 3.5 × 10⁻¹⁵ |
-| B2 | DNMT1 knockdown derepresses the TE compartment with **no** single subfamily at FDR < 0.1 | `SUPPORTED_BY_THIS_BUILD` | p = 1.6 × 10⁻⁸; best per-feature padj 0.41 |
+| B1 | TRIM28 knockdown shifts the whole TE compartment | `DOWNGRADED — EFFECT SIZE ONLY` | Δ = +0.42, 73% of features up, same sign in 6/6 feature-set variants. **Sample-level evidence does not support it:** a permuted labelling produced a *larger* Δ (0.68) than observed, sign not preserved under leave-one-library-out (−0.02..+1.12), correlation-aware p = 0.44 (ρ̄ = 0.48, VIF = 155, ~2 effective independent features). The Mann–Whitney p = 3.5 × 10⁻¹⁵ is **retracted as evidence**. See `COMPARTMENT_STATISTICS.md`. TRIM28's *per-feature* hits (AluY padj 0.0005) are a different statistic and stand |
+| B2 | DNMT1 knockdown derepresses the TE compartment with **no** single subfamily at FDR < 0.1 | `SUPPORTED_BY_THIS_BUILD (restated)` | Δ = +0.13, 63% of 503 features up, same sign in **6/6** feature-set variants (LINE +0.19, SINE +0.10, LTR +0.11, DNA +0.10), leave-one-library-out +0.10..+0.19 with sign preserved 4/4, most extreme of 3 admissible labellings by 3.7×, **correlation-aware p = 0.045** (ρ̄ = 0.006, VIF = 4.1). Mann–Whitney p = 1.6 × 10⁻⁸ retracted as anti-conservative. Best per-feature padj 0.41. **This is the 5mC anchor and it holds** |
 | B3 | SETDB1 behaves as a targeted ERV silencer, not a global one | `SUPPORTED_BY_THIS_BUILD` | HERVE-int, HERV9NC-int move; compartment p = 0.24 |
 | B4 | At 1.5 M reads on chr1+chr19, subfamily-level counting has more power than class/family aggregation | `SUPPORTED_BY_THIS_BUILD` | `aggregation_level_comparison.csv` |
 | B5 | *Why* only some subfamilies respond | `NOT_TESTED` | Age explanation tested and **rejected**; see CRITIQUE §on aggregation |

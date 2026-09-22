@@ -1,0 +1,44 @@
+knockdown,control,n_kd,n_control,analysis,variant,delta,n_features,frac_TE_up,p_or_note
+DNMT1,control_CRISPR,2,2,observed,all TE features,0.1298,503,0.634,mannwhitney p=1.41e-07 (NOT correlation-aware)
+DNMT1,control_CRISPR,2,2,leave_one_library_out,without DNMT1_rep1,0.0997,503,,
+DNMT1,control_CRISPR,2,2,leave_one_library_out,without DNMT1_rep2,0.1874,503,,
+DNMT1,control_CRISPR,2,2,leave_one_library_out,without control_CRISPR_rep1,0.166,503,,
+DNMT1,control_CRISPR,2,2,leave_one_library_out,without control_CRISPR_rep2,0.1154,503,,
+DNMT1,control_CRISPR,2,2,leave_one_library_out,SUMMARY,+0.0997..+0.1874,4,,sign preserved in all 4 drops: True; max |shift| from observed 0.0575
+DNMT1,control_CRISPR,2,2,sample_label_permutation,3 admissible labellings (incl. observed),null |delta| max 0.0349,503,,p = 1/3 = 0.333; FLOOR on attainable p is 1/3 = 0.333 — this design cannot produce a smaller value regardless of effect size
+DNMT1,control_CRISPR,2,2,correlation_aware,"CAMERA-style VIF, rho_bar=0.0062 (residual df=2)",0.1298,503,,VIF=4.1; effective independent TE features 122.2 of 503; variance-inflated p=0.0449 (vs mannwhitney 1.41e-07)
+DNMT1,control_CRISPR,2,2,feature_set_sensitivity,LINE only,0.1925,123,0.74,same sign
+DNMT1,control_CRISPR,2,2,feature_set_sensitivity,SINE only,0.1015,53,0.736,same sign
+DNMT1,control_CRISPR,2,2,feature_set_sensitivity,LTR only,0.1089,240,0.571,same sign
+DNMT1,control_CRISPR,2,2,feature_set_sensitivity,DNA only,0.1041,81,0.605,same sign
+DNMT1,control_CRISPR,2,2,feature_set_sensitivity,expressed (mean norm count >= 10),0.1287,262,0.706,same sign
+DNMT1,control_CRISPR,2,2,feature_set_sensitivity,trimmed (drop 5% most extreme log2FC),0.1298,451,0.65,same sign
+SETDB1,non_targeting,3,2,observed,all TE features,0.0228,353,0.53,mannwhitney p=0.411 (NOT correlation-aware)
+SETDB1,non_targeting,3,2,leave_one_library_out,without SETDB1_rep1,0.0285,353,,
+SETDB1,non_targeting,3,2,leave_one_library_out,without SETDB1_rep2,0.1604,353,,
+SETDB1,non_targeting,3,2,leave_one_library_out,without SETDB1_rep3,-0.1205,353,,
+SETDB1,non_targeting,3,2,leave_one_library_out,without non_targeting_rep1,0.6953,353,,
+SETDB1,non_targeting,3,2,leave_one_library_out,without non_targeting_rep2,-0.4001,353,,
+SETDB1,non_targeting,3,2,leave_one_library_out,SUMMARY,-0.4001..+0.6953,5,,sign preserved in all 5 drops: False; max |shift| from observed 0.6725
+SETDB1,non_targeting,3,2,sample_label_permutation,10 admissible labellings (incl. observed),null |delta| max 0.7849,353,,p = 10/10 = 1.000; FLOOR on attainable p is 1/10 = 0.100 — this design cannot produce a smaller value regardless of effect size
+SETDB1,non_targeting,3,2,correlation_aware,"CAMERA-style VIF, rho_bar=0.3988 (residual df=3)",0.0228,353,,VIF=141.4; effective independent TE features 2.5 of 353; variance-inflated p=0.886 (vs mannwhitney 0.411)
+SETDB1,non_targeting,3,2,feature_set_sensitivity,LINE only,0.0175,112,0.527,same sign
+SETDB1,non_targeting,3,2,feature_set_sensitivity,SINE only,0.1835,48,0.812,same sign
+SETDB1,non_targeting,3,2,feature_set_sensitivity,LTR only,-0.1274,146,0.404,SIGN DIFFERS from headline
+SETDB1,non_targeting,3,2,feature_set_sensitivity,DNA only,0.237,41,0.659,same sign
+SETDB1,non_targeting,3,2,feature_set_sensitivity,expressed (mean norm count >= 10),0.0751,137,0.577,same sign
+SETDB1,non_targeting,3,2,feature_set_sensitivity,trimmed (drop 5% most extreme log2FC),0.0228,317,0.533,same sign
+TRIM28,non_targeting,2,2,observed,all TE features,0.4212,322,0.727,mannwhitney p=2.31e-21 (NOT correlation-aware)
+TRIM28,non_targeting,2,2,leave_one_library_out,without TRIM28_rep1,0.5739,322,,
+TRIM28,non_targeting,2,2,leave_one_library_out,without TRIM28_rep2,0.2063,322,,
+TRIM28,non_targeting,2,2,leave_one_library_out,without non_targeting_rep1,1.1159,322,,
+TRIM28,non_targeting,2,2,leave_one_library_out,without non_targeting_rep2,-0.0245,322,,
+TRIM28,non_targeting,2,2,leave_one_library_out,SUMMARY,-0.0245..+1.1159,4,,sign preserved in all 4 drops: False; max |shift| from observed 0.6947
+TRIM28,non_targeting,2,2,sample_label_permutation,3 admissible labellings (incl. observed),null |delta| max 0.6788,322,,p = 2/3 = 0.667; FLOOR on attainable p is 1/3 = 0.333 — this design cannot produce a smaller value regardless of effect size
+TRIM28,non_targeting,2,2,correlation_aware,"CAMERA-style VIF, rho_bar=0.4789 (residual df=2)",0.4212,322,,VIF=154.7; effective independent TE features 2.1 of 322; variance-inflated p=0.441 (vs mannwhitney 2.31e-21)
+TRIM28,non_targeting,2,2,feature_set_sensitivity,LINE only,0.4479,105,0.81,same sign
+TRIM28,non_targeting,2,2,feature_set_sensitivity,SINE only,0.6261,48,0.958,same sign
+TRIM28,non_targeting,2,2,feature_set_sensitivity,LTR only,0.1254,130,0.585,same sign
+TRIM28,non_targeting,2,2,feature_set_sensitivity,DNA only,0.4363,33,0.818,same sign
+TRIM28,non_targeting,2,2,feature_set_sensitivity,expressed (mean norm count >= 10),0.4356,145,0.807,same sign
+TRIM28,non_targeting,2,2,feature_set_sensitivity,trimmed (drop 5% most extreme log2FC),0.4212,288,0.753,same sign
