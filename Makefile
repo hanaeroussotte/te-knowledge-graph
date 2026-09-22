@@ -9,7 +9,7 @@ SCOPE  ?= chr_subset
 ALIGNER ?= hisat2
 GENE   ?= SETDB1
 
-.PHONY: help refs annotation graph index smoke de tractability signatures query clean-results
+.PHONY: help validate refs annotation graph index smoke de tractability signatures query clean-results
 
 help:  ## show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -130,3 +130,6 @@ query:  ## ask the engine about a gene:  make query GENE=TET2
 
 clean-results:  ## remove generated results, keep references and graph
 	rm -rf $(OUT)/align $(OUT)/fastq $(OUT)/counts
+
+validate:  ## structural audit of the graph: schema, hygiene, provenance, reasoning capacity
+	python src/validate_graph.py

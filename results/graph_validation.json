@@ -1,0 +1,254 @@
+[
+ {
+  "metric": "edges_total",
+  "value": 9455,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "nodes_declared",
+  "value": 1910,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_layer::curated",
+  "value": 9263,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_layer::derived_edges",
+  "value": 89,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_layer::mechanism",
+  "value": 44,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_layer::literature",
+  "value": 32,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_layer::measured_inflammation",
+  "value": 15,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_layer::measured",
+  "value": 12,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_tier::curated",
+  "value": 7991,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_tier::predicted",
+  "value": 1316,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_tier::inferred",
+  "value": 89,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_tier::literature",
+  "value": 32,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_tier::measured",
+  "value": 27,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "source_concentration",
+  "value": 0.518,
+  "verdict": "WEAKNESS",
+  "note": "largest source = Reactome (4900 edges)"
+ },
+ {
+  "metric": "schema_checked_edges",
+  "value": 9366,
+  "verdict": "info",
+  "note": "derived edges are untyped by design"
+ },
+ {
+  "metric": "schema_violations",
+  "value": 0,
+  "verdict": "PASS",
+  "note": ""
+ },
+ {
+  "metric": "derived_unknown_predicates",
+  "value": 0,
+  "verdict": "PASS",
+  "note": ""
+ },
+ {
+  "metric": "self_loops",
+  "value": 0,
+  "verdict": "PASS",
+  "note": ""
+ },
+ {
+  "metric": "duplicate_triples",
+  "value": 0,
+  "verdict": "PASS",
+  "note": "same subject/predicate/object appearing more than once"
+ },
+ {
+  "metric": "sign_contradictions",
+  "value": 1,
+  "verdict": "REVIEW",
+  "note": "PPARG->Alu [literature via PMID:14668325]"
+ },
+ {
+  "metric": "sign_contradictions_within_one_layer",
+  "value": 1,
+  "verdict": "DEFECT",
+  "note": "a single source asserting both directions for one pair \u2014 extractor self-inconsistency"
+ },
+ {
+  "metric": "provenance_filled::source",
+  "value": 1.0,
+  "verdict": "ok",
+  "note": ""
+ },
+ {
+  "metric": "provenance_filled::retrieved",
+  "value": 1.0,
+  "verdict": "ok",
+  "note": ""
+ },
+ {
+  "metric": "provenance_filled::native_score",
+  "value": 0.198,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "provenance_filled::statistic",
+  "value": 0.012,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "edges_with_blank_context_cell",
+  "value": 0,
+  "verdict": "PASS",
+  "note": "11 context columns must never be empty (use not_applicable)"
+ },
+ {
+  "metric": "distinct_entities_touched",
+  "value": 1951,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "degree_median",
+  "value": 2.0,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "degree_max",
+  "value": 188,
+  "verdict": "info",
+  "note": "hub = HDAC1"
+ },
+ {
+  "metric": "edge_share_of_top_1pct_entities",
+  "value": 0.159,
+  "verdict": "ok",
+  "note": "high value = a few hubs carry the graph"
+ },
+ {
+  "metric": "te_entities_with_any_edge",
+  "value": 21,
+  "verdict": "info",
+  "note": "Alu, AluY, AluYa5, ERV, HERV, HERV-E"
+ },
+ {
+  "metric": "te_vocabulary_coverage",
+  "value": 0.0199,
+  "verdict": "WEAKNESS",
+  "note": "21 of 1057 subfamilies in the vocabulary have any edge at all \u2014 the graph is overwhelmingly empty on the TE side"
+ },
+ {
+  "metric": "gene_TE_edges_total",
+  "value": 87,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "gene_TE_edges_measured",
+  "value": 12,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "MARK_AT_edges",
+  "value": 4,
+  "verdict": "WEAKNESS",
+  "note": "every R2/R3 inference consumes one of these"
+ },
+ {
+  "metric": "mark_writer_eraser_edges",
+  "value": 44,
+  "verdict": "info",
+  "note": ""
+ },
+ {
+  "metric": "distinct_marks_grounded",
+  "value": 2,
+  "verdict": "WEAKNESS",
+  "note": "5mC, H3K9me3"
+ },
+ {
+  "metric": "measured_genes_that_are_enzymes",
+  "value": 2,
+  "verdict": "info",
+  "note": "measured=['DNMT1', 'SETDB1', 'TRIM28']; of these, enzymes=['DNMT1', 'SETDB1']"
+ },
+ {
+  "metric": "measured_genes_wasted_on_rules",
+  "value": 1,
+  "verdict": "WEAKNESS",
+  "note": "['TRIM28'] have measured TE effects but no DEPOSITS_MARK/ERASES_MARK edge, so they cannot satisfy R1 and contribute nothing to inference"
+ },
+ {
+  "metric": "RECRUITS_edges",
+  "value": 0,
+  "verdict": "EXPLAINS_R5_ZERO",
+  "note": "R5_RECRUITMENT_CHAIN requires RECRUITS edges; none exist, so it can never fire"
+ },
+ {
+  "metric": "connected_components",
+  "value": 7,
+  "verdict": "info",
+  "note": "sizes: [1905, 25, 10, 5, 2]"
+ },
+ {
+  "metric": "largest_component_fraction",
+  "value": 0.976,
+  "verdict": "ok",
+  "note": ""
+ }
+]

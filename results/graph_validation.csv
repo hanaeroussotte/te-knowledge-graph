@@ -1,0 +1,43 @@
+metric,value,verdict,note
+edges_total,9455.0,info,
+nodes_declared,1910.0,info,
+edges_layer::curated,9263.0,info,
+edges_layer::derived_edges,89.0,info,
+edges_layer::mechanism,44.0,info,
+edges_layer::literature,32.0,info,
+edges_layer::measured_inflammation,15.0,info,
+edges_layer::measured,12.0,info,
+edges_tier::curated,7991.0,info,
+edges_tier::predicted,1316.0,info,
+edges_tier::inferred,89.0,info,
+edges_tier::literature,32.0,info,
+edges_tier::measured,27.0,info,
+source_concentration,0.518,WEAKNESS,largest source = Reactome (4900 edges)
+schema_checked_edges,9366.0,info,derived edges are untyped by design
+schema_violations,0.0,PASS,
+derived_unknown_predicates,0.0,PASS,
+self_loops,0.0,PASS,
+duplicate_triples,0.0,PASS,same subject/predicate/object appearing more than once
+sign_contradictions,1.0,REVIEW,PPARG->Alu [literature via PMID:14668325]
+sign_contradictions_within_one_layer,1.0,DEFECT,a single source asserting both directions for one pair — extractor self-inconsistency
+provenance_filled::source,1.0,ok,
+provenance_filled::retrieved,1.0,ok,
+provenance_filled::native_score,0.198,info,
+provenance_filled::statistic,0.012,info,
+edges_with_blank_context_cell,0.0,PASS,11 context columns must never be empty (use not_applicable)
+distinct_entities_touched,1951.0,info,
+degree_median,2.0,info,
+degree_max,188.0,info,hub = HDAC1
+edge_share_of_top_1pct_entities,0.159,ok,high value = a few hubs carry the graph
+te_entities_with_any_edge,21.0,info,"Alu, AluY, AluYa5, ERV, HERV, HERV-E"
+te_vocabulary_coverage,0.0199,WEAKNESS,21 of 1057 subfamilies in the vocabulary have any edge at all — the graph is overwhelmingly empty on the TE side
+gene_TE_edges_total,87.0,info,
+gene_TE_edges_measured,12.0,info,
+MARK_AT_edges,4.0,WEAKNESS,every R2/R3 inference consumes one of these
+mark_writer_eraser_edges,44.0,info,
+distinct_marks_grounded,2.0,WEAKNESS,"5mC, H3K9me3"
+measured_genes_that_are_enzymes,2.0,info,"measured=['DNMT1', 'SETDB1', 'TRIM28']; of these, enzymes=['DNMT1', 'SETDB1']"
+measured_genes_wasted_on_rules,1.0,WEAKNESS,"['TRIM28'] have measured TE effects but no DEPOSITS_MARK/ERASES_MARK edge, so they cannot satisfy R1 and contribute nothing to inference"
+RECRUITS_edges,0.0,EXPLAINS_R5_ZERO,"R5_RECRUITMENT_CHAIN requires RECRUITS edges; none exist, so it can never fire"
+connected_components,7.0,info,"sizes: [1905, 25, 10, 5, 2]"
+largest_component_fraction,0.976,ok,
