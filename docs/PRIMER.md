@@ -175,7 +175,7 @@ easy and embarrassing: removing an *eraser* of a repressive mark leaves *more* m
 
 This is worth being precise about, because it is the project's central claim. The problem is
 not that these graphs give a *poor* answer about TEs. It is that **the question cannot be
-expressed**. If there is no TE node type, a TE cannot be the object of an edge, cannot appear
+expressed**. Without TEs as first-class entities, a TE cannot be the object of an edge, cannot appear
 in a returned path, and cannot be scored by a prediction model. The evidence exists in the
 literature; the data model has nowhere to put it.
 

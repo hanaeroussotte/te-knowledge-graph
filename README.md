@@ -30,7 +30,8 @@ exclusions are structural rather than accidental.
 definition, so the reads that report on them are exactly the reads thrown away. TE signal is
 absent from most public expression matrices.
 
-**From the graph.** Hetionet, PrimeKG and Open Targets have no TE node type. A TE cannot be a
+**From the graph.** Hetionet, PrimeKG and Open Targets do not model TEs as first-class
+entities. A TE cannot be a
 target, cannot lie on a returned path, and cannot be predicted — the schema has nowhere to put
 it. The evidence exists in the literature; the data model does not admit it.
 

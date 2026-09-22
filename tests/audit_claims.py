@@ -27,9 +27,16 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 
 BANNED = {
-    r"[Nn]o public (biological )?knowledge graph (can|has|represents)":
+    # The first version of this pattern required the literal words "public knowledge
+    # graph", and the slide deck said "No major biology knowledge graph has a TE node
+    # type" — the same retracted claim, straight past the audit. Match the CLAIM, not one
+    # phrasing of it: a negation, any qualifier, "knowledge graph", and a has/contains verb.
+    r"[Nn]o (public|major|existing|current)?\s*(biological|biomedical|biology)?\s*"
+    r"knowledge graph\s+(can|has|have|contains?|includes?|models?|represents?)":
         "retracted D1 — say 'major general-purpose biomedical KGs do not model TEs as "
         "first-class entities'",
+    r"(has|have) (a )?(no|zero) TE node type|no TE node type":
+        "retracted D1 variant — 'does not model TEs as first-class entities'",
     r"[Nn]obody has systematically perturbed":
         "retracted D3 — genome-wide screens for TE regulators exist since 2003",
     r"causal deduction":

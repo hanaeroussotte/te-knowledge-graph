@@ -18,7 +18,7 @@ Today that person does one of three things:
 | What they do now | What it costs | What it misses |
 |---|---|---|
 | Read the TE literature by hand | days per gene | anything not yet published |
-| Query a knowledge graph (Hetionet, Open Targets, PrimeKG) | minutes | **everything** — no TE node type exists |
+| Query a knowledge graph (Hetionet, Open Targets, PrimeKG) | minutes | **everything** — TEs are not first-class entities there |
 | Re-analyse RNA-seq with a TE-aware pipeline | weeks of setup | genes with no available perturbation data |
 
 The middle row is the point. It is not that the existing graphs give a poor answer; it is that

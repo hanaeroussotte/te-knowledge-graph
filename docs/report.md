@@ -15,7 +15,8 @@ exclusions are structural rather than accidental.
 definition, so the reads that report on them are exactly the reads thrown away. TE signal is
 therefore missing from most public expression matrices.
 
-**In the graph.** Hetionet, PrimeKG and Open Targets have no TE node type. A transposable
+**In the graph.** Hetionet, PrimeKG and Open Targets do not model TEs as first-class
+entities. A transposable
 element cannot be a target, cannot lie on a returned path, and cannot be predicted, because
 the schema has nowhere to put it.
 

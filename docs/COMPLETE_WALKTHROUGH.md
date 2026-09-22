@@ -31,11 +31,13 @@ them switched off using chemical marks on DNA and on the proteins DNA is wound a
 that silencing machinery is damaged, transposable elements switch back on, and the cell's
 antiviral alarm system mistakes their RNA for a real infection and starts an inflammatory
 response. That chain — *broken silencer → element reactivation → inflammation* — is
-suspected to matter in ageing, in blood cancers and in autoimmunity. **No public biological
-knowledge graph can represent it**, because none of them has a node type for transposable
-elements. This project builds one that does, fills it from five independent evidence
-sources including our own measurements from raw sequencing data, adds a small symbolic
-reasoning engine that derives new links and shows its work as a proof tree, and ends by
+suspected to matter in ageing, in blood cancers and in autoimmunity. **The major
+general-purpose biomedical knowledge graphs do not model transposable elements as
+first-class entities**, so that chain is hard to express in them directly. This project
+builds one that does, fills it from five independent evidence sources including our own
+re-analysis of perturbation experiments run for other purposes, adds a small symbolic
+reasoning engine that generates mechanistic hypotheses and shows its work as a proof tree,
+and ends by
 asking which of the genes involved could actually be hit with a drug.
 
 ---
