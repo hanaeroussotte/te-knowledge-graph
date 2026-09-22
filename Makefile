@@ -133,3 +133,7 @@ clean-results:  ## remove generated results, keep references and graph
 
 validate:  ## structural audit of the graph: schema, hygiene, provenance, reasoning capacity
 	python src/validate_graph.py
+
+demo:  ## rebuild the clickable query demo from real engine output
+	python src/te_reason.py DNMT1 TRIM28 SETDB1 TET2 DNMT3A SUV39H1 KDM4A EZH2 TP53 MPHOSPH8 TRIM24 JAK2 ASXL1 GAPDH --json handoff/demo_answers.json
+	python src/make_demo.py
