@@ -1,0 +1,7 @@
+analysis,knockdown,gene,log2FC,padj,pct_remaining,verdict
+knockdown_efficiency,SETDB1,SETDB1,-0.352,0.773,78.3,NOT CONFIRMED — own mRNA not significantly reduced
+knockdown_efficiency,TRIM28,TRIM28,-1.117,8.61e-12,46.1,CONFIRMED
+knockdown_efficiency,DNMT1,DNMT1,-1.873,1.04e-18,27.3,CONFIRMED
+compensation_alt_writers,SETDB1,ASH1L+DNMT1+PRDM2,0.215,,,median +0.215 vs all-gene +0.018; n=3 UNDERPOWERED — only 9 of 55 silencing-machinery genes measurable at chr1+chr19 scope
+compensation_alt_writers,TRIM28,ASH1L+DNMT1+PRDM2,-0.026,,,median -0.026 vs all-gene -0.016; n=3 UNDERPOWERED — only 9 of 55 silencing-machinery genes measurable at chr1+chr19 scope
+compensation_alt_writers,DNMT1,ASH1L+PRDM2,-0.118,,,median -0.118 vs all-gene -0.014; n=2 UNDERPOWERED — only 9 of 55 silencing-machinery genes measurable at chr1+chr19 scope
