@@ -21,6 +21,18 @@ Losing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER 
 Nobody measured SUV39H1. The prediction is signed, specific, and every step is a database
 record or a measurement you can open.
 
+## Start here — five minutes
+
+| | |
+|---|---|
+| **Open `demo/query.html`** | Click a gene. Every answer shows its evidence tier, the subgraph it was derived from, and what to measure next. Click **GAPDH** — the system returns nothing, deliberately. No server, no build step. |
+| **Open `demo/pitch.html`** | The 11-slide deck: the problems, what already exists, the residual gap, the results, the limitations. Arrow keys; `s` toggles speaker notes. |
+| **Run one command** | `python src/te_reason.py TET2 --proofs` — a gene with no transposon annotation and no knockdown, answered anyway, with the derivation printed. |
+| **Check we are not lying** | `make gate` runs the claim audit, resolves all 46 DOIs and 44 PMIDs, and re-runs the regression pins. |
+
+Reading order for the documents is in `docs/COMPLETE_WALKTHROUGH.md`; the short version is
+`docs/WHERE_WE_ARE.md`, and the limitations are `docs/CRITIQUE.md`.
+
 ## Why this exists
 
 Transposable elements are excluded from graph-based target discovery twice over, and both
@@ -35,8 +47,13 @@ entities. A TE cannot be a
 target, cannot lie on a returned path, and cannot be predicted — the schema has nowhere to put
 it. The evidence exists in the literature; the data model does not admit it.
 
-This repository fixes both: a pipeline that keeps multi-mapping reads and redistributes them
-by EM, and a graph with `TEFamily` / `TELocus` / `TEClass` as first-class node types.
+This repository addresses both: a pipeline that keeps multi-mapping reads and redistributes
+them by EM, and a graph in which transposable elements are first-class entities — `TEClass`,
+`TEFamily` and `TESubfamily` are node types a predicate can point at.
+
+**`TELocus` and `TETranscript` are roadmap, not built.** The field is moving to locus
+resolution and this schema does not reach it yet; `docs/TE_RESOLUTION.md` §8 says so in
+detail, and the working resolution here is the subfamily.
 
 ## What is here
 
@@ -105,9 +122,25 @@ make index         # STAR/HISAT2 index over the chromosome subset (~4 min)
 make smoke         # quantify 2 samples end to end (~15 min)
 make de            # differential expression -> measured edges
 make query GENE=TET2
+
+make validate      # 42 structural metrics on the graph -> results/graph_validation.csv
+make demo          # rebuild demo/query.html from live engine output
+make gate          # claim audit + DOI/PMID resolution + regression pins
+make ship          # gate && stage  (the && is the point: see docs/COMPLETE_WALKTHROUGH.md 21)
 ```
 
-`make` with no target lists everything.
+`make` with no target lists everything. Nothing below `make graph` requires the pipeline to
+have been run — the shipped `data/` and `results/` tables are enough to query, validate and
+rebuild the demo.
+
+### What is in `demo/`
+
+| file | |
+|---|---|
+| `query.html` | the product: 14 genes, all five evidence tiers, four of them refusals. Self-contained; a viewer over real engine output, not a server |
+| `pitch.html` | the 11-slide deck, figures embedded, works offline |
+| `TE_Knowledge_Graph.pptx` | the slides as presented |
+| `demo.html` | the earlier query walkthrough, kept for reference |
 
 ## Evidence tiers
 
@@ -142,24 +175,43 @@ behaving well.
 
 ## Reported honestly
 
-Two components were built, validated, and **not shipped**:
+**Four things were built, measured, and not shipped.**
 
-- **Rule-based literature extraction** — precision 0.109, recall 0.175, direction agreement
-  10/21 (chance) against an LLM-labelled reference. Code kept in `src/extract_lit.py` so the
-  negative result is reproducible; not wired into the graph.
+- **Rule-based literature extraction** — precision 0.109, direction agreement 10/21 (chance)
+  against an LLM-labelled reference. Code kept in `src/extract_lit.py` so the negative result
+  is reproducible; not wired into the graph.
 - **Link prediction** — gated at design time on having a gene × TE matrix large enough to hold
   out a validation set. Three knockdowns is not. An unvalidated AUC is worse than no model.
+- **An interferon conclusion**, first refused: at a chr1+chr19 reference only **16.8%** of the
+  type-I IFN gene set was present, below the coverage guard in `score_signatures.py`. We then
+  built a targeted 62 Mb panel reference, took coverage to **76.8%**, and re-ran — and the
+  answer was *still* a null. It now carries a mechanism: in K562 the cytosolic sensors are
+  barely expressed (CGAS 0.21, ZBP1 0.26, TLR3 0.00 CPM) while the transducers run at
+  270–800. So the claim is not "TE derepression does not cause interferon" — it is that **this
+  dataset cannot decisively test it**, and a sensing-competent cell type is required.
+- **Our own set-level p-values, retracted.** The Mann–Whitney test treated ~350 TE subfamilies
+  as independent observations. Measured mean pairwise correlation runs 0.006–0.48, i.e.
+  **variance inflation 4× to 155×**. DNMT1 survives restated — Δ = +0.13, same sign in 6/6
+  feature-set variants, stable to dropping any library, **correlation-aware p = 0.045**.
+  TRIM28's whole-compartment claim does not and is now an effect size only.
+  See `docs/COMPARTMENT_STATISTICS.md`.
 
-The interferon analysis in `results/` is also a negative: at a chr1+chr19 reference only ~17%
-of the type-I IFN gene set is present and every canonical sensor except IRF3 is off-scope, so
-the result describes the chromosome selection rather than the biology. `score_signatures.py`
-refuses to interpret a signature below `--min-coverage` for that reason.
+**And one control we failed.** `SETDB1`'s own mRNA is not significantly reduced in its own
+knockdown (−0.35 log₂, 78% remaining, padj 0.77), while TRIM28 and DNMT1 are both confirmed at
+padj < 1e-11 in the same data. SETDB1 grounds 3 of the 4 `MARK_AT` edges, so **78 of 83 derived
+edges rest on the mark supported by the least-confirmed perturbation** — see
+`results/experiment_priority.csv` and `figures/fig_ev5_priority.png`. Read as *not confirmed*,
+not *failed*: CRISPRi acts on transcription, we read a shallow steady-state snapshot, and the
+knockdown did produce the two ERV results. Full-depth genome-wide would settle it.
+
+`best_tier: none` is a supported output, not an error path. Four of the fourteen genes in the
+demo return it.
 
 `docs/CRITIQUE.md` has the full limitation list and five concrete falsifiers.
 `docs/LANDSCAPE.md` places the project against the existing TE atlases, the 16 benchmarked
 quantifiers, the perturbation-prediction models and the companies in this space, with a
-verification ledger for every claim in it. `docs/JURY_QUESTIONS.md` answers 41 likely
-questions.
+verification ledger for every claim in it — including one claim we recorded as unfindable that
+turned out to exist. `docs/JURY_QUESTIONS.md` answers 41 likely questions.
 
 ## A note on the shipped graph vs the figures
 
