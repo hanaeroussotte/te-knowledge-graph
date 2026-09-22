@@ -32,6 +32,27 @@ So this script does three things, in order:
 Only statistics that beat their null AND survive the held-out test should be handed to the
 biological layer. The rest are descriptions of one run of one model.
 
+SELF-TEST COVERAGE — read this before trusting any number here
+--------------------------------------------------------------
+`--selftest` generates trajectories with a known answer. Measured on 2026-09-22:
+
+    concentrated (truth: recovery only moves 2 of 8 dimensions)
+        effective_dimensions_used  1.96  (null 7.08, p = 0.000)   <- recovers the truth
+        held_out_accuracy          1.00  (baseline 0.50)          <- principle transfers
+    diffuse (truth: recovery moves all 8 equally)
+        effective_dimensions_used  7.66  (null 7.40, p = 0.984)   <- correctly NOT significant
+        held_out_accuracy          0.50  (baseline 0.50)          <- correctly NO principle
+
+Both directions pass, and the second matters more: on data with no structure the script
+reports no structure instead of manufacturing one.
+
+**But only 2 of the 5 statistics are exercised by that test.** The synthetic generator
+produces independent per-dimension steps and no disturbance-specific structure, so it
+contains no joint change, no convergence and no multi-basin geometry to find — which is why
+q2, q4 and q6 sit at their null values above. Their implementations are argued from first
+principles and are UNVALIDATED. Before relying on one, extend `synth()` to generate the
+phenomenon it claims to detect and confirm it is detected.
+
 INPUT SCHEMA (two CSVs — this is the handoff contract)
 ------------------------------------------------------
 `--runs` one row per (disturbance, search run):
