@@ -21,7 +21,10 @@ Two statistics are computed, and you want both.
                      normalisation-invariant. It also needs no replicates.
 
 In the reference run this mattered: DNMT1 knockdown had ZERO subfamilies at FDR < 0.1 and a
-set-level shift at p = 1.4e-07. Reading only the padj column would have called it a null.
+set-level shift whose effect size (delta = +0.13) survives every robustness test in
+docs/COMPARTMENT_STATISTICS.md. Reading only the padj column would have called it a null.
+The Mann-Whitney p this comment used to quote is retracted: it treats correlated TE
+features as independent observations.
 """
 from __future__ import annotations
 import argparse, datetime, hashlib, os, sys

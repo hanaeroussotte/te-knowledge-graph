@@ -80,6 +80,51 @@ def main():
              + glob.glob(str(ROOT / "src/*.py")))
     fails, warns = [], []
 
+    # ---------------------------------------------------------------- retracted STATISTICS
+    # Added 2026-09-22, immediately after it failed to catch one. The compartment
+    # Mann-Whitney p-values were retracted (docs/COMPARTMENT_STATISTICS.md) because they
+    # treat correlated TE features as independent; the deck still asserted two of them on
+    # its final slide, and this audit passed, because BANNED only ever matched POSITIONING
+    # language. A retracted number is as damaging as a retracted phrase and this script had
+    # no concept of one.
+    #
+    # It also has to see through HTML entities. The deck wrote `1.6&times;10&minus;8`, so a
+    # pattern looking for '×' or 'x' matched nothing at all — the encoding hid it from three
+    # separate greps. Normalise entities before matching, never after.
+    RETRACTED_STATS = {
+        r"1\.6\s*(?:&times;|[x×*])\s*10\s*(?:&minus;|[-−])?\s*⁻?8":
+            "retracted: DNMT1 compartment Mann-Whitney p. Use delta = +0.13, "
+            "correlation-aware p = 0.045 (docs/COMPARTMENT_STATISTICS.md)",
+        r"3\.5\s*(?:&times;|[x×*])\s*10\s*(?:&minus;|[-−])?\s*⁻?15":
+            "retracted: TRIM28 compartment Mann-Whitney p. The compartment claim is "
+            "effect-size only; quote the per-feature AluY result instead",
+        r"1\.41?e-0?7|2\.3\d*e-?2?1":
+            "retracted compartment Mann-Whitney p-value",
+        r"p\s*=\s*(?:&minus;|-)?\s*0?\.0+1?6?\s*(?:&times;|[x×])\s*10\s*⁻?2[01]":
+            "retracted compartment Mann-Whitney p-value",
+    }
+
+    def normalise(s: str) -> str:
+        """Entities first, THEN tags. The deck wrote `1.6&times;10<sup>&minus;8</sup>`:
+        unescaping alone leaves `1.6×10<sup>−8</sup>` and the markup still splits the
+        number, so the first version of this check reported a clean pass on the very file
+        it was written to catch."""
+        import html
+        return re.sub(r"<[^>]+>", "", html.unescape(s))
+
+    for f in files:
+        raw = Path(f).read_text(errors="ignore")
+        rel = str(Path(f).relative_to(ROOT))
+        if rel in REGISTRY or rel in {"docs/COMPARTMENT_STATISTICS.md"}:
+            continue
+        for pat, why in RETRACTED_STATS.items():
+            for src in (raw, normalise(raw)):
+                for m in re.finditer(pat, src):
+                    if is_prohibition(src, m.start(), m.end()):
+                        continue
+                    fails.append(f"{rel} — {why}\n      …{m.group(0)!r}…")
+                    break
+
     for f in files:
         txt = Path(f).read_text(errors="ignore")
         rel = str(Path(f).relative_to(ROOT))
