@@ -90,89 +90,66 @@ absence.</p>""",
 on the NOT_FOUND caveat yourself; a claim of novelty that names its own limit is much harder
 to attack than one that does not.""")
 
-slide("Result 1 — the tool", "Ask it about TET2: no annotation, no experiment, still an answer",
-"""<pre class="term">$ python src/te_reason.py TET2 --proofs
+slide("Result 1 — real data", "The TE compartment moves as a whole",
+f"""<img class="fig tall" src="{img('fig_ev1_data.png')}" alt="TE versus gene log2FC distributions">
+<p class="punch">Look at <b>DNMT1</b>. <b>Zero</b> individual TE families clear FDR — best padj
+0.41 — yet the whole compartment is displaced. A per-feature search finds nothing here; the
+compartment statistic finds a coherent shift. <b>&Delta; = +0.13</b>, same sign in <b>6/6</b>
+feature-set variants, stable to dropping any library, correlation-aware <b>p = 0.045</b>.</p>
+<table class="t">
+<tr><th>Knockdown</th><th>target's own mRNA</th><th>did it work?</th></tr>
+<tr><td>DNMT1</td><td>&minus;1.87 (27% remaining)</td><td class="ok">confirmed</td></tr>
+<tr><td>TRIM28</td><td>&minus;1.12 (46% remaining)</td><td class="ok">confirmed</td></tr>
+<tr><td>SETDB1</td><td>&minus;0.35, ns (78% remaining)</td><td class="bad">not confirmed</td></tr>
+</table>
+<p class="small">TRIM28's &Delta; = +0.42 is shown as an <b>effect size</b>: a permuted labelling
+beat the real one, so its compartment p-value is retracted. Its per-feature AluY result
+(padj 0.0005) is a different statistic and stands. Counted with <b>TEtranscripts, Jin et al.
+2015 — not ours.</b></p>""",
+"""Point at the DNMT1 panel and say the sentence: zero significant families, clear compartment
+shift. Then the efficiency table without flinching — SETDB1 is our own failed control and
+nobody else will show you one.""")
 
-=== TET2  [best tier: inferred]  measured=0 curated=0 literature=0 inferred=1
-Losing TET2 is predicted to <b>lower</b> TE:global, derived by R3_ERASER_INVERSION from:
-5mC-MARK_AT-&gt;TE:global, TET2-ERASES_MARK-&gt;5mC   [e0eab062a2cf49c, e62dbe0821f074b]
-  citation gate: 1 sentences kept, 0 rejected
-
-  TET2 -DEREPRESSES-&gt; TE:global            [inferred via R3_ERASER_INVERSION]
-    <span class="warn">! grounded in context_cell_type=K562; perturbation_modality=CRISPR
-      — asserting it elsewhere is a further inference</span>
-    5mC -MARK_AT-&gt; TE:global                [inferred via R1_MARK_GROUNDING]
-      DNMT1 -SILENCES-&gt; TE:global           <span class="meas">[measured: ENCODE ENCSR600OWF,
-        median log2FC of 503 TE subfamilies minus 3120 protein-coding genes]</span>
-      DNMT1 -DEPOSITS_MARK-&gt; 5mC            [curated: GO:0003886]
-    TET2 -ERASES_MARK-&gt; 5mC                 [curated: GO:0070579]</pre>
+slide("Result 2 — the proof", "Not a lookup: the answer is a chain you can audit",
+f"""<img class="fig tall" src="{img('fig_ev2_proof.png')}" alt="TET2 proof tree with evidence tiers">
 <p class="punch">TET2 has <b>no</b> transposon annotation in the Gene Ontology and <b>no</b>
-knockdown in ENCODE. The answer is specific, signed, traceable to one real measurement — and
-labelled <span class="mono">inferred</span>, not measured. That is problems 4 and 5, answered
-in one screen.</p>""",
-"""Run it live if you can — under a second. Trace the tree bottom-up with a finger, then
-point at the warning line: the system flags that its own conclusion is bound to one cell
-type.""")
+knockdown in ENCODE. The prediction is nevertheless specific, directional, and traceable to
+<b>one real measurement</b> — and every edge is labelled with the kind of evidence it is.</p>
+<p>A conclusion's tier is the <b>weakest link on its path</b>, so this answer is
+<span class="mono">inferred</span>, never <span class="mono">measured</span>. Run it yourself:
+<span class="mono">python src/te_reason.py TET2 --proofs</span></p>""",
+"""Trace it with a finger: one measurement, two ontology records, a directional claim. That is
+problem 4 answered. If you have a laptop, run the command instead — under a second, and it
+prints the same tree with its citation ids.""")
 
-slide("Result 2 — the measurement", "Three knockdowns, re-counted against the repeat annotation",
-"""<p>ENCODE RNA-seq in K562, 11 libraries. HISAT2 reporting up to 100 alignments per read,
-TEcount's expectation-maximisation for multi-mapping reads (<b>TEtranscripts — not ours</b>),
-DESeq2 with size factors estimated on protein-coding genes only.</p>
-<table class="t">
-<tr><th>Knockdown</th><th>target's own mRNA</th><th>remaining</th><th>did it work?</th><th>effect on TEs</th></tr>
-<tr><td>DNMT1</td><td>&minus;1.87</td><td>27%</td><td class="ok">confirmed</td><td>whole-compartment shift</td></tr>
-<tr><td>TRIM28</td><td>&minus;1.12</td><td>46%</td><td class="ok">confirmed</td><td>AluY +0.79, padj 0.0005</td></tr>
-<tr><td>SETDB1</td><td>&minus;0.35 <span class="small">(ns)</span></td><td>78%</td><td class="bad">not confirmed</td><td>two ERV families up</td></tr>
-</table>
-<p class="punch bad-b">We pointed that check at our own data and it cost us: SETDB1 — the sole
-anchor for one of our two chromatin marks — cannot be confirmed to have worked. <i>Not
-confirmed</i>, not <i>failed</i>: CRISPRi read as a shallow snapshot, and it did produce the
-ERV results. It is in the limitations.</p>""",
-"""Credit TEtranscripts out loud — the single thing most likely to be mistaken for our
-contribution. Then give the SETDB1 row without flinching. Nobody else will show you a failed
-control on their own data.""")
+slide("Result 3 — refusal", "It recognises missing evidence, fixes it, and still accepts a null",
+f"""<img class="fig" src="{img('fig_ev3_refusal.png')}" alt="refusal, rebuild, null">
+<p class="punch">The interferon question came back <b>refused</b>, not answered: the reference
+held 17% of the signature, below the coverage guard. So we built a targeted 62 Mb reference,
+took coverage to <b>77%</b>, and re-ran — and the answer was <i>still</i> a null.</p>
+<p class="punch ok-b">The null then got a mechanism: in K562 the cytosolic sensors are barely
+expressed. <b>The wiring and the sprinklers are installed; the smoke detectors are not.</b> So
+the claim is not &ldquo;TE derepression does not cause interferon&rdquo; — it is <i>this dataset
+cannot decisively test it, and here is the cell type that could</i>.</p>
+<p class="small">Three more things were built, measured and not shipped: a literature extractor
+at precision 0.109, link prediction with no constructible held-out set, and the p-values
+retracted on the previous slide. <span class="mono">best_tier: none</span> is a supported
+output, not an error path.</p>""",
+"""Problem 5, and the slide nobody else will have. The beat that lands is 'refused, fixed the
+computation, and the answer was still no'.""")
 
-slide("Result 3 — attacked", "The one result that had to survive, and what it cost",
-"""<p>The readout is normalisation-invariant by construction:
-<span class="mono">&Delta; = median log&#8322;FC over TE subfamilies &minus; median over
-protein-coding genes</span>, within one contrast — size factors are per-sample and
-multiplicative, so they cancel in the difference.</p>
-<p class="punch bad-b">A reviewer found the real flaw: our p-value treated ~350 correlated TE
-families as independent evidence. We measured the inflation instead of arguing. <b>Mean
-pairwise correlation 0.006 to 0.48 &rarr; variance inflation 4&times; to 155&times;</b> — in two
-of three contrasts, 322 families carry about <b>two families' worth</b> of independent
-information. Those p-values are <b>retracted</b>. This is exactly why CAMERA exists.</p>
-<table class="t">
-<tr><th>Challenge</th><th>DNMT1 — the anchor slide 5's answer rests on</th></tr>
-<tr><td>effect size</td><td><b>&Delta; = +0.13</b>, 63% of 503 families up</td></tr>
-<tr><td>six ways of defining the TE set</td><td class="ok">same sign <b>6 of 6</b> — LINE +0.19, SINE +0.10, LTR +0.11, DNA +0.10</td></tr>
-<tr><td>drop any single library</td><td class="ok">+0.10 … +0.19, <b>sign never flips</b></td></tr>
-<tr><td>permute the sample labels</td><td class="ok">most extreme of the 3 admissible labellings, by 3.7&times;</td></tr>
-<tr><td>correlation-aware p</td><td><b>0.045</b></td></tr>
-</table>
-<p class="small">TRIM28's <i>whole-compartment</i> claim did not survive — a permuted labelling
-beat the real one — and is now an effect size only. Its per-feature AluY result is a different
-statistic and stands.</p>""",
-"""Have this ready: with two replicates per arm there are three label shufflings, so no p
-below 0.333 is reachable — a limit of the experiment, not the analysis. Anyone quoting a tiny
-p from a two-replicate design is quoting an artefact.""")
-
-slide("Result 4 — what it is for", "The graph tells you which experiment to run next",
-f"""<img class="fig" src="{img('fig_holdout_robustness.png')}" alt="anchor-dependence analysis">
-<p class="punch">Remove <b>SETDB1</b> and the derived layer collapses from <b>89 edges to
-8</b>. Remove <b>TRIM28</b> — the largest measured effect in the dataset — and <b>nothing
-changes</b>, because a scaffold has no writer annotation and cannot ground a mark. Only
-<b>four</b> edges support the entire inference layer.</p>
-<p class="punch ok-b">That turns &ldquo;we need more data&rdquo; into a named experiment:
-<b>more writers and erasers of these two marks</b>. We then checked — of 40 such enzymes in
-the graph, ENCODE has knockdowns for <b>three</b>, and we have used two. <b>The public well is
-nearly dry, and that is the result.</b></p>
-<p>Four things were also built, measured, and not shipped: a literature extractor at
-precision <b>0.109</b>, link prediction with no constructible held-out set, an interferon
-conclusion drawn from a reference holding 17% of the signature, and the p-values retracted on
-the previous slide.</p>""",
-"""The TRIM28-contributes-nothing result is counter-intuitive and worth a pause. It is also
-the honest answer to 'what would you do with more compute' — a named experiment, not a wish.""")
+slide("Result 4 — what it is for", "It tells you which experiment to run next",
+f"""<img class="fig" src="{img('fig_ev4_anchor.png')}" alt="anchor dependence">
+<p class="punch">Remove <b>TRIM28</b> — the largest measured effect in the dataset — and the
+reasoning is <b>unchanged</b>, because a scaffold has no writer annotation and cannot ground a
+mark. Remove <b>SETDB1</b> and <b>91% of the inference disappears</b>. Four edges support the
+entire derived layer.</p>
+<p class="punch ok-b">That converts &ldquo;we need more data&rdquo; into a named experiment:
+<b>more writers and erasers of these two marks</b>. We checked — of 40 such enzymes in the
+graph, ENCODE has knockdowns for <b>three</b>, and we have used two. <b>The public well is
+nearly dry, and that is the result.</b></p>""",
+"""More interesting than 'we have 9,366 edges'. A system that shows where its own reasoning is
+fragile, rather than hiding it, is the thing worth having.""")
 
 slide("Honestly", "What is weak, what compute would buy, and the ask",
 """<div class="two">
@@ -206,6 +183,63 @@ command.</p>""",
 """If asked why you did not run it: because the critical path is longer than the time, and
 naming that is better than a half-finished job. The pre-registration is the artefact proving
 the interpretation was fixed before the data was opened. Three-minute cut: slides 2, 3, 4, 5.""")
+
+slide("Appendix", "What a dynamical layer could add to knowledge-graph research",
+"""<p class="lede">Not specific to this project. Four things <b>no</b> knowledge graph can
+represent, in any domain — consequences of the representation, not gaps in the data.</p>
+<table class="t">
+<tr><th>What a graph cannot hold</th><th>Why</th><th>What it costs you</th></tr>
+<tr><td><b>time</b></td><td>forward chaining reaches a fixpoint, and a fixpoint has no clock</td><td>&ldquo;X silences Y&rdquo; cannot distinguish an immediate effect from one taking ten cell divisions</td></tr>
+<tr><td><b>position</b></td><td>a node is an identity, not a coordinate</td><td>one node here stands for up to 104,272 scattered loci with no spatial relation to each other</td></tr>
+<tr><td><b>dose</b></td><td>a signed edge has no magnitude axis</td><td>partial and complete loss of function are the same edge</td></tr>
+<tr><td><b>feedback</b></td><td>chaining to a fixpoint does not model a cycle — it <i>ignores</i> one</td><td>our cGAS path <b>is</b> a cycle, so its acyclic reading is known to be wrong</td></tr>
+</table>
+<p class="punch">A cellular automaton is local rules applied over time on a lattice. It is
+<b>natively</b> temporal, spatial, quantitative and cyclic — exactly the four axes a graph gives
+up in exchange for provenance.</p>
+<p class="small">The track record is not speculative: Turing 1952 (local rules generate pattern),
+Moe 1964 (a cardiac automaton reproducing fibrillation), Kauffman 1969 (random Boolean networks
+settling into few stable states), Li 2004 (yeast cell cycle), Anderson <i>Cell</i> 2006 (tumour
+morphology under microenvironmental selection), PhysiCell 2018.</p>""",
+"""Only open the appendix if asked. The framing: these are not missing data, they are the price
+of a representation that carries provenance. Naming the trade is stronger than pretending it is
+not there.""")
+
+slide("Appendix", "How the two would compose — and the conditions for believing it",
+"""<div class="two">
+<div class="card"><h3>The asymmetry, stated precisely</h3>
+<p class="small">The automaton supplies <b>structure with no referents</b>: its cells are not
+loci, its states are not molecules, nothing in it has a source, and nothing in it could be
+falsified by an experiment.</p>
+<p class="small">The graph supplies <b>referents with evidence and no dynamics</b>: every node is
+a named entity, every edge carries a citation and a tier, and none of it moves.</p>
+<p class="small ok-b">Complements, not competitors — the useful direction is the automaton
+proposing <i>phenomena to look for</i> and the graph naming <i>which entities could instantiate
+them</i>.</p></div>
+<div class="card"><h3>One case where it would earn its place</h3>
+<p class="small">A deterministic rule engine gives one direction per gene for all targets. It
+<b>cannot produce a split</b> — and our own cohort splits: DNMT3A-mutant carriers divide into
+RTE-high and RTE-low by <i>which</i> mutation they carry.</p>
+<p class="small">Bimodality from identical parameters is a generic property of bistable
+stochastic local-rule models. So it is a candidate <b>explanation</b> for a pattern the current
+model cannot generate at all.</p></div>
+</div>
+<p class="punch bad-b"><b>Three conditions, or it is decoration.</b> (1) Pre-commit the
+biological prediction <i>before</i> looking at the graph — in 9,366 relationships you will
+always find something analogous to any principle you bring. (2) The abstract side needs its own
+null model: &ldquo;recovery uses few dimensions&rdquo; may just be what search in low dimensions
+always looks like. (3) Simulated output carries a tier <b>below</b>
+<span class="mono">inferred</span> and can never ground a rule — using it to fill edges would be
+the link prediction we already refused, and a simulation does not create validation data.</p>
+<p class="punch ok-b">And a falsifier fixed in advance: the first buildable version predicts
+per-locus derepression depends on <b>distance to the nearest nucleation site and local
+density</b>, not on subfamily identity — refutable with a locus-level quantifier. <b>If it
+fails, the model is dropped, not tuned.</b> Design in
+<span class="mono">docs/CELLULAR_AUTOMATA.md</span>; nothing from it is implemented, and nothing
+from it is in any number on the previous slides.</p>""",
+"""If pressed on why it is not built: because the three conditions are not met, and a dynamical
+model that has not met them adds free parameters rather than knowledge. Saying that is the
+answer.""")
 
 CSS = """
 *{box-sizing:border-box}
