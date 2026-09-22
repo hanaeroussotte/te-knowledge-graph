@@ -1,0 +1,5 @@
+sample,experiment,target_gene,condition,biorep,fastq_url_1,fastq_url_2
+DNMT3B_rep1,ENCSR290GUQ,DNMT3B,kd,1,https://www.encodeproject.org/files/ENCFF738OGJ/@@download/ENCFF738OGJ.fastq.gz,https://www.encodeproject.org/files/ENCFF200MXH/@@download/ENCFF200MXH.fastq.gz
+DNMT3B_rep2,ENCSR290GUQ,DNMT3B,kd,2,https://www.encodeproject.org/files/ENCFF621IJR/@@download/ENCFF621IJR.fastq.gz,https://www.encodeproject.org/files/ENCFF805FZT/@@download/ENCFF805FZT.fastq.gz
+control_CRISPR_HepG2_rep1,ENCSR306EWE,control_CRISPR_HepG2,control,1,https://www.encodeproject.org/files/ENCFF141NOE/@@download/ENCFF141NOE.fastq.gz,https://www.encodeproject.org/files/ENCFF096NVC/@@download/ENCFF096NVC.fastq.gz
+control_CRISPR_HepG2_rep2,ENCSR306EWE,control_CRISPR_HepG2,control,2,https://www.encodeproject.org/files/ENCFF520IZB/@@download/ENCFF520IZB.fastq.gz,https://www.encodeproject.org/files/ENCFF922CIA/@@download/ENCFF922CIA.fastq.gz

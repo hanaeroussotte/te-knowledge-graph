@@ -75,6 +75,9 @@ deliberate attempt to kill it — see `PRIOR_ART.md` and the claim registry `CLA
 | `PRIOR_ART.md` / `CLAIMS.md` | the evidence behind every claim, and its status |
 | `EPISTEMOLOGY.md` | what the system is entitled to conclude, and the inference ladder |
 | `DEMO_SCRIPT.md` | the seven-question demo |
+| `DEMO_5MIN.md` | **the timed 5-minute pitch** |
+| `PREREGISTRATION.md` | the one prospective prediction, committed before the data was opened |
+| `ROBUSTNESS.md` | leave-one-anchor-out: what the reasoning layer actually rests on |
 | `EXECUTION_BRIEF.md` | plan, status and verification commands |
 | `PRIMER.md` / `MANUAL.md` | shorter explainer / operator's guide |
 | `CRITIQUE.md` | read before believing any of it |

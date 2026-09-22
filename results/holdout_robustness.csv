@@ -1,0 +1,5 @@
+anchor_removed,n_measured_dropped,derived,R1,R2,R3,R4,genes_answered
+SETDB1,8,8,1,2,3,2,8/10
+TRIM28,13,89,4,38,45,2,9/10
+DNMT1,6,83,3,36,42,2,7/10
+none,0,89,4,38,45,2,10/10
