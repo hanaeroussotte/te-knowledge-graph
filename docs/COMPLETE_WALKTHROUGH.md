@@ -18,6 +18,8 @@ equations and you should be able to defend each of them.
 | `WHY_THIS_IS_DIFFERENT.md` | What already existed, and which part is genuinely new |
 | **`LANDSCAPE.md`** | **The field and commercial landscape: atlases, quantifiers, companies, and the verification ledger** |
 | **`JURY_QUESTIONS.md`** | **41 questions you will be asked, with answers grounded in our numbers** |
+| **`DEMO_COMBINED.md`** | **The combined demo with the cellular-automata collaborator: the worked example, the mapping table, and the five-beat script** |
+| **`CELLULAR_AUTOMATA.md`** | **Why a cellular automaton is complementary, what to build, and what not to build** |
 | **`CONCEPTS_EXPLAINED.md`** | **What GO/STRING/Reactome/Complex Portal are; EM, Bayesian options, gene-set testing, proof trees, bootstrap — and where this analysis could be wrong** |
 | **`GRAPH_VALIDATION.md`** | **42 measured answers to "is this graph any good?", including the one defect it found** |
 | `PRIOR_ART.md` / `CLAIMS.md` | The evidence behind every claim; approved vs prohibited wording |
