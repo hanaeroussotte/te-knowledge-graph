@@ -222,3 +222,52 @@ would most reduce our uncertainty** — if five methyltransferases are predicted
 the same TE programme, you do not test all five, you test the one that best discriminates
 between the competing explanations. That turns a knowledge graph into an experimental-design
 engine, which is a considerably more valuable object than a database.
+
+---
+
+## 10. Two things this document was missing
+
+Added after the external review of 2026-09-22, which attacked this document's positioning
+directly. Both are corrections, not additions.
+
+### 10.1 TE atlases exist, and they are much larger than this
+
+Section 2 surveyed TE *quantification methods* and biomedical *knowledge graphs*, and never
+asked whether TE **atlases** exist. They do:
+
+| Resource | Scale | Reference |
+|---|---|---|
+| TE-SCALE | 1.3 M cells, 330 samples, 20 cancer types | [10.1093/nar/gkaf1235](https://doi.org/10.1093/nar/gkaf1235) |
+| TEITbase | TE-initiated transcripts, 33 cancer types | [10.1093/database/baag025](https://doi.org/10.1093/database/baag025) |
+| REdiscoverTE | >400 altered TE subfamilies across TCGA | [10.1038/s41467-019-13035-2](https://doi.org/10.1038/s41467-019-13035-2) |
+| ERVmap | locus-level human ERV expression | [10.1073/pnas.1814589115](https://doi.org/10.1073/pnas.1814589115) |
+
+Against 3 knockdowns in one cell line, any comparison of scale is embarrassing. So do not
+make one. The distinction is the **axis**, and it is real:
+
+> Those resources answer *where* TEs are active — which tissue, which tumour, which cell.
+> This asks *what perturbation changed them*, through what mechanism, and what to test next.
+> Observational versus interventional. Neither substitutes for the other, and the
+> perturbational axis is the emptier one.
+
+### 10.2 A company got here first, and was ahead on biology
+
+Section 2 did not search the commercial landscape at all. **ROME Therapeutics** built a
+company on the repeat genome — under the name *repeatomics* — with published science that is
+verifiable and, on the biology, well ahead of this project: the structures of human LINE-1
+ORF2p ([10.1038/s41586-023-06947-z](https://doi.org/10.1038/s41586-023-06947-z), *Nature*
+2024), a pan-cancer LINE-1 activity model with locus-level heterogeneity
+([10.1038/s41467-025-57271-1](https://doi.org/10.1038/s41467-025-57271-1)), and a
+genome-wide CRISPR screen for LINE-1 regulators.
+
+They had proprietary experimental biology and a drug-development programme. This has neither.
+What has not been found in their public work is this specific architecture: arbitrary public
+perturbation datasets re-analysed against the repeat genome, converted into signed
+provenance-bearing edges in one evidence schema, reasoned over with rules that keep
+measurement and inference visibly separate.
+
+That is a narrower claim than "nobody has done this", and it is the one that is true.
+`LANDSCAPE.md` §6 carries the other companies named, all tagged as unverified from this
+environment — the sandbox reaches literature databases, not company websites, and a
+confident comparison to a platform whose description cannot be checked would be exactly the
+kind of claim this project exists to avoid making.

@@ -256,6 +256,46 @@ not, *then* the computation. That ordering is the scientific logic.
 
 ---
 
+## Four more you are now likely to get
+
+Added after the external review of 2026-09-22. `JURY_QUESTIONS.md` has 41 with answers;
+these four are the ones that would have caught the deck as it stood.
+
+**"There are already TE atlases — TE-SCALE, TEITbase, REdiscoverTE. How is this different?"**
+> They're much larger than this and they answer a different question: **where** TEs are
+> active — which tissue, which tumour, which cell. This asks **what perturbation changed
+> them**, through what mechanism, and what to test next. Observational versus
+> interventional. TE-SCALE has 1.3 million cells; I have three knockdowns. I'm not claiming
+> scale, I'm claiming a different axis — and the perturbational one is emptier.
+
+**"ROME Therapeutics did this. They raised real money and they shut down."**
+> ROME is the closest industrial precedent and they were ahead of me on biology — they
+> solved the LINE-1 ORF2p structure in *Nature* and built reverse-transcriptase inhibitors.
+> I'm not claiming more depth than a drug company. What I haven't found in their public work
+> is this architecture: public perturbation data re-analysed against the repeat genome into
+> one evidence schema with inspectable reasoning. And a company winding down doesn't
+> establish that the science failed.
+
+**"There's a published benchmark of 16 TE quantification tools. Did you use the best one?"**
+> I used a mature subfamily-level method because the inference layer consumes subfamily
+> resolution, not because it won a benchmark. She et al. 2026 is the benchmark and it's on
+> my reading list. The specific challenge is MAJEC, which reports exon-overlap contamination
+> down from over 40% to about 5% — and **r = 0.987 subfamily-level concordance with
+> TEtranscripts**, which is why I don't expect my subfamily conclusions to be
+> quantifier-dependent. The head-to-head is pre-registered with a retract-if-sign-flips row
+> and deliberately not yet run.
+
+**"Why Modal rather than Nextflow on AWS or your institution's cluster?"**
+> Nextflow or Snakemake could absolutely run this pipeline, and for a production genomics
+> facility with a stable Slurm stack they might be the better answer. Modal's advantage here
+> isn't capability — it's that an agent can decide at runtime what computation is needed,
+> acquire the compute, fan out across libraries, reuse a shared reference volume and shut
+> down, with nobody managing infrastructure. For an AI-native exploratory system that's a
+> real difference. For a stable production pipeline it isn't. Say both halves — the answer
+> is more credible than a sales pitch.
+
+---
+
 ## Five things never to say
 
 From `CLAIMS.md` §0, which is the authority. Check it before you go on.
@@ -267,6 +307,7 @@ From `CLAIMS.md` §0, which is the authority. Check it before you go on.
 | "Our TE quantification method" | "We use TEcount from TEtranscripts" |
 | "The engine proves / derives causally" | "The engine predicts — here's the proof tree" |
 | "This is the TE atlas" | "A perturbational TE atlas is the long-term object; this is an architecture with a worked example" |
+| Citing a September 2026 *GeroScience* paper on DNMT3A vs TET2 retroelements | It could not be found in five searches. Cite Scheller et al., *Nat Cancer* 2021 (10.1038/s43018-021-00213-9) for the DNMT3A arm instead |
 
 ---
 

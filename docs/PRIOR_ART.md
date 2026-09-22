@@ -162,3 +162,115 @@ TE derepression. If cGAS also acts upstream in chromatin control, then the TE �
 inflammation path contains feedback, and a directed acyclic reading of it is wrong. The
 `EPISTEMOLOGY.md` ladder and the R6 rule are written so this is expressible rather than
 assumed away, and it is listed as an open structural issue in `CRITIQUE.md`.
+
+---
+
+# Second pass: external review, 2026-09-22
+
+The first pass (above) was run by the same agent that built the project, which is a
+structural conflict of interest no amount of adversarial phrasing removes. On 2026-09-22 the
+completed walkthrough was given to a **separate deep-research system** and it was asked to
+attack the positioning. It found prior art this pass had missed, in two areas that were not
+searched at all the first time.
+
+The full landscape write-up is `LANDSCAPE.md`. The machine-readable rows are in
+`data/graph/prior_art.csv` (claim ids `N1b`–`N15c`, `S1`, `S2`, `X1`). What follows is what
+changed.
+
+## Search method for the second pass
+
+| | |
+|---|---|
+| **Date** | 2026-09-22 |
+| **Sources** | PubMed E-utilities (via connector); Europe PMC REST |
+| **Method** | Every factual assertion in the review was re-searched from scratch. The review's own citations were **not visible** — it named papers, years and numbers with no resolvable identifiers — so nothing in it was accepted without an independent hit |
+| **Outcome** | **29 verified, 1 not found, 6 unverifiable from this environment** |
+
+## What the first pass missed, and why
+
+**Two entire categories were never searched.**
+
+1. **TE expression atlases.** The first pass searched for TE *knowledge graphs* and TE
+   *quantification methods*, and never asked whether TE *atlases* exist. They do, and they
+   are large: TE-SCALE (1.3 M cells, 330 samples, 20 cancer types,
+   [10.1093/nar/gkaf1235](https://doi.org/10.1093/nar/gkaf1235)); TEITbase (TE-initiated
+   transcripts across 33 cancer types,
+   [10.1093/database/baag025](https://doi.org/10.1093/database/baag025)); REdiscoverTE across
+   TCGA with over 400 altered TE subfamilies
+   ([10.1038/s41467-019-13035-2](https://doi.org/10.1038/s41467-019-13035-2)); ERVmap
+   ([10.1073/pnas.1814589115](https://doi.org/10.1073/pnas.1814589115)).
+   **Consequence:** the phrase the audit already bans is now banned for a documented reason,
+   and the surviving distinction is axis-based — those atlases answer *where* TEs are active,
+   this project asks *what perturbation changed them*.
+
+2. **The commercial landscape.** Not searched at all. **ROME Therapeutics** built a company
+   on the repeat genome with published science that is verifiable and ahead of this project
+   on biology: LINE-1 ORF2p structures
+   ([10.1038/s41586-023-06947-z](https://doi.org/10.1038/s41586-023-06947-z), *Nature* 2024),
+   a pan-cancer LINE-1 activity model with locus heterogeneity
+   ([10.1038/s41467-025-57271-1](https://doi.org/10.1038/s41467-025-57271-1)), and the
+   genome-wide L1 regulator screen already cited above. Several other companies were named;
+   none of the corporate claims can be checked from this environment, and they are tagged
+   accordingly in `LANDSCAPE.md` §6.
+
+**Two claims narrowed further.**
+
+- **D1 (knowledge graphs).** Already narrowed once. Two closer precedents now exist in the
+  record: **TEKRABber** ([10.7554/elife.103608](https://doi.org/10.7554/elife.103608)), which
+  builds TE–KRAB-ZFP networks in human brain evolution, and **PlaNC-TE**
+  ([10.1093/database/bay078](https://doi.org/10.1093/database/bay078)), an ncRNA–TE
+  knowledgebase in plants. TEKRABber is closer in subject matter than ICEO was. The narrowed
+  wording survives — PrimeKG ([10.1038/s41597-023-01960-3](https://doi.org/10.1038/s41597-023-01960-3))
+  and Hetionet ([10.7554/elife.26726](https://doi.org/10.7554/elife.26726)) genuinely have no
+  TE node type — but "nobody builds TE networks" would now be false twice over.
+- **Subfamily resolution.** Defended upward (aggregating loses signal, measured). The review
+  established that it must be defended **downward** too: locus-resolution measurement is
+  established (CELLO-seq, [10.1038/s41587-021-01093-1](https://doi.org/10.1038/s41587-021-01093-1)),
+  locus-level annotation exists at scale (2,596 long-read datasets, 21 organs, 71 cell lines,
+  [10.1186/s44342-025-00048-1](https://doi.org/10.1186/s44342-025-00048-1)), and two 2026
+  preprints push further. The ontology roadmap in `LANDSCAPE.md` §1.1 is the response.
+
+**One new hazard.** There is now a published benchmark of **16** TE RNA quantification tools
+(She J, Wang J, Yang E., [10.1093/gpbjnl/qzag044](https://doi.org/10.1093/gpbjnl/qzag044)).
+"Which quantifier and why" is no longer an open question in the field; it has an answer sheet.
+
+## One claim did not survive verification
+
+The review asserted that a **September 2026 *GeroScience* article** compares retroelement
+deregulation between DNMT3A- and TET2-mutant clonal haematopoiesis — direct recent support
+for the project's own hypothesis.
+
+**It was not found.** Five searches (PubMed `GeroScience retroelement`,
+`GeroScience transposable element`, `DNMT3A TET2 retroelement`,
+`retroelement deregulation clonal hematopoiesis`; Europe PMC `DNMT3A AND TET2 AND
+(retroelement OR retrotransposon) AND PUB_YEAR:2026`) returned no matching paper. The
+*GeroScience* TE papers that do exist concern canine LINE-1 methylation with age,
+Alzheimer's/cognitive impairment, and Alu overexpression in fibroblasts. Recorded as `X1`
+with verdict `NOT_FOUND_IN_PRIOR_ART_SEARCH`.
+
+**The single claim most favourable to this project's hypothesis is the one that did not
+resolve.** That is worth stating in exactly those terms, because it is the argument for the
+citation gate in one sentence.
+
+**What was found instead is better than what was claimed.** Two verified papers, neither in
+the first pass:
+
+- **Scheller et al., *Nature Cancer* 2021**
+  ([10.1038/s43018-021-00213-9](https://doi.org/10.1038/s43018-021-00213-9), PMID 35122024) —
+  hotspot **DNMT3A** mutations in clonal haematopoiesis and AML sensitise cells to azacytidine
+  **via a viral mimicry response**. Peer-reviewed, CH-specific, and direct support for the
+  DNMT3A arm of `HYPOTHESIS_DNMT3A_TET2.md`. It says nothing about the TET2 contrast, and it
+  is not a measurement made here.
+- **Mutant ASXL1-BAP1-EHMT complex**, *PNAS* 2025
+  ([10.1073/pnas.2413302121](https://doi.org/10.1073/pnas.2413302121), PMID 39752521) — a
+  different CH driver converging on heterochromatin dysfunction. ASXL1 is already in the CH
+  gene set; this is a second mechanistic entry point and a natural next perturbation target.
+
+## What the second pass did not change
+
+The differentiation that survived the first attack survived the second one, and the wording
+in `CLAIMS.md` D8/D12 stands: signed perturbation edges, four evidence layers in one graph,
+inspectable mechanistic reasoning with proof trees, re-mining public perturbation data for
+TE phenotypes, and refusing when the evidence is insufficient. The review's independent
+conclusion was that it did not find a public system combining those pieces — which is a
+second `NOT_FOUND`, from a different searcher, and still not proof of absence.

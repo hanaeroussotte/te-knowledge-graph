@@ -156,6 +156,10 @@ the result describes the chromosome selection rather than the biology. `score_si
 refuses to interpret a signature below `--min-coverage` for that reason.
 
 `docs/CRITIQUE.md` has the full limitation list and five concrete falsifiers.
+`docs/LANDSCAPE.md` places the project against the existing TE atlases, the 16 benchmarked
+quantifiers, the perturbation-prediction models and the companies in this space, with a
+verification ledger for every claim in it. `docs/JURY_QUESTIONS.md` answers 41 likely
+questions.
 
 ## A note on the shipped graph vs the figures
 

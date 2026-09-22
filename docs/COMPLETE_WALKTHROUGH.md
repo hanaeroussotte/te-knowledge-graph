@@ -16,6 +16,8 @@ equations and you should be able to defend each of them.
 | **`TOMORROW.md`** | **What do I actually do on the day, hour by hour** |
 | **`PRESENTATION_GUIDE.md`** | **Every slide explained: what to say, and what each number means** |
 | `WHY_THIS_IS_DIFFERENT.md` | What already existed, and which part is genuinely new |
+| **`LANDSCAPE.md`** | **The field and commercial landscape: atlases, quantifiers, companies, and the verification ledger** |
+| **`JURY_QUESTIONS.md`** | **41 questions you will be asked, with answers grounded in our numbers** |
 | `PRIOR_ART.md` / `CLAIMS.md` | The evidence behind every claim; approved vs prohibited wording |
 | `EPISTEMOLOGY.md` | What the system is entitled to conclude, and the inference ladder |
 | `ROBUSTNESS.md` | How much does the reasoning layer actually rest on? |
@@ -31,12 +33,17 @@ equations and you should be able to defend each of them.
 | `COMPUTE.md` / `modal_setup.md` | What belongs in the cloud and what does not |
 | `RUNBOOK.md` | Operational: reruns |
 
-**Sections 17–21 are newer than 1–16.** They cover the prior-art work, context
-inheritance, the robustness result, the prospective test and the pre-push gate. Sections
-1–16 keep their original numbering because the text cross-references them (`§8.7` and so
-on), so the new material is appended rather than interleaved. If you are reading straight
-through, read 1–16 then 17–21; nothing in 17–21 contradicts what comes before, but §17
-does narrow one claim made in §3.
+**Sections 17–22 are newer than 1–16.** They cover the prior-art work, context
+inheritance, the robustness result, the prospective test, the pre-push gate and the external
+review. Sections 1–16 keep their original numbering because the text cross-references them
+(`§8.7` and so on), so the new material is appended rather than interleaved. If you are
+reading straight through, read 1–16 then 17–22; nothing in 17–22 contradicts what comes
+before, but §17 narrows one claim made in §3, and **§22 narrows two more** — including the
+positioning against existing TE atlases.
+
+**If you read only one of the later sections, read §22.4.** It is the episode where a
+flattering citation from an external reviewer failed to resolve, and it is the clearest
+demonstration in the project of why every claim here carries an identifier.
 
 ---
 
@@ -1737,7 +1744,142 @@ rather than quietly passed.
 
 ---
 
-## 22. Glossary
+## 22. The external review, and what verification did to it
+
+On 2026-09-22 the finished project — this document, in fact — was handed to a **separate
+deep-research system** and it was asked to attack the positioning using the literature and
+the commercial landscape. This section records what came back, because the result changed
+several claims and one part of it is the single best illustration in the whole project of
+why the citation gate exists.
+
+The full landscape write-up is `docs/LANDSCAPE.md`. The 41 questions it generated, with
+answers, are `docs/JURY_QUESTIONS.md`.
+
+### 22.1 Why an external review was worth having
+
+Section 17 describes the internal prior-art gate: 23 queries, 279 abstracts, 198 full texts,
+and five novelty claims retracted. It was run adversarially and it worked. But it was run
+**by the same agent that built the project**, and that is a structural conflict of interest
+no amount of adversarial phrasing removes. You cannot fully audit your own positioning,
+because the searches you fail to think of are exactly the ones your blind spots predict.
+
+That turned out to be literally true. The second pass found **two entire categories the
+first pass never searched.**
+
+### 22.2 The two blind spots
+
+**TE expression atlases.** The first pass searched for TE knowledge graphs and TE
+quantification tools. It never asked whether TE *atlases* exist. They do, and they dwarf
+this project: TE-SCALE holds 1.3 million cells across 330 samples and 20 cancer types
+([10.1093/nar/gkaf1235](https://doi.org/10.1093/nar/gkaf1235)); TEITbase covers TE-initiated
+transcripts across 33 cancer types
+([10.1093/database/baag025](https://doi.org/10.1093/database/baag025)); REdiscoverTE found
+over 400 altered TE subfamilies across TCGA
+([10.1038/s41467-019-13035-2](https://doi.org/10.1038/s41467-019-13035-2)).
+
+Against three knockdowns in one cell line, no comparison of scale is survivable. The
+distinction that *is* survivable is the axis: those resources answer **where** TEs are
+active; this one asks **what perturbation changed them**. Observational versus
+interventional. The audit already banned calling this project "the TE atlas"; now there is a
+documented reason rather than a stylistic preference.
+
+**The commercial landscape.** Not searched at all — a strange omission for a hackathon
+judged partly by people who fund companies. **ROME Therapeutics** built a company on the
+repeat genome and was ahead of this project on biology: LINE-1 ORF2p structures in *Nature*
+2024 ([10.1038/s41586-023-06947-z](https://doi.org/10.1038/s41586-023-06947-z)), a pan-cancer
+LINE-1 activity model with locus heterogeneity
+([10.1038/s41467-025-57271-1](https://doi.org/10.1038/s41467-025-57271-1)), reverse
+transcriptase inhibitors, and the genome-wide L1 regulator screen already cited in section
+17. The right posture toward ROME is respect and a narrow claim — see `LANDSCAPE.md` §6.1
+for the exact wording, including the only correct answer to "didn't they shut down?".
+
+### 22.3 The third correction: we defended the resolution in only one direction
+
+Sections 8 and 11 defend subfamily resolution **upward** — aggregating to family or class
+measurably destroys signal (AluY padj 0.0005 versus pooled `Alu:SINE` not significant).
+That defence is real and it is measured. But the field is moving **downward**, to individual
+loci, and a defence that faces one way is not a defence. Locus-specific single-cell
+measurement is established (CELLO-seq,
+[10.1038/s41587-021-01093-1](https://doi.org/10.1038/s41587-021-01093-1)); locus-level
+annotation exists across 2,596 long-read datasets, 21 organs and 71 cell lines
+([10.1186/s44342-025-00048-1](https://doi.org/10.1186/s44342-025-00048-1)). `TE_RESOLUTION.md`
+§8 now carries the five-level ontology this implies, marked as roadmap, because `TELocus` and
+`TETranscript` **do not exist** in the built schema.
+
+And there is now a published benchmark of **16** TE quantification tools
+([10.1093/gpbjnl/qzag044](https://doi.org/10.1093/gpbjnl/qzag044)). "Which quantifier and
+why" has an answer sheet in the literature. Read it before presenting.
+
+### 22.4 The part worth reading twice
+
+The review arrived with citation markers whose **targets were not visible**. It named
+papers, journals, years and specific numbers, with no resolvable DOIs or PMIDs.
+
+This repository has a rule for exactly that situation (`CLAIMS.md`): a claim without a
+resolvable identifier is not a claim. So every factual assertion in it was re-searched from
+scratch against PubMed and Europe PMC. That took one afternoon and produced:
+
+| | |
+|---|---|
+| **Verified** | 29 — paper exists, identifier resolves, and where a number was quoted it was confirmed in the abstract |
+| **Not found** | 1 |
+| **Unverifiable here** | 6 — all corporate claims; the sandbox reaches literature databases, not company websites |
+
+**The one that was not found was the one most favourable to this project.**
+
+The review stated that a September 2026 *GeroScience* article compares retroelement
+deregulation between DNMT3A- and TET2-mutant clonal haematopoiesis — that is, direct, recent,
+independent support for the exact hypothesis in `HYPOTHESIS_DNMT3A_TET2.md`. Five searches
+across PubMed and Europe PMC found no such paper. The *GeroScience* TE papers that do exist
+concern canine LINE-1 methylation with age, Alzheimer's disease, and Alu overexpression in
+fibroblasts. It is recorded as `X1` in `data/graph/prior_art.csv` with verdict
+`NOT_FOUND_IN_PRIOR_ART_SEARCH`, and it is **not cited anywhere**.
+
+Sit with the ordering for a moment. Twenty-nine claims verified, most of them
+*inconvenient* — atlases that dwarf us, a company that got there first, a benchmark that
+makes our tool choice defensible-but-examined. One claim did not resolve, and it was the
+flattering one. Nothing here suggests bad faith by the reviewing system; generative systems
+produce plausible citations, and plausible-and-flattering is the most dangerous combination
+there is, because it is the one a motivated reader stops checking.
+
+**That is the argument for the citation gate in a single episode.** A project that had
+accepted the review as authority rather than evidence would now have a slide citing a paper
+that does not appear to exist, supporting the claim it most wanted to make, in front of
+judges who can search.
+
+### 22.5 What verification found instead, which is better
+
+Two real papers, neither in the first pass, both now in the record:
+
+- **Scheller et al., *Nature Cancer* 2021**
+  ([10.1038/s43018-021-00213-9](https://doi.org/10.1038/s43018-021-00213-9), PMID 35122024) —
+  hotspot **DNMT3A** mutations in clonal haematopoiesis and AML sensitise cells to
+  azacytidine **via a viral mimicry response**. Peer-reviewed, CH-specific, and the closest
+  genuine support that exists for the DNMT3A arm of the hypothesis. It says nothing about the
+  TET2 contrast, and it is not a measurement made here — but it is real, and it resolves.
+- **Mutant ASXL1-BAP1-EHMT complex**, *PNAS* 2025
+  ([10.1073/pnas.2413302121](https://doi.org/10.1073/pnas.2413302121), PMID 39752521) — a
+  different clonal-haematopoiesis driver converging on heterochromatin dysfunction. ASXL1 is
+  already in the CH gene set, so this is a second mechanistic entry point into the same axis
+  and an obvious next perturbation target.
+
+So the net effect of *not* trusting the review was to lose one paper that could not be found
+and gain two that could. That is the whole case for the method, and it cost an afternoon.
+
+### 22.6 What did not change
+
+The differentiation that survived the first attack survived the second: signed perturbation
+edges, four evidence layers in one graph, inspectable mechanistic reasoning with proof trees,
+re-mining public perturbation data for TE phenotypes their authors never measured, and
+refusing when the evidence is insufficient. The reviewing system independently reported not
+finding a public system that combines those pieces.
+
+That is a second `NOT_FOUND` from a different searcher. It is **still not proof of absence**,
+and `CLAIMS.md` D12 says so in the same sentence as the claim.
+
+---
+
+## 23. Glossary
 
 | Term | Meaning |
 |---|---|

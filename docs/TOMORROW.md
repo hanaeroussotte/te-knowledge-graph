@@ -272,11 +272,43 @@ show a confirmation, and almost nobody shows the other thing.
 
 ## Part 4 — The talk
 
-### 4.1 Read these two, in this order
+### 4.1 Read these three, in this order
 
 1. `docs/DEMO_5MIN.md` — the timed script, four beats, 4:40.
 2. `docs/PRESENTATION_GUIDE.md` — every slide explained, with the number you must be able
-   to defend and the four questions you will definitely be asked.
+   to defend and the eight questions you will definitely be asked.
+3. `docs/JURY_QUESTIONS.md` — 41 questions with answers. Don't memorise it; read it once so
+   nothing in it is a surprise, and note which three you'd currently fumble.
+
+### 4.1b If you have 30 spare minutes, read one paper
+
+Not ten. One, and this one:
+
+**Ho JSY, Douse CH, Marazzi I. "Transposable element DNA and RNA: Drivers of gene
+expression, evolution, and disease." *Cell* 2026.**
+[10.1016/j.cell.2026.05.003](https://doi.org/10.1016/j.cell.2026.05.003)
+
+It is the current conceptual review of the field and it frames the locus-level direction,
+which is the one technical question about your design that you cannot currently answer from
+your own data. If a judge is a TE person, this is the paper they have read.
+
+If you get a second 30 minutes, the next most useful is the 16-tool quantification benchmark
+(She J, Wang J, Yang E., *Genomics Proteomics Bioinformatics* 2026,
+[10.1093/gpbjnl/qzag044](https://doi.org/10.1093/gpbjnl/qzag044)), because "which quantifier
+and why" now has a published answer sheet and you should know what it says.
+
+### 4.1c Three names to recognise instantly
+
+You do not need to know these deeply. You need to not look blank.
+
+| Name | One line | If they bring it up |
+|---|---|---|
+| **TE-SCALE / TEITbase / REdiscoverTE** | Existing TE expression atlases, much larger than yours | "Those answer *where* TEs are active. I'm asking *what perturbation changed them*." |
+| **ROME Therapeutics** | A company built on the repeat genome; solved the LINE-1 ORF2p structure | "Closest industrial precedent, and ahead of me on biology. What I haven't found in their public work is this architecture." |
+| **GEARS / TxPert** | KG + machine learning to predict perturbation responses | "Their output space is gene expression, not TEs. TxPert on a TE-aware matrix would be a strong competitor — closable gap." |
+
+`docs/LANDSCAPE.md` has the full picture if you want it, including which of those claims are
+verified and which are second-hand.
 
 ### 4.2 The three things to have completely fluent
 

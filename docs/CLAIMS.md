@@ -26,6 +26,14 @@ body-text search over the open-access subset, plus one web search for a preprint
 searched **2026-09-20**; 279 abstracts screened and 198 open-access full texts read at
 sentence level. A negative here means *not located by this search*, never *does not exist*.
 
+**Second, independent pass — 2026-09-22.** The completed project was reviewed by a separate
+deep-research system asked to attack the positioning, and every factual assertion it made
+was then re-searched from scratch against PubMed and Europe PMC because its own citations
+carried no resolvable identifiers: **29 verified, 1 not found, 6 unverifiable from this
+environment.** It found two categories the first pass never searched — existing TE atlases
+and the commercial landscape — which produced D13–D17. See `LANDSCAPE.md` and
+`PRIOR_ART.md` § "Second pass".
+
 ## Status vocabulary
 
 | Status | Meaning |
@@ -59,6 +67,10 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | W9 | "TxPert plus a TE-aware expression matrix would be a strong competitor — a closable gap." | "Nothing else can do this." |
 | W10 | "cGAS also acts upstream in chromatin control, so this path has feedback and our drawing is a simplification." | "TE derepression → cGAS → interferon" as a settled directed pathway. |
 | W11 | "Three components were built, measured and not shipped." | Any mention of link prediction as a feature. |
+| W12 | "TE atlases exist and are large — TE-SCALE, TEITbase, REdiscoverTE. They answer *where* TEs are active; we ask *what perturbation changed them*." | "There's no TE atlas." / "the first TE atlas" |
+| W13 | "ROME Therapeutics is the closest industrial precedent and was ahead of us on biology — they solved the ORF2p structure. What I haven't found in their public work is this architecture." | Any comparison implying we have more depth than ROME, or that its closure means the science failed. |
+| W14 | "We work at subfamily level because aggregating upward measurably loses signal; the field is moving to loci and the ontology is split to permit it." | "Subfamily is the right level." / any implication `TELocus` exists as a node type. |
+| W15 | "A September 2026 paper was cited to us as supporting this; five searches did not find it, so it isn't in the record." | Citing the unlocated *GeroScience* DNMT3A/TET2 retroelement paper as support. |
 
 ---
 
@@ -71,6 +83,9 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | A3 | cGAS has a role upstream of TE control, not only downstream as a sensor: cGAS-deficient mice show LINE-1 derepression and inflammatory ageing | `ESTABLISHED` | Nat Aging 2026, 10.1038/s43587-026-01206-y |
 | A4 | Neither DNMT3A nor TET2 has a knockdown RNA-seq experiment in ENCODE | `SUPPORTED_BY_THIS_BUILD` | `encode_kd_inventory.csv`, 1,114 experiments / 570 targets |
 | A5 | TET2 is not annotated to any GO transposition or TE-silencing term | `SUPPORTED_BY_THIS_BUILD` | QuickGO query in `build_graph.py` |
+| A6 | Hotspot DNMT3A mutations in clonal haematopoiesis and AML sensitise cells to azacytidine via a viral mimicry response | `ESTABLISHED` | Scheller et al., Nat Cancer 2021, 10.1038/s43018-021-00213-9 (PMID 35122024). The closest real support for the DNMT3A arm of C3; says nothing about the TET2 contrast |
+| A7 | TE regulation is strongly cell-type-specific: 456 cell-type–histone–TE triplets show strong cell-type-specific enrichment | `ESTABLISHED` | Hyacinthe & Bourque, Nat Commun 2026, 10.1038/s41467-026-74920-1. Note the unit is *triplets* |
+| A8 | Silencing of LINE-1 is a selective dependency of myeloid leukaemia (MPP8/HUSH) | `ESTABLISHED` | Nat Genet 2021, 10.1038/s41588-021-00829-8 |
 
 ## B. Claims about our measurements
 
@@ -102,7 +117,7 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | # | Claim | Status | Notes |
 |---|---|---|---|
 | D1 | "No public knowledge graph has TEs" | `RETRACTED_BY_US` | Replaced by D2 |
-| D2 | Major general-purpose human biomedical knowledge graphs (PrimeKG, Hetionet, Open Targets) do not model TE families or loci as first-class entities, making TE-specific perturbational reasoning hard to express directly | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Nearest precedent is ICEO, an ontology for *bacterial* mobile elements (10.1038/s41597-021-01112-5) |
+| D2 | Major general-purpose human biomedical knowledge graphs (PrimeKG, Hetionet, Open Targets) do not model TE families or loci as first-class entities, making TE-specific perturbational reasoning hard to express directly | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Schemas checked: PrimeKG 10.1038/s41597-023-01960-3 (10 node types), Hetionet 10.7554/elife.26726 (11 metanodes). **Closer precedents than ICEO now in the record:** TEKRABber builds TE–KRAB-ZFP networks (10.7554/elife.103608) and PlaNC-TE is an ncRNA–TE knowledgebase in plants (10.1093/database/bay078). "Nobody builds TE networks" would be false twice over |
 | D3 | "Nobody has systematically perturbed genes to find TE regulators" | `RETRACTED_BY_US` | Flatly false — C. elegans 2003, Drosophila 2013, human L1 CRISPR screens Nature 2018, LINE-1 CRISPR 2025 |
 | D4 | Re-mining perturbation experiments *run for other purposes* for TE phenotypes their authors did not measure | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Narrow. Existing screens are prospective and TE-designed, usually reporter-based and L1-focused |
 | D5 | TE quantification handling multi-mapping reads is our contribution | `RETRACTED_BY_US` | It is TEtranscripts/TEcount (10.1093/bioinformatics/btv422). Alternatives: Telescope, SQuIRE, SalmonTE, TEspeX, MATES, IRescue, MAJEC |
@@ -112,7 +127,13 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | D9 | Knowledge-graph-driven prediction of perturbation responses is unexplored | `RETRACTED_BY_US` | TxPert (10.1038/s41587-026-03113-4) and at least three other KG-based perturbation predictors |
 | D10 | TxPert plus a TE-aware expression matrix would be a strong competitor | `HYPOTHESIS` | TxPert's published output space is conventional transcriptomic response; it does not model TEs. The gap is closable, not closed |
 | D11 | A reduced/targeted reference set is a novel idea | `RETRACTED_BY_US` | Targeted panels are routine. Our contribution is the coverage guard and the reference-perturbation control around one |
-| D12 | The surviving positioning: **an evidence-traceable perturbational reasoning system for transposable-element regulation** | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Combination claim: re-analysis of perturbation data for TE effects + signed provenance-tracked edges + mechanism rules + inspectable proof trees + explicit refusal. Each component has precedent; the assembly did not surface |
+| D12 | The surviving positioning: **an evidence-traceable perturbational reasoning system for transposable-element regulation** | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Combination claim: re-analysis of perturbation data for TE effects + signed provenance-tracked edges + mechanism rules + inspectable proof trees + explicit refusal. Each component has precedent; the assembly did not surface. **Independently re-attacked 2026-09-22** by a separate deep-research system, which also did not locate a system combining these pieces — a second `NOT_FOUND` from a different searcher, still not proof of absence |
+| D13 | "This is the TE atlas" / no TE atlas exists | `RETRACTED_BY_US` | TE-SCALE (1.3 M cells / 330 samples / 20 cancer types, 10.1093/nar/gkaf1235), TEITbase (33 cancer types, 10.1093/database/baag025), REdiscoverTE (>400 subfamilies across TCGA, 10.1038/s41467-019-13035-2), ERVmap (10.1073/pnas.1814589115). Banned by `tests/audit_claims.py` |
+| D14 | Existing TE atlases answer a **different question** — *where* TEs are active, not *what perturbation changed them* | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | The distinction is axis-based and defensible. It is not a claim of superiority and neither object substitutes for the other |
+| D15 | Locus-level TE measurement is out of reach, or subfamily is the field's working resolution | `RETRACTED_BY_US` | CELLO-seq (10.1038/s41587-021-01093-1), locus annotation across 2,596 long-read datasets (10.1186/s44342-025-00048-1), TEsingle and TEscape preprints 2026. Our subfamily choice is a power argument at our depth, not a claim about the field |
+| D16 | The choice of TE quantifier is an open question in the field | `RETRACTED_BY_US` | 16 tools benchmarked with guidelines: She J, Wang J, Yang E., 10.1093/gpbjnl/qzag044 |
+| D17 | No company has built repeat-genome analytics | `RETRACTED_BY_US` | ROME Therapeutics: ORF2p structures 10.1038/s41586-023-06947-z, pan-cancer L1 model 10.1038/s41467-025-57271-1, genome-wide L1 regulator screen 10.1186/s13100-025-00386-5. Corporate detail unverifiable from this environment — see `LANDSCAPE.md` §6 |
+| D18 | A *GeroScience* paper (Sept 2026) gives recent direct support to the DNMT3A/TET2 hypothesis | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Asserted by the external review without a resolvable identifier; five searches found no such paper (`prior_art.csv` row `X1`). **Must not be cited.** Real support that *was* found: Scheller et al., Nat Cancer 2021, 10.1038/s43018-021-00213-9 |
 
 ## E. Claims about the system's behaviour
 

@@ -149,3 +149,57 @@ inherited by silence. The flag is what forces that.
 `NOT_TESTED`. Nothing in this document has been run. It is the design the next build should
 target, recorded so the current subfamily choice reads as a scoped decision with an expiry
 condition rather than an oversight.
+
+---
+
+## 8. The direction this document originally missed
+
+Sections 1–7 defend subfamily resolution **upward** — against aggregating to family and
+class, which was measured and demonstrably loses signal. The external review of 2026-09-22
+pointed out that the more dangerous direction is **downward**, and it was right: the field
+is moving to loci, and a defence that only faces one way is not a defence.
+
+The evidence, all verified (`LANDSCAPE.md` §1 carries the full citations):
+
+- Locus-specific single-cell measurement is established — CELLO-seq, *Nat Biotechnol* 2021,
+  [10.1038/s41587-021-01093-1](https://doi.org/10.1038/s41587-021-01093-1).
+- Locus-level annotation exists at scale — 2,596 long-read datasets, 21 organs, 71 cell
+  lines, [10.1186/s44342-025-00048-1](https://doi.org/10.1186/s44342-025-00048-1).
+- Two 2026 preprints go further still: TEsingle
+  ([10.64898/2026.03.19.712984](https://doi.org/10.64898/2026.03.19.712984)) and TEscape
+  ([10.64898/2026.07.08.737305](https://doi.org/10.64898/2026.07.08.737305)).
+- And the reason it matters biologically: copies within one subfamily do not behave alike.
+  A VEXAS preprint reports CRISPRi against **two individual L1 loci** reversing
+  disease-associated HSC phenotypes
+  ([10.64898/2026.07.31.742092](https://doi.org/10.64898/2026.07.31.742092)) — which, if it
+  holds, is a phenotype no subfamily-level measurement could ever have located.
+
+### 8.1 The full ontology
+
+```
+TEClass  →  TEFamily  →  TESubfamily  →  TELocus  →  TETranscript
+ SINE        Alu           AluY          one of      a specific
+                                      104,272 copies  TE-initiated
+                                                       transcript
+```
+
+**Evidence attaches at whichever level the experiment supports**, and only there. A TEcount
+measurement supports a `TESubfamily` node; a Telescope or CELLO-seq measurement supports a
+`TELocus` node; a long-read transcript assembly supports `TETranscript`. Nothing propagates
+downward — a subfamily-level effect is not evidence about any individual copy, which is
+precisely the inferential error locus-level work exists to prevent.
+
+`TEFamily` and `TESubfamily` are already separate node types in the built schema, for the
+measured reason in §2. **`TELocus` and `TETranscript` do not exist.** They are roadmap. The
+schema is split in a way that permits adding them without migration of the existing levels,
+which is the most that can honestly be claimed today.
+
+### 8.2 The sentence to say out loud
+
+> We work at subfamily level because we measured that aggregating upward loses signal, and
+> because the inference layer consumes that resolution. The field is moving to loci, the
+> tools for it exist, and the ontology is split so the schema can follow. It has not
+> followed yet.
+
+Not: *subfamily is the right level*. It is the right level **here, at this depth, for this
+inference layer** — and that qualifier is the whole content of the claim.
