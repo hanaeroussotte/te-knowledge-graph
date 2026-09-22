@@ -94,7 +94,42 @@ padj implies.
 **n = 2–3 per arm.** Dispersion estimates at that n are unstable, and DESeq2's shrinkage is
 doing a lot of work. Effect *signs* are more trustworthy than effect *sizes*.
 
+**The set-level p-values are retracted, and this is the most serious item on the page.**
+The Mann–Whitney test treated ~350 TE subfamilies as independent observations. They are not:
+subfamilies covary through shared regulatory machinery, shared sequence ancestry and shared
+mapping ambiguity, and competitive set tests are anti-conservative under exactly that
+condition — which is why CAMERA (10.1093/nar/gks461) exists. Measured mean pairwise
+correlation runs from 0.006 (DNMT1) to 0.48 (TRIM28): **variance inflation 4× to 155×**, so in
+the two CRISPRi contrasts 322 features carry about *two features'* worth of independent
+information. `src/compartment_robustness.py` attacks the statistic four ways and
+`docs/COMPARTMENT_STATISTICS.md` reports the outcome. DNMT1 survives restated at Δ = +0.13 with
+correlation-aware p = 0.045; TRIM28's whole-compartment claim does not and is now an effect
+size only.
+
+**With two replicates per arm, no sample-level p below 0.333 exists.** Three label
+permutations, so that is the floor regardless of effect size. More replicates would settle
+these claims; a better test cannot.
+
+**The leave-one-library-out check is handicapped by the design.** Dropping one library from a
+2-vs-2 contrast leaves 1-vs-2, where dispersion is barely estimable — so instability under
+that check is partly procedural, which makes DNMT1's stability under the same handicap more
+informative than it first looks.
+
 ### 3.2 Methodological
+
+**SETDB1's knockdown efficiency is not confirmed.** Its own mRNA falls −0.35 log₂ (78%
+remaining, padj 0.77) in its own knockdown, while TRIM28 (−1.12, 46% remaining) and DNMT1
+(−1.87, 27% remaining) are both confirmed at padj < 1e-11 in the same data. SETDB1 is the sole
+H3K9me3 anchor, holding 3 of the 4 `MARK_AT` edges, so the least-confirmed perturbation carries
+most of the inference layer. Two honest qualifications: CRISPRi acts on transcription and we
+read a shallow steady-state snapshot, so a weak reading is not proof of failure; and the
+knockdown did produce the two ERV results, which a perturbation that did nothing should not.
+Verdict is *not confirmed*, not *failed* — `results/knockdown_efficiency.csv`.
+
+**The efficiency check existed and was pointed the wrong way.** It was written into
+`PREREGISTRATION.md` as a gate to read *before* any TE number in a future experiment, and was
+never pointed backwards at the three contrasts already in hand. It found this on the first
+attempt.
 
 **Aggregating to family/class level made results worse — observation solid, explanation not.**
 Following the TE_CHIP pipeline's class/family aggregation, subfamily-level significance was

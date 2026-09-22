@@ -1324,6 +1324,48 @@ A 301 bp window on chr1 was fetched from both and compared byte for byte: identi
 13. **Two novelty claims rest on a scoped negative** (§17.4). "Not found in 198 open-access
     full texts on one date" is not "does not exist", and the search itself nearly produced
     five false negatives from a single mistyped field name.
+14. **The compartment p-values are retracted** (§24, `COMPARTMENT_STATISTICS.md`). Our
+    set-level Mann–Whitney test treated ~350 TE subfamilies as independent observations. They
+    covary through shared machinery, shared sequence ancestry and shared mapping ambiguity:
+    measured mean pairwise correlation 0.006 (DNMT1) to 0.48 (TRIM28), i.e. **variance
+    inflation 4× to 155×**, so in the two CRISPRi contrasts 322 features carry roughly *two
+    features'* worth of independent information. DNMT1 survives restated — Δ = +0.13, same
+    sign in 6/6 feature-set variants, stable to dropping any library, most extreme of the 3
+    admissible labellings by 3.7×, **correlation-aware p = 0.045**. TRIM28's *whole-compartment*
+    claim does not, and is now an effect size only; its per-feature AluY result is a different
+    statistic and stands.
+15. **With two replicates per arm, no sample-level p below 0.333 is attainable.** Three label
+    permutations exist. This is a property of the design, not of the analysis, and any small
+    sample-level p from such a design is an artefact.
+16. **SETDB1's knockdown efficiency is not confirmed** (`knockdown_efficiency.csv`,
+    `CLAIMS.md` B3). Its own mRNA falls only −0.35 log₂ (78% remaining, padj 0.77), while
+    TRIM28 (−1.12, padj 8.6e-12) and DNMT1 (−1.87, padj 1.0e-18) are confirmed in the same
+    data. **SETDB1 is the sole H3K9me3 anchor** — 3 of the 4 `MARK_AT` edges — so the
+    least-confirmed perturbation carries most of the inference layer. Read as *not confirmed*,
+    never *failed*: CRISPRi acts on transcription, we read a shallow steady-state snapshot, and
+    the knockdown did produce the two ERV results. Full-depth genome-wide would settle it. This
+    check had been written into the pre-registration for a future experiment and never pointed
+    backwards at the existing three.
+17. **R5_RECRUITMENT_CHAIN can never fire** (`GRAPH_VALIDATION.md`). There are **zero**
+    `RECRUITS` edges in the graph, so the rule has no possible input. The biology is well
+    established — TRIM28 recruits SETDB1, KRAB-ZFPs recruit TRIM28 — so this is a missing
+    ingest, not a missing mechanism, and it is the single change that would let TRIM28's
+    measured effect reach the reasoning layer at all.
+18. **The literature layer contradicts itself once, from one abstract.** `make validate` finds
+    one gene–TE pair asserted in both directions, both edges extracted from the same source.
+    Retained rather than deleted: it is that layer's unmeasured error rate becoming visible,
+    and the reason it can never ground a rule.
+19. **Only 9 of 55 silencing-machinery genes are measurable at the current reference scope**
+    (16.4%). So the compensation question — does a cell losing one silencer upregulate
+    another? — is *refused*, not answered. SETDB1's knockdown does show alternative writers at
+    +0.215 median against +0.018 for genes generally, which points toward compensation at
+    n = 3 and is a hint, not a result.
+20. **The graph has no time, no position, no dose and no feedback.** Every edge carries
+    `timepoint`, `dose`, `te_resolution` and related context columns, and for those four the
+    value is `not_applicable` throughout. A TE subfamily is one node standing for up to 104,272
+    scattered loci with no positional relation to each other, and forward chaining to a fixpoint
+    cannot represent a cycle — which matters because the cGAS path (item 12) contains one.
+    §24 is what would fix this, and it is **not implemented**.
 
 ---
 
@@ -1960,6 +2002,90 @@ finding a public system that combines those pieces.
 
 That is a second `NOT_FOUND` from a different searcher. It is **still not proof of absence**,
 and `CLAIMS.md` D12 says so in the same sentence as the claim.
+
+---
+
+## 24. What a dynamical layer would add — designed, not built
+
+Items 12 and 20 are the same complaint from two directions: **the graph is a statement about
+what is true, not about what happens next.** Forward chaining reaches a fixpoint. A fixpoint
+has no time in it, no position along the chromosome, no dose, and no way to represent a loop.
+Those are not oversights to be patched with more edges; they are consequences of the
+representation.
+
+A cellular-automaton collaboration is scoped to address exactly those four, and this section
+records it because the *reason* the four absences matter is the clearest thing that came out
+of the discussion. **None of it is implemented, and nothing from it may enter the evidence
+graph.**
+
+### 24.1 The four things it would supply
+
+**Feedback.** §17.6 records that cGAS acts upstream in chromatin maintenance as well as
+downstream as a sensor, so `TE → nucleic acid → cGAS → interferon → chromatin` contains a
+cycle and the acyclic reading is wrong. Forward chaining does not model a cycle, it ignores
+one. A lattice dynamical system handles cycles natively. This is the strongest argument
+available, because it is not "we could add a simulation" — it is "the graph has a known
+representational failure and this is the right formalism for it".
+
+**Position.** Heterochromatin acts on neighbourhoods: nucleation, local spreading, boundary
+elements. The graph cannot say *this copy is 2 kb from a nucleation site and that one is
+80 kb away*, which is a candidate explanation for why only some copies of a subfamily respond
+— an observation we have and cannot explain (the young-subfamily hypothesis was tested and
+rejected).
+
+**Bistability, which would explain something already in hand.** A deterministic rule engine
+gives one direction per gene for all loci. It cannot produce a *split*. Yet
+`HYPOTHESIS_DNMT3A_TET2.md` §8 records that DNMT3A-mutant carriers divide into RTE-high and
+RTE-low by which mutation they carry — PWWP exclusively high, the R882H hotspot clustering
+low. Bimodality from identical parameters is a generic property of bistable stochastic
+local-rule models. So this is a candidate *explanation* for a pattern the current model
+cannot generate at all.
+
+**Time and dose.** See item 20.
+
+### 24.2 What it cannot supply, stated first
+
+The automaton's cells are not loci and its states are not chromatin marks. Nothing in it has
+a source, and nothing in it could be falsified by an experiment. **A model with many free
+parameters, fitted to nothing, will reproduce *some* qualitative phenomenon whatever the
+biology** — which is why "the simulation looks like the disease" is not evidence. The
+asymmetry is the point: the automaton supplies structure with no referents; this graph
+supplies referents with evidence and no dynamics.
+
+### 24.3 The two conditions before any of it is believed
+
+1. **Pre-commit to the biological prediction each abstract principle implies, before looking
+   at the graph.** In 9,366 relationships you will *always* find something analogous to any
+   principle you bring. Writing the prediction down first is the only thing that makes it a
+   test rather than a story.
+2. **The abstract side needs its own null model.** "Recovery uses only a few dimensions" may
+   simply be what search in a low-dimensional space always looks like. Run the same search on
+   scrambled rules; if the geometry is unchanged there is no principle to transfer.
+   `src/ca_principles.py` implements both a permutation null and a leave-one-disturbance-out
+   generalisation test, and its self-test confirms it reports *no structure* on unstructured
+   input — which is the property that makes it safe to use.
+
+### 24.4 The interface, if it is ever built
+
+One file each way, and nothing shared but files, so neither side blocks on the other's
+refactor. Out: `edges_mechanism.csv`, the per-locus TE annotation, and the measured effects.
+Back: a per-locus silencing-probability table that aggregates to subfamily so it can be
+compared against what we already measured.
+
+**Simulated output would carry a tier below `inferred` and could never satisfy
+R1_MARK_GROUNDING.** Using it to fill graph edges would be the link prediction this project
+already refused (§13), and a simulation does not create validation data.
+
+### 24.5 The falsifier, stated in advance
+
+The first buildable version predicts that per-locus derepression depends on **distance to the
+nearest nucleation site and local TE density**, not on subfamily identity. That is refutable
+with a locus-level quantifier — Telescope or SQuIRE, already named in `TE_RESOLUTION.md` §8 as
+the next frontier. **If locus-level derepression turns out to be independent of distance and
+density, the spreading model is wrong and gets dropped, not tuned.**
+
+The full design is `docs/CELLULAR_AUTOMATA.md`; a worked end-to-end run of the metamodel, with
+its own negative result, is `docs/DEMO_COMBINED.md`.
 
 ---
 
