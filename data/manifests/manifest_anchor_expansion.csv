@@ -1,0 +1,9 @@
+sample,experiment,target_gene,condition,biorep,read_count,fastq_url_1,fastq_url_2,assay
+MORC2_rep1,ENCSR990DKW,MORC2,kd,1,52342086,https://www.encodeproject.org/files/ENCFF722YZF/@@download/ENCFF722YZF.fastq.gz,https://www.encodeproject.org/files/ENCFF074DWR/@@download/ENCFF074DWR.fastq.gz,CRISPR
+MORC2_rep2,ENCSR990DKW,MORC2,kd,2,48028629,https://www.encodeproject.org/files/ENCFF330WER/@@download/ENCFF330WER.fastq.gz,https://www.encodeproject.org/files/ENCFF037PTG/@@download/ENCFF037PTG.fastq.gz,CRISPR
+control_MORC2_rep1,ENCSR978MMZ,non-targeting,control,1,95365807,https://www.encodeproject.org/files/ENCFF788BNI/@@download/ENCFF788BNI.fastq.gz,https://www.encodeproject.org/files/ENCFF559SIV/@@download/ENCFF559SIV.fastq.gz,CRISPR
+control_MORC2_rep2,ENCSR978MMZ,non-targeting,control,2,46767013,https://www.encodeproject.org/files/ENCFF443VVT/@@download/ENCFF443VVT.fastq.gz,https://www.encodeproject.org/files/ENCFF772ZYG/@@download/ENCFF772ZYG.fastq.gz,CRISPR
+SUZ12_rep1,ENCSR682DZY,SUZ12,kd,1,69152723,https://www.encodeproject.org/files/ENCFF539TDD/@@download/ENCFF539TDD.fastq.gz,https://www.encodeproject.org/files/ENCFF500XLE/@@download/ENCFF500XLE.fastq.gz,CRISPR
+SUZ12_rep2,ENCSR682DZY,SUZ12,kd,2,59444538,https://www.encodeproject.org/files/ENCFF648BHR/@@download/ENCFF648BHR.fastq.gz,https://www.encodeproject.org/files/ENCFF491IAL/@@download/ENCFF491IAL.fastq.gz,CRISPR
+control_SUZ12_rep1,ENCSR516TLX,non-targeting,control,1,49377203,https://www.encodeproject.org/files/ENCFF144HNL/@@download/ENCFF144HNL.fastq.gz,https://www.encodeproject.org/files/ENCFF853XQB/@@download/ENCFF853XQB.fastq.gz,CRISPR
+control_SUZ12_rep2,ENCSR516TLX,non-targeting,control,2,55260639,https://www.encodeproject.org/files/ENCFF063ZYP/@@download/ENCFF063ZYP.fastq.gz,https://www.encodeproject.org/files/ENCFF816GYE/@@download/ENCFF816GYE.fastq.gz,CRISPR
