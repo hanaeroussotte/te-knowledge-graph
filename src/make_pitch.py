@@ -139,15 +139,18 @@ output, not an error path.</p>""",
 computation, and the answer was still no'.""")
 
 slide("Result 4 — what it is for", "It tells you which experiment to run next",
-f"""<img class="fig" src="{img('fig_ev4_anchor.png')}" alt="anchor dependence">
-<p class="punch">Remove <b>TRIM28</b> — the largest measured effect in the dataset — and the
-reasoning is <b>unchanged</b>, because a scaffold has no writer annotation and cannot ground a
-mark. Remove <b>SETDB1</b> and <b>91% of the inference disappears</b>. Four edges support the
-entire derived layer.</p>
-<p class="punch ok-b">That converts &ldquo;we need more data&rdquo; into a named experiment:
-<b>more writers and erasers of these two marks</b>. We checked — of 40 such enzymes in the
-graph, ENCODE has knockdowns for <b>three</b>, and we have used two. <b>The public well is
-nearly dry, and that is the result.</b></p>""",
+f"""<img class="fig" src="{img('fig_ev5_priority.png')}" alt="experiment priority by mark">
+<p class="punch"><b>78 of 83 derived edges rest on H3K9me3</b> — a mark grounded by SETDB1
+alone, the one knockdown whose efficiency we could <i>not</i> confirm. 5mC carries 5 and is
+grounded by DNMT1 alone. H3K27me3 has <b>zero</b> groundings, so nothing about it can be
+derived at all. Remove TRIM28, the largest measured effect, and the reasoning is
+<b>unchanged</b>: a scaffold cannot ground a mark.</p>
+<p class="punch ok-b">So the ranking is computed, not asserted: the <b>26 H3K9me3 writers and
+erasers</b> in the graph would each corroborate 78 edges — and <b>not one has a public
+knockdown</b>. The only ENCODE option left is DNMT3B, which corroborates the arm worth 5.
+<b>That gap is the ask</b>, and it is an experimental-design output rather than a wish list.</p>
+<p class="small">Value proxy = derived edges that would gain a second independent grounding. A
+count of exposure, not an expected-information calculation, and the figure says so.</p>""",
 """More interesting than 'we have 9,366 edges'. A system that shows where its own reasoning is
 fragile, rather than hiding it, is the thing worth having.""")
 

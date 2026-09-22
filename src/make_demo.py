@@ -18,6 +18,14 @@ if not SRC.exists():
     SRC = ROOT.parent / "handoff" / "demo_answers.json"
 A = json.load(open(SRC))
 
+def img(name):
+    import base64
+    p = ROOT / "figures" / name
+    if not p.exists():
+        return ""
+    return "data:image/png;base64," + base64.b64encode(p.read_bytes()).decode()
+
+
 TIER_ORDER = ["measured", "curated", "literature", "inferred", "none"]
 TIER_NOTE = {
  "measured":   "our own re-analysis of a perturbation experiment",
@@ -266,106 +274,111 @@ nav = "".join(
     for t in TIER_ORDER if groups[t])
 
 CSS = """
-/* Palette taken from the NeSy deck: near-black ground, cyan primary, blue, pink accent.
-   The tier colours are not decorative — cyan is measurement, blue is curation, slate is
-   literature (weakest), pink is symbolic inference. The picture therefore shows the
-   neurosymbolic combination directly: cyan and blue edges feeding pink conclusions. */
+/* Light palette, NeSy accent hues darkened for contrast on white. The tier colours stay
+   load-bearing: cyan is measurement, blue is curation, slate is literature (weakest),
+   magenta is symbolic inference. A subgraph therefore shows cyan and blue edges feeding
+   magenta conclusions, which is the architecture without a caption. */
 :root{
- --bg:#151515; --panel:#1c1f24; --panel2:#22262c; --line:#30343b;
- --ink:#ecf8fc; --mut:#8c98a5; --dim:#687487;
- --t-measured:#18b7e8; --t-curated:#2a6fae; --t-literature:#687487;
- --t-inferred:#e78aca; --t-none:#4a5260;
+ --bg:#f6f8fb; --panel:#ffffff; --panel2:#eef3f8; --line:#dbe3ec;
+ --ink:#18212e; --mut:#55606e; --dim:#7d8a99;
+ --t-measured:#0d7ea6; --t-curated:#2a6fae; --t-literature:#6b7886;
+ --t-inferred:#b0466f; --t-none:#98a2af;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
  font:15px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;
  -webkit-font-smoothing:antialiased}
 .wrap{display:flex;min-height:100vh}
-aside{width:280px;flex:0 0 280px;background:#101216;border-right:1px solid var(--line);
+aside{width:282px;flex:0 0 282px;background:#fff;border-right:1px solid var(--line);
  padding:1.5rem 1.15rem;overflow:auto}
-.brand{font:700 9.6px/1.5 inherit;letter-spacing:.20em;color:var(--t-measured);
+.brand{font:700 9.6px/1.5 inherit;letter-spacing:.2em;color:var(--t-measured);
  text-transform:uppercase;margin-bottom:1rem}
-aside h1{font-size:.98rem;line-height:1.4;margin:0 0 .4rem;color:#fff;letter-spacing:-.01em}
+aside h1{font-size:.98rem;line-height:1.4;margin:0 0 .4rem;letter-spacing:-.01em}
 aside .sub{font-size:.79rem;color:var(--mut);margin:0 0 1.3rem;line-height:1.55}
 .grp{margin-bottom:.95rem}
 .glab{font:700 9.4px/1.5 inherit;text-transform:uppercase;letter-spacing:.15em;
  color:var(--dim);margin-bottom:.4rem;padding-left:.1rem}
 .gb{display:block;width:100%;text-align:left;margin:.2rem 0;padding:.44rem .65rem;
- border-radius:7px;border:1px solid var(--line);background:#191c21;color:#dbe4ee;
- font:600 13.2px/1.3 inherit;letter-spacing:.01em;cursor:pointer;transition:.13s}
-.gb:hover{background:#23282f;border-color:#3d434d}
-.gb.on{background:#11303c;border-color:var(--t-measured);color:#fff}
+ border-radius:7px;border:1px solid var(--line);background:#f9fbfd;color:#2b3644;
+ font:600 13.2px/1.3 inherit;cursor:pointer;transition:.13s}
+.gb:hover{background:#eef3f8;border-color:#c3d0de}
+.gb.on{background:var(--t-measured);border-color:var(--t-measured);color:#fff}
 main{flex:1;padding:2.1rem 2.5rem 3rem;overflow:auto;max-width:1060px}
 .hdr{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
 h2{font-size:1.95rem;margin:0;letter-spacing:-.025em;font-weight:700}
 .tnote{color:var(--mut);font-size:.9rem;margin:.5rem 0 .85rem;max-width:74ch}
-.badge{display:inline-block;padding:.22rem .62rem;border-radius:999px;
- font:700 10.4px/1.5 inherit;text-transform:uppercase;letter-spacing:.12em;color:#08121a}
+.badge{display:inline-block;padding:.22rem .62rem;border-radius:999px;color:#fff;
+ font:700 10.4px/1.5 inherit;text-transform:uppercase;letter-spacing:.12em}
 .badge.big{font-size:11px;padding:.3rem .78rem}
-.b-measured{background:var(--t-measured)}.b-curated{background:var(--t-curated);color:#eaf4ff}
-.b-literature{background:var(--t-literature);color:#f0f4f8}
-.b-inferred{background:var(--t-inferred)}.b-none{background:var(--t-none);color:#dfe6ec}
+.b-measured{background:var(--t-measured)}.b-curated{background:var(--t-curated)}
+.b-literature{background:var(--t-literature)}.b-inferred{background:var(--t-inferred)}
+.b-none{background:var(--t-none)}
 .counts{margin:.15rem 0 1.35rem}
 .cnt{display:inline-block;margin-right:.4rem;padding:.18rem .58rem;border-radius:6px;
- font:600 11.6px/1.5 inherit;background:#22262c;color:var(--mut);border:1px solid var(--line)}
+ font:600 11.6px/1.5 inherit;background:#eef3f8;color:var(--mut);border:1px solid var(--line)}
 .claim{background:var(--panel);border:1px solid var(--line);border-radius:12px;
- padding:1.1rem 1.25rem;margin-bottom:1.15rem}
+ padding:1.1rem 1.25rem;margin-bottom:1.15rem;box-shadow:0 1px 2px rgba(20,35,60,.04)}
 .ctop{display:flex;align-items:center;gap:.65rem;margin-bottom:.55rem}
 .rule{font:600 11px/1.5 ui-monospace,Menlo,monospace;color:var(--dim);letter-spacing:.06em}
 .ctext{margin:.1rem 0 .85rem;font-size:1.03rem;line-height:1.55}
 .combo{font:600 11.4px/1.5 inherit;color:var(--mut);letter-spacing:.04em;
  text-transform:uppercase;margin-bottom:.55rem}
 .mx{padding:.1rem .42rem;border-radius:5px;margin:0 .1rem}
-.m-measured{color:var(--t-measured);background:#0e2b36}
-.m-curated{color:#7fb3e0;background:#132a41}
-.m-literature{color:#a8b4c2;background:#23282f}
-.m-inferred{color:var(--t-inferred);background:#361f30}
-svg.kg{display:block;margin:.35rem 0 .65rem;background:#14171b;border:1px solid var(--line);
+.m-measured{color:#075e7d;background:#e2f2f8}
+.m-curated{color:#1d5488;background:#e6eefa}
+.m-literature{color:#4d5a69;background:#eef1f5}
+.m-inferred{color:#8e2f56;background:#fae9f0}
+svg.kg{display:block;margin:.35rem 0 .65rem;background:#fbfdff;border:1px solid var(--line);
  border-radius:10px;padding:.3rem}
-.kn{fill:#1e2228}
-.nl{font:600 12.4px ui-monospace,Menlo,monospace;fill:#e8f2f8}
+.kn{fill:#ffffff}
+.nl{font:600 12.4px ui-monospace,Menlo,monospace;fill:#1b2430}
 .el{font:600 9.4px inherit;fill:var(--dim);letter-spacing:.07em}
 details{margin:.35rem 0 .1rem}
-summary{cursor:pointer;font-size:.83rem;color:var(--dim);letter-spacing:.02em}
+summary{cursor:pointer;font-size:.83rem;color:var(--dim)}
 summary:hover{color:var(--t-measured)}
-.proof{background:#0d1014;border:1px solid var(--line);border-radius:8px;
- padding:.75rem .9rem;overflow-x:auto;margin-top:.5rem}
+.proof{background:#0f141a;border-radius:8px;padding:.75rem .9rem;overflow-x:auto;
+ margin-top:.5rem}
 .pl{font:12.4px/1.62 ui-monospace,SFMono-Regular,Menlo,monospace;color:#b9c6d4;
  white-space:pre-wrap}
-.t-measured{color:var(--t-measured)}.t-curated{color:#7fb3e0}
-.t-inferred{color:var(--t-inferred)}.t-literature{color:#a8b4c2}
+.t-measured{color:#5ecbe8}.t-curated{color:#8fc0ec}
+.t-inferred{color:#eda3c4}.t-literature{color:#aab6c4}
 .warn{color:#e8a25a}
-.cites{margin-top:.6rem;font-size:.78rem;color:var(--dim);letter-spacing:.02em}
-.cites code{background:#22262c;padding:.1rem .34rem;border-radius:4px;font-size:.94em;
+.cites{margin-top:.6rem;font-size:.78rem;color:var(--dim)}
+.cites code{background:#eef3f8;padding:.1rem .34rem;border-radius:4px;font-size:.94em;
  color:var(--mut)}
 .refuse{background:var(--panel);border:1px solid var(--line);
  border-left:3px solid var(--t-none);border-radius:12px;padding:1.15rem 1.3rem}
-.rbig{font:700 1.12rem/1.4 ui-monospace,Menlo,monospace;color:var(--mut);
- margin-bottom:.55rem;letter-spacing:-.01em}
+.rbig{font:700 1.12rem/1.4 ui-monospace,Menlo,monospace;color:var(--mut);margin-bottom:.55rem}
 .sm{font-size:.87rem;color:var(--mut)}
-.legend{display:flex;gap:1.1rem;flex-wrap:wrap;margin:0 0 1.5rem;padding:.9rem 1.05rem;
+.legend{display:flex;gap:1.1rem;flex-wrap:wrap;margin:0 0 1.2rem;padding:.9rem 1.05rem;
  background:var(--panel2);border:1px solid var(--line);border-radius:10px}
 .lg{flex:1 1 260px;min-width:240px}
-.lg h4{margin:0 0 .3rem;font:700 9.8px/1.5 inherit;letter-spacing:.15em;
- text-transform:uppercase}
+.lg h4{margin:0 0 .3rem;font:700 9.8px/1.5 inherit;letter-spacing:.15em;text-transform:uppercase}
 .lg p{margin:0;font-size:.8rem;color:var(--mut);line-height:1.5}
-.next{background:#141b1f;border:1px solid #234;border-left:3px solid var(--t-measured);
+.prio{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+ padding:.55rem .9rem 0;margin:0 0 1.5rem}
+.prio summary{font:700 10px/1.5 inherit;letter-spacing:.15em;text-transform:uppercase;
+ color:var(--t-measured);padding:.35rem 0}
+.prio img{width:100%;display:block;margin:.7rem 0 .2rem;border-radius:8px}
+.prio p{font-size:.82rem;color:var(--mut);margin:.2rem 0 .85rem;line-height:1.55}
+.next{background:#f4fafd;border:1px solid #cfe6f0;border-left:3px solid var(--t-measured);
  border-radius:12px;padding:1.05rem 1.25rem;margin-top:.4rem}
 .next h3{margin:0 0 .7rem;font:700 10px/1.5 inherit;letter-spacing:.17em;
  text-transform:uppercase;color:var(--t-measured)}
 .nxr{margin-bottom:.8rem}
 .nxk{display:inline-block;font:700 9.4px/1.5 inherit;letter-spacing:.13em;
- text-transform:uppercase;color:#08121a;background:var(--t-measured);padding:.15rem .5rem;
+ text-transform:uppercase;color:#fff;background:var(--t-measured);padding:.15rem .5rem;
  border-radius:4px;margin-bottom:.32rem}
-.nxr p{margin:.3rem 0 0;font-size:.895rem;color:#c8d6e2;line-height:1.6}
-.nxr code{background:#22262c;padding:.08rem .32rem;border-radius:4px;font-size:.92em;
- color:var(--t-inferred)}
-.nxf{margin:.85rem 0 0;padding-top:.7rem;border-top:1px solid var(--line);
- font-size:.8rem;color:var(--dim);line-height:1.55}
+.nxr p{margin:.3rem 0 0;font-size:.895rem;color:#2f3b4a;line-height:1.6}
+.nxr code{background:#e8eef5;padding:.08rem .32rem;border-radius:4px;font-size:.92em;
+ color:#8e2f56}
+.nxf{margin:.85rem 0 0;padding-top:.7rem;border-top:1px solid #cfe6f0;font-size:.8rem;
+ color:var(--mut);line-height:1.55}
 footer{margin-top:2.2rem;padding-top:1.1rem;border-top:1px solid var(--line);
  font-size:.81rem;color:var(--dim);line-height:1.6}
-footer code{background:#22262c;padding:.1rem .36rem;border-radius:4px;color:var(--mut)}
+footer code{background:#eef3f8;padding:.1rem .36rem;border-radius:4px;color:var(--mut)}
 """
+
 
 JS = """
 const C=%s;
@@ -385,9 +398,28 @@ out.write_text(
  "<b>nothing</b>.</p>" + nav +
  "<div class='glab' style='margin-top:1.2rem'>edge colours</div>"
  "<p class='sub' style='margin:0'><span style='color:var(--t-measured)'>&#9644; measured</span> "
- "&nbsp;<span style='color:#7fb3e0'>&#9644; curated</span><br>"
- "<span style='color:#a8b4c2'>&#9644; literature</span> "
- "&nbsp;<span style='color:var(--t-inferred)'>&#9644; inferred</span></p>" + "</aside><main><div id='out'></div>"
+ "&nbsp;<span style='color:var(--t-curated)'>&#9644; curated</span><br>"
+ "<span style='color:var(--t-literature)'>&#9644; literature</span> "
+ "&nbsp;<span style='color:var(--t-inferred)'>&#9644; inferred</span></p>" + "</aside><main>"
+ "<div class='legend'>"
+ "<div class='lg'><h4 style='color:var(--t-measured)'>the statistical half</h4>"
+ "<p>Continuous, noisy effect sizes measured from public perturbation RNA-seq by our own "
+ "re-analysis. Numbers with confidence, and no meaning attached.</p></div>"
+ "<div class='lg'><h4 style='color:var(--t-curated)'>the symbolic half</h4>"
+ "<p>Discrete, exact records &mdash; Gene Ontology, Reactome, Complex Portal &mdash; plus six "
+ "rules that chain them. Meaning with no data attached.</p></div>"
+ "<div class='lg'><h4 style='color:var(--t-inferred)'>what you are looking at</h4>"
+ "<p>Every answer below is a <b>subgraph</b>: measured and curated edges combined by a rule "
+ "into a conclusion no single source contains. That combination is the neurosymbolic part, and "
+ "the tier tells you how much of it is measurement.</p></div></div>"
+ "<details class='prio' open><summary>how the system ranks one experiment against another</summary>"
+ f"<img src='{img('fig_ev5_priority.png')}' alt='experiment priority by mark'>"
+ "<p>Value proxy = derived edges that would gain a second, independent grounding &mdash; a "
+ "count of exposure, not an expected-information calculation. <b>78 of 83 derived edges rest "
+ "on H3K9me3, grounded by SETDB1 alone: the one knockdown whose efficiency is not "
+ "confirmed.</b> The 26 H3K9me3 writers and erasers in this graph would each corroborate those "
+ "78 edges, and none has a public knockdown. That gap is the ask.</p></details>"
+ "<div id='out'></div>"
  "<footer>Answers produced by <code>python src/te_reason.py &lt;gene&gt; --proofs</code> and "
  "pasted in verbatim. <b>This page is a viewer, not a server</b> — it computes nothing. "
  "A conclusion's tier is the weakest link on its derivation path, so a chain containing one "
