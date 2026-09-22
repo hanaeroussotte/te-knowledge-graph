@@ -85,6 +85,14 @@ gate:  ## FULL pre-push gate — nothing is committed until this passes
 	@git status --short
 	@echo "GATE PASSED — now read the diff above, then commit."
 
+ship:  ## gate, then stage — refuses to stage anything if the gate fails.  make ship M="msg"
+# The gate is only a gate if something depends on its exit status. Running `make gate`
+# and then `git commit` as two statements in one shell line does NOT gate anything:
+# the commit runs regardless. That mistake was made, and the fix is this target, where
+# `&&` makes staging conditional on the gate passing.
+	@$(MAKE) --no-print-directory gate && git add -A && \
+	  echo && echo "staged. now:  git commit -m \"...\"  &&  git push origin main"
+
 figures:  ## regenerate both panel figures from results/*.csv
 	python src/make_figures.py --outdir figures
 

@@ -1702,9 +1702,31 @@ graph has a TE node type"* — the same retracted claim — and walked straight 
 Widening the pattern to match the claim immediately exposed **five live instances** in
 files we believed were clean.
 
-All three were found by **attacking the check**, not by reading it. The habit: verify a gate
+**(d) The gate was bypassed entirely — by the person who built it.** A commit was made by
+running, in one shell line:
+
+```bash
+make gate; git add -A && git commit -m "..." && git push
+```
+
+`make gate` exited **2**. The commit and push ran anyway, because `;` does not care about
+the exit status of what came before. A gate is only a gate if something *depends* on its
+exit status. The fix is `make ship`, where `&&` makes staging conditional:
+
+```bash
+make ship   # gate && git add -A   — refuses to stage if the gate fails
+```
+
+The violation it had caught was benign — a "never say X" table in
+`PRESENTATION_GUIDE.md` quoting a retracted phrase, which the audit read as an assertion
+because it only checked the character immediately before the match. `in_quoted_span()` now
+recognises a quoted phrase mid-line as a quotation rather than a claim, and that was
+verified by confirming an *unquoted* version of the same sentence still fails.
+
+All four were found by **attacking the check**, not by reading it. The habit: verify a gate
 by deliberately injecting a violation and confirming it fails, then removing it and
-confirming it passes. Never trust a gate that has only ever run on a clean tree.
+confirming it passes. Never trust a gate that has only ever run on a clean tree — and never
+put a gate and the thing it gates on the same shell line separated by a semicolon.
 
 ### 21.2 One box deliberately unticked
 

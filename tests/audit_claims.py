@@ -52,9 +52,26 @@ NEG = re.compile(r"(not|never|avoid|instead of|rather than|replaced|retract|bann
                  r"do not|don't|attackable|say it that way)\W*$", re.I)
 
 
-def is_prohibition(txt: str, start: int) -> bool:
+def in_quoted_span(txt: str, start: int, end: int) -> bool:
+    """Is the match inside a pair of double quotes on its own line?
+
+    A 'never say X / say Y instead' table quotes the banned phrase by design, and the
+    quoted phrase may sit mid-string — `| "This is the TE atlas" |` — so checking only the
+    character immediately before the match misses it. Quoting a claim is not asserting it.
+    """
+    ls = txt.rfind("\n", 0, start) + 1
+    le = txt.find("\n", end)
+    line = txt[ls:le if le != -1 else len(txt)]
+    a, b = start - ls, end - ls
+    # count quote marks before the match on this line; odd = we are inside a quoted span
+    return line[:a].count('"') % 2 == 1 and '"' in line[b:]
+
+
+def is_prohibition(txt: str, start: int, end: int | None = None) -> bool:
     pre = txt[max(0, start - 120):start]
-    return bool(NEG.search(pre.strip())) or pre.rstrip().endswith(('"', "'", "as ", "— "))
+    if NEG.search(pre.strip()) or pre.rstrip().endswith(('"', "'", "as ", "— ")):
+        return True
+    return in_quoted_span(txt, start, end if end is not None else start)
 
 
 def main():
@@ -70,7 +87,7 @@ def main():
             continue
         for pat, why in BANNED.items():
             for m in re.finditer(pat, txt):
-                if is_prohibition(txt, m.start()):
+                if is_prohibition(txt, m.start(), m.end()):
                     continue
                 line = txt[:m.start()].count("\n") + 1
                 fails.append(f"{rel}:{line} — {why}\n      …{m.group(0)!r}…")
