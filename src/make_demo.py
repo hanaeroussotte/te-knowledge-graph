@@ -133,6 +133,94 @@ def render_proof(lines):
         out.append(f'<div class="{cls}" style="padding-left:{ind*0.55}em">{s}</div>')
     return "".join(out)
 
+
+# ---------------------------------------------------------------- next experiment
+# Computed, never written by hand. Every statement below is derived from a table in the
+# repository: which genes ENCODE actually perturbed, which genes carry a DEPOSITS_MARK or
+# ERASES_MARK annotation, how many derived edges collapse when each anchor is removed, and
+# whether each knockdown's own mRNA actually fell. A demo that invented plausible next
+# experiments would be the easiest thing here to fake and the least defensible.
+import csv
+
+def _load_next_context():
+    def rd(rel):
+        fp = ROOT / rel
+        return list(csv.DictReader(open(fp))) if fp.exists() else []
+    mech = rd("data/graph/edges_mechanism.csv")
+    inv  = rd("data/graph/encode_kd_inventory.csv")
+    ho   = rd("results/holdout_robustness.csv")
+    eff  = rd("results/knockdown_efficiency.csv")
+    wr = {r["subject"]: r["object"] for r in mech if r["predicate"] == "DEPOSITS_MARK"}
+    er = {r["subject"]: r["object"] for r in mech if r["predicate"] == "ERASES_MARK"}
+    enc = {r.get("target_label") for r in inv} | {r.get("target_gene") for r in inv}
+    enc.discard(None); enc.discard("")
+    full = next((int(r["derived"]) for r in ho if r["anchor_removed"] == "none"), 0)
+    dep = {r["anchor_removed"]: full - int(r["derived"])
+           for r in ho if r["anchor_removed"] != "none"}
+    effi = {r["gene"]: r for r in eff if r["analysis"] == "knockdown_efficiency"}
+    enzymes = set(wr) | set(er)
+    return dict(wr=wr, er=er, enc=enc, dep=dep, eff=effi,
+                n_enz=len(enzymes), n_enz_enc=len(enzymes & enc))
+
+NX = _load_next_context()
+
+def next_experiment(g, tier):
+    wr, er, enc, dep, eff = NX["wr"], NX["er"], NX["enc"], NX["dep"], NX["eff"]
+    mark = wr.get(g) or er.get(g)
+    role = "writer" if g in wr else ("eraser" if g in er else None)
+    in_enc = g in enc
+    have = f'<b>ENCODE has a knockdown of {g}</b>' if in_enc else \
+           f'<b>No ENCODE knockdown of {g} exists</b> &mdash; this needs a GEO/SRA search or new data'
+    rows = []
+    if g in eff and eff[g]["verdict"].startswith("NOT CONFIRMED"):
+        rows.append(("highest priority",
+            f'{g}\u2019s own mRNA is not significantly reduced in its own knockdown '
+            f'({eff[g]["log2FC"]} log&#8322;, {eff[g]["pct_remaining"]}% remaining), and '
+            f'<b>{dep.get(g,0)} derived edges depend on it</b>. A full-depth genome-wide '
+            f'rerun of the same libraries settles whether the perturbation worked. Until it '
+            f'does, every conclusion below it is provisional.'))
+    if tier == "measured" and dep.get(g, 0) == 0:
+        rows.append(("ingest, not experiment",
+            f'{g} is measured and its effect is the largest in the dataset, yet it grounds '
+            f'<b>0</b> derived edges: a scaffold carries no mark annotation, so no rule can '
+            f'use it. The fix is not more data &mdash; it is ingesting <code>RECRUITS</code> '
+            f'edges, of which the graph currently holds <b>zero</b>. With them, '
+            f'{g}&nbsp;&rarr;&nbsp;SETDB1&nbsp;&rarr;&nbsp;H3K9me3&nbsp;&rarr;&nbsp;TE '
+            f'becomes traversable.'))
+    if tier in ("inferred", "curated", "literature") and mark:
+        rows.append(("converts this answer to measured",
+            f'Perturb {g} directly and re-quantify against the repeat annotation. {have}. '
+            f'Because {g} is a <b>{role} of {mark}</b>, that experiment would also add an '
+            f'<b>independent grounding for {mark}</b> &mdash; and by the anchor-dependence '
+            f'analysis that is the single highest-value class of experiment available, '
+            f'because only four edges currently ground the whole inference layer.'))
+    elif tier in ("inferred", "curated", "literature"):
+        rows.append(("converts this answer to measured",
+            f'Perturb {g} directly and re-quantify against the repeat annotation. {have}. '
+            f'{g} carries no chromatin-mark annotation, so this would add a measured edge '
+            f'but no new rule grounding.'))
+    if tier == "none":
+        rows.append(("what would create an answer",
+            f'Nothing connects {g} to transposable-element regulation at any tier, so there '
+            f'is no path to strengthen. Two things would create one: a curated '
+            f'<code>DEPOSITS_MARK</code> or <code>ERASES_MARK</code> annotation for {g}, or a '
+            f'measured perturbation effect. {have}. <b>Until one exists the honest output is '
+            f'this one</b> &mdash; and proposing an experiment here would be the system '
+            f'inventing a hypothesis it has no basis for.'))
+    if tier == "measured" and dep.get(g, 0) > 0 and not rows:
+        rows.append(("corroboration",
+            f'<b>{dep.get(g,0)} derived edges rest on this one contrast.</b> An independent '
+            f'{("writer" if g in wr else "eraser")} of {mark} would corroborate it; a second '
+            f'cell type would test whether it generalises beyond K562.'))
+    if not rows:
+        return ""
+    body = "".join(f'<div class="nxr"><span class="nxk">{k}</span><p>{v}</p></div>'
+                   for k, v in rows)
+    return (f'<div class="next"><h3>what to measure next</h3>{body}'
+            f'<p class="nxf">Scope: of the <b>{NX["n_enz"]}</b> chromatin-mark writers and '
+            f'erasers in this graph, ENCODE has knockdowns for <b>{NX["n_enz_enc"]}</b> and we '
+            f'have used two. The public well is nearly dry, which is itself the result.</p></div>')
+
 cards = {}
 for g, v in A.items():
     t = v["best_tier"]
@@ -169,7 +257,7 @@ for g, v in A.items():
         body = "".join(blocks)
     cards[g] = (f'<div class="hdr"><h2>{g}</h2><span class="badge big b-{t}">best tier: {t}'
                 f'</span></div><p class="tnote">{TIER_NOTE[t]}</p>'
-                f'<div class="counts">{counts}</div>{body}')
+                f'<div class="counts">{counts}</div>{body}{next_experiment(g, t)}')
 
 groups = {t: [g for g, v in A.items() if v["best_tier"] == t] for t in TIER_ORDER}
 nav = "".join(
@@ -261,6 +349,19 @@ summary:hover{color:var(--t-measured)}
 .lg h4{margin:0 0 .3rem;font:700 9.8px/1.5 inherit;letter-spacing:.15em;
  text-transform:uppercase}
 .lg p{margin:0;font-size:.8rem;color:var(--mut);line-height:1.5}
+.next{background:#141b1f;border:1px solid #234;border-left:3px solid var(--t-measured);
+ border-radius:12px;padding:1.05rem 1.25rem;margin-top:.4rem}
+.next h3{margin:0 0 .7rem;font:700 10px/1.5 inherit;letter-spacing:.17em;
+ text-transform:uppercase;color:var(--t-measured)}
+.nxr{margin-bottom:.8rem}
+.nxk{display:inline-block;font:700 9.4px/1.5 inherit;letter-spacing:.13em;
+ text-transform:uppercase;color:#08121a;background:var(--t-measured);padding:.15rem .5rem;
+ border-radius:4px;margin-bottom:.32rem}
+.nxr p{margin:.3rem 0 0;font-size:.895rem;color:#c8d6e2;line-height:1.6}
+.nxr code{background:#22262c;padding:.08rem .32rem;border-radius:4px;font-size:.92em;
+ color:var(--t-inferred)}
+.nxf{margin:.85rem 0 0;padding-top:.7rem;border-top:1px solid var(--line);
+ font-size:.8rem;color:var(--dim);line-height:1.55}
 footer{margin-top:2.2rem;padding-top:1.1rem;border-top:1px solid var(--line);
  font-size:.81rem;color:var(--dim);line-height:1.6}
 footer code{background:#22262c;padding:.1rem .36rem;border-radius:4px;color:var(--mut)}
