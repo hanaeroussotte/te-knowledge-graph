@@ -1,8 +1,16 @@
 # Does the engine reproduce the DNMT3A / TET2 hypothesis?
 
-**The hypothesis under test** (from the user's prior research): in DNMT3A-mutant clonal
-haematopoiesis, TE reactivation lies on the causal path to inflammation. In TET2-mutant CH,
-inflammation occurs but **not** through TE reactivation.
+**The hypothesis under test** — now published, with this project's author as a co-author:
+
+> Hasan M, Durandeau S, Thompson IR, **Roussotte H**, et al. "Retrotransposable element
+> derepression distinguishes DNMT3A-mutant from TET2-mutant clonal haematopoiesis."
+> *GeroScience*, 16 September 2026.
+> [10.1007/s11357-026-02510-6](https://doi.org/10.1007/s11357-026-02510-6) · PMID 42744964
+
+In DNMT3A-mutant clonal haematopoiesis, TE reactivation lies on the path to inflammation. In
+TET2-mutant CH, inflammation occurs but **not** through TE reactivation. **Section 8 records
+what the paper actually measured**, and why the fact that the author is on it changes how
+this document may be cited.
 
 **Short answer: yes — and the engine derives the asymmetry rather than being told it.**
 It also makes a sharper claim than the hypothesis states, which is good, because sharper means
@@ -222,3 +230,131 @@ cross-sample correlation. The comparison must stay contrast-internal.
 The value on offer is a hypothesis-generation engine that reconstructs a real, non-obvious
 model from public data and states exactly which experiment would break it. That is worth more
 than a confirmation would be.
+
+---
+
+## 8. The hypothesis is now published — what that does and does not give us
+
+Added 2026-09-22, when the author supplied the paper. It changes three things and must not
+be allowed to change a fourth.
+
+### 8.1 What the paper measured
+
+| | |
+|---|---|
+| **Cohort** | 68 PBMC samples from a healthy-ageing cohort (hip-replacement surgery, n = 738 population study) |
+| **Groups** | DNMT3A high-VAF (>10%) n = 10 · DNMT3A low-VAF (≤10%) n = 30 · DNMT3A/TET2 double-mutant n = 9 · TET2-mutant n = 7 · non-CH control n = 12 |
+| **Sequencing** | total RNA (no poly(A) selection), 150 bp paired-end, mean **65.1 M reads/sample**, nf-core/rnavar v1.0, hg38 |
+| **Gene + RTE quantification** | **featureCounts v2.0** — genes against GENCODE, RTEs against RepeatMasker regions, rlog-normalised at **class and family** level |
+| **Families examined** | nine: CR1, L1, L2 (LINE); Alu, MIR (SINE); ERV1, ERVL, ERVL–MaLR, ERVK (LTR) |
+| **Statistics** | DESeq2 v1.42.0, `~Batch+Sex+Age+Group`; log₂FC > 0.5 and **raw** *p* < 0.05, with adjusted values supplied separately |
+| **Validation** | TARGET-seq single-cell (5 DNMT3A, 3 TET2; EGAS00001007358) pseudobulked per lineage, plus an independent bulk cohort (GSE263013, 92 PBMC donors → 7 DNMT3A high-VAF, 6 TET2-mutant) |
+
+**Findings:**
+
+- **DNMT3A high-VAF → widespread RTE derepression**, dominated by **LINE:L1** and
+  **LTR:ERV1/ERVL**. The RTE-high subgroup is enriched for **TNF-α/NF-κB signalling,
+  inflammatory response, interferon regulatory genes** (higher TNF and S100A9) and
+  senescence signatures.
+- **Heterogeneity within high-VAF, which is the paper's subtlest result.** Two distinct
+  subgroups: one with markedly elevated RTE expression, one indistinguishable from controls.
+  **PWWP-domain** mutations were exclusively RTE-high; the recurrent **R882H** hotspot
+  clustered with *low* RTE expression while **R882C** was RTE-high. Interpret with care at
+  n = 10, as the paper does — but it means *DNMT3A-mutant* is not one phenotype.
+- **TET2-mutant → a non-significant trend toward *reduced* RTE expression** versus controls,
+  with subfamily-level downregulation across all three comparisons and **CR1, L2, ERVL, MIR
+  significantly lower than DNMT3A high-VAF**. No RTE-associated inflammatory signature;
+  instead **oxidative phosphorylation, ROS and mTORC1** enrichment. Inflammation by a
+  metabolic/redox route, not a retroelement one.
+- **Double mutants sit in between**, trending above TET2 and clearly below DNMT3A high-VAF,
+  with TNF–NF-κB and interferon programmes attenuated.
+- **TARGET-seq:** DNMT3A-mutant cells carry more upregulated RTE subfamilies than
+  TET2-mutant across lineages, strongest in **erythroid and megakaryocyte** compartments,
+  with ERV1, ERVL, ERVL–MaLR and L1 contributing most.
+- **A finding that touches this graph directly:** RTE-high DNMT3A clones were enriched for
+  **HUSH-mediated silencing** and SIRT1-mediated rRNA regulation, read as a compensatory
+  response to lost DNMT3A methylation. HUSH (MPHOSPH8/TASOR/PPHLN1) is already a complex in
+  this graph and R4_COMPLEX_CONSENSUS operates over it.
+
+### 8.2 The engine's derived direction agrees
+
+Section 1 shows the engine predicting, from a DNMT1 knockdown plus two GO annotations:
+
+```
+DNMT3A loss  →  RAISE TE:global      (R2_WRITER_TRANSFER)
+TET2   loss  →  LOWER TE:global      (R3_ERASER_INVERSION)
+```
+
+Section 3 called the TET2 arm "sharper than the hypothesis states, which is good, because
+sharper means easier to falsify" — the published hypothesis says inflammation is *not
+TE-mediated* in TET2 CH, which is a statement about the mechanism, whereas the rule commits
+to a **direction**: TEs go *down*.
+
+**The paper measures them going down.** Non-significantly versus controls, significantly
+versus DNMT3A high-VAF, and consistently at subfamily level across all three comparisons.
+
+What makes that worth more than a coincidence of pipelines is how little the two analyses
+share:
+
+| | Hasan et al. 2026 | this project |
+|---|---|---|
+| System | primary human PBMCs, 68 donors | K562 cell line, 3 knockdowns |
+| Perturbation | naturally occurring somatic mutation | CRISPR / CRISPRi knockdown |
+| Gene perturbed | DNMT3A, TET2 themselves | **DNMT1** — neither of them |
+| Quantifier | featureCounts over RepeatMasker | TEcount, EM allocation |
+| Resolution | class and family | **subfamily** |
+| Route to the claim | measured directly | derived through two GO annotations |
+
+Different quantifier, different resolution, different modality, different tissue, and the
+engine never saw DNMT3A or TET2 data at all.
+
+### 8.3 The four caveats, and the fourth is the one that matters
+
+1. **The TET2 result is a non-significant trend** versus controls at n = 7. It is
+   significant against DNMT3A high-VAF, which is a different comparison. Say "trend", not
+   "shown".
+2. **The engine's anchor is DNMT1, not DNMT3A.** R2 transfers a measured DNMT1 effect to
+   DNMT3A via a shared curated enzymatic role; R3 inverts it for an eraser. Both remain
+   `inferred`. Neither DNMT3A nor TET2 has been perturbed in this project, and §19 of the
+   walkthrough shows that 5mC is grounded by exactly **one** edge.
+3. **Resolution and quantifier differ**, so this is directional agreement, not replication.
+   The paper's family-level analysis is also a live example of the aggregation whose power
+   cost this project measured (`aggregation_level_comparison.csv`) — the paper's own TET2
+   signal being non-significant at family level is consistent with that.
+4. **This is not a blind prospective validation, and must never be presented as one.** The
+   hypothesis was known to this project from the start — it is in the first line of this
+   document — and the author is the paper's fourth author. The *rule firing* is mechanical
+   and its premises are curated annotations rather than that paper, so the derivation is
+   genuinely blind to it. But the choice to ask about DNMT3A and TET2 was not. What is fair
+   to claim: **the engine reconstructs the published asymmetry from unrelated public data
+   and commits to a sharper, directional version of it that the measurement then agrees
+   with.** What is not fair: "independent confirmation", "we predicted this", or any framing
+   that hides the co-authorship.
+
+### 8.4 The honest sentence, updated
+
+> The hypothesis is published — Hasan et al., *GeroScience* 2026 — and I'm a co-author, so
+> this project instruments my own prior finding rather than confirming it. What is not
+> trivial is that the engine reconstructs the asymmetry from a DNMT1 knockdown and two GO
+> annotations, having never seen DNMT3A or TET2 data, and commits to a *directional* claim
+> the paper's own hypothesis does not make: TEs go down in TET2. The paper measures a trend
+> in that direction, by a different quantifier at a different resolution in a different
+> tissue. That is what a hypothesis-generation engine is supposed to do, and the experiment
+> that would break it is still the obvious one — perturb DNMT3A and TET2 directly.
+
+### 8.5 What it changes in the next-experiment list
+
+Section 6 item 2 — *find or generate DNMT3A and TET2 knockdown RNA-seq* — is unchanged and
+still the test that converts both predictions from `inferred` to `measured`.
+
+Two additions come from the paper:
+
+- **The HUSH enrichment is a testable point of contact.** If HUSH silencing is compensatory
+  in RTE-high DNMT3A clones, then perturbing HUSH components should interact with DNMT3A
+  status. MPHOSPH8, TASOR and PPHLN1 are already in the graph and ENCODE knockdown data
+  exists for parts of the complex — this is a concrete, cheap next contrast.
+- **`DNMT3A-mutant` should not be one node.** PWWP-domain versus R882H versus R882C behave
+  differently, and the graph currently has a single DNMT3A gene node. Mutation-level
+  resolution is the same class of problem as locus-level TE resolution
+  (`TE_RESOLUTION.md` §8): the schema forces a coarser entity than the biology supports.
+  Logged, not built.

@@ -234,37 +234,78 @@ changed.
 (She J, Wang J, Yang E., [10.1093/gpbjnl/qzag044](https://doi.org/10.1093/gpbjnl/qzag044)).
 "Which quantifier and why" is no longer an open question in the field; it has an answer sheet.
 
-## One claim did not survive verification
+## One claim was recorded as not found, and that was my error
 
-The review asserted that a **September 2026 *GeroScience* article** compares retroelement
-deregulation between DNMT3A- and TET2-mutant clonal haematopoiesis — direct recent support
-for the project's own hypothesis.
+**Corrected 2026-09-22, same day.** This section originally reported that an asserted
+September 2026 *GeroScience* article comparing retroelement deregulation in DNMT3A- versus
+TET2-mutant clonal haematopoiesis could not be found, and drew a lesson about verifying
+flattering citations. The paper exists:
 
-**It was not found.** Five searches (PubMed `GeroScience retroelement`,
-`GeroScience transposable element`, `DNMT3A TET2 retroelement`,
-`retroelement deregulation clonal hematopoiesis`; Europe PMC `DNMT3A AND TET2 AND
-(retroelement OR retrotransposon) AND PUB_YEAR:2026`) returned no matching paper. The
-*GeroScience* TE papers that do exist concern canine LINE-1 methylation with age,
-Alzheimer's/cognitive impairment, and Alu overexpression in fibroblasts. Recorded as `X1`
-with verdict `NOT_FOUND_IN_PRIOR_ART_SEARCH`.
+> Hasan M, Durandeau S, Thompson IR, **Roussotte H**, et al. "Retrotransposable element
+> derepression distinguishes DNMT3A-mutant from TET2-mutant clonal haematopoiesis."
+> *GeroScience*, 16 September 2026.
+> [10.1007/s11357-026-02510-6](https://doi.org/10.1007/s11357-026-02510-6) ·
+> **PMID 42744964**
 
-**The single claim most favourable to this project's hypothesis is the one that did not
-resolve.** That is worth stating in exactly those terms, because it is the argument for the
-citation gate in one sentence.
+The review's journal, subject and date were all exact. Crossref resolves the DOI and PubMed
+had already indexed it. **The index was not lagging — the searches were bad.**
 
-**What was found instead is better than what was claimed.** Two verified papers, neither in
-the first pass:
+**Root cause: vocabulary, not availability.** The paper's title says *retrotransposable
+element*. Every query ran said `retroelement` or `retrotransposon`. One query used the
+American *hematopoiesis* where the paper uses *haematopoiesis*, and returned zero.
+`retrotransposable element clonal haematopoiesis` returns PMID 42744964 as its single hit.
 
-- **Scheller et al., *Nature Cancer* 2021**
-  ([10.1038/s43018-021-00213-9](https://doi.org/10.1038/s43018-021-00213-9), PMID 35122024) —
-  hotspot **DNMT3A** mutations in clonal haematopoiesis and AML sensitise cells to azacytidine
-  **via a viral mimicry response**. Peer-reviewed, CH-specific, and direct support for the
-  DNMT3A arm of `HYPOTHESIS_DNMT3A_TET2.md`. It says nothing about the TET2 contrast, and it
-  is not a measurement made here.
-- **Mutant ASXL1-BAP1-EHMT complex**, *PNAS* 2025
-  ([10.1073/pnas.2413302121](https://doi.org/10.1073/pnas.2413302121), PMID 39752521) — a
-  different CH driver converging on heterochromatin dysfunction. ASXL1 is already in the CH
-  gene set; this is a second mechanistic entry point and a natural next perturbation target.
+**This is the same failure this document opens by confessing.** The `FULL_TEXT:` versus
+`BODY:` episode at the top of this file is a zero produced by a field-name typo, mistaken
+for a substantive negative, and the lesson recorded was that a search returning zero should
+be validated before it is trusted. That lesson was written here and then not applied — this
+time producing a false *retraction* rather than a false novelty claim, plus an unfair
+implication about the reviewing system's reliability. Both directions of the same error
+cost real accuracy.
+
+**What stands, and what does not.** Checking an unsourced citation was correct, and
+recording `NOT_FOUND_IN_PRIOR_ART_SEARCH` was correct — that verdict is *defined* as "not
+located by this search, never does not exist". What was wrong was the **confidence placed on
+a negative** produced by three badly-worded queries, and the narrative built on it. A null
+that weak supports no story. `data/graph/prior_art.csv` row `X1` now carries verdict
+`FOUND_AFTER_INITIAL_SEARCH_FAILURE` with the failed and successful queries recorded
+verbatim, so the mistake is auditable rather than quietly overwritten.
+
+And the practical lesson, which is the cheapest of the three: **the author of the paper was
+in the conversation.** One question would have resolved it immediately.
+
+## What the paper is, and what it is not
+
+It is **not independent support** for this project's positioning, and must never be
+presented as such: this project's author is the fourth of thirty authors. It is the
+**publication of the hypothesis this project instruments** — which is better than
+independent support in one respect, because it means the hypothesis has a citable primary
+source instead of being described as unpublished work.
+
+Its findings, and the reason they matter here (full detail in
+`HYPOTHESIS_DNMT3A_TET2.md` §8):
+
+- 68 PBMC samples — DNMT3A high-VAF (>10%) n = 10, DNMT3A low-VAF n = 30, double-mutant
+  n = 9, TET2-mutant n = 7, non-CH control n = 12.
+- DNMT3A high-VAF clones: widespread RTE derepression dominated by **LINE:L1 and
+  LTR:ERV1/ERVL**, with TNF-α/NF-κB, interferon and senescence enrichment in the RTE-high
+  subgroup.
+- TET2-mutant clones: a **non-significant trend toward reduced** RTE expression versus
+  controls, no RTE-associated inflammatory signature, and oxidative phosphorylation, ROS
+  and mTORC1 enrichment instead.
+- Reproduced by TARGET-seq across lineages and in an independent cohort (GSE263013).
+- RTE-high DNMT3A clones were enriched for **HUSH-mediated silencing** — a complex already
+  in this graph, and a concrete point of contact with R4_COMPLEX_CONSENSUS.
+
+**The methodological contrast is the useful part.** The paper quantifies with
+**featureCounts** over RepeatMasker at **class and family** level in primary PBMCs; this
+project uses **TEcount** EM allocation at **subfamily** level in K562 after CRISPR
+knockdown. Different quantifier, different resolution, different perturbation modality,
+different tissue. Directional agreement across that gap is not methodological coincidence —
+and the paper is also a concrete instance of the family-level analysis whose power cost this
+project measured directly in `aggregation_level_comparison.csv`.
+
+Recorded in `CLAIMS.md` as A9, with the authorship conflict stated in the claim itself.
 
 ## What the second pass did not change
 

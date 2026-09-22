@@ -15,8 +15,9 @@ that resolves every DOI against Crossref and every PMID against NCBI, and a rule
 (`CLAIMS.md`) that a claim without a resolvable identifier is not a claim. So every factual
 assertion in the review was re-searched from scratch against PubMed and Europe PMC before
 being allowed into this document. The results of that verification are in §9, and they
-matter: **29 claims verified, one not found, and six unverifiable from here.** The one that
-could not be found is the one most favourable to this project's hypothesis (§10).
+matter: **30 claims verified and six unverifiable from here.** One was initially recorded as
+not found, wrongly — §10 is the correction, and it is the most instructive section in this
+document.
 
 That is the whole method, and it is worth stating plainly: an external review is evidence,
 not authority. It gets checked like anything else.
@@ -31,7 +32,7 @@ Every claim in this document carries one:
 |---|---|
 | **[V]** | Verified here — the paper exists, the identifier resolves, and the specific number quoted was found in the abstract |
 | **[V-ref]** | The paper is verified but a number attributed to it was not checked against its abstract |
-| **[NF]** | Searched for and **not found**. Not "false" — not located by PubMed + Europe PMC on 2026-09-22 |
+| **[NF]** | Searched for and **not found**. Not "false" — not located by PubMed + Europe PMC on 2026-09-22. **§10 is a worked example of an `[NF]` that was simply a bad search, so treat every tag in this column as a statement about the search, not about the world** |
 | **[U]** | Unverifiable from this environment (corporate facts, press releases, company websites — the sandbox reaches literature databases, not news) |
 
 `[U]` is not a euphemism for "probably true". It means the claim is reported as
@@ -400,9 +401,13 @@ ERVmap · TE-SCALE (1.3 M cells / 330 samples / 20 cancer types confirmed) · TE
 (33 cancer types) · PlaNC-TE · TEKRABber · PrimeKG · Hetionet · GEARS · scPerturb ·
 456 cell-type–histone–TE triplets · Seczynska HUSH · MPP8 myeloid dependency · Griffin
 SETDB1 · Roulois · Chiappinelli · ORF2p structures · pan-cancer L1 locus heterogeneity ·
-VEXAS L1 preprint · Scheller DNMT3A/azacitidine · ASXL1-BAP1-EHMT · TxPert · MAJEC.
+VEXAS L1 preprint · Scheller DNMT3A/azacitidine · ASXL1-BAP1-EHMT · TxPert · MAJEC ·
+Hasan et al. *GeroScience* 2026 (verified late — see §10).
 
-**Not found — 1.** See §10.
+**Initially recorded as not found — 1, wrongly.** The *GeroScience* DNMT3A/TET2 paper was
+found after the correction: [10.1007/s11357-026-02510-6](https://doi.org/10.1007/s11357-026-02510-6),
+PMID 42744964. The searches failed on vocabulary, not on the index. **§10 is the full
+correction and the lesson is not the one §9 originally implied.**
 
 **Unverifiable here — 6.** All corporate: ROME's platform description and corporate
 outcome, Nexco/TEnex, HERVolution, Enara Bio, HAYA, Repeat Therapeutics.
@@ -412,47 +417,135 @@ publication found), and **DRKG** as a primary citation (referenced in many downs
 
 ---
 
-## 10. The claim that did not survive verification
+## 10. The claim I got wrong, and what it cost
 
-The review states that the DNMT3A/TET2 interest "has just received direct support from a
-September 16, 2026 GeroScience article comparing retroelement deregulation in those two CH
-genotypes."
+**Read this section before quoting §9 at anyone.** The first version of it was confidently
+wrong, and the correction is more instructive than the original point.
 
-**[NF] This paper was not found.** Searched on 2026-09-22:
+### 10.1 What I wrote, and what was actually true
 
-| Search | Result |
+The external review stated that the DNMT3A/TET2 interest "has just received direct support
+from a September 16, 2026 *GeroScience* article comparing retroelement deregulation in those
+two CH genotypes." I searched five ways, found nothing, recorded it as `[NF]`, and wrote a
+section observing that the one claim most favourable to the project was the one that did not
+resolve — with the implication that a generative system had produced a flattering citation.
+
+**The paper exists.** The author of this project supplied the PDF.
+
+> **Hasan M, Durandeau S, Thompson IR, Roussotte H, Tsai Y-T, Seymen N, Gerlevik S,
+> Bianchini N, Alishah K, Albuquerque MM, Lewis J, Bonganay L, Jakobsen NA, Zeisig B,
+> Irshad S, Vyas P, So ECW, Iacoangeli A, Zheng X, Mackie S, Mok KY, Uksaite V,
+> Handfield L-F, Napolitani G, Carmichael J, Mufti GJ, Gandhi AK, Suragani RNVS, Quek L,
+> Karimi MM.** "Retrotransposable element derepression distinguishes DNMT3A-mutant from
+> TET2-mutant clonal haematopoiesis." *GeroScience*, published **16 September 2026**.
+> [10.1007/s11357-026-02510-6](https://doi.org/10.1007/s11357-026-02510-6) ·
+> **PMID 42744964** · CC-BY.
+
+The review's date was exact. The journal was exact. The subject was exact. Crossref resolves
+the DOI, and **PubMed had already indexed it** — a search on the DOI returns PMID 42744964.
+Nothing was lagging. The index had it and I did not find it.
+
+### 10.2 Why the search failed, precisely
+
+Not indexing latency. **Vocabulary.** The paper's title says *retrotransposable element*;
+every query I ran said `retroelement` or `retrotransposon`. And the paper uses the British
+*haematopoiesis*; one of my queries used the American *hematopoiesis*, which returned zero.
+
+Run afterwards against the same PubMed:
+
+| Query | Hits |
 |---|---|
-| PubMed `GeroScience retroelement` | 4 hits — canine LINE-1 methylation with age (2026-07), Alu overexpression in fibroblasts (2025-12), 2 older |
-| PubMed `GeroScience transposable element` | 3 hits — TE dysregulation in cognitive impairment/AD (2025-08), unrelated |
-| PubMed `DNMT3A TET2 retroelement` | 2 hits — LINE-1 methylation in vapers/smokers; bovine placental ERV |
-| PubMed `retroelement deregulation clonal hematopoiesis` | 0 hits |
-| Europe PMC `DNMT3A AND TET2 AND (retroelement OR retrotransposon) AND 2026` | 33 hits, none matching |
+| `GeroScience retroelement` | 4 — none of them this paper |
+| `DNMT3A TET2 retroelement` | 2 — unrelated |
+| `retroelement deregulation clonal hematopoiesis` | **0** |
+| `retrotransposable element clonal haematopoiesis` | **1 — PMID 42744964** |
+| `retrotransposable DNMT3A TET2` | **1 — PMID 42744964** |
+| `(retroelement OR retrotransposon OR retrotransposable) AND DNMT3A AND TET2` | **4, including it** |
 
-**This is the claim in the entire review most favourable to this project's hypothesis, and
-it is the one that does not resolve.** That ordering is not a coincidence worth ignoring —
-it is exactly why the citation gate exists, and exactly why an external review gets checked
-rather than believed. If the paper exists under a title these searches missed, it can be
-added; until an identifier resolves, **it must not be cited, and the hypothesis must not be
-described as having recent direct support.**
+Any one of the last three would have found it in a single call. The searches that failed
+failed on a synonym and a vowel.
 
-### 10.1 What was found instead, and it is genuinely useful
+### 10.3 This is the same failure already recorded at the top of `PRIOR_ART.md`
 
-Two real papers, both verified, both relevant to the DNMT3A/TET2 worked example:
+That document opens with a methodological confession: a full-text pass used Europe PMC's
+`FULL_TEXT:` field, which is not a valid field name and fails **silently**, returning zero
+for five queries. Five "no precedent found" verdicts were an artefact of a typo. The lesson
+recorded there was:
 
-- **[V]** **Scheller et al., *Nature Cancer* 2021** —
-  [10.1038/s43018-021-00213-9](https://doi.org/10.1038/s43018-021-00213-9) (PMID 35122024).
-  "Hotspot DNMT3A mutations in clonal hematopoiesis and acute myeloid leukemia sensitize
-  cells to azacytidine **via viral mimicry response**." This is direct, peer-reviewed,
-  DNMT3A-mutant-CH-specific evidence that the DNMT3A lesion connects to viral mimicry. It
-  supports the *DNMT3A* arm of the hypothesis in `HYPOTHESIS_DNMT3A_TET2.md` — not the
-  contrast with TET2, and not via a measurement made here, but it is the closest real
-  support that exists and it was not in the prior-art table.
-- **[V]** **ASXL1-BAP1-EHMT complex → heterochromatin dysfunction in clonal haematopoiesis**
-  — *PNAS* 2025, [10.1073/pnas.2413302121](https://doi.org/10.1073/pnas.2413302121)
-  (PMID 39752521). A different CH driver converging on heterochromatin. ASXL1 is already in
-  the CH gene set; this is a second mechanistic entry point into the same axis and a natural
-  next perturbation target.
+> A novelty claim is cheapest to "prove" with a broken search. Any future search should
+> validate its syntax against a query expected to return many hits before trusting a zero.
 
-The net effect of the verification pass is therefore **better** than the review's own claim:
-one unverifiable supporting paper was removed, and two verifiable ones were added — one of
-which is specifically about DNMT3A-mutant clonal haematopoiesis and viral mimicry.
+**I then made the same class of error in the opposite direction** — and this time the broken
+search did not manufacture novelty, it manufactured a *retraction* and an accusation. A
+search returning zero because of the words you chose is not evidence about the world. It was
+already written down. I did not apply it.
+
+### 10.4 The corrected lesson, which is not the one I drew
+
+The original section drew a satisfying moral: verify flattering citations, because
+plausible-and-flattering is the dangerous combination. That is still true and it is still
+why the citation gate exists. But it was the wrong lesson to draw *from this episode*,
+because the flattering citation was **correct** and my verification was what failed.
+
+Three things are true at once, and the order matters:
+
+1. **Checking was right.** A claim with no resolvable identifier cannot go into a document
+   that carries a citation gate. Nothing about this episode argues for accepting unsourced
+   citations.
+2. **Recording it as `[NF]` was right.** The verdict vocabulary exists precisely for
+   "we did not locate this", and `NOT_FOUND_IN_PRIOR_ART_SEARCH` is defined in `CLAIMS.md`
+   as *not located by this search*, never *does not exist*.
+3. **The narrative built on top of it was wrong.** I treated a null from three
+   badly-worded queries as strong enough to support a story about the reviewer's
+   reliability. A null that weak supports no story at all. The failure was not the
+   verification, it was the **confidence attached to a negative result** — which is the
+   single most common way a literature search misleads, and the thing this repository
+   claims to be careful about.
+
+And a fourth, which is the practical one: **the cheapest way to resolve a citation about
+your own field is to ask the person who works in it.** The author was in the conversation
+the entire time. One question would have cost a sentence and saved a wrong section.
+
+### 10.5 What the paper actually reports
+
+Details in `HYPOTHESIS_DNMT3A_TET2.md` §8; in brief, and note that it is **not**
+independent of this project — the project's author is the fourth of thirty authors, so this
+is the *source* of the hypothesis, not confirmation of it:
+
+- **Cohort.** 68 PBMC samples from a healthy-ageing cohort: DNMT3A high-VAF (>10%) n = 10,
+  DNMT3A low-VAF n = 30, DNMT3A/TET2 double-mutant n = 9, TET2-mutant n = 7, non-CH control
+  n = 12. Total RNA-seq, mean 65.1 M reads per sample.
+- **DNMT3A high-VAF:** widespread RTE derepression, dominated by **LINE:L1 and
+  LTR:ERV1/ERVL**, with TNF-α/NF-κB, interferon and senescence enrichment in the RTE-high
+  subgroup — and marked heterogeneity, including the R882H hotspot clustering with *low*
+  RTE expression while PWWP-domain mutations were exclusively RTE-high.
+- **TET2-mutant:** a **non-significant trend toward reduced** RTE expression versus controls,
+  no RTE-associated inflammatory signature, and enrichment of oxidative phosphorylation, ROS
+  and mTORC1 instead — inflammation by a metabolic/redox route rather than a retroelement one.
+- Reproduced in TARGET-seq across haematopoietic lineages and in an independent cohort
+  (GSE263013).
+
+**One finding deserves attention here rather than in the hypothesis document:** the
+RTE-high DNMT3A high-VAF clones were enriched for **HUSH-mediated silencing** and SIRT1
+pathways, read as a compensatory response. HUSH (MPHOSPH8/TASOR/PPHLN1) is already a
+complex in this graph, and R4_COMPLEX_CONSENSUS operates over it. That is a concrete,
+testable point of contact between the paper and the graph, and it was not in either document
+before.
+
+### 10.6 The methodological contrast, which is genuinely useful
+
+The paper and this project measure the same biology with almost no shared machinery:
+
+| | Hasan et al. 2026 | this project |
+|---|---|---|
+| System | primary human PBMCs, 68 donors | K562, 3 knockdowns |
+| Perturbation | naturally occurring somatic mutation | CRISPR/CRISPRi knockdown |
+| Quantifier | **featureCounts** over RepeatMasker regions | **TEcount** (TEtranscripts EM) |
+| Resolution | class and family (9 families) | **subfamily** (1,057) |
+| Statistics | DESeq2, ~Batch+Sex+Age+Group, raw *p* | DESeq2 + a set-level compartment test |
+
+Different quantifier, different resolution, different perturbation modality, different
+tissue. Where the two agree on a direction, that agreement is not methodological
+coincidence — and where this project chose subfamily resolution over family, the paper is a
+concrete example of the family-level analysis whose power cost was measured in
+`aggregation_level_comparison.csv`.

@@ -70,7 +70,7 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | W12 | "TE atlases exist and are large — TE-SCALE, TEITbase, REdiscoverTE. They answer *where* TEs are active; we ask *what perturbation changed them*." | "There's no TE atlas." / "the first TE atlas" |
 | W13 | "ROME Therapeutics is the closest industrial precedent and was ahead of us on biology — they solved the ORF2p structure. What I haven't found in their public work is this architecture." | Any comparison implying we have more depth than ROME, or that its closure means the science failed. |
 | W14 | "We work at subfamily level because aggregating upward measurably loses signal; the field is moving to loci and the ontology is split to permit it." | "Subfamily is the right level." / any implication `TELocus` exists as a node type. |
-| W15 | "A September 2026 paper was cited to us as supporting this; five searches did not find it, so it isn't in the record." | Citing the unlocated *GeroScience* DNMT3A/TET2 retroelement paper as support. |
+| W15 | "The hypothesis is published — Hasan et al., *GeroScience* 2026, 10.1007/s11357-026-02510-6, and I'm a co-author, so this project instruments my own prior finding rather than confirming it." | "An independent paper confirms our prediction." (You are the 4th of 30 authors. It is the source, not confirmation.) |
 
 ---
 
@@ -86,6 +86,7 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | A6 | Hotspot DNMT3A mutations in clonal haematopoiesis and AML sensitise cells to azacytidine via a viral mimicry response | `ESTABLISHED` | Scheller et al., Nat Cancer 2021, 10.1038/s43018-021-00213-9 (PMID 35122024). The closest real support for the DNMT3A arm of C3; says nothing about the TET2 contrast |
 | A7 | TE regulation is strongly cell-type-specific: 456 cell-type–histone–TE triplets show strong cell-type-specific enrichment | `ESTABLISHED` | Hyacinthe & Bourque, Nat Commun 2026, 10.1038/s41467-026-74920-1. Note the unit is *triplets* |
 | A8 | Silencing of LINE-1 is a selective dependency of myeloid leukaemia (MPP8/HUSH) | `ESTABLISHED` | Nat Genet 2021, 10.1038/s41588-021-00829-8 |
+| A9 | In human CH, DNMT3A high-VAF clones show widespread RTE derepression (LINE:L1, LTR:ERV1/ERVL) with TNF-α/NF-κB, interferon and senescence enrichment, whereas TET2-mutant clones trend toward *reduced* RTE expression and show inflammation via oxidative phosphorylation/ROS/mTORC1 instead | `ESTABLISHED (AUTHOR CONFLICT)` | **Hasan et al., GeroScience 2026, 10.1007/s11357-026-02510-6, PMID 42744964.** 68 PBMC samples; featureCounts over RepeatMasker at class/family level; reproduced by TARGET-seq and in GSE263013. **This project's author is the 4th of 30 authors — this is the source of C3, not independent confirmation of it.** The TET2 trend is non-significant vs controls (n=7) |
 
 ## B. Claims about our measurements
 
@@ -108,8 +109,8 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | # | Claim | Status | Evidence |
 |---|---|---|---|
 | C1 | DNMT3A silences TEs globally | `INFERRED` | R2_WRITER_TRANSFER from the DNMT1 measurement + GO:0003886 |
-| C2 | TET2 loss *lowers* TE expression | `INFERRED` | R3_ERASER_INVERSION; sharper than the source hypothesis and falsifiable |
-| C3 | In DNMT3A-mutant CH, TE reactivation is on the causal path to inflammation; in TET2-mutant CH inflammation is not TE-mediated | `HYPOTHESIS` | The user's published hypothesis. This project instruments it; it does not test it |
+| C2 | TET2 loss *lowers* TE expression | `INFERRED — DIRECTION AGREES WITH A9` | R3_ERASER_INVERSION from the DNMT1 measurement + GO:0070579. The direction matches what Hasan et al. measured in TET2-mutant CH (non-significant trend to reduced RTE; significant reduction vs DNMT3A high-VAF), across a different quantifier, resolution, modality and tissue. **Not a blind prospective validation** — the hypothesis was known to this project before the rule was run, and the rule's premises are curated annotations, not that paper |
+| C3 | In DNMT3A-mutant CH, TE reactivation is on the path to inflammation; in TET2-mutant CH inflammation occurs but is not TE-mediated | `PUBLISHED BY THE AUTHOR — SEE A9` | Now citable: Hasan et al., GeroScience 2026, 10.1007/s11357-026-02510-6. This project instruments the hypothesis; it does not test it, and the author's co-authorship must be disclosed whenever it is cited as support |
 | C4 | The 28 structurally tractable targets with no clinical programme are actionable | `INFERRED` | Imported Open Targets/ChEMBL buckets, not computed here |
 
 ## D. Novelty and positioning claims
@@ -133,7 +134,7 @@ For the claims that are easy to overstate. Left column is sayable; right column 
 | D15 | Locus-level TE measurement is out of reach, or subfamily is the field's working resolution | `RETRACTED_BY_US` | CELLO-seq (10.1038/s41587-021-01093-1), locus annotation across 2,596 long-read datasets (10.1186/s44342-025-00048-1), TEsingle and TEscape preprints 2026. Our subfamily choice is a power argument at our depth, not a claim about the field |
 | D16 | The choice of TE quantifier is an open question in the field | `RETRACTED_BY_US` | 16 tools benchmarked with guidelines: She J, Wang J, Yang E., 10.1093/gpbjnl/qzag044 |
 | D17 | No company has built repeat-genome analytics | `RETRACTED_BY_US` | ROME Therapeutics: ORF2p structures 10.1038/s41586-023-06947-z, pan-cancer L1 model 10.1038/s41467-025-57271-1, genome-wide L1 regulator screen 10.1186/s13100-025-00386-5. Corporate detail unverifiable from this environment — see `LANDSCAPE.md` §6 |
-| D18 | A *GeroScience* paper (Sept 2026) gives recent direct support to the DNMT3A/TET2 hypothesis | `NOT_FOUND_IN_PRIOR_ART_SEARCH` | Asserted by the external review without a resolvable identifier; five searches found no such paper (`prior_art.csv` row `X1`). **Must not be cited.** Real support that *was* found: Scheller et al., Nat Cancer 2021, 10.1038/s43018-021-00213-9 |
+| D18 | A September 2026 *GeroScience* paper compares retroelement deregulation in DNMT3A- vs TET2-mutant CH | `VERIFIED_AFTER_SEARCH_FAILURE` | **It exists** — Hasan et al., 10.1007/s11357-026-02510-6, PMID 42744964, 16 Sep 2026. Initially recorded as `NOT_FOUND`; the searches used *retroelement*/*retrotransposon* and never *retrotransposable* (the title word), plus one American spelling of *haematopoiesis*. PubMed had it indexed the whole time. See `PRIOR_ART.md` § "One claim was recorded as not found" — the lesson is about over-trusting a negative, not about the reviewer |
 
 ## E. Claims about the system's behaviour
 

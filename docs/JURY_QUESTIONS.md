@@ -245,6 +245,36 @@ production pipeline it is not. Say both halves.
 
 ---
 
+## E2. The published hypothesis
+
+**42. Your own paper already reports this. What does the graph add?**
+Hasan et al., *GeroScience* 2026 ([10.1007/s11357-026-02510-6](https://doi.org/10.1007/s11357-026-02510-6),
+PMID 42744964) measures it in 68 PBMC donors, and **I'm the fourth of thirty authors** — so
+this project instruments my own prior finding, it does not confirm it. Say that first, every
+time. What the graph adds is that it reaches the same asymmetry from a **DNMT1** knockdown in
+K562 plus two GO annotations, having never seen DNMT3A or TET2 data, and commits to a
+*directional* claim the paper's hypothesis does not make: TEs go **down** in TET2, not just
+"inflammation isn't TE-mediated". The paper measures a trend in that direction, using
+featureCounts at family level in primary cells — a different quantifier, resolution,
+perturbation modality and tissue.
+
+**43. So is that a validation of your rules?**
+Directional agreement, not a validation. It is **not blind**: the hypothesis was known to
+this project from the first day. The rule firing is mechanical and its premises are curated
+annotations, so the derivation itself never saw the paper — but the choice to ask about
+DNMT3A and TET2 was informed by it. And the paper's TET2 result is a non-significant trend
+at n = 7. The test that would make it a validation is still the same one: perturb DNMT3A and
+TET2 directly.
+
+**44. Anything in the paper you hadn't already modelled?**
+Two things, and both are now logged as next steps. **HUSH-mediated silencing** was enriched
+in the RTE-high DNMT3A clones, read as compensatory — HUSH (MPHOSPH8/TASOR/PPHLN1) is
+already a complex in the graph, so perturbing its components against DNMT3A status is a
+concrete cheap contrast. And **`DNMT3A-mutant` is not one phenotype**: PWWP-domain mutations
+were exclusively RTE-high while the R882H hotspot clustered RTE-*low*. The graph has a
+single DNMT3A node, which is the same class of problem as subfamily-versus-locus — the
+schema forces a coarser entity than the biology supports.
+
 ## F. The two questions worth wanting
 
 **"What happens when the evidence isn't enough?"**

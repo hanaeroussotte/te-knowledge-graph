@@ -307,6 +307,31 @@ You do not need to know these deeply. You need to not look blank.
 | **ROME Therapeutics** | A company built on the repeat genome; solved the LINE-1 ORF2p structure | "Closest industrial precedent, and ahead of me on biology. What I haven't found in their public work is this architecture." |
 | **GEARS / TxPert** | KG + machine learning to predict perturbation responses | "Their output space is gene expression, not TEs. TxPert on a TE-aware matrix would be a strong competitor — closable gap." |
 
+### 4.1d Your own paper is now in the repository, and there is one rule about it
+
+Hasan et al., *GeroScience* 2026, [10.1007/s11357-026-02510-6](https://doi.org/10.1007/s11357-026-02510-6),
+PMID 42744964 — you are the fourth of thirty authors. It is cited properly in
+`HYPOTHESIS_DNMT3A_TET2.md` §8, `CLAIMS.md` A9, and the prior-art table.
+
+**The rule: disclose the co-authorship in the same sentence you cite it.** Not because
+anyone would catch you out, but because "an independent paper confirms our prediction" is a
+claim you cannot make about a paper with your name on it, and a judge who checks the author
+list after hearing it will discount everything else you said. Said the other way round it is
+actually a *stronger* line:
+
+> The hypothesis is published and I'm a co-author, so this instruments my own prior finding
+> rather than confirming it. What isn't trivial is that the engine reconstructs the
+> asymmetry from a DNMT1 knockdown and two GO annotations, having never seen DNMT3A or TET2
+> data — and commits to a sharper claim than the paper's hypothesis makes: TEs go *down* in
+> TET2. The paper measures a trend in that direction, with a different quantifier at a
+> different resolution in a different tissue.
+
+Two things from the paper that were **not** in the graph and are now logged as next steps:
+the **HUSH** enrichment in RTE-high DNMT3A clones (HUSH is already a complex in the graph —
+perturbing it against DNMT3A status is a cheap concrete contrast), and the fact that
+**`DNMT3A-mutant` is not one phenotype** — PWWP-domain mutations were exclusively RTE-high
+while R882H clustered RTE-low.
+
 `docs/LANDSCAPE.md` has the full picture if you want it, including which of those claims are
 verified and which are second-hand.
 

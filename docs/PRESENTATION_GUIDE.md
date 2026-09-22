@@ -285,6 +285,16 @@ these four are the ones that would have caught the deck as it stood.
 > quantifier-dependent. The head-to-head is pre-registered with a retract-if-sign-flips row
 > and deliberately not yet run.
 
+**"Your own paper already shows this. Isn't the graph redundant?"**
+> The paper measures it — 68 PBMC donors, featureCounts at family level, and I'm the fourth
+> of thirty authors, so let me be clear that this project instruments my own prior finding
+> rather than confirming it. The non-trivial part is that the engine reaches the same
+> asymmetry from a **DNMT1** knockdown in K562 and two GO annotations, having never seen
+> DNMT3A or TET2 data — and it commits to a sharper claim than the paper's hypothesis makes:
+> TEs go *down* in TET2, not merely "inflammation isn't TE-mediated". The paper measures a
+> trend in that direction. Different quantifier, different resolution, different tissue.
+> That's what a hypothesis-generation engine is for.
+
 **"Why Modal rather than Nextflow on AWS or your institution's cluster?"**
 > Nextflow or Snakemake could absolutely run this pipeline, and for a production genomics
 > facility with a stable Slurm stack they might be the better answer. Modal's advantage here
@@ -307,7 +317,7 @@ From `CLAIMS.md` §0, which is the authority. Check it before you go on.
 | "Our TE quantification method" | "We use TEcount from TEtranscripts" |
 | "The engine proves / derives causally" | "The engine predicts — here's the proof tree" |
 | "This is the TE atlas" | "A perturbational TE atlas is the long-term object; this is an architecture with a worked example" |
-| Citing a September 2026 *GeroScience* paper on DNMT3A vs TET2 retroelements | It could not be found in five searches. Cite Scheller et al., *Nat Cancer* 2021 (10.1038/s43018-021-00213-9) for the DNMT3A arm instead |
+| "An independent paper confirms our TET2 prediction" | "The hypothesis is published — Hasan et al., *GeroScience* 2026 — **and I'm a co-author.** So this instruments my own prior finding. What's not trivial is that the engine reconstructs it from a DNMT1 knockdown having never seen DNMT3A or TET2 data." |
 
 ---
 
