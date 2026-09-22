@@ -18,19 +18,29 @@ third one matters most.
 
 ## Part 0 — Tonight, 10 minutes
 
-Two things only, both administrative, both things I could not do for you.
+One thing only, and it is a decision rather than a task.
 
-### 0.1 Add a LICENSE
+### 0.1 Add a LICENSE — **done**
 
 Without one, default copyright applies and nobody can legally reuse your code — which is
 awkward if a judge asks "can we look at this?".
 
-On GitHub: go to your repo → **Add file** → **Create new file** → type `LICENSE` as the
-filename → a **"Choose a license template"** button appears on the right → pick **MIT**
-(simplest: anyone can use it, you keep credit, no warranty) → Commit.
+`LICENSE` is now in the repository root: **MIT**, copyright 2026 Hanae Roussotte. Anyone may
+use, modify and redistribute the code, including commercially, as long as they keep the
+copyright notice; no warranty is given. GitHub reads the file automatically and will show
+an "MIT" badge next to the repo name.
 
-*If you'd rather be more protective, Apache-2.0 adds an explicit patent grant. MIT is the
-common default for research code.*
+Nothing to do. Two notes in case you are asked:
+
+- **Why MIT and not Apache-2.0.** Apache-2.0 adds an explicit patent grant and a
+  requirement to state what you changed. That is the better choice if you expect patent
+  questions. MIT is the common default for research code and the shortest thing a judge
+  can read in ten seconds. If you want to switch, it is one file replacement — the
+  licence is not load-bearing anywhere in the code.
+- **It covers the code, not the data.** `data/` and `results/` derive from ENCODE, GENCODE,
+  UCSC RepeatMasker, Open Targets, ChEMBL, STRING, Reactome and Complex Portal, each with
+  its own terms. Putting MIT on the repository does not relicense any of those, and the
+  README says so.
 
 ### 0.2 Decide on repo visibility
 

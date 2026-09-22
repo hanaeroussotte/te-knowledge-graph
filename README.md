@@ -181,7 +181,9 @@ is architectural. What stands between this and an actual atlas is compute, not d
 
 ## Licence
 
-No licence file is included — add one before making the repository public. MIT or Apache-2.0
-are the usual choices for research code. Note that the *data* in `data/` and `results/` derives
-from sources with their own terms (ENCODE, Open Targets and ChEMBL are permissive; check
-Complex Portal and COSMIC-derived material if you add any).
+**MIT** — see [`LICENSE`](LICENSE). Anyone may use, modify and redistribute the code,
+including commercially, provided the copyright notice is kept. No warranty is given.
+
+The licence covers the *code*. The *data* in `data/` and `results/` derives from sources with
+their own terms (ENCODE, Open Targets and ChEMBL are permissive; check Complex Portal and
+COSMIC-derived material if you add any). Nothing here relicenses those.
