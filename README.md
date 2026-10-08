@@ -63,7 +63,7 @@ detail, and the working resolution here is the subfamily.
 | `src/build_te_annotation.py` | RepeatMasker → TE GTF + subfamily vocabulary |
 | `src/build_graph.py` | curated + chromatin-mark edge layers from GO, STRING, Reactome, Complex Portal |
 | `src/run_de.py` | PyDESeq2 → per-feature **and** set-level measured edges |
-| `src/nesy_rules.py` | 5 forward-chaining rules, proof trees, path-admissibility grammar |
+| `src/nesy_rules.py` | 6 forward-chaining rules, proof trees, path-admissibility grammar |
 | `src/te_reason.py` | `explain(gene)` + the citation gate |
 | `src/annotate_tractability.py` | Open Targets + ChEMBL → five druggability classes |
 | `src/score_signatures.py` | interferon / senescence set-level tests, with a coverage guard |

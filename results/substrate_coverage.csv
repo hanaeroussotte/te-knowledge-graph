@@ -1,0 +1,9 @@
+metric,value
+ENCODE knockdown RNA-seq experiments (human lines),1114
+distinct target genes knocked down,570
+experiments with released paired-end FASTQ,1060
+curated TE-regulator genes (GO-derived),112
+curated TE-regulators WITH ENCODE knockdown data,15
+DNMT3A knockdown experiments in ENCODE,0
+TET2 knockdown experiments in ENCODE,0
+median reads per FASTQ file,32356346
