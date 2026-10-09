@@ -21,6 +21,24 @@ Losing SUV39H1 is predicted to raise HERV9NC-int, derived by R2_WRITER_TRANSFER 
 Nobody measured SUV39H1. The prediction is signed, specific, and every step is a database
 record or a measurement you can open.
 
+## What I built
+
+I re-analysed three ENCODE knockdown experiments for their effect on the repetitive genome —
+keeping the multi-mapping reads that standard pipelines discard, because those are the only
+reads that report on transposable elements at all. I turned those measurements into signed,
+provenance-tracked edges, assembled them into a graph alongside curated mechanism from
+Reactome, Complex Portal, STRING and GO, and wrote a forward-chaining rule layer that derives
+new predictions from them with an inspectable proof for each one.
+
+The part I care most about is what it does when the evidence runs out. Every claim carries an
+evidence tier, a derived conclusion inherits the weakest tier on its path, and a gene with no
+supporting evidence returns `best_tier: none` rather than a plausible sentence. Four of the
+fourteen genes in the demo do exactly that.
+
+I have measured three genes, not 570. The "any gene" claim is architectural, and what stands
+between this and an atlas is compute rather than design. Everything below says where it is
+weak; `docs/CRITIQUE.md` is the full list, and I would rather you read that first.
+
 ## Start here — five minutes
 
 | | |
@@ -28,7 +46,7 @@ record or a measurement you can open.
 | **Open `demo/query.html`** | Click a gene. Every answer shows its evidence tier, the subgraph it was derived from, and what to measure next. Click **GAPDH** — the system returns nothing, deliberately. No server, no build step. |
 | **Open `demo/pitch.html`** | The 11-slide deck: the problems, what already exists, the residual gap, the results, the limitations. Arrow keys; `s` toggles speaker notes. |
 | **Run one command** | `python src/te_reason.py TET2 --proofs` — a gene with no transposon annotation and no knockdown, answered anyway, with the derivation printed. |
-| **Check we are not lying** | `make gate` runs the claim audit, resolves all 46 DOIs and 44 PMIDs, and re-runs the regression pins. |
+| **Check I am not overclaiming** | `make gate` runs the claim audit, resolves all 46 DOIs and 44 PMIDs, and re-runs the regression pins. |
 
 Reading order for the documents is in `docs/COMPLETE_WALKTHROUGH.md`; the short version is
 `docs/WHERE_WE_ARE.md`, and the limitations are `docs/CRITIQUE.md`.
@@ -79,7 +97,7 @@ detail, and the working resolution here is the subfamily.
 > evidence paths can be inspected and falsified.
 
 It is **not** a new TE quantification method (that is
-[TEtranscripts](https://doi.org/10.1093/bioinformatics/btv422), which we run), not the first
+[TEtranscripts](https://doi.org/10.1093/bioinformatics/btv422), which I run), not the first
 systematic search for TE regulators (genome-wide screens date to 2003), and not a new
 statistical test (competitive gene-set testing). Every novelty claim was put through a
 deliberate attempt to kill it — see `PRIOR_ART.md` and the claim registry `CLAIMS.md`.
@@ -183,25 +201,25 @@ behaving well.
 - **Link prediction** — gated at design time on having a gene × TE matrix large enough to hold
   out a validation set. Three knockdowns is not. An unvalidated AUC is worse than no model.
 - **An interferon conclusion**, first refused: at a chr1+chr19 reference only **16.8%** of the
-  type-I IFN gene set was present, below the coverage guard in `score_signatures.py`. We then
+  type-I IFN gene set was present, below the coverage guard in `score_signatures.py`. I then
   built a targeted 62 Mb panel reference, took coverage to **76.8%**, and re-ran — and the
   answer was *still* a null. It now carries a mechanism: in K562 the cytosolic sensors are
   barely expressed (CGAS 0.21, ZBP1 0.26, TLR3 0.00 CPM) while the transducers run at
   270–800. So the claim is not "TE derepression does not cause interferon" — it is that **this
   dataset cannot decisively test it**, and a sensing-competent cell type is required.
-- **Our own set-level p-values, retracted.** The Mann–Whitney test treated ~350 TE subfamilies
+- **My own set-level p-values, retracted.** The Mann–Whitney test treated ~350 TE subfamilies
   as independent observations. Measured mean pairwise correlation runs 0.006–0.48, i.e.
   **variance inflation 4× to 155×**. DNMT1 survives restated — Δ = +0.13, same sign in 6/6
   feature-set variants, stable to dropping any library, **correlation-aware p = 0.045**.
   TRIM28's whole-compartment claim does not and is now an effect size only.
   See `docs/COMPARTMENT_STATISTICS.md`.
 
-**And one control we failed.** `SETDB1`'s own mRNA is not significantly reduced in its own
+**And one control I failed.** `SETDB1`'s own mRNA is not significantly reduced in its own
 knockdown (−0.35 log₂, 78% remaining, padj 0.77), while TRIM28 and DNMT1 are both confirmed at
 padj < 1e-11 in the same data. SETDB1 grounds 3 of the 4 `MARK_AT` edges, so **78 of 83 derived
 edges rest on the mark supported by the least-confirmed perturbation** — see
 `results/experiment_priority.csv` and `figures/fig_ev5_priority.png`. Read as *not confirmed*,
-not *failed*: CRISPRi acts on transcription, we read a shallow steady-state snapshot, and the
+not *failed*: CRISPRi acts on transcription, I read a shallow steady-state snapshot, and the
 knockdown did produce the two ERV results. Full-depth genome-wide would settle it.
 
 `best_tier: none` is a supported output, not an error path. Four of the fourteen genes in the
@@ -210,7 +228,7 @@ demo return it.
 `docs/CRITIQUE.md` has the full limitation list and five concrete falsifiers.
 `docs/LANDSCAPE.md` places the project against the existing TE atlases, the 16 benchmarked
 quantifiers, the perturbation-prediction models and the companies in this space, with a
-verification ledger for every claim in it — including one claim we recorded as unfindable that
+verification ledger for every claim in it — including one claim I recorded as unfindable that
 turned out to exist. `docs/JURY_QUESTIONS.md` answers 41 likely questions.
 
 ## A note on the shipped graph vs the figures
